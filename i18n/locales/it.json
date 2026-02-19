@@ -1,0 +1,340 @@
+{
+  "header": {
+    "home": "Home",
+    "products": "Prodotti",
+    "services": "Servizi",
+    "search": "Ricerca",
+    "projects": "Progetti",
+    "contact": "Contatti",
+    "searchPlaceholder": "Cerca qui",
+    "aboutUs": "Chi Siamo",
+    "companyCv": "CV Aziendale",
+    "newsAndBlog": "Notizie & Blog",
+    "contactUs": "Contattaci",
+    "darkMode": "Modalità Scura",
+    "lightMode": "Modalità Chiara",
+    "login": "Accedi",
+    "logout": "Esci",
+    "myIzogrup": "MyIzogrup"
+  },
+  "hero": {
+    "prevSlide": "Diapositiva precedente",
+    "nextSlide": "Diapositiva successiva"
+  },
+  "ourServices": {
+    "heading": "I NOSTRI SERVIZI",
+    "description": "Con oltre 15 anni di esperienza e una vera attenzione alla soddisfazione del cliente, puoi contare su di noi per l'impermeabilizzazione della tua prossima casa/edificio o l'isolamento termico.",
+    "viewAll": "VISUALIZZA TUTTI I SERVIZI"
+  },
+  "costOfServices": {
+    "heading": "COSTO DEI SERVIZI",
+    "description": "Utilizza il nostro modulo online per ottenere una stima preliminare del costo del tuo servizio.",
+    "requestQuote": "RICHIEDI UN PREVENTIVO"
+  },
+  "ourProducts": {
+    "heading": "LE NOSTRE LINEE DI PRODOTTI",
+    "viewAll": "VISUALIZZA TUTTI I PRODOTTI",
+    "contactForPricing": "Si prega di contattarci per i prezzi di questo prodotto"
+  },
+  "featuredProducts": {
+    "heading": "PRODOTTO IN EVIDENZA",
+    "prevProduct": "Prodotto precedente",
+    "nextProduct": "Prodotto successivo",
+    "products": {
+      "floorTenax": {
+        "name": "Floor Tenax Speedy",
+        "description": "Microcemento rinforzato con fibre, ad asciugatura rapida per il ripristino dei pavimenti"
+      },
+      "readymesh": {
+        "name": "Readymesh MS-350",
+        "description": "Fibre di acciaio ad alta presa 35mm"
+      },
+      "sanadek": {
+        "name": "Sanadek",
+        "description": "Vernice interna non tossica, traspirante con stucco di calce"
+      },
+      "protechSigilflex": {
+        "name": "Protech Sigilflex",
+        "description": "Membrana impermeabilizzante avanzata per terrazze"
+      },
+      "thermalInsulation": {
+        "name": "Thermal Insulation Pro",
+        "description": "Sistema di isolamento termico ad alte prestazioni"
+      }
+    }
+  },
+  "ourProjects": {
+    "heading": "I NOSTRI PROGETTI",
+    "description": "Basta chiamarci e i nostri consulenti ti contatteranno rapidamente. Analizzeremo il tuo problema e ti offriremo la soluzione migliore e più conveniente senza alcun costo per la valutazione. Tutto quello che devi fare è rivedere e approvare la nostra proposta.",
+    "viewAll": "VISUALIZZA TUTTI I PROGETTI",
+    "prevProject": "Progetto precedente",
+    "nextProject": "Progetto successivo"
+  },
+  "videoTutorial": {
+    "heading": "TUTORIAL VIDEO",
+    "viewAll": "VISUALIZZA TUTTI I TUTORIAL VIDEO",
+    "prevVideo": "Video precedente",
+    "nextVideo": "Video successivo"
+  },
+  "aboutUs": {
+    "heading": "CHI SIAMO",
+    "description": "Forniamo impermeabilizzazione e isolamento termico per tutti i tipi di edifici, dalle case e piccole imprese alle grandi aziende. Il nostro team addestrato offre installazioni professionali con una forte attenzione alla qualità e alla soddisfazione del cliente.",
+    "features": {
+      "constructionManagement": {
+        "title": "Gestione della Costruzione",
+        "description": "Combiniamo qualità, artigianalità, conoscenza e prezzi bassi per offrirti servizi senza pari rispetto ai nostri concorrenti."
+      },
+      "bestMaterials": {
+        "title": "Migliori Materiali",
+        "description": "Abbiamo il personale, l'esperienza e le risorse giuste per far funzionare un progetto senza problemi. Garantiamo che il lavoro sia completato in tempo."
+      },
+      "professionalStandards": {
+        "title": "Standard Professionali",
+        "description": "Lavorare con noi comporta una serie di passaggi attentamente pianificati. È incentrato su un programma a cui ci atteniamo e sulla comunicazione quotidiana."
+      }
+    }
+  },
+  "whyChoose": {
+    "heading": "PERCHÉ SCEGLIERE IZOGRUP SH.P.K",
+    "description": "Fondato da Oligert & Erion Plaka nel 2004, Izogrup si è affermato come uno dei più grandi e prestigiosi fornitori di servizi di impermeabilizzazione e isolamento termico in Albania.",
+    "stats": {
+      "experience": {
+        "title": "10+ ANNI",
+        "subtitle": "DI ESPERIENZA"
+      },
+      "projects": {
+        "title": "110+",
+        "subtitle": "PROGETTI"
+      },
+      "clients": {
+        "title": "100+",
+        "subtitle": "CLIENTI"
+      },
+      "environment": {
+        "title": "PROTEGGIAMO",
+        "subtitle": "L'AMBIENTE"
+      },
+      "quality": {
+        "title": "ECONOMIA &",
+        "subtitle": "QUALITÀ"
+      }
+    }
+  },
+  "newsBlogs": {
+    "heading": "NOTIZIE BLOG",
+    "viewAll": "VISUALIZZA TUTTI I BLOG",
+    "prevBlog": "Blog precedente",
+    "nextBlog": "Blog successivo"
+  },
+  "weWorkWith": {
+    "heading": "LAVORIAMO CON"
+  },
+  "footer": {
+    "contactBanner": {
+      "heading": "CONTATTACI",
+      "subheading": "Scopri di più su come lavorare con IZOGRUP",
+      "button": "CONTATTACI"
+    },
+    "followUs": "Seguici",
+    "downloadApp": "Scarica la Nostra App",
+    "contactInfo": "Contattaci",
+    "account": "Account",
+    "loginRegister": "Accedi Registrati",
+    "loggedInAs": "Accesso come",
+    "logout": "Esci",
+    "products": "PRODOTTI",
+    "sustainability": "SOSTENIBILITÀ",
+    "toolsDownloads": "STRUMENTI E DOWNLOAD",
+    "technicalService": "SERVIZIO TECNICO",
+    "projects": "PROGETTI",
+    "aboutUs": "CHI SIAMO",
+    "news": "NOTIZIE",
+    "productLines": "LINEE DI PRODOTTI",
+    "scrollToTop": "Scorri verso l'alto",
+    "copyright": "© Copyright 2025 Izogrup SH.P.K TUTTI I DIRITTI RISERVATI"
+  },
+  "common": {
+    "loading": "Caricamento...",
+    "error": "Errore",
+    "success": "Successo",
+    "cancel": "Annulla",
+    "save": "Salva",
+    "delete": "Elimina",
+    "edit": "Modifica"
+  },
+  "productsPage": {
+    "productLine": "LINEA DI PRODOTTI",
+    "searchProduct": "Cerca Prodotto",
+    "completeRange": "Una Gamma Completa Di Prodotti E Tecnologie Per L'Industria Edile",
+    "completeRangeDesc": "Nel corso degli anni, Izogrup è diventato un partner affidabile nell'industria delle costruzioni, offrendo prodotti specializzati per ogni esigenza dall'impermeabilizzazione dei tetti all'isolamento acustico dei teatri e al restauro di edifici storici.",
+    "browseByProductLines": "Sfoglia Per Linee Di Prodotti",
+    "allProducts": "Tutti I Prodotti",
+    "noProductsFound": "Nessun prodotto trovato.",
+    "viewMoreProducts": "VISUALIZZA PIÙ PRODOTTI",
+    "back": "Indietro",
+    "productNotFound": "Prodotto non trovato",
+    "relatedDocuments": "DOCUMENTI CORRELATI",
+    "english": "Inglese",
+    "download": "Scarica",
+    "copyLink": "Copia Collegamento",
+    "relatedVideo": "Video Correlato",
+    "clickToWatch": "Fai clic per guardare",
+    "calculateConsumption": "CALCOLA CONSUMO",
+    "tileSpecifications": "Specifiche Piastrelle",
+    "tileLengthMm": "Lunghezza Piastrella (mm)",
+    "tileWidthMm": "Larghezza Piastrella (mm)",
+    "tileThicknessMm": "Spessore Piastrella (mm)",
+    "areaToBeCovered": "Area Da Coprire",
+    "areaM2": "Area Da Coprire M²",
+    "groutSpecifications": "Specifiche Stucco",
+    "recommendedWidth": "La Larghezza Consigliata Dei Giunti Di Stucco Per Questo Prodotto È Tra 2 Mm E 20 Mm",
+    "tileLengthGrout": "Lunghezza Piastrella( mm )",
+    "loginMessage": "Se Desideri Salvare Il Risultato Del Calcolo, Accedi Al Sito Web.",
+    "reset": "Ripristina",
+    "submit": "Invia",
+    "sending": "Invio...",
+    "calculationSuccess": "Richiesta di calcolo inviata con successo! Ti contatteremo presto.",
+    "calculationError": "Impossibile inviare il calcolo. Per favore riprova.",
+    "fillAllFields": "Per favore compila tutti i campi",
+    "disclaimer1": "Il Calcolo Si Basa Sul Volume Effettivo Da Riempire E Sulla Densità Del Prodotto.",
+    "disclaimer2": "I Dati Forniti Devono Essere Considerati Indicativi E Solo A Scopo Estimativo, Poiché Alcuni Fattori Che Potrebbero Ancora Influire Sul Consumo Effettivo Non Possono Essere Considerati (Ad Esempio, Rugosità Della Piastrella, Prodotto Residuo In Eccesso, Irregolarità Della Superficie, Ecc.)."
+  },
+  "servicesPage": {
+    "serviceLine": "LINEA DI SERVIZI",
+    "searchService": "Cerca Servizio",
+    "completeRange": "Una Gamma Completa Di Servizi E Tecnologie Per L'Industria Edile",
+    "completeRangeDesc": "Nel corso degli anni, Izogrup è diventato un partner affidabile nell'industria delle costruzioni, offrendo servizi specializzati per ogni esigenza dall'impermeabilizzazione dei tetti all'isolamento acustico dei teatri e al restauro di edifici storici.",
+    "browseByServiceLines": "Sfoglia Per Linee Di Servizi",
+    "allServices": "Tutti I Servizi",
+    "noServicesFound": "Nessun servizio trovato.",
+    "viewMoreServices": "VISUALIZZA PIÙ SERVIZI",
+    "serviceNotFound": "Servizio non trovato",
+    "contactForPricing": "Si prega di contattarci per i prezzi di questo servizio"
+  },
+  "searchPage": {
+    "searchTheSite": "CERCA IL SITO",
+    "browseByProductLine": "SFOGLIA PER LINEA DI PRODOTTI",
+    "searchPlaceholder": "Cerca Prodotti, Servizi, Progetti, Documenti Tecnici....",
+    "browseSearchPlaceholder": "Cerca Prodotti....",
+    "searching": "Ricerca in corso...",
+    "enterSearchTerm": "Inserisci un termine di ricerca per trovare prodotti, soluzioni, progetti e documenti tecnici",
+    "resultsWillAppear": "I risultati appariranno qui una volta eseguita una ricerca",
+    "searchResultsFor": "Risultati della ricerca per",
+    "found": "Trovato",
+    "results": "risultati",
+    "product": "prodotto",
+    "products": "prodotti",
+    "service": "servizio",
+    "services": "servizi",
+    "project": "progetto",
+    "projects": "progetti",
+    "noResultsFound": "Nessun risultato trovato per",
+    "tryDifferentKeywords": "Prova parole chiave diverse o sfoglia le nostre linee di prodotti",
+    "products": "Prodotti",
+    "services": "Servizi",
+    "projects": "Progetti",
+    "noProductsFound": "Nessun prodotto trovato in questa categoria",
+    "trySelectingDifferent": "Prova a selezionare una categoria diversa",
+    "browseOurProductLines": "Sfoglia le nostre linee di prodotti",
+    "selectCategoryOrSearch": "Seleziona una categoria dal menu a discesa sopra o utilizza la barra di ricerca per trovare prodotti",
+    "loadingProducts": "Caricamento prodotti...",
+    "allProducts": "Tutti I Prodotti",
+    "contactUs": "Contattaci"
+  },
+  "projectsPage": {
+    "projectsHero": "PIÙ DI 80 ANNI DI STORIA, MIGLIAIA DI PROGETTI GLOBALI",
+    "discoverAllProjects": "SCOPRI TUTTI I PROGETTI",
+    "discoverPrestigious": "Scopri alcuni dei progetti più prestigiosi di IZOGRUP in tutto il mondo",
+    "projectNotFound": "Progetto non trovato",
+    "back": "Indietro",
+    "client": "Cliente",
+    "location": "Posizione",
+    "duration": "Durata",
+    "completed": "Completato",
+    "noProjectsAvailable": "Nessun progetto disponibile"
+  },
+  "contactPage": {
+    "contactsHero": "CONTATTI",
+    "companyTitle": "IZOGRUP SH.PK",
+    "description1": "Scopri le varie sedi di IZOGRUP in ALBANIA e inviaci un messaggio direttamente utilizzando questo modulo.",
+    "description2": "Ottieni l'ultimo listino prezzi dal nostro ufficio commerciale, o contatta il nostro team di servizi tecnici per supporto in loco o di progettazione e informazioni dettagliate sui prodotti e le soluzioni IZOGRUP.",
+    "phone": "Telefono",
+    "email": "Email",
+    "address": "Indirizzo",
+    "contactButton": "CONTATTA IL SUPPORTO TECNICO E COMMERCIALE",
+    "offices": "Uffici",
+    "plants": "Impianti",
+    "distributionCenters": "Centri di Distribuzione",
+    "headquarters": "Sede Centrale",
+    "officeAddress": "Indirizzo",
+    "officePhone": "Telefono",
+    "officeFax": "Fax",
+    "officeEmail": "Email",
+    "officeUrl": "URL",
+    "findOnMaps": "TROVACI SU GOOGLE MAPS",
+    "askForAdvice": "Chiedi Consiglio Tecnico",
+    "technicalAdvice": "Consiglio Tecnico",
+    "fillForm": "Compila il modulo con i tuoi dettagli e il nostro team ti contatterà a breve con il supporto di cui hai bisogno.",
+    "namePlaceholder": "Nome*",
+    "surnamePlaceholder": "Cognome",
+    "emailPlaceholder": "Email*",
+    "phonePlaceholder": "Telefono*",
+    "cityPlaceholder": "Città",
+    "provincePlaceholder": "Provincia",
+    "messagePlaceholder": "Inserisci il tuo messaggio*",
+    "processingInfo": "Elaborazione Delle Informazioni Personali",
+    "privacyText": "Dopo aver letto e compreso pienamente l'informativa sulla privacy su come IZOGRUP elabora e utilizza le mie informazioni personali",
+    "iAgree": "Accetto",
+    "consentText": "Acconsento a che IZOGRUP utilizzi le mie informazioni personali per contattarmi in merito alla mia richiesta.",
+    "contactUs": "CONTATTACI",
+    "sending": "INVIO...",
+    "messageSentSuccess": "Messaggio Inviato Con Successo!",
+    "thankYouMessage": "Grazie per averci contattato. Il nostro team ti contatterà a breve.",
+    "error": "Errore",
+    "failedToSend": "Impossibile inviare il messaggio. Per favore riprova.",
+    "errorOccurred": "Si è verificato un errore. Per favore riprova più tardi."
+  },
+  "cart": {
+    "shoppingCart": "Carrello della Spesa",
+    "item": "articolo",
+    "items": "articoli",
+    "yourCartIsEmpty": "Il tuo carrello è vuoto",
+    "addSomeProducts": "Aggiungi alcuni prodotti per iniziare",
+    "browseProducts": "Sfoglia Prodotti",
+    "sku": "SKU",
+    "subtotal": "Subtotale",
+    "shippingAndTaxes": "Spedizione e tasse calcolate al checkout",
+    "proceedToCheckout": "Procedi al Checkout",
+    "continueShopping": "Continua lo Shopping"
+  },
+  "checkout": {
+    "checkoutHero": "CHECKOUT",
+    "completeOrder": "Completa il tuo ordine",
+    "error": "Errore",
+    "success": "Successo!",
+    "paymentSuccessful": "Pagamento riuscito! Ordine effettuato. Reindirizzamento alla home...",
+    "clearCartAndGo": "Svuota Carrello & Vai ai Prodotti",
+    "customerInformation": "Informazioni Cliente",
+    "fullName": "Nome Completo",
+    "email": "Email",
+    "phone": "Telefono",
+    "deliveryInformation": "Informazioni di Consegna",
+    "deliveryAddress": "Indirizzo di Consegna",
+    "city": "Città",
+    "postalCode": "Codice Postale",
+    "deliveryInstructions": "Istruzioni di Consegna",
+    "continueToPayment": "Continua al Pagamento",
+    "processing": "Elaborazione...",
+    "paymentInformation": "Informazioni di Pagamento",
+    "backToCheckout": "Torna al Checkout",
+    "orderSummary": "Riepilogo Ordine",
+    "noItemsInCart": "Nessun articolo nel carrello",
+    "tax": "Tassa (10%)",
+    "delivery": "Consegna",
+    "total": "Totale",
+    "continueShopping": "Continua lo Shopping",
+    "fillAllRequired": "Per favore compila tutti i campi obbligatori",
+    "cartEmpty": "Il tuo carrello è vuoto",
+    "required": "*"
+  }
+}

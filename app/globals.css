@@ -1,0 +1,260 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-background: #ffffff;
+  --color-foreground: #171717;
+  --font-sans: var(--font-kantumruy-pro);
+}
+
+:root {
+  /* Light Mode Colors */
+  --background: #ffffff;
+  --foreground: #171717;
+  --background-secondary: #f5f5f5;
+  --background-tertiary: #f0f0f0;
+  --text-secondary: #6b7280;
+  --text-tertiary: #9ca3af;
+  --border-color: #e5e7eb;
+  --border-light: #f3f4f6;
+  --card-bg: #ffffff;
+  --input-bg: #ffffff;
+  --input-border: #e5e7eb;
+  --hover-bg: #f9fafb;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+.dark {
+  /* Dark Mode Colors */
+  --background: #000000;
+  --foreground: #ededed;
+  --background-secondary: #1a1a1a;
+  --background-tertiary: #2d2d2d;
+  --text-secondary: #b0b0b0;
+  --text-tertiary: #808080;
+  --border-color: #333333;
+  --border-light: #404040;
+  --card-bg: #1a1a1a;
+  --input-bg: #2d2d2d;
+  --input-border: #404040;
+  --hover-bg: #262626;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-kantumruy-pro), sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Smooth transitions for theme switching */
+* {
+  @apply transition-colors duration-300;
+}
+
+/* Swiper Custom Pagination */
+.swiper-pagination-custom .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.swiper-pagination-custom .swiper-pagination-bullet-active {
+  background: #9F001B;
+  width: 40px;
+  border-radius: 6px;
+}
+
+/* Featured Products Pagination */
+.featured-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: rgba(159, 0, 27, 0.3);
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.featured-pagination .swiper-pagination-bullet-active {
+  background: #9F001B;
+  width: 40px;
+  border-radius: 6px;
+}
+
+/* Dark mode specific styles */
+.dark .swiper-pagination-custom .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.dark .featured-pagination .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.dark .featured-pagination .swiper-pagination-bullet-active {
+  background: #ffffff;
+}
+
+/* We Work With section - same pagination as Featured Products (white in dark mode) */
+.we-work-with-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: rgba(159, 0, 27, 0.3);
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.we-work-with-pagination .swiper-pagination-bullet-active {
+  background: #9F001B;
+  width: 40px;
+  border-radius: 6px;
+}
+
+.dark .we-work-with-pagination .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.dark .we-work-with-pagination .swiper-pagination-bullet-active {
+  background: #ffffff;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-tertiary);
+}
+
+/* Selection styling */
+::selection {
+  background: #9F001B;
+  color: white;
+}
+
+.dark ::selection {
+  background: #ff4d6d;
+  color: #000000;
+}
+
+
+/* Dark Mode Utility Classes */
+.dark-text-primary {
+  @apply text-[#171717] dark:text-[#ededed] transition-colors;
+}
+
+.dark-text-secondary {
+  @apply text-[#6b7280] dark:text-[#b0b0b0] transition-colors;
+}
+
+.dark-text-tertiary {
+  @apply text-[#9ca3af] dark:text-[#808080] transition-colors;
+}
+
+.dark-bg-primary {
+  @apply bg-white dark:bg-[#000000] transition-colors;
+}
+
+.dark-bg-secondary {
+  @apply bg-[#f5f5f5] dark:bg-[#1a1a1a] transition-colors;
+}
+
+.dark-bg-tertiary {
+  @apply bg-[#f0f0f0] dark:bg-[#2d2d2d] transition-colors;
+}
+
+.dark-border {
+  @apply border-[#e5e7eb] dark:border-[#333333] transition-colors;
+}
+
+.dark-border-light {
+  @apply border-[#f3f4f6] dark:border-[#404040] transition-colors;
+}
+
+.dark-card {
+  @apply bg-white dark:bg-gray-800 transition-colors;
+}
+
+.dark-input {
+  @apply bg-white dark:bg-gray-800 text-[#171717] dark:text-white border-gray-300 dark:border-gray-600 transition-colors;
+}
+
+.dark-hover {
+  @apply hover:bg-[#f9fafb] dark:hover:bg-gray-700 transition-colors;
+}
+
+/* Gradient text for dark mode */
+.gradient-text {
+  @apply bg-gradient-to-r from-[#9F001B] to-[#1B2556] bg-clip-text text-transparent;
+}
+
+/* Smooth transitions for all interactive elements */
+button,
+a,
+input,
+select,
+textarea {
+  @apply transition-all duration-300;
+}
+
+/* Focus states for accessibility */
+:focus-visible {
+  @apply outline-2 outline-offset-2 outline-[#9F001B] dark:outline-[#ff4d6d];
+}
+
+/* Placeholder styling */
+::placeholder {
+  @apply text-gray-400 dark:text-gray-500;
+}
+
+.dark ::placeholder {
+  @apply text-gray-500;
+}
+
+/* Products hero search: white placeholder in dark mode */
+.dark .products-hero-search input::placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+
+/* Services hero search: white placeholder in dark mode */
+.dark .services-hero-search input::placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+
+/* Support / Contact form (Ask For Technical Advice): white placeholders in dark mode */
+.dark .contact-form-technical-advice input::placeholder,
+.dark .contact-form-technical-advice textarea::placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+
+/* Calculate Consumption: white placeholders in dark mode */
+.dark .calculate-consumption-section input::placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+
+/* Header dropdown menu: search placeholder white in dark mode */
+.dark .header-dropdown-search-input::placeholder {
+  color: #ffffff;
+  opacity: 1;
+}

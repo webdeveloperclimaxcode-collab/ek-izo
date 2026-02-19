@@ -1,0 +1,340 @@
+{
+  "header": {
+    "home": "Home",
+    "products": "Products",
+    "services": "Services",
+    "search": "Search",
+    "projects": "Projects",
+    "contact": "Contact",
+    "searchPlaceholder": "Search here",
+    "aboutUs": "About Us",
+    "companyCv": "Company CV",
+    "newsAndBlog": "News & Blog",
+    "contactUs": "Contact Us",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode",
+    "login": "Login",
+    "logout": "Logout",
+    "myIzogrup": "MyIzogrup"
+  },
+  "hero": {
+    "prevSlide": "Previous slide",
+    "nextSlide": "Next slide"
+  },
+  "ourServices": {
+    "heading": "OUR SERVICES",
+    "description": "With over 15 years experience and real focus on customer satisfaction, you can rely on us for your next home/building waterproofing or thermal insulation.",
+    "viewAll": "VIEW ALL SERVICES"
+  },
+  "costOfServices": {
+    "heading": "COST OF SERVICES",
+    "description": "Use our online form to get a preliminary estimate of your service cost.",
+    "requestQuote": "REQUEST A QUOTE"
+  },
+  "ourProducts": {
+    "heading": "OUR PRODUCT LINES",
+    "viewAll": "VIEW ALL PRODUCTS",
+    "contactForPricing": "Please contact us for pricing on this product"
+  },
+  "featuredProducts": {
+    "heading": "FEATURED PRODUCT",
+    "prevProduct": "Previous product",
+    "nextProduct": "Next product",
+    "products": {
+      "floorTenax": {
+        "name": "Floor Tenax Speedy",
+        "description": "Fiber-reinforced, fast-setting micro concrete for floor restoration"
+      },
+      "readymesh": {
+        "name": "Readymesh MS-350",
+        "description": "35mm high-grip steel fibres"
+      },
+      "sanadek": {
+        "name": "Sanadek",
+        "description": "Non-toxic, breathable, interior paint with lime putty"
+      },
+      "protechSigilflex": {
+        "name": "Protech Sigilflex",
+        "description": "Advanced waterproofing membrane for terraces"
+      },
+      "thermalInsulation": {
+        "name": "Thermal Insulation Pro",
+        "description": "High-performance thermal insulation system"
+      }
+    }
+  },
+  "ourProjects": {
+    "heading": "OUR PROJECTS",
+    "description": "Just give us a call, and our consultants will reach out quickly. We'll analyze your issue and offer the best, most cost-effective solution at no charge for the assessment. All you need to do is review and approve our proposal.",
+    "viewAll": "VIEW ALL PROJECTS",
+    "prevProject": "Previous project",
+    "nextProject": "Next project"
+  },
+  "videoTutorial": {
+    "heading": "VIDEO TUTORIAL",
+    "viewAll": "VIEW ALL VIDEO TUTORIAL",
+    "prevVideo": "Previous video",
+    "nextVideo": "Next video"
+  },
+  "aboutUs": {
+    "heading": "ABOUT US",
+    "description": "We provide waterproofing and thermal insulation for all types of buildings—from homes and small businesses to large corporations. Our trained team delivers professional installations with a strong focus on quality and customer satisfaction.",
+    "features": {
+      "constructionManagement": {
+        "title": "Construction Management",
+        "description": "We combine quality, workmanship, knowledge & low prices to provide you with services unmatched by our competitors."
+      },
+      "bestMaterials": {
+        "title": "Best Materials",
+        "description": "We have the personnel, experience and the right resources to make a project run smoothly. We guarantee that a work is done on time."
+      },
+      "professionalStandards": {
+        "title": "Professional Standards",
+        "description": "Working with us involve a carefully planned series of steps. It is centered around a schedule we stick to and daily communication."
+      }
+    }
+  },
+  "whyChoose": {
+    "heading": "WHY CHOOSE IZOGRUP SH.P.K",
+    "description": "Founded by Oligert & Erion Plaka back in 2004, Izogrup has established itself as one of the greatest & prestigious providers of waterproofing & thermal insulation services in Albania.",
+    "stats": {
+      "experience": {
+        "title": "10+ YEARS",
+        "subtitle": "OF EXPERIENCE"
+      },
+      "projects": {
+        "title": "110+",
+        "subtitle": "PROJECTS"
+      },
+      "clients": {
+        "title": "100+",
+        "subtitle": "CLIENTS"
+      },
+      "environment": {
+        "title": "WE PROTECT",
+        "subtitle": "THE ENVIRONMENT"
+      },
+      "quality": {
+        "title": "ECONOMY &",
+        "subtitle": "QUALITY"
+      }
+    }
+  },
+  "newsBlogs": {
+    "heading": "NEWS BLOGS",
+    "viewAll": "VIEW ALL BLOGS",
+    "prevBlog": "Previous blog",
+    "nextBlog": "Next blog"
+  },
+  "weWorkWith": {
+    "heading": "WE WORK WITH"
+  },
+  "footer": {
+    "contactBanner": {
+      "heading": "CONTACT US",
+      "subheading": "Learn More About Working With IZOGRUP",
+      "button": "CONTACT US"
+    },
+    "followUs": "Follow Us",
+    "downloadApp": "Download Our App",
+    "contactInfo": "Contact Us",
+    "account": "Account",
+    "loginRegister": "Login Register",
+    "loggedInAs": "Logged in as",
+    "logout": "Logout",
+    "products": "PRODUCTS",
+    "sustainability": "SUSTAINABILITY",
+    "toolsDownloads": "TOOLS & DOWNLOADS",
+    "technicalService": "TECHNICAL SERVICE",
+    "projects": "PROJECTS",
+    "aboutUs": "ABOUT US",
+    "news": "NEWS",
+    "productLines": "PRODUCT LINES",
+    "scrollToTop": "Scroll to top",
+    "copyright": "© Copyright 2025 Izogrup SH.P.K ALL RIGHTS RESERVED"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit"
+  },
+  "productsPage": {
+    "productLine": "PRODUCT LINE",
+    "searchProduct": "Search Product",
+    "completeRange": "A Complete Range Of Products And Technologies For The Building Industry",
+    "completeRangeDesc": "Over the years, Izogrup has become a reliable partner in the construction industry, offering specialized products for every need from waterproofing roofs to soundproofing theatres and restoring historic buildings.",
+    "browseByProductLines": "Browse by Product Lines",
+    "allProducts": "All Products",
+    "noProductsFound": "No products found.",
+    "viewMoreProducts": "VIEW MORE PRODUCTS",
+    "back": "Back",
+    "productNotFound": "Product not found",
+    "relatedDocuments": "RELATED DOCUMENTS",
+    "english": "English",
+    "download": "Download",
+    "copyLink": "Copy Link",
+    "relatedVideo": "Related Video",
+    "clickToWatch": "Click to watch",
+    "calculateConsumption": "CALCULATE CONSUMPTION",
+    "tileSpecifications": "Tile Specifications",
+    "tileLengthMm": "Tile Length (mm)",
+    "tileWidthMm": "Tile Width (mm)",
+    "tileThicknessMm": "Tile Thickness (mm)",
+    "areaToBeCovered": "Area To Be Covered",
+    "areaM2": "Area To Be Covered M²",
+    "groutSpecifications": "Grout Specifications",
+    "recommendedWidth": "Recommended Width Of Grout Joints For This Product Is Between 2 Mm And 20 Mm",
+    "tileLengthGrout": "Tile Length( mm )",
+    "loginMessage": "If You Wish To Save The Calculation Result, Log In To The Website.",
+    "reset": "Reset",
+    "submit": "Submit",
+    "sending": "Sending...",
+    "calculationSuccess": "Calculation request sent successfully! We'll get back to you soon.",
+    "calculationError": "Failed to submit calculation. Please try again.",
+    "fillAllFields": "Please fill in all fields",
+    "disclaimer1": "The Calculation Is Based On The Actual Volume To Be Filled And The Product Density.",
+    "disclaimer2": "The Provided Data Should Be Considered Indicative And For Estimation Purposes Only, As Certain Factors That May Still Affect The Actual Consumption Cannot Be Considered (For Example, Tile Roughness, Excess Residual Product, Surface Irregularities, Etc.)."
+  },
+  "servicesPage": {
+    "serviceLine": "SERVICE LINE",
+    "searchService": "Search Service",
+    "completeRange": "A Complete Range Of Services And Technologies For The Building Industry",
+    "completeRangeDesc": "Over the years, Izogrup has become a reliable partner in the construction industry, offering specialized services for every need from waterproofing roofs to soundproofing theatres and restoring historic buildings.",
+    "browseByServiceLines": "Browse by Service Lines",
+    "allServices": "All Services",
+    "noServicesFound": "No services found.",
+    "viewMoreServices": "VIEW MORE SERVICES",
+    "serviceNotFound": "Service not found",
+    "contactForPricing": "Please contact us for pricing on this service"
+  },
+  "searchPage": {
+    "searchTheSite": "SEARCH THE SITE",
+    "browseByProductLine": "BROWSE BY PRODUCT LINE",
+    "searchPlaceholder": "Search for Products, Services, Projects, Technical Documents....",
+    "browseSearchPlaceholder": "Search for Products....",
+    "searching": "Searching...",
+    "enterSearchTerm": "Enter a search term to find products, solutions, projects, and technical documents",
+    "resultsWillAppear": "Results will appear here once you perform a search",
+    "searchResultsFor": "Search Results for",
+    "found": "Found",
+    "results": "results",
+    "product": "product",
+    "products": "products",
+    "service": "service",
+    "services": "services",
+    "project": "project",
+    "projects": "projects",
+    "noResultsFound": "No results found for",
+    "tryDifferentKeywords": "Try different keywords or browse our product lines",
+    "products": "Products",
+    "services": "Services",
+    "projects": "Projects",
+    "noProductsFound": "No products found in this category",
+    "trySelectingDifferent": "Try selecting a different category",
+    "browseOurProductLines": "Browse our product lines",
+    "selectCategoryOrSearch": "Select a category from the dropdown above or use the search bar to find products",
+    "loadingProducts": "Loading products...",
+    "allProducts": "All Products",
+    "contactUs": "Contact Us"
+  },
+  "projectsPage": {
+    "projectsHero": "MORE THAN 80 YEARS OF HISTORY, THOUSANDS OF GLOBAL PROJECTS",
+    "discoverAllProjects": "DISCOVER ALL PROJECTS",
+    "discoverPrestigious": "Discover some of IZOGRUP's most prestigious projects worldwide",
+    "projectNotFound": "Project not found",
+    "back": "Back",
+    "client": "Client",
+    "location": "Location",
+    "duration": "Duration",
+    "completed": "Completed",
+    "noProjectsAvailable": "No projects available"
+  },
+  "contactPage": {
+    "contactsHero": "CONTACTS",
+    "companyTitle": "IZOGRUP SH.PK",
+    "description1": "Find out the various locations of IZOGRUP in ALBANIA and send us a message directly using this form.",
+    "description2": "Obtain the latest Price List from our Commercial Office, or contact our Technical Services team for on-site or design support and detailed information about IZOGRUP products and solutions.",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "contactButton": "CONTACT THE TECHNICAL & COMMERCIAL SUPPORT",
+    "offices": "Offices",
+    "plants": "Plants",
+    "distributionCenters": "Distribution Centers",
+    "headquarters": "Headquarters",
+    "officeAddress": "Address",
+    "officePhone": "Phone",
+    "officeFax": "Fax",
+    "officeEmail": "Email",
+    "officeUrl": "URL",
+    "findOnMaps": "FIND US ON GOOGLE MAPS",
+    "askForAdvice": "Ask For Technical Advice",
+    "technicalAdvice": "Technical Advice",
+    "fillForm": "Fill out the form with your details, and our team will contact you shortly with the support you need.",
+    "namePlaceholder": "Name*",
+    "surnamePlaceholder": "Surname",
+    "emailPlaceholder": "Email*",
+    "phonePlaceholder": "Phone*",
+    "cityPlaceholder": "City",
+    "provincePlaceholder": "Province",
+    "messagePlaceholder": "Enter your message*",
+    "processingInfo": "Processing Of Personal Information",
+    "privacyText": "After reading and fully understanding the privacy policy how IZOGRUP processes and uses my personal information",
+    "iAgree": "I Agree",
+    "consentText": "I consent to IZOGRUP using my personal information to contact me about my request.",
+    "contactUs": "CONTACT US",
+    "sending": "SENDING...",
+    "messageSentSuccess": "Message Sent Successfully!",
+    "thankYouMessage": "Thank you for contacting us. Our team will get back to you shortly.",
+    "error": "Error",
+    "failedToSend": "Failed to send message. Please try again.",
+    "errorOccurred": "An error occurred. Please try again later."
+  },
+  "cart": {
+    "shoppingCart": "Shopping Cart",
+    "item": "item",
+    "items": "items",
+    "yourCartIsEmpty": "Your cart is empty",
+    "addSomeProducts": "Add some products to get started",
+    "browseProducts": "Browse Products",
+    "sku": "SKU",
+    "subtotal": "Subtotal",
+    "shippingAndTaxes": "Shipping and taxes calculated at checkout",
+    "proceedToCheckout": "Proceed to Checkout",
+    "continueShopping": "Continue Shopping"
+  },
+  "checkout": {
+    "checkoutHero": "CHECKOUT",
+    "completeOrder": "Complete your order",
+    "error": "Error",
+    "success": "Success!",
+    "paymentSuccessful": "Payment successful! Order placed. Redirecting to home...",
+    "clearCartAndGo": "Clear Cart & Go to Products",
+    "customerInformation": "Customer Information",
+    "fullName": "Full Name",
+    "email": "Email",
+    "phone": "Phone",
+    "deliveryInformation": "Delivery Information",
+    "deliveryAddress": "Delivery Address",
+    "city": "City",
+    "postalCode": "Postal Code",
+    "deliveryInstructions": "Delivery Instructions",
+    "continueToPayment": "Continue to Payment",
+    "processing": "Processing...",
+    "paymentInformation": "Payment Information",
+    "backToCheckout": "Back to Checkout",
+    "orderSummary": "Order Summary",
+    "noItemsInCart": "No items in cart",
+    "tax": "Tax (10%)",
+    "delivery": "Delivery",
+    "total": "Total",
+    "continueShopping": "Continue Shopping",
+    "fillAllRequired": "Please fill in all required fields",
+    "cartEmpty": "Your cart is empty",
+    "required": "*"
+  }
+}

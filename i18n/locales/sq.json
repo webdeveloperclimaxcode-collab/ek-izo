@@ -1,0 +1,340 @@
+{
+  "header": {
+    "home": "Kreu",
+    "products": "Produktet",
+    "services": "Shërbimet",
+    "search": "Kërkimi",
+    "projects": "Projektet",
+    "contact": "Kontakti",
+    "searchPlaceholder": "Kërkoni këtu",
+    "aboutUs": "Rreth nesh",
+    "companyCv": "CV i Kompanisë",
+    "newsAndBlog": "Lajme & Blog",
+    "contactUs": "Kontaktoni ne",
+    "darkMode": "Mënyra e Errët",
+    "lightMode": "Mënyra e Lehtë",
+    "login": "Hyrje",
+    "logout": "Dalje",
+    "myIzogrup": "MyIzogrup"
+  },
+  "hero": {
+    "prevSlide": "Rrëshqitja e mëparshme",
+    "nextSlide": "Rrëshqitja tjetër"
+  },
+  "ourServices": {
+    "heading": "SHËRBIMET TONA",
+    "description": "Me më shumë se 15 vjet përvojë dhe fokus të vërtetë në kënaqësinë e klientit, mund të mbështeteni në ne për ujëmbrojtjen ose izolimin termik të shtëpisë/ndërtesës tuaj të ardhshme.",
+    "viewAll": "SHIKO TË GJITHA SHËRBIMET"
+  },
+  "costOfServices": {
+    "heading": "KOSTOJA E SHËRBIMEVE",
+    "description": "Përdorni formularin tonë në internet për të marrë një vlerësim paraprak të kostos së shërbimit tuaj.",
+    "requestQuote": "KËRKONI OFERTË"
+  },
+  "ourProducts": {
+    "heading": "LINJAT E PRODUKTEVE TONA",
+    "viewAll": "SHIKO TË GJITHA PRODUKTET",
+    "contactForPricing": "Ju lutemi kontaktoni ne për çmimet e këtij produkti"
+  },
+  "featuredProducts": {
+    "heading": "PRODUKTI I ZGJEDHUR",
+    "prevProduct": "Produkti i mëparshëm",
+    "nextProduct": "Produkti tjetër",
+    "products": {
+      "floorTenax": {
+        "name": "Floor Tenax Speedy",
+        "description": "Mikrobetoni i përforcuar me fibra, me vendosje të shpejtë për restaurimin e dyshemesë"
+      },
+      "readymesh": {
+        "name": "Readymesh MS-350",
+        "description": "Fibra çeliku me kapje të lartë 35mm"
+      },
+      "sanadek": {
+        "name": "Sanadek",
+        "description": "Bojë e brendshme jo-toksike, e frymëzueshme me putty gëlqere"
+      },
+      "protechSigilflex": {
+        "name": "Protech Sigilflex",
+        "description": "Membrana e avancuar ujëmbrojtëse për terasa"
+      },
+      "thermalInsulation": {
+        "name": "Thermal Insulation Pro",
+        "description": "Sistem izolimi termik me performancë të lartë"
+      }
+    }
+  },
+  "ourProjects": {
+    "heading": "PROJEKTET TONA",
+    "description": "Thjesht na telefononi, dhe konsultentet tona do të arrijnë shpejt. Ne do të analizojmë problemin tuaj dhe do të ofrojmë zgjidhjen më të mirë dhe më ekonomike pa asnjë tarifë për vlerësimin. Gjithçka që duhet të bëni është të rishikoni dhe të miratoni propozimin tonë.",
+    "viewAll": "SHIKO TË GJITHA PROJEKTET",
+    "prevProject": "Projekti i mëparshëm",
+    "nextProject": "Projekti tjetër"
+  },
+  "videoTutorial": {
+    "heading": "TUTORIAL VIDEO",
+    "viewAll": "SHIKO TË GJITHA TUTORIALET VIDEO",
+    "prevVideo": "Video e mëparshme",
+    "nextVideo": "Video tjetër"
+  },
+  "aboutUs": {
+    "heading": "RRETH NESH",
+    "description": "Ne ofrojmë ujëmbrojtje dhe izolim termik për të gjitha llojet e ndërtesave—nga shtëpitë dhe bizneset e vogla deri te korporatat e mëdha. Ekipi ynë i trajnuar ofron instalime profesionale me fokus të fortë në cilësi dhe kënaqësinë e klientit.",
+    "features": {
+      "constructionManagement": {
+        "title": "Menaxhimi i Ndërtimit",
+        "description": "Ne kombinojmë cilësinë, punësinë, njohuritë dhe çmimet e ulëta për t'ju ofruar shërbime të pashembulluara nga konkurrentët tanë."
+      },
+      "bestMaterials": {
+        "title": "Materialet më të Mira",
+        "description": "Ne kemi personelit, përvojën dhe burimet e duhura për të bërë që një projekt të funksionojë pa probleme. Ne garantojmë që puna të bëhet në kohë."
+      },
+      "professionalStandards": {
+        "title": "Standardet Profesionale",
+        "description": "Puna me ne përfshin një seri hapash të planifikuar me kujdes. Ajo është e përqendruar rreth një orari të cilit ne i përmbahemi dhe komunikimit ditor."
+      }
+    }
+  },
+  "whyChoose": {
+    "heading": "PËR ÇFARË TË ZGJEDHNI IZOGRUP SH.P.K",
+    "description": "I themeluar nga Oligert & Erion Plaka në vitin 2004, Izogrup ka vendosur veten si një nga ofruesit më të mëdhenj dhe më prestigjiozë të shërbimeve të ujëmbrojtjes dhe izolimit termik në Shqipëri.",
+    "stats": {
+      "experience": {
+        "title": "10+ VJET",
+        "subtitle": "PËRVOJË"
+      },
+      "projects": {
+        "title": "110+",
+        "subtitle": "PROJEKTE"
+      },
+      "clients": {
+        "title": "100+",
+        "subtitle": "KLIENTË"
+      },
+      "environment": {
+        "title": "NE MBROJMË",
+        "subtitle": "MJEDISIN"
+      },
+      "quality": {
+        "title": "EKONOMI &",
+        "subtitle": "CILËSI"
+      }
+    }
+  },
+  "newsBlogs": {
+    "heading": "LAJME BLOG",
+    "viewAll": "SHIKO TË GJITHA BLOGJET",
+    "prevBlog": "Blogi i mëparshëm",
+    "nextBlog": "Blogi tjetër"
+  },
+  "weWorkWith": {
+    "heading": "NE PUNOJMË ME"
+  },
+  "footer": {
+    "contactBanner": {
+      "heading": "KONTAKTONI NE",
+      "subheading": "Mësoni më shumë rreth punës me IZOGRUP",
+      "button": "KONTAKTONI NE"
+    },
+    "followUs": "Ndiqni Ne",
+    "downloadApp": "Shkarkoni Aplikacionin Tonë",
+    "contactInfo": "Kontaktoni Ne",
+    "account": "Llogaria",
+    "loginRegister": "Hyrje Regjistrim",
+    "loggedInAs": "Kyçur si",
+    "logout": "Dalje",
+    "products": "PRODUKTET",
+    "sustainability": "QËNDRUESHMËRIA",
+    "toolsDownloads": "MJETE & SHKARKIM",
+    "technicalService": "SHËRBIM TEKNIK",
+    "projects": "PROJEKTET",
+    "aboutUs": "RRETH NESH",
+    "news": "LAJME",
+    "productLines": "LINJAT E PRODUKTEVE",
+    "scrollToTop": "Rrëshqit në krye",
+    "copyright": "© Të drejtat e autorit 2025 Izogrup SH.P.K TË GJITHA TË DREJTAT E REZERVUARA"
+  },
+  "common": {
+    "loading": "Po ngarkohet...",
+    "error": "Gabim",
+    "success": "Sukses",
+    "cancel": "Anulo",
+    "save": "Ruaj",
+    "delete": "Fshij",
+    "edit": "Redakto"
+  },
+  "productsPage": {
+    "productLine": "LINJA E PRODUKTEVE",
+    "searchProduct": "Kërko Produktin",
+    "completeRange": "Një Gamë E Plotë E Produkteve Dhe Teknologjive Për Industrinë E Ndërtimit",
+    "completeRangeDesc": "Gjatë viteve, Izogrup është bërë një partner i besueshëm në industrinë e ndërtimit, duke ofruar produkte të specializuara për çdo nevojë nga ujëmbrojtja e çatisë deri në izolimin akustik të teatrove dhe restaurimin e ndërtesave historike.",
+    "browseByProductLines": "Shfletoni Sipas Linjave Të Produkteve",
+    "allProducts": "Të Gjitha Produktet",
+    "noProductsFound": "Nuk u gjet asnjë produkt.",
+    "viewMoreProducts": "SHIKO MË SHUMË PRODUKTE",
+    "back": "Kthehu",
+    "productNotFound": "Produkti nuk u gjet",
+    "relatedDocuments": "DOKUMENTET E LIDHURA",
+    "english": "Shqip",
+    "download": "Shkarko",
+    "copyLink": "Kopjo Lidhjen",
+    "relatedVideo": "Video E Lidhur",
+    "clickToWatch": "Kliko për të parë",
+    "calculateConsumption": "LLOGARIT KONSUMIN",
+    "tileSpecifications": "Specifikat E Pllakave",
+    "tileLengthMm": "Gjatësia E Pllakës (mm)",
+    "tileWidthMm": "Gjerësia E Pllakës (mm)",
+    "tileThicknessMm": "Trashësia E Pllakës (mm)",
+    "areaToBeCovered": "Zona Për Të Mbuluar",
+    "areaM2": "Zona Për Të Mbuluar M²",
+    "groutSpecifications": "Specifikat E Fugës",
+    "recommendedWidth": "Gjerësia E Rekomanduar E Fugave Të Fugës Për Këtë Produkt Është Midis 2 Mm Dhe 20 Mm",
+    "tileLengthGrout": "Gjatësia E Pllakës( mm )",
+    "loginMessage": "Nëse Dëshironi Të Ruani Rezultatin E Llogaritjes, Hyni Në Faqen E Internetit.",
+    "reset": "Rivendos",
+    "submit": "Paraqit",
+    "sending": "Po dërgohet...",
+    "calculationSuccess": "Kërkesa e llogaritjes u dërgua me sukses! Do të kontaktohemi me ju së shpejti.",
+    "calculationError": "Dështoi të dërgonte llogaritjen. Ju lutemi provoni përsëri.",
+    "fillAllFields": "Ju lutemi plotësoni të gjitha fushat",
+    "disclaimer1": "Llogaritja Bazohet Në Vëllimin Aktual Për Të Mbushur Dhe Densitetin E Produktit.",
+    "disclaimer2": "Të Dhënat E Dhëna Duhet Të Konsiderohen Indicative Dhe Vetëm Për Qëllime Vlerësimi, Pasi Disa Faktorë Që Mund Të Ndikojnë Në Konsumin Aktual Nuk Mund Të Konsiderohen (Për Shembull, Vrazhdësia E Pllakës, Produkti I Tepërt Mbetje, Parregullsitë E Sipërfaqes, Etj.)."
+  },
+  "servicesPage": {
+    "serviceLine": "LINJA E SHËRBIMEVE",
+    "searchService": "Kërko Shërbimin",
+    "completeRange": "Një Gamë E Plotë E Shërbimeve Dhe Teknologjive Për Industrinë E Ndërtimit",
+    "completeRangeDesc": "Gjatë viteve, Izogrup është bërë një partner i besueshëm në industrinë e ndërtimit, duke ofruar shërbime të specializuara për çdo nevojë nga ujëmbrojtja e çatisë deri në izolimin akustik të teatrove dhe restaurimin e ndërtesave historike.",
+    "browseByServiceLines": "Shfletoni Sipas Linjave Të Shërbimeve",
+    "allServices": "Të Gjitha Shërbimet",
+    "noServicesFound": "Nuk u gjet asnjë shërbim.",
+    "viewMoreServices": "SHIKO MË SHUMË SHËRBIME",
+    "serviceNotFound": "Shërbimi nuk u gjet",
+    "contactForPricing": "Ju lutemi kontaktoni ne për çmimet e këtij shërbimi"
+  },
+  "searchPage": {
+    "searchTheSite": "KËRKO FAQEN",
+    "browseByProductLine": "SHFLETONI SIPAS LINJËS SË PRODUKTEVE",
+    "searchPlaceholder": "Kërko Produktet, Shërbimet, Projektet, Dokumentet Teknikë....",
+    "browseSearchPlaceholder": "Kërko Produktet....",
+    "searching": "Po kërkon...",
+    "enterSearchTerm": "Futni një term kërkimi për të gjetur produkte, zgjidhje, projekte dhe dokumente teknikë",
+    "resultsWillAppear": "Rezultatet do të shfaqen këtu pasi të kryeni një kërkim",
+    "searchResultsFor": "Rezultatet e Kërkimit për",
+    "found": "Gjetur",
+    "results": "rezultate",
+    "product": "produkt",
+    "products": "produkte",
+    "service": "shërbim",
+    "services": "shërbime",
+    "project": "projekt",
+    "projects": "projekte",
+    "noResultsFound": "Nuk u gjet asnjë rezultat për",
+    "tryDifferentKeywords": "Provoni fjalë kyçe të ndryshme ose shfletoni linjat e produkteve tona",
+    "products": "Produktet",
+    "services": "Shërbimet",
+    "projects": "Projektet",
+    "noProductsFound": "Nuk u gjet asnjë produkt në këtë kategori",
+    "trySelectingDifferent": "Provoni të zgjidhni një kategori të ndryshme",
+    "browseOurProductLines": "Shfletoni linjat e produkteve tona",
+    "selectCategoryOrSearch": "Zgjidhni një kategori nga lista rënëse më lart ose përdorni shiritin e kërkimit për të gjetur produkte",
+    "loadingProducts": "Po ngarkohen produktet...",
+    "allProducts": "Të Gjitha Produktet",
+    "contactUs": "Kontaktoni Ne"
+  },
+  "projectsPage": {
+    "projectsHero": "MË SHUMË SE 80 VJET HISTORI, MIJËRA PROJEKTE GLOBALE",
+    "discoverAllProjects": "ZBULONI TË GJITHA PROJEKTET",
+    "discoverPrestigious": "Zbuloni disa nga projektet më prestigjiozë të IZOGRUP në të gjithë botën",
+    "projectNotFound": "Projekti nuk u gjet",
+    "back": "Kthehu",
+    "client": "Klienti",
+    "location": "Vendndodhja",
+    "duration": "Kohëzgjatja",
+    "completed": "Përfunduar",
+    "noProjectsAvailable": "Nuk ka projekte të disponueshme"
+  },
+  "contactPage": {
+    "contactsHero": "KONTAKTET",
+    "companyTitle": "IZOGRUP SH.PK",
+    "description1": "Zbuloni vendndodhjet e ndryshme të IZOGRUP në SHQIPËRI dhe na dërgoni një mesazh drejtpërdrejt duke përdorur këtë formular.",
+    "description2": "Merrni listën më të fundit të çmimeve nga zyra jonë tregtare, ose kontaktoni ekipin e shërbimeve teknike për mbështetje në vend ose të projektimit dhe informacione të detajuara rreth produkteve dhe zgjidhjeve IZOGRUP.",
+    "phone": "Telefoni",
+    "email": "Email",
+    "address": "Adresa",
+    "contactButton": "KONTAKTONI MBËSHTETJEN TEKNIKE DHE TREGTARE",
+    "offices": "Zyrë",
+    "plants": "Fabrika",
+    "distributionCenters": "Qendrat e Shpërndarjes",
+    "headquarters": "Selia Qendrore",
+    "officeAddress": "Adresa",
+    "officePhone": "Telefoni",
+    "officeFax": "Fax",
+    "officeEmail": "Email",
+    "officeUrl": "URL",
+    "findOnMaps": "GJENI NE NE GOOGLE MAPS",
+    "askForAdvice": "Kërkoni Këshillim Teknik",
+    "technicalAdvice": "Këshillim Teknik",
+    "fillForm": "Plotësoni formularin me detajet tuaja, dhe ekipi ynë do t'ju kontaktojë në kohën e duhur me mbështetjen që keni nevojë.",
+    "namePlaceholder": "Emri*",
+    "surnamePlaceholder": "Mbiemri",
+    "emailPlaceholder": "Email*",
+    "phonePlaceholder": "Telefoni*",
+    "cityPlaceholder": "Qyteti",
+    "provincePlaceholder": "Provinca",
+    "messagePlaceholder": "Futni mesazhin tuaj*",
+    "processingInfo": "Përpunimi I Informacionit Personal",
+    "privacyText": "Pas leximit dhe kuptimit të plotë të politikës së privatësisë se si IZOGRUP përpunon dhe përdor informacionin tim personal",
+    "iAgree": "Jam Dakord",
+    "consentText": "Jam dakord që IZOGRUP të përdorë informacionin tim personal për të më kontaktuar në lidhje me kërkesën time.",
+    "contactUs": "KONTAKTONI NE",
+    "sending": "PO DËRGOHET...",
+    "messageSentSuccess": "Mesazhi U Dërgua Me Sukses!",
+    "thankYouMessage": "Faleminderit që na kontaktuat. Ekipi ynë do t'ju kontaktojë në kohën e duhur.",
+    "error": "Gabim",
+    "failedToSend": "Dështoi të dërgonte mesazhin. Ju lutemi provoni përsëri.",
+    "errorOccurred": "Ndodhi një gabim. Ju lutemi provoni më vonë."
+  },
+  "cart": {
+    "shoppingCart": "Shporta e Blerjes",
+    "item": "artikull",
+    "items": "artikuj",
+    "yourCartIsEmpty": "Shporta juaj është bosh",
+    "addSomeProducts": "Shtoni disa produkte për të filluar",
+    "browseProducts": "Shfletoni Produktet",
+    "sku": "SKU",
+    "subtotal": "Nëntotali",
+    "shippingAndTaxes": "Shpenzimi i dërgimit dhe taksat llogariten në checkout",
+    "proceedToCheckout": "Vazhdoni në Checkout",
+    "continueShopping": "Vazhdoni Blerjen"
+  },
+  "checkout": {
+    "checkoutHero": "CHECKOUT",
+    "completeOrder": "Plotësoni porosinë tuaj",
+    "error": "Gabim",
+    "success": "Sukses!",
+    "paymentSuccessful": "Pagesa u krye me sukses! Porosia u vendos. Po ridrejtoheni në shtëpi...",
+    "clearCartAndGo": "Zbrazni Shportën & Shkoni në Produkte",
+    "customerInformation": "Informacioni i Klientit",
+    "fullName": "Emri i Plotë",
+    "email": "Email",
+    "phone": "Telefoni",
+    "deliveryInformation": "Informacioni i Dorëzimit",
+    "deliveryAddress": "Adresa e Dorëzimit",
+    "city": "Qyteti",
+    "postalCode": "Kodi Postar",
+    "deliveryInstructions": "Udhëzimet e Dorëzimit",
+    "continueToPayment": "Vazhdoni në Pagesë",
+    "processing": "Po përpunohet...",
+    "paymentInformation": "Informacioni i Pagesës",
+    "backToCheckout": "Kthehu në Checkout",
+    "orderSummary": "Përmbledhja e Porosisë",
+    "noItemsInCart": "Nuk ka artikuj në shportë",
+    "tax": "Taksa (10%)",
+    "delivery": "Dorëzim",
+    "total": "Totali",
+    "continueShopping": "Vazhdoni Blerjen",
+    "fillAllRequired": "Ju lutemi plotësoni të gjitha fushat e detyrueshme",
+    "cartEmpty": "Shporta juaj është bosh",
+    "required": "*"
+  }
+}

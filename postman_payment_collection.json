@@ -1,0 +1,171 @@
+{
+  "info": {
+    "_postman_id": "izogrup-payment-apis",
+    "name": "IZOGRUP Payment APIs",
+    "description": "Complete payment API collection for IZOGRUP e-commerce platform",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Checkout - Create Order",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"items\": [\n    {\n      \"type\": \"product\",\n      \"itemId\": \"{{product_id}}\",\n      \"quantity\": 2\n    },\n    {\n      \"type\": \"service\",\n      \"itemId\": \"{{service_id}}\",\n      \"quantity\": 1\n    }\n  ],\n  \"fullName\": \"John Doe\",\n  \"email\": \"john@example.com\",\n  \"phone\": \"+1234567890\",\n  \"deliveryAddress\": \"123 Main Street, Apt 4B\",\n  \"deliveryCity\": \"New York\",\n  \"deliveryPostalCode\": \"10001\",\n  \"deliveryInstructions\": \"Leave at door\",\n  \"deliveryMethod\": \"standard\",\n  \"paymentMethod\": \"stripe\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/checkout",
+          "host": ["{{base_url}}"],
+          "path": ["api", "checkout"]
+        },
+        "description": "Create a new order with customer information and items. Returns orderId and totalAmount needed for payment."
+      },
+      "response": [
+        {
+          "name": "Success Response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{base_url}}/api/checkout",
+              "host": ["{{base_url}}"],
+              "path": ["api", "checkout"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "body": "{\n  \"success\": true,\n  \"data\": {\n    \"orderId\": \"550e8400-e29b-41d4-a716-446655440000\",\n    \"orderNumber\": \"ORD-1704067200000-ABC123XYZ\",\n    \"totalAmount\": 1529.05,\n    \"orderStatus\": \"pending\",\n    \"paymentStatus\": \"pending\"\n  }\n}"
+        }
+      ]
+    },
+    {
+      "name": "2. Create Payment Intent",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"amount\": 1529.05,\n  \"email\": \"john@example.com\",\n  \"orderId\": \"{{order_id}}\",\n  \"currency\": \"eur\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/payment/create-intent",
+          "host": ["{{base_url}}"],
+          "path": ["api", "payment", "create-intent"]
+        },
+        "description": "Create a Stripe payment intent for processing card payments. Returns clientSecret for Stripe.js and paymentIntentId for confirmation."
+      },
+      "response": [
+        {
+          "name": "Success Response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{base_url}}/api/payment/create-intent",
+              "host": ["{{base_url}}"],
+              "path": ["api", "payment", "create-intent"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "body": "{\n  \"success\": true,\n  \"clientSecret\": \"pi_1234567890_secret_abcdefghijk\",\n  \"paymentIntentId\": \"pi_1234567890\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "3. Confirm Payment",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"paymentIntentId\": \"{{payment_intent_id}}\",\n  \"orderId\": \"{{order_id}}\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/payment/confirm",
+          "host": ["{{base_url}}"],
+          "path": ["api", "payment", "confirm"]
+        },
+        "description": "Confirm payment with Stripe and update order status to confirmed. Call this after successful card payment."
+      },
+      "response": [
+        {
+          "name": "Success Response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{base_url}}/api/payment/confirm",
+              "host": ["{{base_url}}"],
+              "path": ["api", "payment", "confirm"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "body": "{\n  \"success\": true,\n  \"data\": {\n    \"orderId\": \"550e8400-e29b-41d4-a716-446655440000\",\n    \"orderNumber\": \"ORD-1704067200000-ABC123XYZ\",\n    \"paymentStatus\": \"completed\",\n    \"orderStatus\": \"confirmed\"\n  }\n}"
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3000",
+      "type": "string",
+      "description": "Base URL of the application (change to production URL when needed)"
+    },
+    {
+      "key": "product_id",
+      "value": "product-uuid-here",
+      "type": "string",
+      "description": "Replace with actual product ID from your database"
+    },
+    {
+      "key": "service_id",
+      "value": "service-uuid-here",
+      "type": "string",
+      "description": "Replace with actual service ID from your database"
+    },
+    {
+      "key": "order_id",
+      "value": "",
+      "type": "string",
+      "description": "Will be populated from checkout response"
+    },
+    {
+      "key": "payment_intent_id",
+      "value": "",
+      "type": "string",
+      "description": "Will be populated from create-intent response"
+    }
+  ]
+}
