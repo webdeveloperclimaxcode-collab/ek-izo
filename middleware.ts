@@ -8,8 +8,10 @@ import type { NextRequest } from "next/server";
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Allow home page
-  if (pathname === "/") return NextResponse.next();
+  // Allow home page and privacy policy page
+  if (pathname === "/" || pathname === "/privacypolicy") {
+    return NextResponse.next();
+  }
 
   // Allow all API routes
   if (pathname.startsWith("/api")) return NextResponse.next();

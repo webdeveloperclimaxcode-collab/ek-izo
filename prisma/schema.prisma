@@ -49,6 +49,7 @@ model Users {
   ordersAssigned Order[]
   ordersCreated Order[]     @relation("OrderCreator")
   activityLogs ActivityLog[]
+  notifications Notification[]
   chatRoomMemberships ChatRoomMember[]
   chatMessages ChatMessage[]
   createdProducts Product[]  @relation("ProductCreator")
@@ -66,6 +67,7 @@ model ProductCategory {
   createdAt     DateTime             @default(now())
   updatedAt     DateTime             @updatedAt
   subcategories ProductSubcategory[]
+  products      Product[]            // Products with category but no subcategory
 
   @@index([name])
 }
@@ -89,6 +91,7 @@ model ServiceCategory {
   createdAt     DateTime             @default(now())
   updatedAt     DateTime             @updatedAt
   subcategories ServiceSubcategory[]
+  services      Service[]            // Services with category but no subcategory
 
   @@index([name])
 }
@@ -115,6 +118,7 @@ model Product {
   price             Float?
   stock             Int?                @default(0)
   status            String              @default("active")
+  categoryId        String?             // Main category when no subcategory selected
   subcategoryId     String?
   images            String[]
   videos            String[]
@@ -127,11 +131,13 @@ model Product {
   createdAt         DateTime            @default(now())
   updatedAt         DateTime            @updatedAt
   homepageProduct   HomepageProduct?
+  category          ProductCategory?    @relation(fields: [categoryId], references: [id], onDelete: SetNull)
   subcategory       ProductSubcategory? @relation(fields: [subcategoryId], references: [id])
   creator           Users?              @relation("ProductCreator", fields: [createdBy], references: [id], onDelete: SetNull)
 
   @@index([title])
   @@index([sku])
+  @@index([categoryId])
   @@index([subcategoryId])
   @@index([status])
   @@index([publishOnWebsite])
@@ -144,6 +150,7 @@ model Service {
   description       String?
   price             Float?
   status            String              @default("active")
+  categoryId        String?             // Main category when no subcategory selected
   subcategoryId     String?
   images            String[]
   videos            String[]
@@ -155,9 +162,11 @@ model Service {
   createdAt         DateTime            @default(now())
   updatedAt         DateTime            @updatedAt
   homepageService   HomepageService?
+  category          ServiceCategory?    @relation(fields: [categoryId], references: [id], onDelete: SetNull)
   subcategory       ServiceSubcategory? @relation(fields: [subcategoryId], references: [id])
 
   @@index([title])
+  @@index([categoryId])
   @@index([subcategoryId])
   @@index([status])
   @@index([publishOnWebsite])
@@ -342,8 +351,18 @@ model CompanyInfo {
   googlePlayUrl String?
   appStoreUrl   String?
   companyCV     String?
+  privacyPolicy String?
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt
+}
+
+model WebsiteSettings {
+  id               String   @id @default(uuid())
+  websiteTitle     String?
+  metaDescription  String?
+  metaKeywords     String?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
 }
 
 model Site {
@@ -366,13 +385,28 @@ model Site {
   description       String?
   createdAt         DateTime     @default(now())
   updatedAt         DateTime     @updatedAt
-  assignments       Assignment[]
-  siteManager       Users?       @relation("SiteManager", fields: [siteManagerId], references: [id])
+  assignments            Assignment[]
+  assignmentSiteHistory  AssignmentSiteHistory[]
+  siteManager            Users?       @relation("SiteManager", fields: [siteManagerId], references: [id])
 
   @@index([status])
   @@index([startDate])
   @@index([clientId])
   @@index([siteManagerId])
+}
+
+model AssignmentSiteHistory {
+  id          String   @id @default(uuid())
+  siteId      String
+  date        DateTime
+  workerCount Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  site        Site     @relation(fields: [siteId], references: [id], onDelete: Cascade)
+
+  @@unique([siteId, date])
+  @@index([siteId])
+  @@index([date])
 }
 
 model Worker {
@@ -424,18 +458,19 @@ model Team {
 }
 
 model Assignment {
-  id           String   @id @default(uuid())
-  siteId       String
-  workerId     String
-  carId        String?
-  assignedDate DateTime
-  status       String   @default("active")
-  notes        String?
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
-  site         Site     @relation(fields: [siteId], references: [id], onDelete: Cascade)
-  worker       Users    @relation(fields: [workerId], references: [id], onDelete: Cascade)
-  car          Car?     @relation(fields: [carId], references: [id], onDelete: SetNull)
+  id                    String   @id @default(uuid())
+  siteId                String
+  workerId              String
+  carId                 String?
+  assignedDate          DateTime
+  status                String   @default("active")
+  notes                 String?
+  showAssignmentHistory Boolean  @default(false)
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+  site                  Site     @relation(fields: [siteId], references: [id], onDelete: Cascade)
+  worker                Users    @relation(fields: [workerId], references: [id], onDelete: Cascade)
+  car                   Car?     @relation(fields: [carId], references: [id], onDelete: SetNull)
 
   @@index([siteId])
   @@index([workerId])
@@ -574,6 +609,25 @@ model ActivityLog {
   @@index([entityId])
 }
 
+model Notification {
+  id        String   @id @default(uuid())
+  userId    String
+  title     String
+  message   String
+  module    String   // assignments, orders, sites, etc.
+  type      String   // assignment_assigned, order_created, etc.
+  data      Json?
+  isRead    Boolean  @default(false)
+  readAt    DateTime?
+  createdAt DateTime @default(now())
+  user      Users    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([isRead])
+  @@index([module])
+  @@index([createdAt])
+}
+
 // Each chat room (group/team chat or 1-to-1)
 model ChatRoom {
   id        String      @id @default(uuid())
@@ -623,6 +677,10 @@ model Attendance {
   checkOutTime DateTime?
   date         DateTime  // Date of the attendance (for grouping)
   notes        String?
+  checkInLat   Float?
+  checkInLng   Float?
+  checkOutLat  Float?
+  checkOutLng  Float?
   createdAt    DateTime  @default(now())
   updatedAt    DateTime  @updatedAt
 
