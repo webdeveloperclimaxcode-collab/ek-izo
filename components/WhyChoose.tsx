@@ -51,10 +51,10 @@ export default function WhyChoose() {
       <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto">
         {/* Section Header */}
         <div className="text-center mb-6">
-          <h2 className="text-[32px] font-bold text-[#1B2556] dark:text-white tracking-tight mb-4 transition-colors">
+          <h2 className="text-[32px] font-bold text-brand-primary dark:text-white tracking-tight mb-4 transition-colors">
             {t("whyChoose.heading")}
           </h2>
-          <p className="text-base text-[#1B2556] dark:text-white max-w-5xl mx-auto leading-relaxed transition-colors">
+          <p className="text-base text-brand-primary dark:text-white max-w-5xl mx-auto leading-relaxed transition-colors">
             {t("whyChoose.description")}
           </p>
         </div>
@@ -78,12 +78,12 @@ export default function WhyChoose() {
               </div>
 
               {/* Title */}
-              <h3 className="text-sm font-bold text-[#1B2556] dark:text-white leading-tight uppercase transition-colors">
+              <h3 className="text-sm font-bold text-brand-primary dark:text-white leading-tight uppercase transition-colors">
                 {t(stat.titleKey)}
               </h3>
 
               {/* Subtitle */}
-              <p className="text-sm font-bold text-[#1B2556] dark:text-white leading-tight uppercase transition-colors">
+              <p className="text-sm font-bold text-brand-primary dark:text-white leading-tight uppercase transition-colors">
                 {t(stat.subtitleKey)}
               </p>
             </div>

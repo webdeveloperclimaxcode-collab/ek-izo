@@ -21,7 +21,7 @@ export default function CostOfServices() {
             {/* Icon */}
             <div className="shrink-0">
               <Image
-                src="/assets/images/services/requet_Icon.svg"
+                src="/assets/images/services/request_Icon.svg"
                 alt={t("costOfServices.heading")}
                 width={100}
                 height={100}
@@ -46,7 +46,7 @@ export default function CostOfServices() {
           <div className="shrink-0 w-full md:w-auto">
             <Link
               href="/support"
-              className="block text-center md:inline-block px-8 sm:px-12 lg:px-16 py-4 sm:py-5 bg-linear-to-r from-[#9F001B] to-[#1B2556] text-white font-bold rounded-full hover:opacity-90 transition-opacity text-[15px] sm:text-[16px] lg:text-[18px] tracking-wider"
+              className="block text-center md:inline-block px-8 sm:px-12 lg:px-16 py-4 sm:py-5 bg-brand-gradient text-white font-bold rounded-full hover:opacity-90 transition-opacity text-[15px] sm:text-[16px] lg:text-[18px] tracking-wider"
             >
               {t("costOfServices.requestQuote")}
             </Link>

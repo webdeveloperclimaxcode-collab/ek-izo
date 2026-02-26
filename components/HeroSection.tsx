@@ -97,9 +97,9 @@ export default function HeroSection() {
                     <div 
                       className="relative rounded-lg md:rounded-2xl bg-[#D9D9D9]/10 backdrop-blur-md px-4 py-6 md:px-8 md:py-11"
                       style={{
-                        borderWidth: '2px',
-                        borderStyle: 'solid',
-                        borderImage: 'linear-gradient(to right, #9F001B, #1B2556) 1'
+                        borderWidth: "2px",
+                        borderStyle: "solid",
+                        borderImage: "linear-gradient(to right, var(--brand-secondary), var(--brand-primary)) 1",
                       }}
                     >
                       {slide.title && (
@@ -116,7 +116,7 @@ export default function HeroSection() {
                         <div className="flex justify-center md:justify-end">
                           <Link
                             href={slide.buttonLink}
-                            className="inline-block px-4 md:px-8 py-2 md:py-3 bg-linear-to-r from-[#9F001B] to-[#1B2556] text-white text-xs md:text-sm font-semibold rounded-full hover:opacity-90 transition-opacity"
+                            className="inline-block px-4 md:px-8 py-2 md:py-3 bg-brand-gradient text-white text-xs md:text-sm font-semibold rounded-full hover:opacity-90 transition-opacity"
                           >
                             {slide.buttonText}
                           </Link>
@@ -137,7 +137,7 @@ export default function HeroSection() {
         aria-label="Previous slide"
       >
         <Image
-          src="/assets/images/HeroSection/leftIcon.svg"
+          src="/assets/images/HeroSection/leftIconek.svg"
           alt="Previous"
           width={60}
           height={60}
@@ -150,7 +150,7 @@ export default function HeroSection() {
         aria-label="Next slide"
       >
         <Image
-          src="/assets/images/HeroSection/righticon.svg"
+          src="/assets/images/HeroSection/righticonek.svg"
           alt="Next"
           width={60}
           height={60}

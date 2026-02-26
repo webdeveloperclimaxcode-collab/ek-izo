@@ -54,10 +54,10 @@ export default function AboutUs() {
       <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto">
         {/* Section Header */}
         <div className="text-center mb-6">
-          <h2 className="text-[36px] font-bold text-[#1B2556] dark:text-white tracking-tight mb-6 transition-colors">
+          <h2 className="text-[36px] font-bold text-brand-primary dark:text-white tracking-tight mb-6 transition-colors">
             {getTranslation(language, "aboutUs.heading")}
           </h2>
-          <p className="text-base text-[#1B2556] dark:text-gray-300 max-w-5xl mx-auto leading-relaxed transition-colors">
+          <p className="text-base text-brand-primary dark:text-gray-300 max-w-5xl mx-auto leading-relaxed transition-colors">
             {getTranslation(language, "aboutUs.description")}
           </p>
         </div>
@@ -81,7 +81,7 @@ export default function AboutUs() {
                 {/* Card */}
                 <div className="bg-white dark:bg-[#000000] rounded-[10px] border-gray-300 dark:border-gray-700 pt-28 pb-10 px-10 flex flex-col items-center text-center hover:shadow-lg transition-all border h-full min-h-[380px]">
                   {/* Title */}
-                  <h3 className="text-[24px] font-bold text-[#1B2556] dark:text-white mb-6 leading-tight transition-colors">
+                  <h3 className="text-[24px] font-bold text-brand-primary dark:text-white mb-6 leading-tight transition-colors">
                     {getTranslation(language, feature.titleKey)}
                   </h3>
 

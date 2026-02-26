@@ -110,7 +110,7 @@ export default function Header() {
 
   const navItems = [
     { name: t("header.home"), href: "/" },
-    { name: t("header.products"), href: "/products" },
+    // { name: t("header.products"), href: "/products" },
     { name: t("header.services"), href: "/services" },
     { name: t("header.search"), href: "/search" },
     { name: t("header.projects"), href: "/projects" },
@@ -125,11 +125,11 @@ export default function Header() {
           <div className="shrink-0 min-w-0">
             <Link href="/">
               <Image
-                src="/assets/images/header/logo.svg"
+                src="/assets/images/header/logo_bg_remove.png"
                 alt="IZOGRUP Logo"
                 width={200}
                 height={45}
-                className="h-10 w-auto max-w-[150px] lg:max-w-[200px]"
+                className="h-aut0 w-auto max-w-[150px] lg:max-w-[200px]"
                 priority
               />
             </Link>
@@ -143,10 +143,11 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`px-3 xl:px-6 py-2 text-sm font-medium transition-all whitespace-nowrap ${isActive
-                      ? "bg-linear-to-r from-[#9F001B] to-[#1B2556] text-white rounded-full hover:opacity-90"
-                      : "text-[#1B2556] dark:text-white hover:text-[#7D1F3E] dark:hover:text-[#9F001B]"
-                    }`}
+                  className={`px-3 xl:px-6 py-2 text-sm font-medium transition-all whitespace-nowrap ${
+                    isActive
+                      ? "bg-brand-gradient text-white rounded-full hover:opacity-90"
+                      : "text-brand-primary dark:text-white hover:text-[#7D1F3E] dark:hover:text-brand-secondary"
+                  }`}
                 >
                   {item.name}
                 </Link>
@@ -157,13 +158,13 @@ export default function Header() {
           {/* Language Selector, Cart & Menu Button */}
           <div className="flex items-center gap-2 shrink-0">
             {/* Cart Icon */}
-            <button
+            {/* <button
               onClick={openCart}
               className="relative cursor-pointer p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition-colors"
               aria-label="Shopping cart"
             >
               <svg
-                className="w-6 h-6 text-[#1B2556] dark:text-white"
+                className="w-6 h-6 text-brand-primary dark:text-white"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -176,11 +177,11 @@ export default function Header() {
                 />
               </svg>
               {cartCount > 0 && (
-                <span className="absolute cursor-pointer -top-1 -right-1 bg-linear-to-r from-[#9F001B] to-[#1B2556] text-white text-[10px] font-bold rounded-full w-5 h-5 flex items-center justify-center">
+                <span className="absolute cursor-pointer -top-1 -right-1 bg-brand-gradient text-white text-[10px] font-bold rounded-full w-5 h-5 flex items-center justify-center">
                   {cartCount > 99 ? "99+" : cartCount}
                 </span>
               )}
-            </button>
+            </button> */}
 
             {/* Language Dropdown */}
             <div ref={languageRef} className="relative hidden lg:block">
@@ -237,7 +238,7 @@ export default function Header() {
             <button
               ref={menuButtonRef}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="flex items-center gap-2 cursor-pointer px-2 xl:px-3 py-2 text-sm font-medium text-[#4A5568] dark:text-gray-300 hover:text-[#7D1F3E] dark:hover:text-[#9F001B] transition-colors"
+              className="flex items-center gap-2 cursor-pointer px-2 xl:px-3 py-2 text-sm font-medium text-[#4A5568] dark:text-gray-300 hover:text-[#7D1F3E] dark:hover:text-brand-secondary transition-colors"
             >
               <span className="text-[16px] xl:text-[18px] text-[#1b2556] dark:text-white whitespace-nowrap">Menu</span>
               <Image
@@ -273,7 +274,7 @@ export default function Header() {
                     placeholder={t("header.searchPlaceholder")}
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="header-dropdown-search-input w-full px-6 py-3 bg-linear-to-r from-[#9F001B] to-[#1B2556] text-white placeholder:text-white placeholder:opacity-100 rounded-full focus:outline-none text-[14px]"
+                    className="header-dropdown-search-input w-full px-6 py-3 bg-brand-gradient text-white placeholder:text-white placeholder:opacity-100 rounded-full focus:outline-none text-[14px]"
                   />
                   <button type="submit" className="absolute right-5 top-1/2 -translate-y-1/2 cursor-pointer">
                     <Image
@@ -313,14 +314,14 @@ export default function Header() {
                         className="w-12 h-12 rounded-full object-cover"
                       />
                     ) : (
-                      <div className="w-12 h-12 rounded-full bg-linear-to-r from-[#9F001B] to-[#1B2556] flex items-center justify-center">
+                      <div className="w-12 h-12 rounded-full bg-brand-gradient flex items-center justify-center">
                         <span className="text-white text-[18px] font-bold">
                           {user.displayName?.charAt(0).toUpperCase() || user.email?.charAt(0).toUpperCase()}
                         </span>
                       </div>
                     )}
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-[16px] font-bold text-[#1B2556] dark:text-white truncate">
+                      <h3 className="text-[16px] font-bold text-brand-primary dark:text-white truncate">
                         {user.displayName || "User"}
                       </h3>
                       <p className="text-[12px] text-[#6B7280] dark:text-gray-400 truncate">
@@ -348,13 +349,13 @@ export default function Header() {
                     className="w-12 h-12 dark:invert"
                   />
                   <div>
-                    <h3 className="text-[16px] font-bold text-[#1B2556] dark:text-white">
+                    <h3 className="text-[16px] font-bold text-brand-primary dark:text-white">
                       {t("header.myIzogrup")}
                     </h3>
                     <Link
                       href="/login"
                       onClick={() => setIsMenuOpen(false)}
-                      className="text-[13px] text-[#6B7280] dark:text-gray-400 hover:text-[#9F001B] dark:hover:text-[#ff4d6d] cursor-pointer"
+                      className="text-[13px] text-[#6B7280] dark:text-gray-400 hover:text-brand-secondary dark:hover:text-[#ff4d6d] cursor-pointer"
                     >
                       {t("header.login")}
                     </Link>
@@ -376,10 +377,10 @@ export default function Header() {
                     height={22}
                     className="w-5 h-5"
                   />
-                  <span className="text-[15px] text-[#1B2556] dark:text-white">{t("header.aboutUs")}</span>
+                  <span className="text-[15px] text-brand-primary dark:text-white">{t("header.aboutUs")}</span>
                 </Link>
 
-                <Link
+                {/* <Link
                   href="/products"
                   onClick={() => setIsMenuOpen(false)}
                   className="flex items-center gap-3 px-3 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg transition-colors cursor-pointer"
@@ -392,7 +393,7 @@ export default function Header() {
                     className="w-5 h-5"
                   />
                   <span className="text-[15px] text-[#1B2556] dark:text-white">{t("header.products")}</span>
-                </Link>
+                </Link> */}
 
                 <Link
                   href="/services"
@@ -406,7 +407,7 @@ export default function Header() {
                     height={22}
                     className="w-5 h-5"
                   />
-                  <span className="text-[15px] text-[#1B2556] dark:text-white">{t("header.services")}</span>
+                  <span className="text-[15px] text-brand-primary dark:text-white">{t("header.services")}</span>
                 </Link>
 
                 <Link
@@ -421,7 +422,7 @@ export default function Header() {
                     height={22}
                     className="w-5 h-5"
                   />
-                  <span className="text-[15px] text-[#1B2556] dark:text-white">{t("header.projects")}</span>
+                  <span className="text-[15px] text-brand-primary dark:text-white">{t("header.projects")}</span>
                 </Link>
 
                 <a
@@ -438,7 +439,7 @@ export default function Header() {
                     height={22}
                     className="w-5 h-5"
                   />
-                  <span className="text-[15px] text-[#1B2556] dark:text-white">{t("header.companyCv")}</span>
+                  <span className="text-[15px] text-brand-primary dark:text-white">{t("header.companyCv")}</span>
                 </a>
 
                 <Link
@@ -453,7 +454,7 @@ export default function Header() {
                     height={22}
                     className="w-5 h-5"
                   />
-                  <span className="text-[15px] text-[#1B2556] dark:text-white">
+                  <span className="text-[15px] text-brand-primary dark:text-white">
                     {t("header.newsAndBlog")}
                   </span>
                 </Link>
@@ -470,7 +471,7 @@ export default function Header() {
                     height={22}
                     className="w-5 h-5"
                   />
-                  <span className="text-[15px] text-[#1B2556] dark:text-white">{t("header.contactUs")}</span>
+                  <span className="text-[15px] text-brand-primary dark:text-white">{t("header.contactUs")}</span>
                 </Link>
 
                 <button
@@ -479,17 +480,17 @@ export default function Header() {
                 >
                   {theme === "light" ? (
                     <>
-                      <svg className="w-5 h-5 text-[#1B2556] dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5 text-brand-primary dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                       </svg>
-                      <span className="text-[15px] text-[#1B2556] dark:text-white">{t("header.darkMode")}</span>
+                      <span className="text-[15px] text-brand-primary dark:text-white">{t("header.darkMode")}</span>
                     </>
                   ) : (
                     <>
-                      <svg className="w-5 h-5 text-[#1B2556] dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5 text-brand-primary dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
                       </svg>
-                      <span className="text-[15px] text-[#1B2556] dark:text-white">{t("header.lightMode")}</span>
+                      <span className="text-[15px] text-brand-primary dark:text-white">{t("header.lightMode")}</span>
                     </>
                   )}
                 </button>

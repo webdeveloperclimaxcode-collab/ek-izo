@@ -85,7 +85,7 @@ export default function Footer() {
   return (
     <>
       {/* Contact Us Banner - always same look (no dark mode) */}
-      <div className="w-full text-white py-8 mb-8 bg-linear-to-r from-[#9F001B] to-[#1B2556]">
+      <div className="w-full text-white py-8 mb-8 bg-brand-gradient">
         <div className="w-full px-6 2xl:px-20 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
             <h2 className="text-3xl font-bold mb-2 text-white">{t("footer.contactBanner.heading")}</h2>
@@ -93,7 +93,7 @@ export default function Footer() {
           </div>
           <Link
             href="/support"
-            className="px-8 cursor-pointer py-3 rounded-full font-semibold bg-white text-[#9F001B] hover:bg-gray-100 transition-colors"
+            className="px-8 cursor-pointer py-3 rounded-full font-semibold bg-white text-brand-secondary hover:bg-gray-100 transition-colors"
           >
             {t("footer.contactBanner.button")}
           </Link>
@@ -302,7 +302,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Section - Product Lines (always same, no dark mode) */}
-        <div className="relative bg-linear-to-r from-[#9F001B] via-[#58143B] to-[#1B2556]">
+        {/* <div className="relative bg-brand-gradient">
           <div className="w-full px-6 2xl:px-20 py-8">
             <h3 className="text-xl font-bold mb-6 text-white">{t("footer.productLines")}</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-x-12 gap-y-3">
@@ -318,7 +318,7 @@ export default function Footer() {
             </div>
           </div>
 
-        </div>
+        </div> */}
 
         {/* Scroll to Top Button - Fixed/Sticky positioned */}
         {showScrollTop && (
@@ -338,7 +338,7 @@ export default function Footer() {
         )}
 
         {/* Copyright / Bottom Footer (always same, no dark mode) */}
-        <div className="relative bg-linear-to-r from-[#9F001B] to-[#1B2556]">
+        <div className="relative bg-[#292929]">
           <div className="w-full px-6 2xl:px-20 py-4">
             <p className="text-sm text-white">{t("footer.copyright")}</p>
           </div>

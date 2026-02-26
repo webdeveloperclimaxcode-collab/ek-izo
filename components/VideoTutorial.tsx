@@ -84,7 +84,7 @@ export default function VideoTutorial() {
         <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className={`text-[36px] font-bold tracking-tight transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"}`}>
+            <h2 className={`text-[36px] font-bold tracking-tight transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
               VIDEO TUTORIAL
             </h2>
           </div>
@@ -152,7 +152,7 @@ export default function VideoTutorial() {
 
                     {/* Video Title */}
                     <div className="p-6">
-                      <h3 className={`text-[17px] font-semibold line-clamp-2 min-h-[50px] transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"}`}>
+                      <h3 className={`text-[17px] font-semibold line-clamp-2 min-h-[50px] transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
                         {video.title}
                       </h3>
                     </div>
@@ -194,14 +194,14 @@ export default function VideoTutorial() {
           </div>
 
           {/* View All Button */}
-          <div className="flex justify-center mt-12">
-            <Link
-              href="/video-tutorials"
-              className="px-12 py-4 bg-linear-to-r from-[#9F001B] to-[#1B2556] text-white font-semibold rounded-full hover:opacity-90 transition-opacity text-[16px]"
-            >
-              VIEW ALL VIDEO TUTORIAL
-            </Link>
-          </div>
+            <div className="flex justify-center mt-12">
+              <Link
+                href="/video-tutorials"
+                className="px-12 py-4 bg-brand-gradient text-white font-semibold rounded-full hover:opacity-90 transition-opacity text-[16px]"
+              >
+                VIEW ALL VIDEO TUTORIAL
+              </Link>
+            </div>
         </div>
       </section>
 

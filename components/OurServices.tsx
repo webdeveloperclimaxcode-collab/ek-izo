@@ -73,7 +73,7 @@ export default function OurServices() {
       <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-[36px] font-bold text-[#2D3748] dark:text-white mb-3 tracking-tight transition-colors">
+          <h2 className="text-[36px] font-bold text-brand-primary dark:text-white mb-3 tracking-tight transition-colors">
             {t("ourServices.heading")}
           </h2>
           <p className="text-[18px] text-[#4A5568] dark:text-gray-300 max-w-3xl mx-auto leading-relaxed transition-colors">
@@ -127,20 +127,20 @@ export default function OurServices() {
               {/* CONTENT */}
               <div className="px-6 pb-6 pt-3 flex flex-col flex-1">
                 <Link href={`/services/${service.id}`}>
-                  <h3 className="text-[17px] font-bold text-[#9F001B] dark:text-white mb-3 leading-tight uppercase min-h-[50px] hover:underline transition-colors">
+              <h3 className="text-[17px] font-bold text-brand-secondary dark:text-white mb-3 leading-tight uppercase min-h-[50px] hover:underline transition-colors">
                     {service.title}
                   </h3>
                 </Link>
 
-                <p className="text-[15px] text-[#1b2556] dark:text-white mb-5 leading-relaxed line-clamp-2 min-h-[48px] transition-colors">
+                <p className="text-[15px] text-brand-primary dark:text-white mb-5 leading-relaxed line-clamp-2 min-h-[48px] transition-colors">
                   {service.description || ""}
                 </p>
 
                 {/* PRICE AND ADD TO CART */}
-                {service.price && (
+                {/* {service.price && (
                   <div className="flex justify-between items-center mt-auto">
                     <div className="bg-[#FFF5F7] dark:bg-[#1a1a1a] px-9 py-4 rounded-[38px] shadow-sm transition-colors">
-                      <span className="text-2xl font-bold text-[#9F001B] dark:text-white transition-colors">
+                      <span className="text-2xl font-bold text-brand-secondary dark:text-white transition-colors">
                         ${service.price}
                       </span>
                     </div>
@@ -160,7 +160,7 @@ export default function OurServices() {
                       </button>
                     )}
                   </div>
-                )}
+                )} */}
               </div>
             </div>
           ))}
@@ -170,7 +170,7 @@ export default function OurServices() {
         <div className="flex justify-center">
           <Link
             href="/services"
-            className="px-14 py-4 rounded-full bg-linear-to-r from-[#9F001B] to-[#1B2556] text-white font-semibold text-lg shadow-md hover:opacity-90 transition"
+            className="px-14 py-4 rounded-full bg-brand-gradient text-white font-semibold text-lg shadow-md hover:opacity-90 transition"
           >
             {t("ourServices.viewAll")}
           </Link>

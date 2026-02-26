@@ -56,7 +56,7 @@ export default function FeaturedProducts() {
       <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-[36px] font-bold text-[#1B2556] dark:text-white tracking-tight transition-colors">
+          <h2 className="text-[36px] font-bold text-brand-primary dark:text-white tracking-tight transition-colors">
             {t("featuredProducts.heading")}
           </h2>
         </div>
@@ -107,7 +107,7 @@ export default function FeaturedProducts() {
 
                   {/* Product Info - Right Side */}
                   <div className="flex-1 p-5 pr-6">
-                    <h3 className="text-[17px] font-bold text-[#1B2556] dark:text-white mb-2 leading-tight transition-colors">
+                    <h3 className="text-[17px] font-bold text-brand-primary dark:text-white mb-2 leading-tight transition-colors">
                       {t(product.nameKey)}
                     </h3>
                     <p className="text-[13px] text-[#64748B] dark:text-white leading-relaxed line-clamp-2 transition-colors">

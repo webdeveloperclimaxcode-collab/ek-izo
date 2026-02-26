@@ -9,6 +9,11 @@
 }
 
 :root {
+  /* Brand Colors */
+  --brand-primary: #f6ba40; /* deep blue */
+  --brand-secondary: #f6ba40; /* burgundy red */
+  --brand-accent: #f6ba40; /* accent / button color */
+
   /* Light Mode Colors */
   --background: #ffffff;
   --foreground: #171717;
@@ -68,7 +73,7 @@ body {
 }
 
 .swiper-pagination-custom .swiper-pagination-bullet-active {
-  background: #9F001B;
+  background: var(--brand-secondary);
   width: 40px;
   border-radius: 6px;
 }
@@ -83,7 +88,7 @@ body {
 }
 
 .featured-pagination .swiper-pagination-bullet-active {
-  background: #9F001B;
+  background: var(--brand-secondary);
   width: 40px;
   border-radius: 6px;
 }
@@ -111,7 +116,7 @@ body {
 }
 
 .we-work-with-pagination .swiper-pagination-bullet-active {
-  background: #9F001B;
+  background: var(--brand-secondary);
   width: 40px;
   border-radius: 6px;
 }
@@ -145,7 +150,7 @@ body {
 
 /* Selection styling */
 ::selection {
-  background: #9F001B;
+  background: var(--brand-secondary);
   color: white;
 }
 
@@ -200,9 +205,12 @@ body {
   @apply hover:bg-[#f9fafb] dark:hover:bg-gray-700 transition-colors;
 }
 
-/* Gradient text for dark mode */
+/* Gradient text using brand colors */
 .gradient-text {
-  @apply bg-gradient-to-r from-[#9F001B] to-[#1B2556] bg-clip-text text-transparent;
+  background-image: linear-gradient(to right, black, black);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 /* Smooth transitions for all interactive elements */
@@ -214,9 +222,39 @@ textarea {
   @apply transition-all duration-300;
 }
 
+/* Brand utility classes (for consistent colors across the app) */
+.text-brand-primary {
+  color: var(--foreground);
+}
+
+.text-brand-secondary {
+  color: black;
+}
+
+.bg-brand-primary {
+  background-color: var(--brand-primary);
+}
+
+.bg-brand-secondary {
+  background-color: var(--brand-secondary);
+}
+
+.bg-brand-accent {
+  background-color: var(--brand-accent);
+}
+
+.bg-brand-gradient {
+  background-image: linear-gradient(to right, var(--brand-secondary), var(--brand-primary));
+}
+
+.border-brand-secondary {
+  border-color: var(--brand-secondary);
+}
+
 /* Focus states for accessibility */
 :focus-visible {
-  @apply outline-2 outline-offset-2 outline-[#9F001B] dark:outline-[#ff4d6d];
+  @apply outline-2 outline-offset-2;
+  outline-color: var(--brand-secondary);
 }
 
 /* Placeholder styling */

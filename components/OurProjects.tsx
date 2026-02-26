@@ -61,7 +61,7 @@ export default function OurProjects() {
       <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto">
         {/* Section Header */}
         <div className="text-center mb-6">
-          <h2 className="text-[36px] font-bold text-[#1E293B] dark:text-white tracking-tight mb-4 transition-colors">
+          <h2 className="text-[36px] font-bold text-brand-primary dark:text-white tracking-tight mb-4 transition-colors">
             {t("ourProjects.heading")}
           </h2>
           <p className="text-base text-[#1B2556] dark:text-gray-300 max-w-4xl mx-auto leading-relaxed transition-colors">
@@ -196,7 +196,7 @@ export default function OurProjects() {
         <div className="flex justify-center mt-8">
           <Link
             href="/projects"
-            className="px-12 py-4 bg-gradient-to-r from-[#9F001B] to-[#1B2556] text-white font-semibold rounded-full hover:opacity-90 transition-opacity text-base"
+            className="px-12 py-4 bg-brand-gradient text-white font-semibold rounded-full hover:opacity-90 transition-opacity text-base"
           >
             {t("ourProjects.viewAll")}
           </Link>

@@ -60,7 +60,7 @@ export default function OurProducts() {
       <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-[36px] font-bold text-[#1B2556] dark:text-white tracking-tight transition-colors">
+          <h2 className="text-[36px] font-bold text-brand-primary dark:text-white tracking-tight transition-colors">
             {t("ourProducts.heading")}
           </h2>
         </div>
@@ -95,8 +95,8 @@ export default function OurProducts() {
               {/* Product Content */}
               <div className="p-6 bg-white dark:bg-[#000000] transition-colors">
                 {/* Product Name with Border */}
-                <div className="border-l-4 border-[#9F001B] pl-4 mb-6">
-                  <h3 className="text-[16px] font-bold text-[#1B2556] dark:text-white leading-tight uppercase transition-colors">
+                <div className="border-l-4 border-brand-secondary pl-4 mb-6">
+                  <h3 className="text-[16px] font-bold text-brand-primary dark:text-white leading-tight uppercase transition-colors">
                     {product.title}
                   </h3>
                 </div>
@@ -104,7 +104,7 @@ export default function OurProducts() {
                 {/* Price and Cart Icon */}
                 <div className="flex items-center justify-between min-h-[52px]">
                   {product.price && (
-                    <div className="text-[28px] font-semibold text-[#9F001B] dark:text-white transition-colors">
+                    <div className="text-[28px] font-semibold text-brand-secondary dark:text-white transition-colors">
                       ${product.price}
                     </div>
                   )}
@@ -147,7 +147,7 @@ export default function OurProducts() {
         <div className="flex justify-center">
           <Link
             href="/products"
-            className="px-12 py-4 bg-linear-to-r from-[#9F001B] to-[#1B2556] text-white font-semibold rounded-full hover:opacity-90 transition-opacity text-lg"
+            className="px-12 py-4 bg-brand-gradient text-white font-semibold rounded-full hover:opacity-90 transition-opacity text-lg"
           >
             {t("ourProducts.viewAll")}
           </Link>
