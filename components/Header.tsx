@@ -256,8 +256,8 @@ export default function Header() {
         {isMenuOpen && (
           <div ref={menuRef} className="header-dropdown-menu absolute top-full right-6 w-80 bg-white dark:bg-[#000000] rounded-b-2xl shadow-2xl z-50 overflow-hidden transition-colors duration-300">
             <div className="p-6">
-              {/* Search bar and Close button - same row, aligned */}
-              <div className="flex items-right gap-2 mb-6">
+              {/* Close button aligned to the right */}
+              <div className="flex justify-end mb-6">
                 {/* <form
                   onSubmit={(e) => {
                     e.preventDefault();
@@ -342,15 +342,15 @@ export default function Header() {
               ) : (
                 <div className="flex items-center gap-3 mb-6 pb-4 border-b border-gray-200 dark:border-gray-700">
                   <Image
-                    src="/assets/images/header/dropdown_logo.svg"
-                    alt="MyIzogrup"
-                    width={50}
-                    height={50}
-                    className="w-12 h-12 dark:invert"
+                    src="/assets/images/header/logo_bg_remove.png"
+                    alt="ek-website"
+                    width={200}
+                    height={45}
+                    className="h-12 w-auto max-w-[120px] object-contain"
                   />
                   <div>
                     <h3 className="text-[16px] font-bold text-brand-primary dark:text-white">
-                      {t("header.myIzogrup")}
+                      ek-website
                     </h3>
                     <Link
                       href="/login"

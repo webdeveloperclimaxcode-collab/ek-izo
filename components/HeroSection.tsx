@@ -97,9 +97,9 @@ export default function HeroSection() {
                     <div 
                       className="relative rounded-lg md:rounded-2xl bg-[#D9D9D9]/10 backdrop-blur-md px-4 py-6 md:px-8 md:py-11"
                       style={{
-                        borderWidth: "2px",
+                        borderWidth: "1px",
                         borderStyle: "solid",
-                        borderImage: "linear-gradient(to right, var(--brand-secondary), var(--brand-primary)) 1",
+                        borderColor: "gray",
                       }}
                     >
                       {slide.title && (
@@ -116,7 +116,8 @@ export default function HeroSection() {
                         <div className="flex justify-center md:justify-end">
                           <Link
                             href={slide.buttonLink}
-                            className="inline-block px-4 md:px-8 py-2 md:py-3 bg-brand-gradient text-white text-xs md:text-sm font-semibold rounded-full hover:opacity-90 transition-opacity"
+                            className="inline-block px-4 md:px-8 py-2 md:py-3 bg-white/20 backdrop-blur-sm text-white text-xs md:text-sm font-semibold rounded-full hover:bg-white/30 transition-all"
+
                           >
                             {slide.buttonText}
                           </Link>

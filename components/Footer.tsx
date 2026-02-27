@@ -116,11 +116,11 @@ export default function Footer() {
           {/* Logo - Full Width */}
           <div className="mb-12">
             <Image
-              src="/assets/images/Footer/footerLogo.svg"
-              alt="IZOGRUP Logo"
+              src="/assets/images/header/logo_bg_remove.png"
+              alt="ek-website Logo"
               width={220}
               height={60}
-              className="h-14 w-auto brightness-0 invert"
+              className="h-14 w-auto"
             />
           </div>
 
@@ -249,8 +249,8 @@ export default function Footer() {
                   <h3 className="text-xl font-semibold mb-4 text-white">{t("footer.loginRegister")}</h3>
                   <Link href="/login" className="inline-block hover:opacity-80 transition-opacity cursor-pointer">
                     <Image
-                      src="/assets/images/Footer/smalLogo.svg"
-                      alt="MyIZOGRUP Login"
+                      src="/assets/images/header/logo_bg_remove.png"
+                      alt="ek-website Login"
                       width={180}
                       height={60}
                       className="h-auto w-auto"
