@@ -228,7 +228,7 @@ export default function ServicesListing({ searchQuery }: ServicesListingProps) {
       <div className="w-full px-6 2xl:px-20 max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-8">
-          <h2 className={`text-[28px] font-bold mb-3 text-center transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#2D3748]"
+          <h2 className={`text-[28px] font-bold mb-3 text-center transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"
             }`}>
             {t("servicesPage.completeRange")}
           </h2>
@@ -241,7 +241,7 @@ export default function ServicesListing({ searchQuery }: ServicesListingProps) {
           <div className="relative inline-block" ref={dropdownRef}>
             <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="px-8 py-3 bg-linear-to-r from-[#9F001B] to-[#1B2556] text-white font-semibold rounded-full text-sm flex items-center gap-3 hover:opacity-90 transition-opacity"
+              className="px-8 py-3 bg-brand-gradient text-white font-semibold rounded-full text-sm flex items-center gap-3 hover:opacity-90 transition-opacity"
             >
               {t("servicesPage.browseByServiceLines")}
               <Image
@@ -318,14 +318,15 @@ export default function ServicesListing({ searchQuery }: ServicesListingProps) {
                         ref={(el) => {
                           if (el) categoryItemsRef.current[category.id] = el;
                         }}
-                        className={`px-4 py-3 cursor-pointer text-sm font-medium border-b flex items-center justify-between transition-colors duration-300 ${hoveredCategory === category.id
-                          ? theme === "dark"
-                            ? "bg-gray-700 text-[#9F001B]"
-                            : "bg-gray-50 text-[#9F001B]"
-                          : theme === "dark"
-                            ? "hover:bg-gray-700 text-gray-300 border-gray-700"
-                            : "hover:bg-gray-50 text-[#4A5568] border-gray-100"
-                          }`}
+                        className={`px-4 py-3 cursor-pointer text-sm font-medium border-b flex items-center justify-between transition-colors duration-300 ${
+                          hoveredCategory === category.id
+                            ? theme === "dark"
+                              ? "bg-gray-700 text-brand-secondary"
+                              : "bg-gray-50 text-brand-secondary"
+                            : theme === "dark"
+                              ? "hover:bg-gray-700 text-gray-300 border-gray-700"
+                              : "hover:bg-gray-50 text-[#4A5568] border-gray-100"
+                        }`}
                         onClick={() => handleCategoryClick(category.id)}
                         onMouseEnter={() => {
                           setHoveredCategory(category.id);
@@ -503,17 +504,17 @@ export default function ServicesListing({ searchQuery }: ServicesListingProps) {
                 {/* Service Content */}
                 <div className={`p-6 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-white"}`}>
                   {/* Service Name with Border */}
-                  <div className="border-l-4 border-[#9F001B] pl-4 mb-6">
-                    <h3 className={`text-[16px] font-bold leading-tight uppercase transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"
+                  <div className="border-l-4 border-brand-secondary pl-4 mb-6">
+                    <h3 className={`text-[16px] font-bold leading-tight uppercase transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"
                       }`}>
                       {service.title}
                     </h3>
                   </div>
 
                   {/* Price and Cart Icon */}
-                  <div className="flex items-center justify-between min-h-[52px]">
+                  {/* <div className="flex items-center justify-between min-h-[52px]">
                     {service.price && (
-                      <div className={`text-[28px] font-semibold transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#9F001B]"}`}>
+                      <div className={`text-[28px] font-semibold transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-secondary"}`}>
                         ${service.price}
                       </div>
                     )}
@@ -544,7 +545,7 @@ export default function ServicesListing({ searchQuery }: ServicesListingProps) {
                         />
                       </button>
                     )}
-                  </div>
+                  </div> */}
                 </div>
               </Link>
             ))}
@@ -564,7 +565,7 @@ export default function ServicesListing({ searchQuery }: ServicesListingProps) {
             <div className="flex justify-center mt-10">
               <button
                 onClick={loadMore}
-                className="px-12 py-4 bg-linear-to-r from-[#9F001B] to-[#1B2556] text-white font-semibold rounded-full hover:opacity-90 transition-opacity text-base"
+                className="px-12 py-4 bg-brand-gradient text-white font-semibold rounded-full hover:opacity-90 transition-opacity text-base"
               >
                 {t("servicesPage.viewMoreServices")}
               </button>

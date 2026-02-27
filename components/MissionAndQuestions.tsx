@@ -35,8 +35,8 @@ export default function MissionAndQuestions() {
           {/* Left Column - Our Mission */}
           <div>
             <h2 className="text-[36px] font-bold mb-6">
-              <span className={`transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"}`}>OUR </span>
-              <span className={`transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"}`}>MISSION</span>
+              <span className={`transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>OUR </span>
+              <span className={`transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>MISSION</span>
             </h2>
 
             <p className={`text-[15px] leading-relaxed mb-8 transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>
@@ -52,7 +52,7 @@ export default function MissionAndQuestions() {
 
             <Link
               href="/contact"
-              className="inline-block px-12 py-4 bg-[#9F001B] text-white font-semibold rounded-full hover:opacity-90 transition-opacity text-[16px]"
+              className="inline-block px-12 py-4 bg-brand-gradient text-white font-semibold rounded-full hover:opacity-90 transition-opacity text-[16px]"
             >
               CONTACT US
             </Link>
@@ -61,8 +61,8 @@ export default function MissionAndQuestions() {
           {/* Right Column - Popular Questions */}
           <div>
             <h2 className="text-[36px] font-bold mb-6">
-              <span className={`transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"}`}>POPULAR </span>
-              <span className={`transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"}`}>QUESTIONS</span>
+              <span className={`transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>POPULAR </span>
+              <span className={`transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>QUESTIONS</span>
             </h2>
 
             <div className="space-y-4">
@@ -70,7 +70,7 @@ export default function MissionAndQuestions() {
                 <div key={index}>
                   {/* Question */}
                   <div className="flex items-start gap-3">
-                    <div className="shrink-0 w-6 h-6 rounded-full bg-[#9F001B] flex items-center justify-center mt-1">
+                    <div className="shrink-0 w-6 h-6 rounded-full bg-brand-secondary flex items-center justify-center mt-1">
                       <svg
                         width="8"
                         height="12"
@@ -87,7 +87,7 @@ export default function MissionAndQuestions() {
                         />
                       </svg>
                     </div>
-                    <p className={`text-[15px] font-semibold leading-relaxed transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-[#1B2556]"}`}>
+                    <p className={`text-[15px] font-semibold leading-relaxed transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-brand-primary"}`}>
                       {item.question}
                     </p>
                   </div>

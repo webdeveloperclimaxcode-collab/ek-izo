@@ -76,7 +76,7 @@ export default function BlogListing({ searchQuery, selectedCategory, selectedYea
     <section className={`w-full py-16 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-white"}`}>
       <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto">
         {/* Description */}
-        <p className={`text-[15px] text-center mb-8 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1b2556]"}`}>
+        <p className={`text-[15px] text-center mb-8 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
           Press releases, press kits and other content for journalists
         </p>
 
@@ -133,7 +133,7 @@ export default function BlogListing({ searchQuery, selectedCategory, selectedYea
                       {/* Title */}
                       <h3 className={`text-[16px] font-semibold mb-3 leading-tight line-clamp-2 flex-1 transition-colors duration-300 ${theme === "dark"
                         ? "text-white"
-                        : "text-[#1b2556]"
+                        : "text-brand-primary"
                         }`}>
                         {blog.title}
                       </h3>
@@ -160,7 +160,7 @@ export default function BlogListing({ searchQuery, selectedCategory, selectedYea
                         />
                         <span className={`text-[13px] font-medium transition-colors duration-300 ${theme === "dark"
                           ? "text-white"
-                          : "text-[#1b2556]"
+                          : "text-brand-primary"
                           }`}>
                           {formatDate(blog.publishedAt || blog.createdAt)}
                         </span>

@@ -71,7 +71,7 @@ export default function ServiceDocuments({ serviceId }: { serviceId: string }) {
     <section className={`w-full py-12 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-white"}`}>
       <div className="w-full px-6 2xl:px-20 max-w-7xl mx-auto">
         {/* Section Title */}
-        <h2 className={`text-[32px] font-bold text-center mb-10 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"}`}>
+        <h2 className={`text-[32px] font-bold text-center mb-10 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
           {t("productsPage.relatedDocuments")}
         </h2>
 
@@ -94,7 +94,7 @@ export default function ServiceDocuments({ serviceId }: { serviceId: string }) {
                   height={40}
                   className="w-10 h-10"
                 />
-                <h3 className={`text-[18px] font-bold transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"}`}>
+                <h3 className={`text-[18px] font-bold transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
                   {doc.title}
                 </h3>
               </div>
@@ -103,7 +103,7 @@ export default function ServiceDocuments({ serviceId }: { serviceId: string }) {
               <div className="flex items-center gap-4">
                 <span className={`px-6 py-2.5 rounded-full font-medium text-sm transition-colors duration-300 ${theme === "dark"
                   ? "bg-gray-700 text-gray-300"
-                  : "bg-[#E8EAED] text-[#1B2556]"
+                  : "bg-[#E8EAED] text-brand-primary"
                   }`}>
                   {t("productsPage.english")}
                 </span>

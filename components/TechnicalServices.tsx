@@ -32,10 +32,10 @@ export default function TechnicalServices() {
 
   return (
     <section className={`w-full py-16 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-[#EEF2F6]"}`}>
-      <div className="w-full text-[#1B2556] px-6 2xl:px-20 max-w-6xl mx-auto">
+      <div className="w-full text-brand-primary px-6 2xl:px-20 max-w-6xl mx-auto">
         {/* Description */}
-        <p className={`text-[15px] leading-relaxed text-center mb-12 max-w-5xl mx-auto transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#1B2556]"}`}>
-          <span className="text-[#9F001B] font-semibold">IZOGRUP's</span> highly
+        <p className={`text-[15px] leading-relaxed text-center mb-12 max-w-5xl mx-auto transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-brand-primary"}`}>
+          <span className="text-brand-secondary font-semibold">IZOGRUP's</span> highly
           qualified{" "}
           <span className={`font-bold ${theme === "dark" ? "text-white" : ""}`}>
             Technical Services Division
@@ -67,7 +67,7 @@ export default function TechnicalServices() {
               </div>
 
               {/* Title */}
-              <h3 className={`text-[20px] font-bold transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"}`}>
+              <h3 className={`text-[20px] font-bold transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
                 {service.title}
               </h3>
             </div>

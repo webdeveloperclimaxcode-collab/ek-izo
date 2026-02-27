@@ -130,7 +130,7 @@ export default function ServiceVideos({ serviceId }: { serviceId: string }) {
 
                   {/* Video Info */}
                   <div className="flex-1">
-                    <h3 className={`text-[15px] font-bold mb-1.5 leading-tight transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"}`}>
+                    <h3 className={`text-[15px] font-bold mb-1.5 leading-tight transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
                       {t("productsPage.relatedVideo")} {index + 1}
                     </h3>
                     <p className={`text-[12px] leading-relaxed transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#9CA3AF]"}`}>

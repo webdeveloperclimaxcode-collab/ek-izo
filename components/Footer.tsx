@@ -104,7 +104,7 @@ export default function Footer() {
         {/* Background Image - always visible */}
         <div className="absolute inset-0 opacity-100">
           <Image
-            src="/assets/images/Footer/bg_img_1.5.png"
+            src="/assets/images/Footer/bg_img_new.png"
             alt="Footer Background"
             fill
             className="object-cover"
@@ -328,7 +328,7 @@ export default function Footer() {
             aria-label={t("footer.scrollToTop")}
           >
             <Image
-              src="/assets/images/Footer/UpArrow.svg"
+              src="/assets/images/Footer/UpArrow_new.svg"
               alt="Scroll to top"
               width={80}
               height={80}

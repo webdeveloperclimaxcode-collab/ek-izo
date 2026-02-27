@@ -15,19 +15,19 @@ interface Feature {
 const features: Feature[] = [
   {
     id: 1,
-    icon: "/assets/images/about/a1.svg",
+    icon: "/assets/images/about/a_1.svg",
     titleKey: "aboutUs.features.constructionManagement.title",
     descriptionKey: "aboutUs.features.constructionManagement.description",
   },
   {
     id: 2,
-    icon: "/assets/images/about/a2.svg",
+    icon: "/assets/images/about/a_2.svg",
     titleKey: "aboutUs.features.bestMaterials.title",
     descriptionKey: "aboutUs.features.bestMaterials.description",
   },
   {
     id: 3,
-    icon: "/assets/images/about/a3.svg",
+    icon: "/assets/images/about/a_3.svg",
     titleKey: "aboutUs.features.professionalStandards.title",
     descriptionKey: "aboutUs.features.professionalStandards.description",
   },

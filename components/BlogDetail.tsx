@@ -85,10 +85,11 @@ export default function BlogDetail({ blogId }: { blogId: string }) {
         {/* Back Button */}
         <button
           onClick={() => router.back()}
-          className={`flex items-center cursor-pointer gap-2 mb-6 transition-colors group ${theme === "dark"
-            ? "text-gray-300 hover:text-[#9F001B]"
-            : "text-[#1B2556] hover:text-[#9F001B]"
-            }`}
+          className={`flex items-center cursor-pointer gap-2 mb-6 transition-colors group ${
+            theme === "dark"
+              ? "text-gray-300 hover:text-brand-secondary"
+              : "text-brand-primary hover:text-brand-secondary"
+          }`}
         >
           <svg
             className="w-6 h-6 transition-transform group-hover:-translate-x-1"
@@ -110,13 +111,13 @@ export default function BlogDetail({ blogId }: { blogId: string }) {
         <div className="mb-8">
           {/* Category */}
           {blog.category && (
-            <span className="inline-block px-4 py-1.5 bg-[#9F001B] text-white text-[12px] font-semibold uppercase tracking-wider rounded-full mb-4">
+            <span className="inline-block px-4 py-1.5 bg-brand-secondary text-white text-[12px] font-semibold uppercase tracking-wider rounded-full mb-4">
               {blog.category.name}
             </span>
           )}
 
           {/* Title */}
-          <h1 className={`text-[42px] font-bold mb-4 leading-tight transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"}`}>
+          <h1 className={`text-[42px] font-bold mb-4 leading-tight transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
             {blog.title}
           </h1>
 
@@ -164,7 +165,7 @@ export default function BlogDetail({ blogId }: { blogId: string }) {
         {/* Additional Images */}
         {blog.images && blog.images.length > 0 && (
           <div className="mb-8">
-            <h3 className={`text-[24px] font-bold mb-4 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"}`}>Gallery</h3>
+            <h3 className={`text-[24px] font-bold mb-4 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>Gallery</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {blog.images.map((image, index) => (
                 <div key={index} className="relative h-64 rounded-lg overflow-hidden">
@@ -183,7 +184,7 @@ export default function BlogDetail({ blogId }: { blogId: string }) {
         {/* Tags */}
         {blog.tags && blog.tags.length > 0 && (
           <div className="mb-8">
-            <h3 className={`text-[18px] font-bold mb-3 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"}`}>Tags</h3>
+            <h3 className={`text-[18px] font-bold mb-3 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>Tags</h3>
             <div className="flex flex-wrap gap-2">
               {blog.tags.map((tag, index) => (
                 <span
@@ -202,12 +203,12 @@ export default function BlogDetail({ blogId }: { blogId: string }) {
 
         {/* Share Section */}
         <div className={`border-t pt-8 transition-colors duration-300 ${theme === "dark" ? "border-gray-700" : "border-gray-200"}`}>
-          <h3 className={`text-[18px] font-bold mb-4 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"}`}>Share this article</h3>
+          <h3 className={`text-[18px] font-bold mb-4 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>Share this article</h3>
           <div className="flex gap-3">
-            <button className="px-6 py-3 bg-[#1B2556] text-white rounded-full hover:opacity-90 transition-opacity text-[14px] font-semibold">
+            <button className="px-6 py-3 bg-brand-primary text-white rounded-full hover:opacity-90 transition-opacity text-[14px] font-semibold">
               Share on Facebook
             </button>
-            <button className="px-6 py-3 bg-[#9F001B] text-white rounded-full hover:opacity-90 transition-opacity text-[14px] font-semibold">
+            <button className="px-6 py-3 bg-brand-secondary text-white rounded-full hover:opacity-90 transition-opacity text-[14px] font-semibold">
               Share on Twitter
             </button>
             <button className={`px-6 py-3 text-white rounded-full hover:opacity-90 transition-opacity text-[14px] font-semibold ${theme === "dark"

@@ -154,16 +154,16 @@ export default function ContactHero() {
       <section className={`w-full py-16 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-white"}`}>
         <div className="w-full px-6 2xl:px-20 max-w-5xl mx-auto">
           {/* Company Title */}
-          <h2 className={`text-[32px] font-bold text-center mb-6 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"}`}>
+          <h2 className={`text-[32px] font-bold text-center mb-6 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
             {t("contactPage.companyTitle")}
           </h2>
 
           {/* Description */}
           <div className="text-center mb-8">
-            <p className={`text-[15px] leading-relaxed mb-4 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1b2556]"}`}>
+            <p className={`text-[15px] leading-relaxed mb-4 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
               {t("contactPage.description1")}
             </p>
-            <p className={`text-[15px] leading-relaxed transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1b2556]"}`}>
+            <p className={`text-[15px] leading-relaxed transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
               {t("contactPage.description2")}
             </p>
 
@@ -171,17 +171,17 @@ export default function ContactHero() {
             {companyInfo && (
               <div className="mt-6 space-y-2">
                 {companyInfo.phone && (
-                  <p className={`text-[15px] font-semibold transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"}`}>
+                  <p className={`text-[15px] font-semibold transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
                     {t("contactPage.phone")}: {companyInfo.phone}
                   </p>
                 )}
                 {companyInfo.email && (
-                  <p className={`text-[15px] font-semibold transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"}`}>
-                    {t("contactPage.email")}: <Link href={`mailto:${companyInfo.email}`} className={`hover:underline transition-colors duration-300 ${theme === "dark" ? "text-blue-400" : "text-[#1b2556]"}`}>{companyInfo.email}</Link>
+                  <p className={`text-[15px] font-semibold transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
+                    {t("contactPage.email")}: <Link href={`mailto:${companyInfo.email}`} className={`hover:underline transition-colors duration-300 ${theme === "dark" ? "text-blue-400" : "text-brand-primary"}`}>{companyInfo.email}</Link>
                   </p>
                 )}
                 {companyInfo.address && (
-                  <p className={`text-[15px] transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1b2556]"}`}>
+                  <p className={`text-[15px] transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
                     {companyInfo.address}
                   </p>
                 )}
@@ -193,7 +193,7 @@ export default function ContactHero() {
           <div className="flex justify-center mb-12">
             <Link
               href="/support"
-              className="px-10 py-4 bg-linear-to-r from-[#9F001B] to-[#1B2556] text-white font-semibold rounded-full hover:opacity-90 transition-opacity text-[15px]"
+              className="px-10 py-4 bg-brand-gradient text-white font-semibold rounded-full hover:opacity-90 transition-opacity text-[15px]"
             >
               {t("contactPage.contactButton")}
             </Link>
@@ -203,7 +203,7 @@ export default function ContactHero() {
           <div className="space-y-4">
             {sections.map((section) => (
               <div key={section.id}>
-                <div className="border-l-4 border-[#9F001B]">
+                <div className="border-l-4 border-brand-secondary">
                   <button
                     onClick={() => toggleSection(section.id)}
                     className={`w-full flex items-center justify-between px-6 py-4 transition-colors duration-300 ${theme === "dark"

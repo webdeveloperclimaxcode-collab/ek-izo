@@ -59,10 +59,10 @@ export default function ProjectsListing() {
       <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
-          <h2 className={`text-3xl font-bold mb-4 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"}`}>
+          <h2 className={`text-3xl font-bold mb-4 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
             {t("projectsPage.discoverAllProjects")}
           </h2>
-          <p className={`text-[15px] transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"}`}>
+          <p className={`text-[15px] transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
             {t("projectsPage.discoverPrestigious")}
           </p>
         </div>
@@ -100,20 +100,20 @@ export default function ProjectsListing() {
                   <div className="p-5 flex-1 flex flex-col">
                     {/* Client */}
                     {project.client && (
-                      <span className={`text-[11px] font-semibold uppercase tracking-wider mb-2 block transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"
+                      <span className={`text-[11px] font-semibold uppercase tracking-wider mb-2 block transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"
                         }`}>
                         {project.client}
                       </span>
                     )}
 
                     {/* Title */}
-                    <h3 className={`text-[18px] font-semibold mb-2 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#9F001B]"}`}>
+                    <h3 className={`text-[18px] font-semibold mb-2 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-secondary"}`}>
                       {project.title}
                     </h3>
 
                     {/* Location */}
                     {project.location && (
-                      <p className={`text-[14px] font-semibold mb-2 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"
+                      <p className={`text-[14px] font-semibold mb-2 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"
                         }`}>
                         {project.location}
                       </p>
@@ -129,7 +129,7 @@ export default function ProjectsListing() {
 
                     {/* Duration */}
                     {project.duration && (
-                      <p className={`text-[12px] mt-auto transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#9F001B]"}`}>
+                      <p className={`text-[12px] mt-auto transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-secondary"}`}>
                         Duration: {project.duration}
                       </p>
                     )}

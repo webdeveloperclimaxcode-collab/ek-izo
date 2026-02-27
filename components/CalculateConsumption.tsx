@@ -84,7 +84,7 @@ export default function CalculateConsumption({ productName, serviceName }: Calcu
     <section className={`calculate-consumption-section w-full py-16 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-[#EEF2F6]"}`}>
       <div className="w-full px-6 2xl:px-20 max-w-6xl mx-auto">
         {/* Section Title */}
-        <h2 className={`text-[30px] font-bold text-center mb-12 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"}`}>
+        <h2 className={`text-[30px] font-bold text-center mb-12 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
           {t("productsPage.calculateConsumption")}
         </h2>
 
@@ -191,7 +191,7 @@ export default function CalculateConsumption({ productName, serviceName }: Calcu
               onClick={handleReset}
               className={`px-10 py-3 font-semibold rounded-full transition-colors text-[14px] ${theme === "dark"
                   ? "bg-gray-800 text-white hover:bg-gray-700"
-                  : "bg-[#E8EAED] text-[#1B2556] hover:bg-[#DDE0E4]"
+                  : "bg-[#E8EAED] text-brand-primary hover:bg-[#DDE0E4]"
                 }`}
             >
               {t("productsPage.reset")}
@@ -199,7 +199,7 @@ export default function CalculateConsumption({ productName, serviceName }: Calcu
             <button
               onClick={handleSubmit}
               disabled={loading}
-              className="px-10 py-3 font-semibold rounded-full transition-colors text-[14px] disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer bg-linear-to-r from-[#9F001B] to-[#1B2556] text-white hover:opacity-90"
+              className="px-10 py-3 font-semibold rounded-full transition-colors text-[14px] disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer bg-brand-gradient text-white hover:opacity-90"
             >
               {loading ? t("productsPage.sending") : t("productsPage.submit")}
             </button>

@@ -16,9 +16,9 @@ const kantumruyPro = Kantumruy_Pro({
   weight: ["400", "500", "600", "700"],
 });
 
-export const metadata: Metadata = {
-  title: "IZOGRUP - Hydro Thermo Sound Insulation",
-  description: "Leading provider of hydro-thermo-sound insulation solutions",
+export const metadata: Metadata = { 
+  title: "EkGrup",
+  description: "EkGrup is a leading provider of hydro-thermo-sound insulation solutions",
 };
 
 export default function RootLayout({

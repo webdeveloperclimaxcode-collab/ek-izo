@@ -93,8 +93,11 @@ export default function ContactForm() {
     <section className={`w-full py-16 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-[#EEF2F6]"}`}>
       <div className="w-full px-6 2xl:px-20 max-w-4xl mx-auto">
         {/* Title */}
-        <h2 className={`text-[32px] text-center mb-4 transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-[#4A5568]"}`}>
-          {t("contactPage.askForAdvice")} <span className={`font-bold transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"}`}>{t("contactPage.technicalAdvice")}</span>
+        <h2 className={`text-[32px] text-center mb-4 transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-brand-primary"}`}>
+          {t("contactPage.askForAdvice")}{" "}
+          <span className={`font-bold transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
+            {t("contactPage.technicalAdvice")}
+          </span>
         </h2>
 
         {/* Subtitle */}
@@ -105,16 +108,16 @@ export default function ContactForm() {
         {/* Success Message Popup */}
         {showSuccess && (
           <div className="fixed top-8 left-1/2 transform -translate-x-1/2 z-50 w-11/12 max-w-2xl">
-            <div className={`p-6 border-2 rounded-2xl text-center shadow-2xl transition-colors ${theme === "dark" ? "bg-gray-800" : "bg-white"}`} style={{ borderColor: "#9F001B" }}>
+            <div className={`p-6 border-2 rounded-2xl text-center shadow-2xl transition-colors ${theme === "dark" ? "bg-gray-800" : "bg-white"}`} style={{ borderColor: "var(--brand-secondary)" }}>
               <div className="flex items-center justify-center gap-3 mb-2">
                 <svg
-                  className="w-8 h-8 text-[#9F001B]"
+                  className="w-8 h-8 text-brand-secondary"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
                   <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
                 </svg>
-                <h3 className={`text-xl font-bold transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"}`}>
+                <h3 className={`text-xl font-bold transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
                   {t("contactPage.messageSentSuccess")}
                 </h3>
               </div>
@@ -275,7 +278,7 @@ export default function ContactForm() {
             <button
               type="submit"
               disabled={loading}
-              className="px-16 py-4 bg-linear-to-r from-[#9F001B] to-[#1B2556] text-white font-semibold rounded-full hover:opacity-90 transition-opacity text-[16px] disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+              className="px-16 py-4 bg-brand-gradient text-white font-semibold rounded-full hover:opacity-90 transition-opacity text-[16px] disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
             >
               {loading ? t("contactPage.sending") : t("contactPage.contactUs")}
             </button>

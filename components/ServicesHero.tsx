@@ -48,7 +48,7 @@ export default function ServicesHero({ searchQuery, onSearchChange }: ServicesHe
               className={`w-full px-8 py-5 rounded-full text-lg focus:outline-none focus:ring-2 transition-colors ${
                 theme === "dark"
                   ? "bg-[#FFFFFF]/20 text-white placeholder:text-white placeholder:opacity-100"
-                  : "bg-[#FFFFFF]/46 text-[#1B2556] placeholder:text-[#1B2556]"
+                  : "bg-[#FFFFFF]/46 text-brand-primary placeholder:text-[#4A5568]"
               }`}
             />
             <button

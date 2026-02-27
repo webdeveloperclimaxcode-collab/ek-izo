@@ -112,7 +112,7 @@ export default function Header() {
     { name: t("header.home"), href: "/" },
     // { name: t("header.products"), href: "/products" },
     { name: t("header.services"), href: "/services" },
-    { name: t("header.search"), href: "/search" },
+    // { name: t("header.search"), href: "/search" },
     { name: t("header.projects"), href: "/projects" },
     { name: t("header.contact"), href: "/contact" },
   ];
@@ -257,8 +257,8 @@ export default function Header() {
           <div ref={menuRef} className="header-dropdown-menu absolute top-full right-6 w-80 bg-white dark:bg-[#000000] rounded-b-2xl shadow-2xl z-50 overflow-hidden transition-colors duration-300">
             <div className="p-6">
               {/* Search bar and Close button - same row, aligned */}
-              <div className="flex items-center gap-2 mb-6">
-                <form
+              <div className="flex items-right gap-2 mb-6">
+                {/* <form
                   onSubmit={(e) => {
                     e.preventDefault();
                     if (searchQuery.trim()) {
@@ -285,10 +285,10 @@ export default function Header() {
                       className="w-4 h-4 dark:invert"
                     />
                   </button>
-                </form>
+                </form> */}
                 <button
                   onClick={() => setIsMenuOpen(false)}
-                  className="flex-shrink-0 p-1 hover:opacity-70 transition-opacity cursor-pointer flex items-center justify-center"
+                  className="flex-shrink-0 item-right p-1 hover:opacity-70 transition-opacity cursor-pointer flex items-center justify-center"
                   aria-label="Close menu"
                 >
                   <Image
@@ -368,7 +368,7 @@ export default function Header() {
                 <Link
                   href="/about"
                   onClick={() => setIsMenuOpen(false)}
-                  className="flex items-center gap-3 px-3 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg transition-colors cursor-pointer"
+                  className="group flex items-center gap-3 px-3 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg transition-colors cursor-pointer"
                 >
                   <Image
                     src={theme === "dark" ? "/assets/images/header/about_icon_white.svg" : "/assets/images/header/about_icon.svg"}
@@ -377,7 +377,9 @@ export default function Header() {
                     height={22}
                     className="w-5 h-5"
                   />
-                  <span className="text-[15px] text-brand-primary dark:text-white">{t("header.aboutUs")}</span>
+                  <span className="text-[15px] text-brand-primary dark:text-white group-hover:text-brand-secondary dark:group-hover:text-brand-secondary">
+                    {t("header.aboutUs")}
+                  </span>
                 </Link>
 
                 {/* <Link
@@ -398,7 +400,7 @@ export default function Header() {
                 <Link
                   href="/services"
                   onClick={() => setIsMenuOpen(false)}
-                  className="flex items-center gap-3 px-3 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg transition-colors cursor-pointer"
+                  className="group flex items-center gap-3 px-3 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg transition-colors cursor-pointer"
                 >
                   <Image
                     src={theme === "dark" ? "/assets/images/header/services_white.svg" : "/assets/images/header/services.svg"}
@@ -407,13 +409,15 @@ export default function Header() {
                     height={22}
                     className="w-5 h-5"
                   />
-                  <span className="text-[15px] text-brand-primary dark:text-white">{t("header.services")}</span>
+                  <span className="text-[15px] text-brand-primary dark:text-white group-hover:text-brand-secondary dark:group-hover:text-brand-secondary">
+                    {t("header.services")}
+                  </span>
                 </Link>
 
                 <Link
                   href="/projects"
                   onClick={() => setIsMenuOpen(false)}
-                  className="flex items-center gap-3 px-3 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg transition-colors cursor-pointer"
+                  className="group flex items-center gap-3 px-3 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg transition-colors cursor-pointer"
                 >
                   <Image
                     src={theme === "dark" ? "/assets/images/header/projects_white.svg" : "/assets/images/header/projects.svg"}
@@ -422,7 +426,9 @@ export default function Header() {
                     height={22}
                     className="w-5 h-5"
                   />
-                  <span className="text-[15px] text-brand-primary dark:text-white">{t("header.projects")}</span>
+                  <span className="text-[15px] text-brand-primary dark:text-white group-hover:text-brand-secondary dark:group-hover:text-brand-secondary">
+                    {t("header.projects")}
+                  </span>
                 </Link>
 
                 <a
@@ -430,7 +436,7 @@ export default function Header() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setIsMenuOpen(false)}
-                  className="flex items-center gap-3 px-3 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg transition-colors cursor-pointer"
+                  className="group flex items-center gap-3 px-3 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg transition-colors cursor-pointer"
                 >
                   <Image
                     src={theme === "dark" ? "/assets/images/header/compnaycv_white.svg" : "/assets/images/header/compnaycv.svg"}
@@ -439,13 +445,15 @@ export default function Header() {
                     height={22}
                     className="w-5 h-5"
                   />
-                  <span className="text-[15px] text-brand-primary dark:text-white">{t("header.companyCv")}</span>
+                  <span className="text-[15px] text-brand-primary dark:text-white group-hover:text-brand-secondary dark:group-hover:text-brand-secondary">
+                    {t("header.companyCv")}
+                  </span>
                 </a>
 
                 <Link
                   href="/blog"
                   onClick={() => setIsMenuOpen(false)}
-                  className="flex items-center gap-3 px-3 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg transition-colors cursor-pointer"
+                  className="group flex items-center gap-3 px-3 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg transition-colors cursor-pointer"
                 >
                   <Image
                     src={theme === "dark" ? "/assets/images/header/newsblog_white.svg" : "/assets/images/header/newsblog.svg"}
@@ -454,7 +462,7 @@ export default function Header() {
                     height={22}
                     className="w-5 h-5"
                   />
-                  <span className="text-[15px] text-brand-primary dark:text-white">
+                  <span className="text-[15px] text-brand-primary dark:text-white group-hover:text-brand-secondary dark:group-hover:text-brand-secondary">
                     {t("header.newsAndBlog")}
                   </span>
                 </Link>
@@ -462,7 +470,7 @@ export default function Header() {
                 <Link
                   href="/contact"
                   onClick={() => setIsMenuOpen(false)}
-                  className="flex items-center gap-3 px-3 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg transition-colors cursor-pointer"
+                  className="group flex items-center gap-3 px-3 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg transition-colors cursor-pointer"
                 >
                   <Image
                     src={theme === "dark" ? "/assets/images/header/contact_white.svg" : "/assets/images/header/contact.svg"}
@@ -471,26 +479,32 @@ export default function Header() {
                     height={22}
                     className="w-5 h-5"
                   />
-                  <span className="text-[15px] text-brand-primary dark:text-white">{t("header.contactUs")}</span>
+                  <span className="text-[15px] text-brand-primary dark:text-white group-hover:text-brand-secondary dark:group-hover:text-brand-secondary">
+                    {t("header.contactUs")}
+                  </span>
                 </Link>
 
                 <button
                   onClick={toggleTheme}
-                  className="flex items-center gap-3 px-3 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg transition-colors w-full text-left cursor-pointer"
+                  className="group flex items-center gap-3 px-3 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg transition-colors w-full text-left cursor-pointer"
                 >
                   {theme === "light" ? (
                     <>
-                      <svg className="w-5 h-5 text-brand-primary dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5 text-brand-primary dark:text-white group-hover:text-brand-secondary dark:group-hover:text-brand-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                       </svg>
-                      <span className="text-[15px] text-brand-primary dark:text-white">{t("header.darkMode")}</span>
+                      <span className="text-[15px] text-brand-primary dark:text-white group-hover:text-brand-secondary dark:group-hover:text-brand-secondary">
+                        {t("header.darkMode")}
+                      </span>
                     </>
                   ) : (
                     <>
-                      <svg className="w-5 h-5 text-brand-primary dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5 text-brand-primary dark:text-white group-hover:text-brand-secondary dark:group-hover:text-brand-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
                       </svg>
-                      <span className="text-[15px] text-brand-primary dark:text-white">{t("header.lightMode")}</span>
+                      <span className="text-[15px] text-brand-primary dark:text-white group-hover:text-brand-secondary dark:group-hover:text-brand-secondary">
+                        {t("header.lightMode")}
+                      </span>
                     </>
                   )}
                 </button>

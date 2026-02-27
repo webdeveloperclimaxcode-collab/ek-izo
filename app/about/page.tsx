@@ -9,7 +9,7 @@ export default function AboutPage() {
     <div>
       <AboutHero />
       <OurBackground />
-      <WhyChooseUs />
+      {/* <WhyChooseUs /> */}
       <WhyChooseStats />
       <MissionAndQuestions />
     </div>

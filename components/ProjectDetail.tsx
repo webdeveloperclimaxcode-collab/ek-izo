@@ -73,10 +73,11 @@ export default function ProjectDetail({ projectId }: { projectId: string }) {
         {/* Back Button */}
         <button
           onClick={() => router.back()}
-          className={`flex items-center cursor-pointer gap-2 mb-6 transition-colors group ${theme === "dark"
-            ? "text-gray-300 hover:text-[#9F001B]"
-            : "text-[#1B2556] hover:text-[#9F001B]"
-            }`}
+          className={`flex items-center cursor-pointer gap-2 mb-6 transition-colors group ${
+            theme === "dark"
+              ? "text-gray-300 hover:text-brand-secondary"
+              : "text-brand-primary hover:text-brand-secondary"
+          }`}
         >
           <svg
             className="w-6 h-6 transition-transform group-hover:-translate-x-1"
@@ -155,10 +156,11 @@ export default function ProjectDetail({ projectId }: { projectId: string }) {
                   <button
                     key={index}
                     onClick={() => setSelectedImage(index)}
-                    className={`relative h-32 flex-1 rounded-2xl overflow-hidden transition-all ${selectedImage === index
-                      ? `border-[3px] ${theme === "dark" ? "border-gray-400" : "border-[#1B2556]"}`
-                      : `border-[3px] ${theme === "dark" ? "border-gray-700 hover:border-gray-600" : "border-gray-300 hover:border-gray-400"}`
-                      }`}
+                    className={`relative h-32 flex-1 rounded-2xl overflow-hidden transition-all ${
+                      selectedImage === index
+                        ? `border-[3px] ${theme === "dark" ? "border-gray-400" : "border-brand-primary"}`
+                        : `border-[3px] ${theme === "dark" ? "border-gray-700 hover:border-gray-600" : "border-gray-300 hover:border-gray-400"}`
+                    }`}
                   >
                     <Image
                       src={img}
@@ -174,7 +176,7 @@ export default function ProjectDetail({ projectId }: { projectId: string }) {
 
           {/* Right Side - Project Details */}
           <div>
-            <h1 className={`text-[32px] font-bold mb-4 leading-tight transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"}`}>
+            <h1 className={`text-[32px] font-bold mb-4 leading-tight transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
               {project.title}
             </h1>
 
@@ -182,25 +184,25 @@ export default function ProjectDetail({ projectId }: { projectId: string }) {
             <div className="space-y-3 mb-6">
               {project.client && (
                 <div className="flex items-start gap-2">
-                  <span className={`text-[14px] font-semibold min-w-[100px] transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-[#1B2556]"}`}>{t("projectsPage.client")}:</span>
+                  <span className={`text-[14px] font-semibold min-w-[100px] transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-brand-primary"}`}>{t("projectsPage.client")}:</span>
                   <span className={`text-[14px] transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>{project.client}</span>
                 </div>
               )}
               {project.location && (
                 <div className="flex items-start gap-2">
-                  <span className={`text-[14px] font-semibold min-w-[100px] transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-[#1B2556]"}`}>{t("projectsPage.location")}:</span>
+                  <span className={`text-[14px] font-semibold min-w-[100px] transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-brand-primary"}`}>{t("projectsPage.location")}:</span>
                   <span className={`text-[14px] transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>{project.location}</span>
                 </div>
               )}
               {project.duration && (
                 <div className="flex items-start gap-2">
-                  <span className={`text-[14px] font-semibold min-w-[100px] transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-[#1B2556]"}`}>{t("projectsPage.duration")}:</span>
+                  <span className={`text-[14px] font-semibold min-w-[100px] transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-brand-primary"}`}>{t("projectsPage.duration")}:</span>
                   <span className={`text-[14px] transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>{project.duration}</span>
                 </div>
               )}
               {project.completionDate && (
                 <div className="flex items-start gap-2">
-                  <span className={`text-[14px] font-semibold min-w-[100px] transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-[#1B2556]"}`}>{t("projectsPage.completed")}:</span>
+                  <span className={`text-[14px] font-semibold min-w-[100px] transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-brand-primary"}`}>{t("projectsPage.completed")}:</span>
                   <span className={`text-[14px] transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>
                     {new Date(project.completionDate).toLocaleDateString()}
                   </span>

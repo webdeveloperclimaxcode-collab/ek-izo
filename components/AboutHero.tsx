@@ -22,18 +22,15 @@ export default function AboutHero() {
       {/* Content Section ***************/}
       <div className="w-full px-6 2xl:px-20 max-w-6xl mx-auto py-12">
         {/* Title */}
-        <h1 className={`text-[32px] font-bold text-center mb-8 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1b2556]"}`}>
+        <h1 className={`text-[32px] font-bold text-center mb-8 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
           Building Today With The Future In Mind
         </h1>
 
         {/* Description */}
-        <p className={`text-[16px] leading-relaxed text-center max-w-5xl mx-auto mb-12 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"}`}>
-          Izogrup builds today with the future in mind powered by enthusiasm,
-          teamwork, and forward-thinking. As a leading provider of construction
-          solutions, we deliver durable, high-quality products designed to
-          protect both people and the planet. From major architectural projects
-          to the restoration of historic buildings, our expertise supports
-          sustainable, innovative construction every day.
+        <p className={`text-[16px] leading-relaxed text-center max-w-5xl mx-auto mb-12 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
+        EKGRUP 2010 by Eduart Kumrija is a construction company based in Cërrik, Elbasan, founded in 2010 after several years of professional experience in Italy (2004–2010). We specialize in building construction, plastering, structural works, and technical finishing services.
+With a trained and qualified team of 15 professionals, we are committed to quality, precision, safety, and timely project completion. Our company operates with modern equipment and advanced construction technology to ensure high standards in every project.
+Our mission is to deliver reliable, high-quality construction services while maintaining strong client relationships built on trust and professionalism.
         </p>
 
         {/* Video Section */}

@@ -64,7 +64,7 @@ export default function OurProjects() {
           <h2 className="text-[36px] font-bold text-brand-primary dark:text-white tracking-tight mb-4 transition-colors">
             {t("ourProjects.heading")}
           </h2>
-          <p className="text-base text-[#1B2556] dark:text-gray-300 max-w-4xl mx-auto leading-relaxed transition-colors">
+          <p className="text-base text-brand-primary dark:text-gray-300 max-w-4xl mx-auto leading-relaxed transition-colors">
             {t("ourProjects.description")}
           </p>
         </div>
@@ -136,7 +136,7 @@ export default function OurProjects() {
                       </div>
 
                       {/* Title */}
-                      <h3 className="text-sm font-semibold text-[#9F001B] dark:text-white mb-1 leading-tight transition-colors">
+                      <h3 className="text-sm font-semibold text-brand-secondary dark:text-white mb-1 leading-tight transition-colors">
                         {project.title}
                       </h3>
 
@@ -149,7 +149,7 @@ export default function OurProjects() {
 
                       {/* Description */}
                       {project.description && (
-                        <p className="text-xs text-[#1B2556] dark:text-white line-clamp-2 transition-colors">
+                        <p className="text-xs text-brand-primary dark:text-white line-clamp-2 transition-colors">
                           {project.description}
                         </p>
                       )}

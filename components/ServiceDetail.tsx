@@ -84,10 +84,11 @@ export default function ServiceDetail({ serviceId }: { serviceId: string }) {
         {/* Back Button */}
         <button
           onClick={() => router.back()}
-          className={`flex items-center cursor-pointer gap-2 mb-6 transition-colors group ${theme === "dark"
-            ? "text-gray-300 hover:text-[#9F001B]"
-            : "text-[#1B2556] hover:text-[#9F001B]"
-            }`}
+          className={`flex items-center cursor-pointer gap-2 mb-6 transition-colors group ${
+            theme === "dark"
+              ? "text-gray-300 hover:text-brand-secondary"
+              : "text-brand-primary hover:text-brand-secondary"
+          }`}
         >
           <svg
             className="w-6 h-6 transition-transform group-hover:-translate-x-1"
@@ -162,7 +163,7 @@ export default function ServiceDetail({ serviceId }: { serviceId: string }) {
               {/* Price and Cart */}
               <div className="absolute bottom-3 left-5 right-5 flex items-center justify-between">
                 {service.price && (
-                  <span className={`px-10 py-1.5 rounded-4xl text-2xl transition-colors duration-300 ${theme === "dark" ? "text-white bg-gray-800" : "text-[#9F001B] bg-[#fff5f7]"}`}>
+                  <span className={`px-10 py-1.5 rounded-4xl text-2xl transition-colors duration-300 ${theme === "dark" ? "text-white bg-gray-800" : "text-brand-secondary bg-[#fff5f7]"}`}>
                     ${service.price}
                   </span>
                 )}
@@ -267,7 +268,7 @@ export default function ServiceDetail({ serviceId }: { serviceId: string }) {
 
           {/* Right Side - Service Details */}
           <div>
-            <h1 className={`text-[32px] font-bold mb-4 leading-tight transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"}`}>
+            <h1 className={`text-[32px] font-bold mb-4 leading-tight transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
               {service.title}
             </h1>
 

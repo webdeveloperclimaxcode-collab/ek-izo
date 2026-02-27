@@ -90,7 +90,7 @@ export default function BlogHero({
       </div>
 
       {/* Search and Filters Bar */}
-      <div className={`py-6 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-[#1B2556]"}`}>
+      <div className={`py-6 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-brand-primary"}`}>
         <div className="w-full px-6 2xl:px-20 max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row gap-4 items-center">
             {/* Search Input */}
@@ -101,10 +101,11 @@ export default function BlogHero({
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 onKeyPress={handleKeyPress}
-                className={`w-full px-6 py-3.5 text-white placeholder:text-white/80 rounded-full focus:outline-none text-[15px] transition-colors duration-300 ${theme === "dark"
-                  ? "bg-[#6B1B2F]"
-                  : "bg-[#9F001B]"
-                  }`}
+                className={`w-full px-6 py-3.5 text-white placeholder:text-white/80 rounded-full focus:outline-none text-[15px] transition-colors duration-300 ${
+                  theme === "dark"
+                    ? "bg-[#6B1B2F]"
+                    : "bg-brand-secondary"
+                }`}
               />
               <button onClick={handleSearch} className="absolute right-5 top-1/2 -translate-y-1/2">
                 <Image
@@ -121,10 +122,11 @@ export default function BlogHero({
             <div className="relative">
               <button
                 onClick={() => setShowTopicDropdown(!showTopicDropdown)}
-                className={`px-8 py-3.5 text-white font-semibold rounded-full hover:opacity-90 transition-all text-[15px] flex items-center gap-3 min-w-[150px] justify-between ${theme === "dark"
-                  ? "bg-[#6B1B2F]"
-                  : "bg-[#9F001B]"
-                  }`}
+                className={`px-8 py-3.5 text-white font-semibold rounded-full hover:opacity-90 transition-all text-[15px] flex items-center gap-3 min-w-[150px] justify-between ${
+                  theme === "dark"
+                    ? "bg-[#6B1B2F]"
+                    : "bg-brand-secondary"
+                }`}
               >
                 {selectedTopicLabel}
                 <Image
@@ -176,10 +178,11 @@ export default function BlogHero({
             <div className="relative">
               <button
                 onClick={() => setShowYearDropdown(!showYearDropdown)}
-                className={`px-8 py-3.5 text-white font-semibold rounded-full hover:opacity-90 transition-all text-[15px] flex items-center gap-3 min-w-[150px] justify-between ${theme === "dark"
-                  ? "bg-[#6B1B2F]"
-                  : "bg-[#9F001B]"
-                  }`}
+                className={`px-8 py-3.5 text-white font-semibold rounded-full hover:opacity-90 transition-all text-[15px] flex items-center gap-3 min-w-[150px] justify-between ${
+                  theme === "dark"
+                    ? "bg-[#6B1B2F]"
+                    : "bg-brand-secondary"
+                }`}
               >
                 {selectedYearLabel}
                 <Image

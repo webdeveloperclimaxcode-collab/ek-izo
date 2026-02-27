@@ -169,7 +169,7 @@ export default function VideoTutorial() {
                   aria-label="Previous video"
                 >
                   <Image
-                    src="/assets/images/HeroSection/leftIcon.svg"
+                    src="/assets/images/HeroSection/left-arrow.svg"
                     alt="Previous"
                     width={60}
                     height={60}
@@ -182,7 +182,7 @@ export default function VideoTutorial() {
                   aria-label="Next video"
                 >
                   <Image
-                    src="/assets/images/HeroSection/righticon.svg"
+                    src="/assets/images/HeroSection/right-arrow.svg"
                     alt="Next"
                     width={60}
                     height={60}

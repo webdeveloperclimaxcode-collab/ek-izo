@@ -27,19 +27,17 @@ export default function OurBackground() {
 
           {/* Right Side - Content */}
           <div>
-            <h2 className={`text-[32px] font-bold mb-6 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"}`}>
+            <h2 className={`text-[32px] font-bold mb-6 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
               OUR BACKGROUND
             </h2>
-            <p className={`text-[16px] leading-relaxed mb-8 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1b2556]"}`}>
-              Founded in 2004 by Oligert and Erion Plaka, Izogrup has become one
-              of Albania's leading providers of waterproofing and thermal
-              insulation solutions. With a strong focus on quality and technical
-              expertise, we deliver reliable, durable systems that set industry
-              standards and ensure long-lasting protection.
+            <p className={`text-[16px] leading-relaxed mb-8 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
+            EKGRUP 2010 by Eduart Kumrija is a construction company based in Cërrik, Elbasan, founded in 2010 after several years of professional experience in Italy (2004–2010). We specialize in building construction, plastering, structural works, and technical finishing services.
+With a trained and qualified team of 15 professionals, we are committed to quality, precision, safety, and timely project completion. Our company operates with modern equipment and advanced construction technology to ensure high standards in every project.
+Our mission is to deliver reliable, high-quality construction services while maintaining strong client relationships built on trust and professionalism.
             </p>
             <Link
               href="/services"
-              className="inline-block px-10 py-4 bg-linear-to-r from-[#9F001B] to-[#1B2556] text-white font-semibold rounded-full hover:opacity-90 transition-opacity text-[15px]"
+              className="inline-block px-10 py-4 bg-brand-gradient text-white font-semibold rounded-full hover:opacity-90 transition-opacity text-[15px]"
             >
               SEE OUR SERVICES
             </Link>

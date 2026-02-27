@@ -13,34 +13,34 @@ interface Stat {
 const stats: Stat[] = [
   {
     id: 1,
-    icon: "/assets/images/whychoose/c1.svg",
+    icon: "/assets/images/whychoose/c_1.svg",
     titleKey: "whyChoose.stats.experience.title",
     subtitleKey: "whyChoose.stats.experience.subtitle",
   },
   {
     id: 2,
-    icon: "/assets/images/whychoose/c2.svg",
+    icon: "/assets/images/whychoose/c_2.svg",
     titleKey: "whyChoose.stats.projects.title",
     subtitleKey: "whyChoose.stats.projects.subtitle",
   },
   {
     id: 3,
-    icon: "/assets/images/whychoose/c3.svg",
+    icon: "/assets/images/whychoose/c_3.svg",
     titleKey: "whyChoose.stats.clients.title",
     subtitleKey: "whyChoose.stats.clients.subtitle",
   },
   {
     id: 4,
-    icon: "/assets/images/whychoose/c4.svg",
+    icon: "/assets/images/whychoose/c_4.svg",
     titleKey: "whyChoose.stats.environment.title",
     subtitleKey: "whyChoose.stats.environment.subtitle",
   },
-  {
-    id: 5,
-    icon: "/assets/images/whychoose/c5.svg",
-    titleKey: "whyChoose.stats.quality.title",
-    subtitleKey: "whyChoose.stats.quality.subtitle",
-  },
+  // {
+  //   id: 5,
+  //   icon: "/assets/images/whychoose/c5.svg",
+  //   titleKey: "whyChoose.stats.quality.title",
+  //   subtitleKey: "whyChoose.stats.quality.subtitle",
+  // },
 ];
 
 export default function WhyChoose() {
