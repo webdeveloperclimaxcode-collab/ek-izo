@@ -45,10 +45,10 @@ export default function ServicesHero({ searchQuery, onSearchChange }: ServicesHe
               placeholder={t("servicesPage.searchService")}
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
-              className={`w-full px-8 py-5 rounded-full text-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-colors ${theme === "dark"
-                  ? "bg-yellow-400 text-gray-800 placeholder:text-gray-700"
-                  : "bg-yellow-400 text-gray-800 placeholder:text-gray-700"
-                }`}
+              className={`w-full px-8 py-5 rounded-full text-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-colors 
+              placeholder:text-black! placeholder:opacity-100! 
+              ${theme === "dark" ? "bg-yellow-400 text-gray-800" : "bg-yellow-400 text-gray-800"}`}
+
             />
             <button
               type="submit"
