@@ -73,10 +73,15 @@ export default function OurServices() {
       <div className="w-full px-6 2xl:px-20 max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-left mb-10">
-          <h2 className="text-[26px] md:text-[30px] font-bold text-[#111827] dark:text-white tracking-tight transition-colors">
-            {t("ourServices.heading")}
+          <h2 className="relative inline-block text-[26px] md:text-[30px] font-bold text-[#111827] dark:text-white tracking-tight transition-colors mb-4 pb-2">
+            {/* The Text - z-10 ensures it sits ON TOP of the color */}
+            <span className="relative z-10">
+              {t("ourServices.heading")}
+            </span>
+
+            {/* The Highlight - absolute positioning places it behind */}
+            <div className="absolute left-0 bottom-1 w-full h-7 bg-brand-secondary z-0" />
           </h2>
-          <div className="h-[6px] w-20 bg-brand-secondary rounded-full mt-2 mb-4" />
           <p className="text-[14px] md:text-[15px] text-[#6B7280] dark:text-gray-300 max-w-3xl leading-relaxed transition-colors">
             {t("ourServices.description")}
           </p>
