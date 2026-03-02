@@ -15,9 +15,9 @@ export default function Spinner({ size = "md" }: { size?: "sm" | "md" | "lg" }) 
       <div className="relative">
         {/* Outer rotating ring */}
         <div
-          className={`${sizeClasses[size]} rounded-full border-4 transition-colors duration-300 ${theme === "dark"
-              ? "border-gray-700 border-t-[#ff4d6d]"
-              : "border-gray-200 border-t-[#9F001B]"
+          className={`${sizeClasses[size]} rounded-full border-4 transition-colors duration-300 border-t-(--brand-primary) ${theme === "dark"
+            ? "border-gray-700 "
+            : "border-gray-200 "
             } animate-spin`}
         ></div>
 
