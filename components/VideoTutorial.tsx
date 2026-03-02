@@ -9,7 +9,7 @@ import Spinner from "./Spinner";
 import "swiper/css";
 import "swiper/css/navigation";
 import { useTheme } from "@/contexts/ThemeContext";
-
+import { useLanguage } from "@/contexts/LanguageContext";
 interface Video {
   id: string;
   title: string;
@@ -18,6 +18,7 @@ interface Video {
 }
 
 export default function VideoTutorial() {
+  const { t } = useLanguage();
   const { theme } = useTheme();
   const [videos, setVideos] = useState<Video[]>([]);
   const [loading, setLoading] = useState(true);
@@ -34,6 +35,7 @@ export default function VideoTutorial() {
       const response = await fetch("/api/homepage/videos");
       const data = await response.json();
       if (data.success) {
+        console.log("Fetched videos:", data);
         setVideos(data.data);
       }
     } catch (error) {
@@ -85,11 +87,19 @@ export default function VideoTutorial() {
           {/* Section Header */}
           <div className="text-center mb-16">
             <div className="relative inline-block">
-              <h2 className={`text-[36px] font-bold tracking-tight transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
+              <h2 className="relative inline-block text-[26px] md:text-[30px] font-bold text-[#111827] dark:text-white tracking-tight transition-colors mb-4 pb-2">
+                {/* The Text - z-10 ensures it sits ON TOP of the color */}
+                <span className="relative z-10">
+                  {t("videoTutorial.heading")}
+                </span>
+
+                {/* The Highlight - absolute positioning places it behind */}
+                <div className="absolute left-0 bottom-1 w-full h-7 bg-brand-secondary z-0" />
+              </h2>
+              {/* <h2 className={`text-[36px] font-bold tracking-tight transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
                 VIDEO TUTORIAL
               </h2>
-              {/* Yellow underline */}
-              <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-yellow-500"></div>
+              <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-yellow-500"></div> */}
             </div>
           </div>
 
