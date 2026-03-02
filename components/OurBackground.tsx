@@ -17,7 +17,7 @@ export default function OurBackground() {
           {/* Left Side - Logo */}
           <div className="flex justify-center lg:justify-start">
             <Image
-              src="/assets/images/about/about-logo.svg"
+              src="/assets/images/about/our_background.png"
               alt="Izogrup Logo"
               width={400}
               height={200}
