@@ -13,14 +13,15 @@ export default function SupportHero() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/assets/images/contact/hero.png"
+            src="/assets/images/contact/hero_ek.png"
             alt="Technical & Commercial Support"
             fill
             className="object-cover"
             priority
           />
           {/* Dark Overlay */}
-          <div className={`absolute inset-0 ${theme === "dark" ? "bg-black/70" : "bg-black/50"}`}></div>
+          {/* <div className={`absolute inset-0 ${theme === "dark" ? "bg-black/70" : "bg-black/50"}`}></div> */}
+          <div className={`absolute inset-0 `}></div>
         </div>
 
         {/* Content */}

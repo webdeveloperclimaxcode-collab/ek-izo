@@ -134,14 +134,15 @@ export default function ContactHero() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/assets/images/contact/hero.png"
+            src="/assets/images/contact/hero_2_ek.png"
             alt="Contacts"
             fill
             className={`object-cover ${theme === "dark" ? "brightness-50" : ""}`}
             priority
           />
           {/* Dark Overlay */}
-          <div className={`absolute inset-0 ${theme === "dark" ? "bg-black/70" : "bg-black/50"}`}></div>
+          {/* <div className={`absolute inset-0 ${theme === "dark" ? "bg-black/70" : "bg-black/50"}`}></div> */}
+          <div className={`absolute `}></div>
         </div>
 
         {/* Title */}

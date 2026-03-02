@@ -12,17 +12,17 @@ interface Service {
 const services: Service[] = [
   {
     id: 1,
-    icon: "/assets/images/contact/reomte.svg",
+    icon: "/assets/images/contact/reomte_ek.svg",
     title: "Remote",
   },
   {
     id: 2,
-    icon: "/assets/images/contact/onsite.svg",
+    icon: "/assets/images/contact/onsite_ek.svg",
     title: "On-Site",
   },
   {
     id: 3,
-    icon: "/assets/images/contact/team.svg",
+    icon: "/assets/images/contact/team_ek.svg",
     title: "Dedicated Team",
   },
 ];
