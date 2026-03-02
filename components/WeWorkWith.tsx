@@ -63,13 +63,11 @@ export default function WeWorkWith() {
     <section className={`w-full py-16 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-gray-50"}`}>
       <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-12">
+        <div className="text-start mb-8">
           <div className="relative inline-block">
             <h2 className={`text-[36px] font-bold tracking-tight transition-colors ${theme === "dark" ? "text-white" : "text-gray-800"}`}>
-              WE WORK WITH
+              {t("weWorkWith.heading")}
             </h2>
-            {/* Yellow underline */}
-            <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-yellow-500"></div>
           </div>
         </div>
 

@@ -10,6 +10,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import "swiper/css";
 import "swiper/css/navigation";
 
+
 interface BlogCategory {
   id: string;
   name: string;
@@ -73,16 +74,15 @@ export default function NewsBlogs() {
     return null;
   }
   return (
-    <section className="w-full bg-gray-50 dark:bg-[#000000] py-16 transition-colors duration-300">
+    <section className="w-full bg-white dark:bg-[#000000] py-16 transition-colors duration-300">
       <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center ">
           <div className="relative inline-block">
             <h2 className="text-[36px] font-bold text-brand-primary dark:text-white tracking-tight transition-colors">
-              NEWS BLOGS
+              {t("newsBlogs.heading")}
             </h2>
             {/* Yellow underline */}
-            <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-yellow-500"></div>
           </div>
         </div>
 
@@ -211,7 +211,7 @@ export default function NewsBlogs() {
         <div className="flex justify-center mt-12">
           <Link
             href="/blog"
-            className="px-12 py-4 bg-yellow-400 hover:bg-yellow-500 text-white font-semibold rounded-full transition-colors text-base"
+            className="px-12 py-4 rounded-full border border-brand-secondary text-[#373737] bg-white font-semibold  tracking-wide shadow-sm hover:bg-brand-secondary/5 transition text-base"
           >
             VIEW ALL BLOGS
           </Link>

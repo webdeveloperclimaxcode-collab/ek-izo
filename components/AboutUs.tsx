@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { getTranslation } from "@/lib/i18n";
-
+import { useLanguage } from "@/contexts/LanguageContext";
 interface Feature {
   id: number;
   icon: string;
@@ -35,7 +35,7 @@ const features: Feature[] = [
 
 export default function AboutUs() {
   const [language, setLanguage] = useState("en");
-
+  const { t } = useLanguage();
   useEffect(() => {
     const savedLanguage = localStorage.getItem("language") || "en";
     setLanguage(savedLanguage);
@@ -53,18 +53,27 @@ export default function AboutUs() {
     <section className="w-full bg-white dark:bg-[#000000] py-16 transition-colors duration-300">
       <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="flex justify-center mb-6">
-            <div className="relative inline-block">
-              <h2 className="text-[36px] font-bold text-brand-primary dark:text-white tracking-tight transition-colors">
+        <div className="text-start mb-16">
+          <div className="flex justify-start mb-2">
+            <div className="relative inline-block ">
+              {/* <h2 className="text-[36px] font-bold text-brand-primary dark:text-white tracking-tight transition-colors">
                 ABOUT US
               </h2>
-              {/* Yellow underline */}
-              <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-yellow-500"></div>
+              
+              <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-yellow-500"></div> */}
+              <h2 className="relative inline-block text-[26px] md:text-[30px] font-bold text-[#111827] dark:text-white tracking-tight transition-colors  pb-2">
+                {/* The Text - z-10 ensures it sits ON TOP of the color */}
+                <span className="relative z-10">
+                  {t("aboutUs.heading")}
+                </span>
+
+                {/* The Highlight - absolute positioning places it behind */}
+                <div className="absolute left-0 bottom-1 w-full h-7 bg-brand-secondary z-0" />
+              </h2>
             </div>
           </div>
-          <div className="flex justify-center">
-            <p className="text-base text-gray-600 dark:text-gray-300 max-w-4xl leading-relaxed transition-colors text-center">
+          <div className="flex justify-start">
+            <p className="text-base text-gray-600 dark:text-gray-300 max-w-4xl leading-relaxed transition-colors text-start">
               We provide waterproofing and thermal insulation for all types of buildings—from homes and small businesses to large corporations. Our trained team delivers professional installations with a strong focus on quality and customer satisfaction.
             </p>
           </div>

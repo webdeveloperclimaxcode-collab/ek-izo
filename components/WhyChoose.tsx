@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-
+import { useLanguage } from "@/contexts/LanguageContext";
 interface Stat {
   id: number;
   icon: string;
@@ -72,19 +72,24 @@ const stats: Stat[] = [
 ];
 
 export default function WhyChoose() {
+  const { t } = useLanguage();
   return (
     <section className="w-full bg-gray-50 dark:bg-[#000000] py-16 transition-colors duration-300">
       <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-start mb-16">
           <div className="relative inline-block mb-6">
-            <h2 className="text-[36px] font-bold text-brand-primary dark:text-white tracking-tight transition-colors">
-              WHY CHOOSE EK GROUP
+            <h2 className="relative inline-block text-[26px] md:text-[30px] font-bold text-[#111827] dark:text-white tracking-tight transition-colors  pb-2">
+              {/* The Text - z-10 ensures it sits ON TOP of the color */}
+              <span className="relative z-10">
+                {t("whyChoose.heading")}
+              </span>
+
+              {/* The Highlight - absolute positioning places it behind */}
+              <div className="absolute left-0 bottom-1 w-full h-7 bg-brand-secondary z-0" />
             </h2>
-            {/* Yellow underline */}
-            <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-yellow-500"></div>
           </div>
-          <p className="text-base text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed transition-colors">
+          <p className="text-base  text-gray-600 dark:text-gray-300  mx-auto leading-relaxed transition-colors">
             The advantages of partnering with us
           </p>
         </div>

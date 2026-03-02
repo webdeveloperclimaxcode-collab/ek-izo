@@ -85,7 +85,7 @@ export default function VideoTutorial() {
       <section className={`w-full py-16 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-gray-50"}`}>
         <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <div className="text-start mb-16">
             <div className="relative inline-block">
               <h2 className="relative inline-block text-[26px] md:text-[30px] font-bold text-[#111827] dark:text-white tracking-tight transition-colors mb-4 pb-2">
                 {/* The Text - z-10 ensures it sits ON TOP of the color */}
@@ -227,9 +227,10 @@ export default function VideoTutorial() {
           <div className="flex justify-center mt-12">
             <Link
               href="/video-tutorials"
-              className="px-12 py-4 bg-brand-gradient text-white font-semibold rounded-full hover:opacity-90 transition-opacity text-[16px]"
+              className="px-12 py-4  rounded-full border border-brand-secondary text-[#373737] bg-white font-semibold  tracking-wide shadow-sm hover:bg-brand-secondary/5 transition text-[16px]"
+
             >
-              VIEW ALL VIDEO TUTORIAL
+              {t("videoTutorial.viewAll")}
             </Link>
           </div>
         </div>

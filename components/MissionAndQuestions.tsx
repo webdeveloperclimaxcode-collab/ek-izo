@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useTheme } from "@/contexts/ThemeContext";
-
+import { useLanguage } from "@/contexts/LanguageContext";
 export default function MissionAndQuestions() {
   const { theme } = useTheme();
 
@@ -54,7 +54,7 @@ export default function MissionAndQuestions() {
               href="/contact"
               className="inline-block px-12 py-4 bg-brand-gradient text-white font-semibold rounded-full hover:opacity-90 transition-opacity text-[16px]"
             >
-              CONTACT US
+
             </Link>
           </div>
 

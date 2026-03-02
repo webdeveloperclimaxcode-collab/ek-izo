@@ -85,7 +85,7 @@ export default function Footer() {
   return (
     <>
       {/* Contact Us Banner */}
-      <div className="w-full py-8 bg-brand-secondary">
+      <div className="w-full py-8 px-12 bg-brand-secondary">
         <div className="w-full px-6 2xl:px-20 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
             <h2 className="text-3xl font-bold mb-2 text-[#111827]">
@@ -116,7 +116,7 @@ export default function Footer() {
           />
         </div>
 
-        <div className="relative w-full px-6 2xl:px-20 py-16">
+        <div className="relative w-full px-20 2xl:px-20 py-16">
           {/* Logo - Full Width */}
           <div className="mb-12">
             <Image

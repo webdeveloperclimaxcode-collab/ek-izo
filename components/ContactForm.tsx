@@ -278,7 +278,7 @@ export default function ContactForm() {
             <button
               type="submit"
               disabled={loading}
-              className="px-16 py-4 bg-brand-gradient text-white font-semibold rounded-full hover:opacity-90 transition-opacity text-[16px] disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+              className="px-16  py-4 bg-brand-gradient text-white font-semibold rounded-full hover:opacity-90 transition-opacity text-[16px] disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
             >
               {loading ? t("contactPage.sending") : t("contactPage.contactUs")}
             </button>
