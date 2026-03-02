@@ -37,7 +37,7 @@ export default function ServicesHero({ searchQuery, onSearchChange }: ServicesHe
           {t("servicesPage.serviceLine")}
         </h1>
 
-        {/* Search Bar - white placeholder and search_icon_white in dark mode (same as ProductsHero) */}
+        {/* Search Bar - yellow background */}
         <form onSubmit={handleSearch} className="services-hero-search relative max-w-3xl mx-auto">
           <div className="relative">
             <input
@@ -45,11 +45,10 @@ export default function ServicesHero({ searchQuery, onSearchChange }: ServicesHe
               placeholder={t("servicesPage.searchService")}
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
-              className={`w-full px-8 py-5 rounded-full text-lg focus:outline-none focus:ring-2 transition-colors ${
-                theme === "dark"
-                  ? "bg-[#FFFFFF]/20 text-white placeholder:text-white placeholder:opacity-100"
-                  : "bg-[#FFFFFF]/46 text-brand-primary placeholder:text-[#4A5568]"
-              }`}
+              className={`w-full px-8 py-5 rounded-full text-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-colors ${theme === "dark"
+                  ? "bg-yellow-400 text-gray-800 placeholder:text-gray-700"
+                  : "bg-yellow-400 text-gray-800 placeholder:text-gray-700"
+                }`}
             />
             <button
               type="submit"
@@ -57,7 +56,7 @@ export default function ServicesHero({ searchQuery, onSearchChange }: ServicesHe
               aria-label="Search"
             >
               <Image
-                src={theme === "dark" ? "/assets/images/Products_page/search_icon_white.svg" : "/assets/images/Products_page/search_icon.svg"}
+                src="/assets/images/Products_page/search_icon.svg"
                 alt="Search"
                 width={24}
                 height={24}

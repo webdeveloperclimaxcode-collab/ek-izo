@@ -69,70 +69,50 @@ export default function OurServices() {
   }
 
   return (
-    <section className="w-full bg-linear-to-r from-[#F0F3FF] to-[#FFFFFF] dark:from-[#000000] dark:to-[#000000] py-16 transition-colors duration-300">
-      <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto">
+    <section className="w-full bg-white dark:bg-black py-14 transition-colors duration-300">
+      <div className="w-full px-6 2xl:px-20 max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-[36px] font-bold text-brand-primary dark:text-white mb-3 tracking-tight transition-colors">
+        <div className="text-left mb-10">
+          <h2 className="text-[26px] md:text-[30px] font-bold text-[#111827] dark:text-white tracking-tight transition-colors">
             {t("ourServices.heading")}
           </h2>
-          <p className="text-[18px] text-[#4A5568] dark:text-gray-300 max-w-3xl mx-auto leading-relaxed transition-colors">
+          <div className="h-[6px] w-20 bg-brand-secondary rounded-full mt-2 mb-4" />
+          <p className="text-[14px] md:text-[15px] text-[#6B7280] dark:text-gray-300 max-w-3xl leading-relaxed transition-colors">
             {t("ourServices.description")}
           </p>
         </div>
 
         {/* GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7">
           {services.map((service) => (
-            <div
+            <Link
               key={service.id}
-              className="bg-white dark:bg-[#000000] rounded-[26px] shadow-[0_8px_28px_rgba(0,0,0,0.08)] dark:shadow-[0_8px_28px_rgba(0,0,0,0.3)] overflow-hidden hover:shadow-xl dark:hover:shadow-[0_8px_28px_rgba(0,0,0,0.5)] transition-shadow flex flex-col border border-gray-200 dark:border-gray-700 group"
+              href={`/services/${service.id}`}
+              className="bg-white dark:bg-black rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow flex flex-col"
             >
-              {/* IMAGES */}
-              {service.images.length === 1 ? (
-                /* SINGLE IMAGE */
-                <div className="relative h-[240px]">
+              {/* Image */}
+              <div className="relative h-[170px] md:h-[185px] bg-gray-100 dark:bg-gray-900">
+                {service.images && service.images.length > 0 ? (
                   <Image
                     src={service.images[0]}
                     alt={service.title}
                     fill
-                    className="rounded-[20px] object-cover"
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
-                </div>
-              ) : service.images.length > 1 ? (
-                /* 4-GRID COLLAGE */
-                <div className="grid grid-cols-2 gap-2">
-                  {service.images.slice(0, 4).map((img, index) => (
-                    <div
-                      key={index}
-                      className={`relative ${index < 2 ? "h-[135px]" : "h-[100px]"
-                        }`}
-                    >
-                      <Image
-                        src={img}
-                        alt={service.title}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                /* NO IMAGE */
-                <div className="relative h-[260px] p-3 bg-gray-100 flex items-center justify-center">
-                  <span className="text-gray-400">No Image</span>
-                </div>
-              )}
+                ) : (
+                  <div className="flex items-center justify-center h-full text-gray-400 text-sm">
+                    No Image
+                  </div>
+                )}
+              </div>
 
-              {/* CONTENT */}
-              <div className="px-6 pb-6 pt-3 flex flex-col flex-1">
-                <Link href={`/services/${service.id}`}>
-              <h3 className="text-[17px] font-bold text-brand-secondary dark:text-white mb-3 leading-tight uppercase min-h-[50px] hover:underline transition-colors">
-                    {service.title}
-                  </h3>
-                </Link>
-
-                <p className="text-[15px] text-brand-primary dark:text-white mb-5 leading-relaxed line-clamp-2 min-h-[48px] transition-colors">
+              {/* Content */}
+              <div className="p-5 flex flex-col gap-2 flex-1">
+                <h3 className="text-[12px] md:text-[13px] font-semibold uppercase tracking-wide text-[#111827] dark:text-white leading-snug line-clamp-2 min-h-[34px]">
+                  {service.title}
+                </h3>
+                <p className="text-[12px] md:text-[13px] text-[#6B7280] dark:text-gray-300 leading-relaxed line-clamp-2 min-h-[38px]">
                   {service.description || ""}
                 </p>
 
@@ -162,15 +142,15 @@ export default function OurServices() {
                   </div>
                 )} */}
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
         {/* BUTTON */}
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-10">
           <Link
             href="/services"
-            className="px-14 py-4 rounded-full bg-brand-gradient text-white font-semibold text-lg shadow-md hover:opacity-90 transition"
+            className="px-10 py-3 rounded-full border border-brand-secondary text-[#373737] bg-white font-semibold text-[12px] tracking-wide shadow-sm hover:bg-brand-secondary/5 transition"
           >
             {t("ourServices.viewAll")}
           </Link>

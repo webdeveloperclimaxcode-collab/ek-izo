@@ -84,16 +84,20 @@ export default function Footer() {
   };
   return (
     <>
-      {/* Contact Us Banner - always same look (no dark mode) */}
-      <div className="w-full text-white py-8 mb-8 bg-brand-gradient">
+      {/* Contact Us Banner */}
+      <div className="w-full py-8 bg-brand-secondary">
         <div className="w-full px-6 2xl:px-20 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
-            <h2 className="text-3xl font-bold mb-2 text-white">{t("footer.contactBanner.heading")}</h2>
-            <p className="text-lg opacity-90 text-white/90">{t("footer.contactBanner.subheading")}</p>
+            <h2 className="text-3xl font-bold mb-2 text-[#111827]">
+              {t("footer.contactBanner.heading")}
+            </h2>
+            <p className="text-lg text-[#111827] opacity-90">
+              {t("footer.contactBanner.subheading")}
+            </p>
           </div>
           <Link
             href="/support"
-            className="px-8 cursor-pointer py-3 rounded-full font-semibold bg-white text-brand-secondary hover:bg-gray-100 transition-colors"
+            className="px-8 cursor-pointer py-3 rounded-full font-semibold bg-white text-[#111827] shadow-md hover:bg-gray-100 transition-colors"
           >
             {t("footer.contactBanner.button")}
           </Link>

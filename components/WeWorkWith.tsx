@@ -1,10 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
-import Spinner from "./Spinner";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useTheme } from "@/contexts/ThemeContext";
 import "swiper/css";
@@ -12,65 +11,69 @@ import "swiper/css/pagination";
 
 interface Company {
   id: string;
+  name: string;
   logoUrl: string;
-  websiteUrl: string | null;
+  websiteUrl?: string;
 }
 
+const companies: Company[] = [
+  {
+    id: "1",
+    name: "BASF",
+    logoUrl: "/assets/images/company_logo/basf.svg",
+    websiteUrl: "https://www.basf.com"
+  },
+  {
+    id: "2",
+    name: "General Membrane",
+    logoUrl: "/assets/images/company_logo/general.svg",
+    websiteUrl: "https://www.generalmembrane.com"
+  },
+  {
+    id: "3",
+    name: "Italiana Membrane",
+    logoUrl: "/assets/images/company_logo/italiana.svg",
+    websiteUrl: "https://www.italiana.com"
+  },
+  {
+    id: "4",
+    name: "Polyglass",
+    logoUrl: "/assets/images/company_logo/polyglass.svg",
+    websiteUrl: "https://www.polyglass.com"
+  },
+  {
+    id: "5",
+    name: "Tessil Brenta",
+    logoUrl: "/assets/images/company_logo/tessilbrenta.svg",
+    websiteUrl: "https://www.tessilbrenta.com"
+  }
+];
+
 export default function WeWorkWith() {
-  const [companies, setCompanies] = useState<Company[]>([]);
-  const [loading, setLoading] = useState(true);
   const { t } = useLanguage();
   const { theme } = useTheme();
 
-  useEffect(() => {
-    fetchCompanies();
-  }, []);
-
-  const fetchCompanies = async () => {
-    try {
-      setLoading(true);
-      const response = await fetch("/api/we-work-with");
-      const data = await response.json();
-      if (data.success) {
-        setCompanies(data.data);
-      }
-    } catch (error) {
-      console.error("Error fetching companies:", error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const handleCompanyClick = (websiteUrl: string | null) => {
+  const handleCompanyClick = (websiteUrl?: string) => {
     if (websiteUrl) {
       window.open(websiteUrl.startsWith('http://') || websiteUrl.startsWith('https://') ? websiteUrl : `https://${websiteUrl}`, "_blank", "noopener,noreferrer");
     }
   };
 
-  if (loading) {
-    return (
-      <section className={`w-full py-16 border-t border-b transition-colors duration-300 ${theme === "dark" ? "bg-[#000000] border-gray-800" : "bg-white border-gray-200"}`}>
-        <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto text-center">
-          <Spinner size="lg" />
-        </div>
-      </section>
-    );
-  }
-
-  if (companies.length === 0) {
-    return null;
-  }
   return (
-    <section className={`w-full py-16 border-t border-b transition-colors duration-300 ${theme === "dark" ? "bg-[#000000] border-gray-800" : "bg-white border-gray-200"}`}>
+    <section className={`w-full py-16 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-gray-50"}`}>
       <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-8">
-          <h2 className="text-[32px] font-bold text-[#1B2556] dark:text-white tracking-tight transition-colors">
-            {t("weWorkWith.heading")}
-          </h2>
+        <div className="text-center mb-12">
+          <div className="relative inline-block">
+            <h2 className={`text-[36px] font-bold tracking-tight transition-colors ${theme === "dark" ? "text-white" : "text-gray-800"}`}>
+              WE WORK WITH
+            </h2>
+            {/* Yellow underline */}
+            <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-yellow-500"></div>
+          </div>
         </div>
 
-        {/* Companies Slider - logo size & spacing per Figma (smaller logos, generous gap) */}
+        {/* Companies Slider */}
         <div className="relative">
           <Swiper
             modules={[Pagination, Autoplay]}
@@ -84,40 +87,46 @@ export default function WeWorkWith() {
             }}
             loop={true}
             slidesPerView={2}
-            spaceBetween={48}
+            spaceBetween={32}
             breakpoints={{
               640: {
                 slidesPerView: 3,
-                spaceBetween: 64,
+                spaceBetween: 40,
               },
               768: {
                 slidesPerView: 4,
-                spaceBetween: 80,
+                spaceBetween: 48,
               },
               1024: {
                 slidesPerView: 5,
-                spaceBetween: 96,
+                spaceBetween: 56,
               },
             }}
-            className="pb-10"
+            className="pb-12"
           >
             {companies.map((company) => (
               <SwiperSlide key={company.id}>
                 <div
                   onClick={() => handleCompanyClick(company.websiteUrl)}
-                  className={`flex items-center justify-center h-14 ${company.websiteUrl ? "cursor-pointer hover:opacity-75 transition-opacity" : ""}`}
+                  className={`flex items-center justify-center h-20 p-4 rounded-lg transition-all duration-300 ${theme === "dark"
+                    ? "bg-[#1a1a1a] hover:bg-[#2a2a2a]"
+                    : "bg-white hover:bg-gray-50"
+                    } ${company.websiteUrl ? "cursor-pointer hover:shadow-md" : ""} border ${theme === "dark" ? "border-gray-700" : "border-gray-200"
+                    }`}
                 >
                   <Image
                     src={company.logoUrl}
-                    alt="Company logo"
+                    alt={`${company.name} logo`}
                     width={120}
-                    height={120}
+                    height={60}
                     className="w-auto h-auto max-h-12 max-w-[120px] object-contain transition-all"
                   />
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
+
+          {/* Custom Pagination */}
           <div className="we-work-with-pagination flex justify-center gap-2 mt-6" />
         </div>
       </div>

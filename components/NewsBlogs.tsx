@@ -73,17 +73,21 @@ export default function NewsBlogs() {
     return null;
   }
   return (
-      <section className="w-full bg-gradient-to-r to-[#F0F3FF] from-[#FFFFFF] dark:to-[#000000] dark:from-[#000000] py-16 transition-colors duration-300">
+    <section className="w-full bg-gray-50 dark:bg-[#000000] py-16 transition-colors duration-300">
       <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-[36px] font-bold text-brand-primary dark:text-white tracking-tight transition-colors">
-            {t("newsBlogs.heading")}
-          </h2>
+        <div className="text-center mb-16">
+          <div className="relative inline-block">
+            <h2 className="text-[36px] font-bold text-brand-primary dark:text-white tracking-tight transition-colors">
+              NEWS BLOGS
+            </h2>
+            {/* Yellow underline */}
+            <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-yellow-500"></div>
+          </div>
         </div>
 
         {/* Blogs Slider */}
-        <div className="relative py-8 max-w-6xl mx-auto">
+        <div className="relative py-8 px-16 max-w-6xl mx-auto">
           <Swiper
             modules={[Navigation, Autoplay]}
             navigation={{
@@ -111,47 +115,48 @@ export default function NewsBlogs() {
             {blogs.map((blog) => (
               <SwiperSlide key={blog.id}>
                 <Link href={`/blog/${blog.id}`}>
-                  <div className="bg-white dark:bg-[#000000] rounded-lg shadow-sm dark:shadow-lg overflow-hidden hover:shadow-md dark:hover:shadow-xl transition-shadow h-full border border-gray-300 dark:border-gray-700 max-w-sm mx-auto cursor-pointer">
+                  <div className="bg-white dark:bg-[#1a1a1a] rounded-lg shadow-sm hover:shadow-md transition-shadow h-full border border-gray-100 dark:border-gray-700 max-w-sm mx-auto cursor-pointer overflow-hidden">
                     {/* Blog Image */}
-                    <div className="relative h-44">
-                      {blog.featuredImage ? (
-                        <Image
-                          src={blog.featuredImage}
-                          alt={blog.title}
-                          fill
-                          className="object-cover"
-                        />
-                      ) : (
-                        <div className="w-full h-full bg-gray-100 dark:bg-[#1a1a1a] flex items-center justify-center transition-colors">
-                          <span className="text-gray-400 dark:text-gray-500">No Image</span>
-                        </div>
-                      )}
+                    <div className="relative h-48">
+                      <Image
+                        src={blog.featuredImage || "/assets/images/blog-placeholder.jpg"}
+                        alt={blog.title}
+                        fill
+                        className="object-cover"
+                        onError={(e) => {
+                          // Fallback to a default construction image if the featured image fails
+                          const target = e.target as HTMLImageElement;
+                          target.src = "/assets/images/services/s1.png";
+                        }}
+                      />
                     </div>
 
                     {/* Blog Content */}
-                    <div className="p-5">
+                    <div className="p-6">
                       {/* Category */}
                       {blog.category && (
-                        <span className="text-[11px] text-[#a8a8a8] dark:text-white uppercase tracking-wider mb-2 block transition-colors">
+                        <span className="text-[12px] text-yellow-600 dark:text-yellow-400 uppercase tracking-wider mb-3 block font-medium transition-colors">
                           {blog.category.name}
                         </span>
                       )}
 
                       {/* Title */}
-                      <h3 className="text-base font-semibold text-brand-primary dark:text-white mb-4 leading-snug min-h-[48px] line-clamp-2 transition-colors">
+                      <h3 className="text-[16px] font-bold text-gray-800 dark:text-white mb-4 leading-tight line-clamp-2 transition-colors">
                         {blog.title}
                       </h3>
 
                       {/* Date with Icon */}
                       <div className="flex items-center gap-2">
-                        <Image
-                          src="/assets/images/services/date.svg"
-                          alt="Date"
-                          width={18}
-                          height={18}
-                          className="w-4 h-4"
-                        />
-                        <span className="text-sm text-brand-primary dark:text-white font-medium transition-colors">
+                        <div className="w-4 h-4 bg-yellow-100 rounded flex items-center justify-center">
+                          <Image
+                            src="/assets/images/services/date.svg"
+                            alt="Date"
+                            width={12}
+                            height={12}
+                            className="w-3 h-3"
+                          />
+                        </div>
+                        <span className="text-[14px] text-gray-600 dark:text-gray-400 font-medium transition-colors">
                           {formatDate(blog.publishedAt || blog.createdAt)}
                         </span>
                       </div>
@@ -164,39 +169,51 @@ export default function NewsBlogs() {
 
           {/* Custom Navigation Buttons */}
           <button
-            className="blogs-button-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 cursor-pointer hover:opacity-80 transition-opacity -ml-6"
-            aria-label={t("newsBlogs.prevBlog")}
+            className="blogs-button-prev absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-yellow-400 rounded-full shadow-lg flex items-center justify-center hover:bg-yellow-500 transition-colors"
+            aria-label="Previous blog"
           >
-            <Image
-              src="/assets/images/HeroSection/leftIcon.svg"
-              alt="Previous"
-              width={60}
-              height={60}
-              className="w-12 h-12 md:w-14 md:h-14"
-            />
+            <svg
+              className="w-6 h-6 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
           </button>
 
           <button
-            className="blogs-button-next absolute right-0 top-1/2 -translate-y-1/2 z-10 cursor-pointer hover:opacity-80 transition-opacity -mr-6"
-            aria-label={t("newsBlogs.nextBlog")}
+            className="blogs-button-next absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-yellow-400 rounded-full shadow-lg flex items-center justify-center hover:bg-yellow-500 transition-colors"
+            aria-label="Next blog"
           >
-            <Image
-              src="/assets/images/HeroSection/righticon.svg"
-              alt="Next"
-              width={60}
-              height={60}
-              className="w-12 h-12 md:w-14 md:h-14"
-            />
+            <svg
+              className="w-6 h-6 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
           </button>
         </div>
 
         {/* View All Button */}
-        <div className="flex justify-center mt-8">
+        <div className="flex justify-center mt-12">
           <Link
             href="/blog"
-            className="px-12 py-4 bg-brand-gradient text-white font-semibold rounded-full hover:opacity-90 transition-opacity text-base"
+            className="px-12 py-4 bg-yellow-400 hover:bg-yellow-500 text-white font-semibold rounded-full transition-colors text-base"
           >
-            {t("newsBlogs.viewAll")}
+            VIEW ALL BLOGS
           </Link>
         </div>
       </div>

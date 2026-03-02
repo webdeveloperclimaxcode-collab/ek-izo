@@ -66,7 +66,7 @@ export default function VideoTutorial() {
 
   if (loading) {
     return (
-      <section className={`w-full py-16 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-linear-to-r from-[#FFFFFF] to-[#F0F3FF]"}`}>
+      <section className={`w-full py-16 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-gray-50"}`}>
         <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto text-center">
           <Spinner size="lg" />
         </div>
@@ -80,17 +80,21 @@ export default function VideoTutorial() {
 
   return (
     <>
-      <section className={`w-full py-16 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-linear-to-r to-[#FFFFFF] from-[#F0F3FF]"}`}>
+      <section className={`w-full py-16 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-gray-50"}`}>
         <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className={`text-[36px] font-bold tracking-tight transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
-              VIDEO TUTORIAL
-            </h2>
+            <div className="relative inline-block">
+              <h2 className={`text-[36px] font-bold tracking-tight transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
+                VIDEO TUTORIAL
+              </h2>
+              {/* Yellow underline */}
+              <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-yellow-500"></div>
+            </div>
           </div>
 
           {/* Video Slider */}
-          <div className="relative py-8">
+          <div className="relative py-8 px-16">
             <Swiper
               modules={[Navigation, Autoplay]}
               navigation={{
@@ -123,9 +127,9 @@ export default function VideoTutorial() {
                 <SwiperSlide key={video.id}>
                   <div
                     onClick={() => openVideoModal(video)}
-                    className={`rounded-xl overflow-hidden hover:shadow-xl transition-all cursor-pointer border group h-full duration-300 ${theme === "dark"
-                      ? "bg-[#000000] border-gray-700"
-                      : "bg-white border-gray-100"
+                    className={`rounded-xl overflow-hidden hover:shadow-xl transition-all cursor-pointer group h-full duration-300 ${theme === "dark"
+                      ? "bg-[#1a1a1a] shadow-lg"
+                      : "bg-white shadow-lg"
                       }`}
                   >
                     {/* Video Thumbnail with Play Button */}
@@ -150,11 +154,15 @@ export default function VideoTutorial() {
                       </div>
                     </div>
 
-                    {/* Video Title */}
-                    <div className="p-6">
-                      <h3 className={`text-[17px] font-semibold line-clamp-2 min-h-[50px] transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
+                    {/* Video Info */}
+                    <div className="p-6 text-center">
+                      <h3 className={`text-[17px] font-semibold mb-2 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-gray-800"}`}>
                         {video.title}
                       </h3>
+                      {/* Category label - you can customize this based on your data */}
+                      <p className={`text-[14px] transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-gray-600"}`}>
+                        Construction Management
+                      </p>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -165,43 +173,55 @@ export default function VideoTutorial() {
             {videos.length > 0 && (
               <>
                 <button
-                  className="video-button-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 cursor-pointer hover:opacity-80 transition-opacity -ml-6"
+                  className="video-button-prev absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors"
                   aria-label="Previous video"
                 >
-                  <Image
-                    src="/assets/images/HeroSection/left-arrow.svg"
-                    alt="Previous"
-                    width={60}
-                    height={60}
-                    className="w-12 h-12 md:w-14 md:h-14"
-                  />
+                  <svg
+                    className="w-6 h-6 text-gray-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 19l-7-7 7-7"
+                    />
+                  </svg>
                 </button>
 
                 <button
-                  className="video-button-next absolute right-0 top-1/2 -translate-y-1/2 z-10 cursor-pointer hover:opacity-80 transition-opacity -mr-6"
+                  className="video-button-next absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors"
                   aria-label="Next video"
                 >
-                  <Image
-                    src="/assets/images/HeroSection/right-arrow.svg"
-                    alt="Next"
-                    width={60}
-                    height={60}
-                    className="w-12 h-12 md:w-14 md:h-14"
-                  />
+                  <svg
+                    className="w-6 h-6 text-gray-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
                 </button>
               </>
             )}
           </div>
 
           {/* View All Button */}
-            <div className="flex justify-center mt-12">
-              <Link
-                href="/video-tutorials"
-                className="px-12 py-4 bg-brand-gradient text-white font-semibold rounded-full hover:opacity-90 transition-opacity text-[16px]"
-              >
-                VIEW ALL VIDEO TUTORIAL
-              </Link>
-            </div>
+          <div className="flex justify-center mt-12">
+            <Link
+              href="/video-tutorials"
+              className="px-12 py-4 bg-brand-gradient text-white font-semibold rounded-full hover:opacity-90 transition-opacity text-[16px]"
+            >
+              VIEW ALL VIDEO TUTORIAL
+            </Link>
+          </div>
         </div>
       </section>
 
