@@ -304,7 +304,7 @@ export default function ContactHero() {
                             <Link
                               href="https://maps.google.com"
                               target="_blank"
-                              className="inline-block px-8 py-3 bg-linear-to-r from-[#9F001B] to-[#1B2556] text-white font-semibold rounded-full hover:opacity-90 transition-opacity text-[14px]"
+                              className="inline-block px-8 py-3 bg-brand-gradient text-white font-semibold rounded-full hover:opacity-90 transition-opacity text-[14px]"
                             >
                               {t("contactPage.findOnMaps")}
                             </Link>
