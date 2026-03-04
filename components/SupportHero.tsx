@@ -50,11 +50,11 @@ export default function SupportHero() {
 
           {/* Description */}
           <p className={`text-[15px] leading-relaxed text-center mb-10 max-w-4xl mx-auto transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
-            <span className="text-brand-secondary font-semibold">IZOGRUP</span>{" "}
+            <span className="text-brand-secondary font-semibold">EKGRUP</span>{" "}
             delivers global technical and installation support through our highly
             skilled specialists, experienced across every sector. Our experts
             provide guidance on the correct use of{" "}
-            <span className="text-brand-secondary font-semibold">IZOGRUP</span>{" "}
+            <span className="text-brand-secondary font-semibold">EKGRUP</span>{" "}
             products and are always available to assist with any technical
             inquiries.
           </p>

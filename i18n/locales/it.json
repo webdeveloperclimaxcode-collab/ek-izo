@@ -15,7 +15,7 @@
     "lightMode": "Modalità Chiara",
     "login": "Accedi",
     "logout": "Esci",
-    "myIzogrup": "MyIzogrup"
+    "myIzogrup": "MyEkgrup"
   },
   "hero": {
     "prevSlide": "Diapositiva precedente",
@@ -23,7 +23,7 @@
   },
   "ourServices": {
     "heading": "I NOSTRI SERVIZI",
-    "description": "Con oltre 15 anni di esperienza e una vera attenzione alla soddisfazione del cliente, puoi contare su di noi per l'impermeabilizzazione della tua prossima casa/edificio o l'isolamento termico.",
+    "description": "Nel corso degli anni Ekgrup è diventato un partner affidabile nel settore edile, offrendo servizi specializzati per ogni esigenza",
     "viewAll": "VISUALIZZA TUTTI I SERVIZI"
   },
   "costOfServices": {
@@ -95,8 +95,8 @@
     }
   },
   "whyChoose": {
-    "heading": "PERCHÉ SCEGLIERE IZOGRUP SH.P.K",
-    "description": "Fondato da Oligert & Erion Plaka nel 2004, Izogrup si è affermato come uno dei più grandi e prestigiosi fornitori di servizi di impermeabilizzazione e isolamento termico in Albania.",
+    "heading": "PERCHÉ SCEGLIERE EKGRUP SH.P.K",
+    "description": "Fondato da Oligert & Erion Plaka nel 2004, Ekgrup si è affermato come uno dei più grandi e prestigiosi fornitori di servizi di impermeabilizzazione e isolamento termico in Albania.",
     "stats": {
       "experience": {
         "title": "10+ ANNI",
@@ -132,7 +132,7 @@
   "footer": {
     "contactBanner": {
       "heading": "CONTATTACI",
-      "subheading": "Scopri di più su come lavorare con IZOGRUP",
+      "subheading": "Scopri di più su come lavorare con EKGRUP",
       "button": "CONTATTACI"
     },
     "followUs": "Seguici",
@@ -151,7 +151,8 @@
     "news": "NOTIZIE",
     "productLines": "LINEE DI PRODOTTI",
     "scrollToTop": "Scorri verso l'alto",
-    "copyright": "© Copyright 2025 Izogrup SH.P.K TUTTI I DIRITTI RISERVATI"
+    "copyright": "© Copyright 2025 Ekgrup SH.P.K TUTTI I DIRITTI RISERVATI",
+    "workWithUs": "LAVORA CON NOI"
   },
   "common": {
     "loading": "Caricamento...",
@@ -166,7 +167,7 @@
     "productLine": "LINEA DI PRODOTTI",
     "searchProduct": "Cerca Prodotto",
     "completeRange": "Una Gamma Completa Di Prodotti E Tecnologie Per L'Industria Edile",
-    "completeRangeDesc": "Nel corso degli anni, Izogrup è diventato un partner affidabile nell'industria delle costruzioni, offrendo prodotti specializzati per ogni esigenza dall'impermeabilizzazione dei tetti all'isolamento acustico dei teatri e al restauro di edifici storici.",
+    "completeRangeDesc": "Nel corso degli anni, Ekgrup è diventato un partner affidabile nell'industria delle costruzioni, offrendo prodotti specializzati per ogni esigenza dall'impermeabilizzazione dei tetti all'isolamento acustico dei teatri e al restauro di edifici storici.",
     "browseByProductLines": "Sfoglia Per Linee Di Prodotti",
     "allProducts": "Tutti I Prodotti",
     "noProductsFound": "Nessun prodotto trovato.",
@@ -203,7 +204,7 @@
     "serviceLine": "LINEA DI SERVIZI",
     "searchService": "Cerca Servizio",
     "completeRange": "Una Gamma Completa Di Servizi E Tecnologie Per L'Industria Edile",
-    "completeRangeDesc": "Nel corso degli anni, Izogrup è diventato un partner affidabile nell'industria delle costruzioni, offrendo servizi specializzati per ogni esigenza dall'impermeabilizzazione dei tetti all'isolamento acustico dei teatri e al restauro di edifici storici.",
+    "completeRangeDesc": "Nel corso degli anni, Ekgrup è diventato un partner affidabile nell'industria delle costruzioni, offrendo servizi specializzati per ogni esigenza dall'impermeabilizzazione dei tetti all'isolamento acustico dei teatri e al restauro di edifici storici.",
     "browseByServiceLines": "Sfoglia Per Linee Di Servizi",
     "allServices": "Tutti I Servizi",
     "noServicesFound": "Nessun servizio trovato.",

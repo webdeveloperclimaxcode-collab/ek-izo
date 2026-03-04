@@ -16,14 +16,14 @@ const benefits: Benefit[] = [
     icon: "/assets/images/about/rightchoice.svg",
     title: "RIGHT CHOICE",
     description:
-      "Izogrup is the right choice, offering comprehensive services, the right tools, and a skilled team all with cost-efficient solutions.",
+      "Ekgrup is the right choice, offering comprehensive services, the right tools, and a skilled team all with cost-efficient solutions.",
   },
   {
     id: 2,
     icon: "/assets/images/about/saving.svg",
     title: "SAVING TIME",
     description:
-      "Izogrup operates nationwide in Albania and maintains fully stocked warehouses, eliminating the need for third-party sourcing.",
+      "Ekgrup operates nationwide in Albania and maintains fully stocked warehouses, eliminating the need for third-party sourcing.",
   },
   {
     id: 3,
@@ -55,11 +55,10 @@ export default function WhyChooseUs() {
               </div>
 
               {/* Card - same height, border in both modes (Figma) */}
-              <div className={`flex-1 flex flex-col rounded-2xl pt-20 pb-10 px-8 items-center text-center border transition-colors duration-300 ${
-                theme === "dark"
+              <div className={`flex-1 flex flex-col rounded-2xl pt-20 pb-10 px-8 items-center text-center border transition-colors duration-300 ${theme === "dark"
                   ? "bg-[#1a1a1a] border-gray-600"
                   : "bg-white border-gray-200"
-              }`}>
+                }`}>
                 {/* Title */}
                 <h3 className={`text-[20px] font-bold mb-4 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"}`}>
                   {benefit.title}

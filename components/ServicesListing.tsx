@@ -225,7 +225,7 @@ export default function ServicesListing({ searchQuery }: ServicesListingProps) {
 
   return (
     <section className={`w-full py-12 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-white"}`}>
-      <div className="w-full px-6 2xl:px-20 max-w-7xl mx-auto">
+      <div className="w-full px-6 2xl:px-20 max-w-full mx-auto">
         {/* Header */}
         <div className="mb-8">
           <h2 className={`text-[28px] font-bold mb-3 text-center transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"
@@ -242,7 +242,7 @@ export default function ServicesListing({ searchQuery }: ServicesListingProps) {
             <div className="relative inline-block" ref={dropdownRef}>
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="px-8 py-3 bg-brand-gradient text-black font-semibold rounded-full text-sm flex items-center gap-3 hover:opacity-90 transition-opacity"
+                className="px-8 py-3 bg-brand-gradient text-black font-semibold rounded-full text-sm flex items-center gap-3 hover:opacity-90 transition-opacity hover:cursor-pointer"
               >
                 {t("servicesPage.browseByServiceLines")}
                 <Image
@@ -475,7 +475,8 @@ export default function ServicesListing({ searchQuery }: ServicesListingProps) {
 
         {/* Services Grid */}
         {!loading && filteredServices.length > 0 && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 ">
             {filteredServices.slice(0, visibleServices).map((service) => (
               <Link
                 key={service.id}

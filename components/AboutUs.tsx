@@ -51,7 +51,7 @@ export default function AboutUs() {
 
   return (
     <section className="w-full bg-white dark:bg-[#000000] py-16 transition-colors duration-300">
-      <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto">
+      <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-full mx-auto">
         {/* Section Header */}
         <div className="text-start mb-16">
           <div className="flex justify-start mb-2">
@@ -73,7 +73,7 @@ export default function AboutUs() {
             </div>
           </div>
           <div className="flex justify-start">
-            <p className="text-base text-gray-600 dark:text-gray-300 max-w-4xl leading-relaxed transition-colors text-start">
+            <p className="text-base lg:text-[30px] text-gray-600 dark:text-gray-300  leading-relaxed transition-colors text-start">
               We provide waterproofing and thermal insulation for all types of buildings—from homes and small businesses to large corporations. Our trained team delivers professional installations with a strong focus on quality and customer satisfaction.
             </p>
           </div>
@@ -86,24 +86,24 @@ export default function AboutUs() {
               <div className="bg-white dark:bg-[#1a1a1a] rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition-all p-8 text-left h-full">
                 {/* Icon */}
                 <div className="mb-6">
-                  <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12  rounded-lg flex items-center justify-center">
                     <Image
                       src={feature.icon}
                       alt={getTranslation(language, feature.titleKey)}
-                      width={24}
-                      height={24}
-                      className="w-6 h-6"
+                      width={56}
+                      height={46}
+                    // className="w-6 h-6"
                     />
                   </div>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-[18px] font-bold text-gray-800 dark:text-white mb-4 leading-tight transition-colors">
+                <h3 className="text-[18px] lg:text-3xl font-medium text-gray-800 dark:text-white mb-4 leading-tight transition-colors">
                   {getTranslation(language, feature.titleKey)}
                 </h3>
 
                 {/* Description */}
-                <p className="text-[14px] text-gray-600 dark:text-gray-400 leading-relaxed transition-colors">
+                <p className="text-[14px] lg:text-2xl text-gray-600 dark:text-gray-400 leading-relaxed transition-colors">
                   {getTranslation(language, feature.descriptionKey)}
                 </p>
               </div>

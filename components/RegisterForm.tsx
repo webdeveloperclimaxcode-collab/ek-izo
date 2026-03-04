@@ -114,7 +114,7 @@ export default function RegisterForm() {
           <Link href="/" className="inline-block">
             <Image
               src="/assets/images/header/logo.svg"
-              alt="IZOGRUP Logo"
+              alt="EKGRUP Logo"
               width={200}
               height={60}
               className="h-14 w-auto mx-auto"
@@ -129,7 +129,7 @@ export default function RegisterForm() {
               Create Account
             </h2>
             <p className="text-[14px] text-[#64748B] dark:text-gray-400 text-center transition-colors">
-              Sign up to get started with IZOGRUP
+              Sign up to get started with EKGRUP
             </p>
           </div>
 

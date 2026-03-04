@@ -18,7 +18,7 @@ export default function OurBackground() {
           <div className="flex justify-center lg:justify-start">
             <Image
               src="/assets/images/about/our_background.png"
-              alt="Izogrup Logo"
+              alt="Ekgrup Logo"
               width={400}
               height={200}
               className="w-full max-w-md"
@@ -31,9 +31,9 @@ export default function OurBackground() {
               OUR BACKGROUND
             </h2>
             <p className={`text-[16px] leading-relaxed mb-8 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
-            EKGRUP 2010 by Eduart Kumrija is a construction company based in Cërrik, Elbasan, founded in 2010 after several years of professional experience in Italy (2004–2010). We specialize in building construction, plastering, structural works, and technical finishing services.
-With a trained and qualified team of 15 professionals, we are committed to quality, precision, safety, and timely project completion. Our company operates with modern equipment and advanced construction technology to ensure high standards in every project.
-Our mission is to deliver reliable, high-quality construction services while maintaining strong client relationships built on trust and professionalism.
+              EKGRUP 2010 by Eduart Kumrija is a construction company based in Cërrik, Elbasan, founded in 2010 after several years of professional experience in Italy (2004–2010). We specialize in building construction, plastering, structural works, and technical finishing services.
+              With a trained and qualified team of 15 professionals, we are committed to quality, precision, safety, and timely project completion. Our company operates with modern equipment and advanced construction technology to ensure high standards in every project.
+              Our mission is to deliver reliable, high-quality construction services while maintaining strong client relationships built on trust and professionalism.
             </p>
             <Link
               href="/services"
