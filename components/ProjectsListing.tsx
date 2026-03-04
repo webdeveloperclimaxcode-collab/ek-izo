@@ -56,7 +56,7 @@ export default function ProjectsListing() {
 
   return (
     <section className={`w-full py-16 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-white"}`}>
-      <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto">
+      <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-full mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
           <h2 className={`text-3xl font-bold mb-4 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
@@ -66,9 +66,125 @@ export default function ProjectsListing() {
             {t("projectsPage.discoverPrestigious")}
           </p>
         </div>
-
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mt-10">
+          {projects.length > 0 ? (
+            projects.map((project, index) => {
+              // Calculate the column span based on the repeating 5-item pattern from Figma
+              const getGridSpan = (idx: any) => {
+                const mod = idx % 5;
+                if (mod === 0) return "md:col-span-2"; // 1st item: Wide
+                if (mod === 1) return "md:col-span-1"; // 2nd item: Narrow
+                if (mod === 2) return "md:col-span-1"; // 3rd item: Narrow
+                if (mod === 3) return "md:col-span-2"; // 4th item: Wide
+                if (mod === 4) return "md:col-span-3"; // 5th item: Full width
+                return "md:col-span-1";
+              };
+
+              return (
+                <Link
+                  key={project.id}
+                  href={`/projects/${project.id}`}
+                  className={`group ${getGridSpan(index)}`}
+                >
+                  <div
+                    className={`overflow-hidden h-full flex flex-col transition-all duration-300 hover:-translate-y-1 ${theme === "dark"
+                      ? "bg-[#111111]"
+                      : "bg-[#F7F7F7]" // Light gray background from Figma
+                      }`}
+                  >
+                    {/* Project Image */}
+                    <div
+                      className={`relative w-full h-64 md:h-[320px] ${theme === "dark" ? "bg-gray-800" : "bg-gray-200"
+                        }`}
+                    >
+                      {project.images && project.images.length > 0 ? (
+                        <Image
+                          src={project.images[0]}
+                          alt={project.title}
+                          fill
+                          className="object-cover"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center">
+                          <span
+                            className={
+                              theme === "dark" ? "text-gray-500" : "text-gray-400"
+                            }
+                          >
+                            No Image
+                          </span>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Project Info */}
+                    <div className="p-5 md:p-6 flex-1 flex flex-col">
+                      {/* Client / Category */}
+                      {project.client && (
+                        <span
+                          className={`text-[10px] uppercase tracking-wider mb-1 block transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-gray-800"
+                            }`}
+                        >
+                          {project.client}
+                        </span>
+                      )}
+
+                      {/* Title */}
+                      <h3
+                        className={`text-[15px] font-bold uppercase mb-0.5 transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-black"
+                          }`}
+                      >
+                        {project.title}
+                      </h3>
+
+                      {/* Location */}
+                      {project.location && (
+                        <p
+                          className={`text-[10px] uppercase mb-3 transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-gray-800"
+                            }`}
+                        >
+                          {project.location}
+                        </p>
+                      )}
+
+                      {/* Description */}
+                      {project.description && (
+                        <p
+                          className={`text-[12px] leading-relaxed line-clamp-2 transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-gray-700"
+                            }`}
+                        >
+                          {project.description}
+                        </p>
+                      )}
+
+                      {/* Duration (Optional, keep if needed but wasn't in Figma) */}
+                      {project.duration && (
+                        <p
+                          className={`text-[11px] mt-auto pt-3 transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-gray-800"
+                            }`}
+                        >
+                          Duration: {project.duration}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                </Link>
+              );
+            })
+          ) : (
+            <div className="col-span-1 md:col-span-3 text-center py-12">
+              <p
+                className={`text-lg transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-gray-500"
+                  }`}
+              >
+                {t("projectsPage.noProjectsAvailable")}
+              </p>
+            </div>
+          )}
+        </div>
+        {/* Projects Grid */}
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
           {projects.length > 0 ? (
             projects.map((project) => (
               <Link
@@ -80,7 +196,6 @@ export default function ProjectsListing() {
                   ? "bg-[#000000] border-gray-700"
                   : "bg-white border-gray-200"
                   }`}>
-                  {/* Project Image */}
                   <div className={`relative h-64 ${theme === "dark" ? "bg-gray-700" : "bg-gray-100"}`}>
                     {project.images && project.images.length > 0 ? (
                       <Image
@@ -96,9 +211,7 @@ export default function ProjectsListing() {
                     )}
                   </div>
 
-                  {/* Project Info */}
                   <div className="p-5 flex-1 flex flex-col">
-                    {/* Client */}
                     {project.client && (
                       <span className={`text-[11px] font-semibold uppercase tracking-wider mb-2 block transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"
                         }`}>
@@ -106,12 +219,10 @@ export default function ProjectsListing() {
                       </span>
                     )}
 
-                    {/* Title */}
                     <h3 className={`text-[18px] font-semibold mb-2 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-secondary"}`}>
                       {project.title}
                     </h3>
 
-                    {/* Location */}
                     {project.location && (
                       <p className={`text-[14px] font-semibold mb-2 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"
                         }`}>
@@ -119,7 +230,6 @@ export default function ProjectsListing() {
                       </p>
                     )}
 
-                    {/* Description */}
                     {project.description && (
                       <p className={`text-[13px] line-clamp-3 mb-3 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#6B7280]"
                         }`}>
@@ -127,7 +237,6 @@ export default function ProjectsListing() {
                       </p>
                     )}
 
-                    {/* Duration */}
                     {project.duration && (
                       <p className={`text-[12px] mt-auto transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-secondary"}`}>
                         Duration: {project.duration}
@@ -142,7 +251,7 @@ export default function ProjectsListing() {
               <p className={`text-lg transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-gray-500"}`}>{t("projectsPage.noProjectsAvailable")}</p>
             </div>
           )}
-        </div>
+        </div> */}
       </div>
     </section>
   );

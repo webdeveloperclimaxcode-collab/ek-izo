@@ -83,7 +83,7 @@ export default function VideoTutorial() {
   return (
     <>
       <section className={`w-full py-16 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-gray-50"}`}>
-        <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto">
+        <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-full mx-auto">
           {/* Section Header */}
           <div className="text-start mb-16">
             <div className="relative inline-block">
@@ -104,7 +104,7 @@ export default function VideoTutorial() {
           </div>
 
           {/* Video Slider */}
-          <div className="relative py-8 px-16">
+          <div className="relative py-2">
             <Swiper
               modules={[Navigation, Autoplay]}
               navigation={{
@@ -166,7 +166,7 @@ export default function VideoTutorial() {
 
                     {/* Video Info */}
                     <div className="p-6 text-center">
-                      <h3 className={`text-[17px] font-semibold mb-2 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-gray-800"}`}>
+                      <h3 className={`truncate text-[17px] font-semibold mb-2 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-gray-800"}`}>
                         {video.title}
                       </h3>
                       {/* Category label - you can customize this based on your data */}

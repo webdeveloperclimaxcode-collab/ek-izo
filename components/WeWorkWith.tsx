@@ -46,6 +46,12 @@ const companies: Company[] = [
     name: "Tessil Brenta",
     logoUrl: "/assets/images/company_logo/tessilbrenta.svg",
     websiteUrl: "https://www.tessilbrenta.com"
+  },
+  {
+    id: "6",
+    name: "Italiana Membrane",
+    logoUrl: "/assets/images/company_logo/italiana.svg",
+    websiteUrl: "https://www.italiana.com"
   }
 ];
 
@@ -61,7 +67,7 @@ export default function WeWorkWith() {
 
   return (
     <section className={`w-full py-16 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-gray-50"}`}>
-      <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto">
+      <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-full mx-auto">
         {/* Section Header */}
         <div className="text-start mb-8">
           <div className="relative inline-block">
@@ -106,18 +112,16 @@ export default function WeWorkWith() {
               <SwiperSlide key={company.id}>
                 <div
                   onClick={() => handleCompanyClick(company.websiteUrl)}
-                  className={`flex items-center justify-center h-20 p-4 rounded-lg transition-all duration-300 ${theme === "dark"
-                    ? "bg-[#1a1a1a] hover:bg-[#2a2a2a]"
-                    : "bg-white hover:bg-gray-50"
-                    } ${company.websiteUrl ? "cursor-pointer hover:shadow-md" : ""} border ${theme === "dark" ? "border-gray-700" : "border-gray-200"
+                  className={`flex items-center justify-center h-20  rounded-lg transition-all duration-300 
+                    
+                    ${company.websiteUrl ? "cursor-pointer hover:shadow-md" : ""} 
                     }`}
                 >
                   <Image
                     src={company.logoUrl}
                     alt={`${company.name} logo`}
-                    width={120}
+                    width={180}
                     height={60}
-                    className="w-auto h-auto max-h-12 max-w-[120px] object-contain transition-all"
                   />
                 </div>
               </SwiperSlide>

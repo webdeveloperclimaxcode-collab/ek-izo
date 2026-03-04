@@ -70,7 +70,7 @@ export default function OurServices() {
 
   return (
     <section className="w-full bg-white dark:bg-black py-14 transition-colors duration-300">
-      <div className="w-full px-6 2xl:px-20 max-w-7xl mx-auto">
+      <div className="w-full px-6 2xl:px-20 max-w-full mx-auto">
         {/* Header */}
         <div className="text-left mb-10">
           <h2 className="relative inline-block text-[26px] md:text-[30px] font-bold text-[#111827] dark:text-white tracking-tight transition-colors mb-4 pb-2">
@@ -82,7 +82,7 @@ export default function OurServices() {
             {/* The Highlight - absolute positioning places it behind */}
             <div className="absolute left-0 bottom-1 w-full h-7 bg-brand-secondary z-0" />
           </h2>
-          <p className="text-[14px] md:text-[15px] text-[#6B7280] dark:text-gray-300 max-w-3xl leading-relaxed transition-colors">
+          <p className="text-[16px] lg:text-[30px] md:text-[15px] text-[#6B7280] dark:text-gray-300  leading-relaxed transition-colors">
             {t("ourServices.description")}
           </p>
         </div>

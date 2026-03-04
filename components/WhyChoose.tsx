@@ -75,7 +75,7 @@ export default function WhyChoose() {
   const { t } = useLanguage();
   return (
     <section className="w-full bg-gray-50 dark:bg-[#000000] py-16 transition-colors duration-300">
-      <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto">
+      <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-full mx-auto">
         {/* Section Header */}
         <div className="text-start mb-16">
           <div className="relative inline-block mb-6">
@@ -89,7 +89,7 @@ export default function WhyChoose() {
               <div className="absolute left-0 bottom-1 w-full h-7 bg-brand-secondary z-0" />
             </h2>
           </div>
-          <p className="text-base  text-gray-600 dark:text-gray-300  mx-auto leading-relaxed transition-colors">
+          <p className="text-base lg:text-3xl  text-gray-600 dark:text-gray-300  mx-auto leading-relaxed transition-colors">
             The advantages of partnering with us
           </p>
         </div>
@@ -103,23 +103,22 @@ export default function WhyChoose() {
             >
               {/* Icon positioned at top center inside card */}
               <div className="mb-6 flex justify-center">
-                <div className="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center">
+                <div className="w-16 h-16  rounded-lg flex items-center justify-center">
                   <Image
                     src={stat.icon}
                     alt={getStatTitle(index)}
-                    width={32}
-                    height={32}
-                    className="w-8 h-8"
+                    width={56}
+                    height={56}
                   />
                 </div>
               </div>
 
               {/* Content */}
               <div className="space-y-1">
-                <h3 className="text-[18px] font-bold text-gray-800 dark:text-white leading-tight transition-colors">
+                <h3 className="text-[18px] lg:text-3xl font-medium text-gray-800 dark:text-white leading-tight transition-colors">
                   {getStatTitle(index)}
                 </h3>
-                <p className="text-[14px] text-gray-600 dark:text-gray-400 leading-tight transition-colors">
+                <p className="text-[14px] lg:text-3xl font-medium text-gray-600 dark:text-gray-400 leading-tight transition-colors">
                   {getStatSubtitle(index)}
                 </p>
               </div>

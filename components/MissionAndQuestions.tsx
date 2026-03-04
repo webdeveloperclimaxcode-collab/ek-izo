@@ -8,9 +8,9 @@ export default function MissionAndQuestions() {
 
   const questions = [
     {
-      question: "Why does Izogrup services cost less than its competitors?",
+      question: "Why does Ekgrup services cost less than its competitors?",
       answer:
-        "Because we import the materials directly from the first hand supplier. Izogrup does not enter into commercial agreements with third party companies. Also we have distribution points and staff teams in all major cities, this causes lowers fuel and transportation costs.",
+        "Because we import the materials directly from the first hand supplier. Ekgrup does not enter into commercial agreements with third party companies. Also we have distribution points and staff teams in all major cities, this causes lowers fuel and transportation costs.",
     },
     {
       question: "What is the timeline for the project?",

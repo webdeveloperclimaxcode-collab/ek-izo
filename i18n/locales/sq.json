@@ -15,7 +15,7 @@
     "lightMode": "Mënyra e Lehtë",
     "login": "Hyrje",
     "logout": "Dalje",
-    "myIzogrup": "MyIzogrup"
+    "myIzogrup": "MyEkgrup"
   },
   "hero": {
     "prevSlide": "Rrëshqitja e mëparshme",
@@ -95,8 +95,8 @@
     }
   },
   "whyChoose": {
-    "heading": "PËR ÇFARË TË ZGJEDHNI IZOGRUP SH.P.K",
-    "description": "I themeluar nga Oligert & Erion Plaka në vitin 2004, Izogrup ka vendosur veten si një nga ofruesit më të mëdhenj dhe më prestigjiozë të shërbimeve të ujëmbrojtjes dhe izolimit termik në Shqipëri.",
+    "heading": "PËR ÇFARË TË ZGJEDHNI EKGRUP SH.P.K",
+    "description": "I themeluar nga Oligert & Erion Plaka në vitin 2004, Ekgrup ka vendosur veten si një nga ofruesit më të mëdhenj dhe më prestigjiozë të shërbimeve të ujëmbrojtjes dhe izolimit termik në Shqipëri.",
     "stats": {
       "experience": {
         "title": "10+ VJET",
@@ -132,7 +132,7 @@
   "footer": {
     "contactBanner": {
       "heading": "KONTAKTONI NE",
-      "subheading": "Mësoni më shumë rreth punës me IZOGRUP",
+      "subheading": "Mësoni më shumë rreth punës me EKGRUP",
       "button": "KONTAKTONI NE"
     },
     "followUs": "Ndiqni Ne",
@@ -151,7 +151,8 @@
     "news": "LAJME",
     "productLines": "LINJAT E PRODUKTEVE",
     "scrollToTop": "Rrëshqit në krye",
-    "copyright": "© Të drejtat e autorit 2025 Izogrup SH.P.K TË GJITHA TË DREJTAT E REZERVUARA"
+    "copyright": "© Të drejtat e autorit 2025 Ekgrup SH.P.K TË GJITHA TË DREJTAT E REZERVUARA",
+    "workWithUs": "PUNONI ME NE"
   },
   "common": {
     "loading": "Po ngarkohet...",
@@ -166,7 +167,7 @@
     "productLine": "LINJA E PRODUKTEVE",
     "searchProduct": "Kërko Produktin",
     "completeRange": "Një Gamë E Plotë E Produkteve Dhe Teknologjive Për Industrinë E Ndërtimit",
-    "completeRangeDesc": "Gjatë viteve, Izogrup është bërë një partner i besueshëm në industrinë e ndërtimit, duke ofruar produkte të specializuara për çdo nevojë nga ujëmbrojtja e çatisë deri në izolimin akustik të teatrove dhe restaurimin e ndërtesave historike.",
+    "completeRangeDesc": "Gjatë viteve, Ekgrup është bërë një partner i besueshëm në industrinë e ndërtimit, duke ofruar produkte të specializuara për çdo nevojë nga ujëmbrojtja e çatisë deri në izolimin akustik të teatrove dhe restaurimin e ndërtesave historike.",
     "browseByProductLines": "Shfletoni Sipas Linjave Të Produkteve",
     "allProducts": "Të Gjitha Produktet",
     "noProductsFound": "Nuk u gjet asnjë produkt.",
@@ -203,7 +204,7 @@
     "serviceLine": "LINJA E SHËRBIMEVE",
     "searchService": "Kërko Shërbimin",
     "completeRange": "Një Gamë E Plotë E Shërbimeve Dhe Teknologjive Për Industrinë E Ndërtimit",
-    "completeRangeDesc": "Gjatë viteve, Izogrup është bërë një partner i besueshëm në industrinë e ndërtimit, duke ofruar shërbime të specializuara për çdo nevojë nga ujëmbrojtja e çatisë deri në izolimin akustik të teatrove dhe restaurimin e ndërtesave historike.",
+    "completeRangeDesc": "Gjatë viteve, Ekgrup është bërë një partner i besueshëm në industrinë e ndërtimit, duke ofruar shërbime të specializuara për çdo nevojë nga ujëmbrojtja e çatisë deri në izolimin akustik të teatrove dhe restaurimin e ndërtesave historike.",
     "browseByServiceLines": "Shfletoni Sipas Linjave Të Shërbimeve",
     "allServices": "Të Gjitha Shërbimet",
     "noServicesFound": "Nuk u gjet asnjë shërbim.",
@@ -244,7 +245,7 @@
   "projectsPage": {
     "projectsHero": "MË SHUMË SE 80 VJET HISTORI, MIJËRA PROJEKTE GLOBALE",
     "discoverAllProjects": "ZBULONI TË GJITHA PROJEKTET",
-    "discoverPrestigious": "Zbuloni disa nga projektet më prestigjiozë të IZOGRUP në të gjithë botën",
+    "discoverPrestigious": "Zbuloni disa nga projektet më prestigjiozë të EKGRUP në të gjithë botën",
     "projectNotFound": "Projekti nuk u gjet",
     "back": "Kthehu",
     "client": "Klienti",
@@ -256,8 +257,8 @@
   "contactPage": {
     "contactsHero": "KONTAKTET",
     "companyTitle": "EKGRUP SH.PK",
-    "description1": "Zbuloni vendndodhjet e ndryshme të IZOGRUP në SHQIPËRI dhe na dërgoni një mesazh drejtpërdrejt duke përdorur këtë formular.",
-    "description2": "Merrni listën më të fundit të çmimeve nga zyra jonë tregtare, ose kontaktoni ekipin e shërbimeve teknike për mbështetje në vend ose të projektimit dhe informacione të detajuara rreth produkteve dhe zgjidhjeve IZOGRUP.",
+    "description1": "Zbuloni vendndodhjet e ndryshme të EKGRUP në SHQIPËRI dhe na dërgoni një mesazh drejtpërdrejt duke përdorur këtë formular.",
+    "description2": "Merrni listën më të fundit të çmimeve nga zyra jonë tregtare, ose kontaktoni ekipin e shërbimeve teknike për mbështetje në vend ose të projektimit dhe informacione të detajuara rreth produkteve dhe zgjidhjeve EKGRUP.",
     "phone": "Telefoni",
     "email": "Email",
     "address": "Adresa",
@@ -283,9 +284,9 @@
     "provincePlaceholder": "Provinca",
     "messagePlaceholder": "Futni mesazhin tuaj*",
     "processingInfo": "Përpunimi I Informacionit Personal",
-    "privacyText": "Pas leximit dhe kuptimit të plotë të politikës së privatësisë se si IZOGRUP përpunon dhe përdor informacionin tim personal",
+    "privacyText": "Pas leximit dhe kuptimit të plotë të politikës së privatësisë se si EKGRUP përpunon dhe përdor informacionin tim personal",
     "iAgree": "Jam Dakord",
-    "consentText": "Jam dakord që IZOGRUP të përdorë informacionin tim personal për të më kontaktuar në lidhje me kërkesën time.",
+    "consentText": "Jam dakord që EKGRUP të përdorë informacionin tim personal për të më kontaktuar në lidhje me kërkesën time.",
     "contactUs": "KONTAKTONI NE",
     "sending": "PO DËRGOHET...",
     "messageSentSuccess": "Mesazhi U Dërgua Me Sukses!",

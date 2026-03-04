@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useRouter } from "next/navigation";
 import { useLanguage } from "@/contexts/LanguageContext";
-
+import { useTheme } from "@/contexts/ThemeContext";
 interface ProductCategory {
   id: string;
   name: string;
@@ -31,6 +31,7 @@ export default function Footer() {
   const [companyInfo, setCompanyInfo] = useState<CompanyInfo | null>(null);
   const { user, logout } = useAuth();
   const router = useRouter();
+  const { theme } = useTheme();
   const { t } = useLanguage();
 
   useEffect(() => {
@@ -85,19 +86,19 @@ export default function Footer() {
   return (
     <>
       {/* Contact Us Banner */}
-      <div className="w-full py-8 px-12 bg-brand-secondary">
+      <div className="w-full py-8  bg-brand-secondary">
         <div className="w-full px-6 2xl:px-20 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
             <h2 className="text-3xl font-bold mb-2 text-[#111827]">
               {t("footer.contactBanner.heading")}
             </h2>
-            <p className="text-lg text-[#111827] opacity-90">
+            <p className="text-lg lg:text-3xl text-[#111827] opacity-90">
               {t("footer.contactBanner.subheading")}
             </p>
           </div>
           <Link
             href="/support"
-            className="px-8 cursor-pointer py-3 rounded-full font-semibold bg-white text-[#111827] shadow-md hover:bg-gray-100 transition-colors"
+            className={`px-8 cursor-pointer py-3 rounded-full font-semibold ${theme === "dark" ? "bg-white text-[#111827]" : "bg-black text-white"} shadow-md hover:bg-gray-100 hover:text-black transition-colors`}
           >
             {t("footer.contactBanner.button")}
           </Link>
@@ -269,9 +270,7 @@ export default function Footer() {
               <div className="grid grid-cols-2 gap-x-20 gap-y-8">
                 {/* Column 1 */}
                 <div className="space-y-8">
-                  <Link href="/products" className="block text-base font-medium text-white hover:text-gray-200 transition-colors pb-3 border-b border-white/20 cursor-pointer">
-                    {t("footer.products")}
-                  </Link>
+
 
                   <Link href="/search" className="block text-base font-medium text-white hover:text-gray-200 transition-colors pb-3 border-b border-white/20 cursor-pointer">
                     {t("footer.sustainability")}
@@ -281,6 +280,9 @@ export default function Footer() {
                   </Link>
                   <Link href="/support" className="block text-base font-medium text-white hover:text-gray-200 transition-colors pb-3 border-b border-white/20 cursor-pointer">
                     {t("footer.technicalService")}
+                  </Link>
+                  <Link href="/" className="block text-base font-medium text-white hover:text-gray-200 transition-colors pb-3 border-b border-white/20 cursor-pointer">
+                    {t("footer.workWithUs")}
                   </Link>
                 </div>
 
@@ -297,7 +299,7 @@ export default function Footer() {
                   </Link>
 
                   <Link href="/contact" className="block text-base font-medium text-white hover:text-gray-200 transition-colors pb-3 border-b border-white/30 cursor-pointer">
-                    {t("footer.contactUs")}
+                    {t("footer.contactBanner.heading")}
                   </Link>
                 </div>
               </div>

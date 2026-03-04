@@ -75,7 +75,7 @@ export default function NewsBlogs() {
   }
   return (
     <section className="w-full bg-white dark:bg-[#000000] py-16 transition-colors duration-300">
-      <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto">
+      <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-full mx-auto">
         {/* Section Header */}
         <div className="text-center ">
           <div className="relative inline-block">
@@ -87,7 +87,7 @@ export default function NewsBlogs() {
         </div>
 
         {/* Blogs Slider */}
-        <div className="relative py-8 px-16 max-w-6xl mx-auto">
+        <div className="relative py-8 mx-auto max-w-full">
           <Swiper
             modules={[Navigation, Autoplay]}
             navigation={{
@@ -111,11 +111,12 @@ export default function NewsBlogs() {
                 spaceBetween: 30,
               },
             }}
+
           >
             {blogs.map((blog) => (
               <SwiperSlide key={blog.id}>
                 <Link href={`/blog/${blog.id}`}>
-                  <div className="bg-white dark:bg-[#1a1a1a] rounded-lg shadow-sm hover:shadow-md transition-shadow h-full border border-gray-100 dark:border-gray-700 max-w-sm mx-auto cursor-pointer overflow-hidden">
+                  <div className="bg-white dark:bg-[#1a1a1a] rounded-lg shadow-sm hover:shadow-md transition-shadow h-full border border-gray-100 dark:border-gray-700 max-w-sm  cursor-pointer overflow-hidden">
                     {/* Blog Image */}
                     <div className="relative h-48">
                       <Image

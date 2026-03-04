@@ -15,7 +15,7 @@
     "lightMode": "Light Mode",
     "login": "Login",
     "logout": "Logout",
-    "myIzogrup": "MyIzogrup"
+    "myIzogrup": "MyEkgrup"
   },
   "hero": {
     "prevSlide": "Previous slide",
@@ -95,8 +95,8 @@
     }
   },
   "whyChoose": {
-    "heading": "WHY CHOOSE IZOGRUP SH.P.K",
-    "description": "Founded by Oligert & Erion Plaka back in 2004, Izogrup has established itself as one of the greatest & prestigious providers of waterproofing & thermal insulation services in Albania.",
+    "heading": "WHY CHOOSE EKGRUP SH.P.K",
+    "description": "Founded by Oligert & Erion Plaka back in 2004, Ekgrup has established itself as one of the greatest & prestigious providers of waterproofing & thermal insulation services in Albania.",
     "stats": {
       "experience": {
         "title": "10+ YEARS",
@@ -132,7 +132,7 @@
   "footer": {
     "contactBanner": {
       "heading": "CONTACT US",
-      "subheading": "Learn More About Working With IZOGRUP",
+      "subheading": "Learn More About Working With EKGRUP",
       "button": "CONTACT US"
     },
     "followUs": "Follow Us",
@@ -151,7 +151,8 @@
     "news": "NEWS",
     "productLines": "PRODUCT LINES",
     "scrollToTop": "Scroll to top",
-    "copyright": "© Copyright 2025 Izogrup SH.P.K ALL RIGHTS RESERVED"
+    "copyright": "© Copyright 2025 Ekgrup SH.P.K ALL RIGHTS RESERVED",
+    "workWithUs": "WORK WITH US"
   },
   "common": {
     "loading": "Loading...",
@@ -166,7 +167,7 @@
     "productLine": "PRODUCT LINE",
     "searchProduct": "Search Product",
     "completeRange": "A Complete Range Of Products And Technologies For The Building Industry",
-    "completeRangeDesc": "Over the years, Izogrup has become a reliable partner in the construction industry, offering specialized products for every need from waterproofing roofs to soundproofing theatres and restoring historic buildings.",
+    "completeRangeDesc": "Over the years, Ekgrup has become a reliable partner in the construction industry, offering specialized products for every need from waterproofing roofs to soundproofing theatres and restoring historic buildings.",
     "browseByProductLines": "Browse by Product Lines",
     "allProducts": "All Products",
     "noProductsFound": "No products found.",
@@ -203,7 +204,7 @@
     "serviceLine": "SERVICE LINE",
     "searchService": "Search Service",
     "completeRange": "A Complete Range Of Services And Technologies For The Building Industry",
-    "completeRangeDesc": "Over the years, Izogrup has become a reliable partner in the construction industry, offering specialized services for every need from waterproofing roofs to soundproofing theatres and restoring historic buildings.",
+    "completeRangeDesc": "Over the years, Ekgrup has become a reliable partner in the construction industry, offering specialized services for every need from waterproofing roofs to soundproofing theatres and restoring historic buildings.",
     "browseByServiceLines": "Browse by Service Lines",
     "allServices": "All Services",
     "noServicesFound": "No services found.",
@@ -244,7 +245,7 @@
   "projectsPage": {
     "projectsHero": "MORE THAN 80 YEARS OF HISTORY, THOUSANDS OF GLOBAL PROJECTS",
     "discoverAllProjects": "DISCOVER ALL PROJECTS",
-    "discoverPrestigious": "Discover some of IZOGRUP's most prestigious projects worldwide",
+    "discoverPrestigious": "Discover some of EKGRUP's most prestigious projects worldwide",
     "projectNotFound": "Project not found",
     "back": "Back",
     "client": "Client",
@@ -256,8 +257,8 @@
   "contactPage": {
     "contactsHero": "CONTACTS",
     "companyTitle": "EKGRUP SH.PK",
-    "description1": "Find out the various locations of IZOGRUP in ALBANIA and send us a message directly using this form.",
-    "description2": "Obtain the latest Price List from our Commercial Office, or contact our Technical Services team for on-site or design support and detailed information about IZOGRUP products and solutions.",
+    "description1": "Find out the various locations of EkGRUP in ALBANIA and send us a message directly using this form.",
+    "description2": "Obtain the latest Price List from our Commercial Office, or contact our Technical Services team for on-site or design support and detailed information about Ekgrup products and solutions.",
     "phone": "Phone",
     "email": "Email",
     "address": "Address",
@@ -283,9 +284,9 @@
     "provincePlaceholder": "Province",
     "messagePlaceholder": "Enter your message*",
     "processingInfo": "Processing Of Personal Information",
-    "privacyText": "After reading and fully understanding the privacy policy how IZOGRUP processes and uses my personal information",
+    "privacyText": "After reading and fully understanding the privacy policy how EKGRUP processes and uses my personal information",
     "iAgree": "I Agree",
-    "consentText": "I consent to IZOGRUP using my personal information to contact me about my request.",
+    "consentText": "I consent to EKGRUP using my personal information to contact me about my request.",
     "contactUs": "CONTACT US",
     "sending": "SENDING...",
     "messageSentSuccess": "Message Sent Successfully!",

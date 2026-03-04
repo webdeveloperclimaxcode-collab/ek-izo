@@ -118,7 +118,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="w-full py-3 relative bg-white dark:bg-[#000000] transition-colors duration-300">
+    <header className={`w-full py-3 relative  transition-colors duration-300 bg-black`}>
       <div className="w-full mx-auto px-6 2xl:px-20">
         <div className="flex items-center justify-between gap-2 min-h-16 py-2">
           {/* Logo */}
@@ -126,7 +126,7 @@ export default function Header() {
             <Link href="/">
               <Image
                 src="/assets/images/header/logo_bg_remove.png"
-                alt="IZOGRUP Logo"
+                alt="EKGRUP Logo"
                 width={200}
                 height={45}
                 className="h-aut0 w-auto max-w-[150px] lg:max-w-[200px]"
@@ -136,18 +136,17 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1 xl:gap-2 flex-wrap justify-center flex-1 min-w-0">
+          <nav className="hidden lg:flex items-center gap-1 xl:gap-2 justify-evenly flex-1 max-w-7xl ">
             {navItems.map((item) => {
               const isActive = pathname === item.href;
               return (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`px-3 xl:px-6 py-2 text-sm font-medium transition-all whitespace-nowrap ${
-                    isActive
-                      ? "bg-brand-gradient text-white rounded-full hover:opacity-90"
-                      : "text-brand-primary dark:text-white hover:text-[#7D1F3E] dark:hover:text-brand-secondary"
-                  }`}
+                  className={`px-3 xl:px-6 py-2 text-sm font-medium transition-all text-white whitespace-nowrap ${isActive
+                    ? "bg-[#454545]  rounded-full hover:opacity-90"
+                    : "hover:underline"
+                    }`}
                 >
                   {item.name}
                 </Link>
@@ -184,17 +183,17 @@ export default function Header() {
             </button> */}
 
             {/* Language Dropdown */}
-            <div ref={languageRef} className="relative hidden lg:block">
+            <div ref={languageRef} className="relative hidden lg:block lg:max-w-2xl">
               <button
                 onClick={() => setIsLanguageOpen(!isLanguageOpen)}
-                className="flex cursor-pointer items-center gap-2 px-3 xl:px-6 py-3 xl:py-4 bg-[#F5F5F5] dark:bg-gray-700 rounded-full text-base font-medium text-[#2D3748] dark:text-white hover:bg-[#E8E8E8] dark:hover:bg-gray-600 transition-colors"
+                className="flex cursor-pointer items-center gap-2 px-3 xl:px-6 py-3 xl:py-4  text-base font-medium text-white transition-colors"
               >
                 <Image
                   src={selectedLanguage.flag}
                   alt={selectedLanguage.name}
                   width={32}
                   height={20}
-                  className="w-5 xl:w-6 object-cover rounded shrink-0"
+                  className="w-8 h-5  shrink-0"
                 />
                 <span className="text-[13px] xl:text-[15px] whitespace-nowrap hidden xl:inline">{selectedLanguage.name}</span>
                 <Image
@@ -207,7 +206,7 @@ export default function Header() {
               </button>
 
               {isLanguageOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-[#F5F5F5] dark:bg-gray-700 rounded-2xl shadow-xl py-2 z-50">
+                <div className="absolute right-0 mt-2 w-48 bg-[#111] rounded-2xl shadow-xl py-2 z-50 text-white">
                   {languages
                     .filter((lang) => lang.code !== selectedLanguage.code)
                     .map((lang) => (
@@ -432,7 +431,7 @@ export default function Header() {
                 </Link>
 
                 <a
-                  href={companyInfo?.companyCV || "https://www.izogrup.al/produkte/cvizogrup.pdf"}
+                  href={companyInfo?.companyCV || "https://www.ekgrup.al/produkte/cvekgrup.pdf"}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setIsMenuOpen(false)}
