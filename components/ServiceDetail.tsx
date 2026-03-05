@@ -84,11 +84,10 @@ export default function ServiceDetail({ serviceId }: { serviceId: string }) {
         {/* Back Button */}
         <button
           onClick={() => router.back()}
-          className={`flex items-center cursor-pointer gap-2 mb-6 transition-colors group ${
-            theme === "dark"
-              ? "text-gray-300 hover:text-brand-secondary"
-              : "text-brand-primary hover:text-brand-secondary"
-          }`}
+          className={`flex items-center cursor-pointer gap-2 mb-6 transition-colors group ${theme === "dark"
+            ? "text-gray-300 hover:text-brand-secondary"
+            : "text-brand-primary hover:text-brand-secondary"
+            }`}
         >
           <svg
             className="w-6 h-6 transition-transform group-hover:-translate-x-1"
@@ -162,11 +161,11 @@ export default function ServiceDetail({ serviceId }: { serviceId: string }) {
 
               {/* Price and Cart */}
               <div className="absolute bottom-3 left-5 right-5 flex items-center justify-between">
-                {service.price && (
+                {/* {service.price && (
                   <span className={`px-10 py-1.5 rounded-4xl text-2xl transition-colors duration-300 ${theme === "dark" ? "text-white bg-gray-800" : "text-brand-secondary bg-[#fff5f7]"}`}>
                     ${service.price}
                   </span>
-                )}
+                )} */}
                 {service.enableOnlineSales && (
                   <button
                     onClick={() => {
@@ -273,7 +272,7 @@ export default function ServiceDetail({ serviceId }: { serviceId: string }) {
             </h1>
 
             {service.description && (
-              <div className={`text-[14px] leading-relaxed mb-6 whitespace-pre-line transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#9CA3AF]"}`}>
+              <div className={`text-[14px] lg:text-xl leading-relaxed mb-6 whitespace-pre-line transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#9CA3AF]"}`}>
                 {service.description}
               </div>
             )}
