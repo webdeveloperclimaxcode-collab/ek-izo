@@ -266,12 +266,12 @@ export default function ProductDetail({ productId }: { productId: string }) {
 
           {/* Right Side - Product Details */}
           <div>
-            <h1 className={`text-[32px] font-bold mb-4 leading-tight transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"}`}>
+            <h1 className={`text-[32px] truncate font-bold mb-4 leading-tight transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"}`}>
               {product.title}
             </h1>
 
             {product.description && (
-              <div className={`text-[14px] leading-relaxed mb-6 whitespace-pre-line transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#9CA3AF]"}`}>
+              <div className={`text-[14px] truncate leading-relaxed mb-6 whitespace-pre-line transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#9CA3AF]"}`}>
                 {product.description}
               </div>
             )}
