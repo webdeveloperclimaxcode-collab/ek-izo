@@ -382,19 +382,19 @@ export default function ContactHero() {
           url: "Ek Group.COM",
         },
       ],
-    },
-    {
-      id: 2,
-      title: t("contactPage.plants") || "Plants",
-    },
-    {
-      id: 3,
-      title: t("contactPage.distributionCenters") || "Distribution Centers",
-    },
-    {
-      id: 4,
-      title: t("contactPage.headquarters") || "Headquarters",
-    },
+    }
+    // {
+    //   id: 2,
+    //   title: t("contactPage.plants") || "Plants",
+    // },
+    // {
+    //   id: 3,
+    //   title: t("contactPage.distributionCenters") || "Distribution Centers",
+    // },
+    // {
+    //   id: 4,
+    //   title: t("contactPage.headquarters") || "Headquarters",
+    // },
   ];
 
   useEffect(() => {
@@ -443,7 +443,7 @@ export default function ContactHero() {
       {/* Content Section */}
       <section className={`max-w-full py-16 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-[#F5F5F5]"}`}>
         <div className="w-full px-6 2xl:px-20  mx-auto">
-          <div className="w-full px-6 2xl:px-20 mx-auto">
+          <div className="w-full mb-10   mx-auto">
             <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
 
               {/* Left Image */}
@@ -465,15 +465,15 @@ export default function ContactHero() {
                 </h2>
 
                 <div className="space-y-6">
-                  <p className={`text-[15px] leading-relaxed transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-[#4A5568]"}`}>
+                  <p className={`text-[15px] lg:text-2xl leading-relaxed transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-[#4A5568]"}`}>
                     {t("contactPage.description1")}
                   </p>
-                  <p className={`text-[15px] leading-relaxed transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-[#4A5568]"}`}>
+                  <p className={`text-[15px] lg:text-2xl leading-relaxed transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-[#4A5568]"}`}>
                     {t("contactPage.description2")}
                   </p>
 
                   {/* Dynamic Company Contact Info */}
-                  {companyInfo && (
+                  {/* {companyInfo && (
                     <div className="mt-6 space-y-2">
                       {companyInfo.phone && (
                         <p className={`text-[15px] font-semibold transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1A1A1A]"}`}>
@@ -491,14 +491,14 @@ export default function ContactHero() {
                         </p>
                       )}
                     </div>
-                  )}
+                  )} */}
                 </div>
 
                 {/* Contact Button */}
                 <div className="pt-4">
                   <Link
                     href="/support"
-                    className={`inline-block px-8 py-3.5 border rounded-full text-[13px] font-bold tracking-wide transition-all duration-300 ${theme === "dark"
+                    className={`inline-block lg:text-2xl px-8 py-3.5 border rounded-full text-[13px] font-medium tracking-wide transition-all duration-300 ${theme === "dark"
                       ? "border-[#EAB308] text-white hover:bg-[#EAB308] hover:text-black"
                       : "border-[#EAB308] text-[#1A1A1A] hover:bg-gray-50"
                       }`}
@@ -520,13 +520,13 @@ export default function ContactHero() {
               >
                 <button
                   onClick={() => toggleSection(section.id)}
-                  className={`w-full rounded-xl flex items-center justify-between px-6 py-5 transition-colors duration-300 bg-white ${theme === "dark"
+                  className={`w-full rounded-xl mb-4 flex items-center justify-between px-6 py-5 transition-colors duration-300 bg-white ${theme === "dark"
                     ? "hover:bg-gray-800 text-white"
                     : "hover:bg-gray-50 text-[#4A5568]"
                     }`}
                 >
                   <span className="text-[16px] font-semibold">
-                    {section.title} hello
+                    {section.title}
                   </span>
                   <svg
                     className={`w-5 h-5 transition-transform ${theme === "dark" ? "text-gray-500" : "text-gray-400"

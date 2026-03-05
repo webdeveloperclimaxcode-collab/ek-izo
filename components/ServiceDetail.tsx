@@ -267,12 +267,12 @@ export default function ServiceDetail({ serviceId }: { serviceId: string }) {
 
           {/* Right Side - Service Details */}
           <div>
-            <h1 className={`text-[32px] font-bold mb-4 leading-tight transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
+            <h1 className={`text-[32px] truncate font-bold mb-4 leading-tight transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
               {service.title}
             </h1>
 
             {service.description && (
-              <div className={`text-[14px] lg:text-xl leading-relaxed mb-6 whitespace-pre-line transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#9CA3AF]"}`}>
+              <div className={`text-[14px] truncate lg:text-xl leading-relaxed mb-6 whitespace-pre-line transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#9CA3AF]"}`}>
                 {service.description}
               </div>
             )}

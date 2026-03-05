@@ -224,7 +224,7 @@ export default function ProjectDetail({ projectId }: { projectId: string }) {
 
           {/* Right Side - Project Details */}
           <div>
-            <h1 className={`text-[32px] font-bold mb-4 leading-tight transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
+            <h1 className={`text-[32px] truncate font-bold mb-4 leading-tight transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
               {project.title}
             </h1>
 
@@ -238,20 +238,20 @@ export default function ProjectDetail({ projectId }: { projectId: string }) {
               )}
               {project.location && (
                 <div className="flex items-start gap-2">
-                  <span className={`text-[14px] lg:text-xl font-semibold min-w-[100px] transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-brand-primary"}`}>{t("projectsPage.location")}:</span>
-                  <span className={`text-[14px] transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>{project.location}</span>
+                  <span className={`text-[14px] truncate lg:text-xl font-semibold min-w-[100px] transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-brand-primary"}`}>{t("projectsPage.location")}:</span>
+                  <span className={`text-[14px] truncate transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>{project.location}</span>
                 </div>
               )}
               {project.duration && (
                 <div className="flex items-start gap-2">
-                  <span className={`text-[14px] lg:text-xl font-semibold min-w-[100px] transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-brand-primary"}`}>{t("projectsPage.duration")}:</span>
-                  <span className={`text-[14px] lg:text-xl transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>{project.duration}</span>
+                  <span className={`text-[14px] truncate lg:text-xl font-semibold min-w-[100px] transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-brand-primary"}`}>{t("projectsPage.duration")}:</span>
+                  <span className={`text-[14px] truncate lg:text-xl transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>{project.duration}</span>
                 </div>
               )}
               {project.completionDate && (
                 <div className="flex items-start gap-2">
-                  <span className={`text-[14px] lg:text-xl font-semibold min-w-[100px] transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-brand-primary"}`}>{t("projectsPage.completed")}:</span>
-                  <span className={`text-[14px] lg:text-xl transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>
+                  <span className={`text-[14px] truncate lg:text-xl font-semibold min-w-[100px] transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-brand-primary"}`}>{t("projectsPage.completed")}:</span>
+                  <span className={`text-[14px] truncate lg:text-xl transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>
                     {new Date(project.completionDate).toLocaleDateString()}
                   </span>
                 </div>
@@ -259,7 +259,7 @@ export default function ProjectDetail({ projectId }: { projectId: string }) {
             </div>
 
             {project.description && (
-              <div className={`text-[14px] lg:text-xl leading-relaxed mb-6 whitespace-pre-line transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>
+              <div className={`text-[14px] truncate lg:text-xl leading-relaxed mb-6 whitespace-pre-line transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>
                 {project.description}
               </div>
             )}
