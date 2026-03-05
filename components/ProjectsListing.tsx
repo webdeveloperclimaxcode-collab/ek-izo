@@ -59,10 +59,10 @@ export default function ProjectsListing() {
       <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-full mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
-          <h2 className={`text-3xl font-bold mb-4 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
+          <button className={`text-2xl font-medium mb-4 p-5 transition-colors rounded-full border border-brand-secondary duration-300  ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
             {t("projectsPage.discoverAllProjects")}
-          </h2>
-          <p className={`text-[15px] transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
+          </button>
+          <p className={`text-[15px] lg:text-4xl transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
             {t("projectsPage.discoverPrestigious")}
           </p>
         </div>
@@ -123,7 +123,7 @@ export default function ProjectsListing() {
                       {/* Client / Category */}
                       {project.client && (
                         <span
-                          className={`text-[10px] uppercase tracking-wider mb-1 block transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-gray-800"
+                          className={`text-[10px] lg:text-xl uppercase tracking-wider mb-1 block transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-gray-800"
                             }`}
                         >
                           {project.client}
@@ -132,7 +132,7 @@ export default function ProjectsListing() {
 
                       {/* Title */}
                       <h3
-                        className={`text-[15px] font-bold uppercase mb-0.5 transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-black"
+                        className={`text-[15px] lg:text-2xl font-medium uppercase mb-0.5 transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-black"
                           }`}
                       >
                         {project.title}
@@ -141,7 +141,7 @@ export default function ProjectsListing() {
                       {/* Location */}
                       {project.location && (
                         <p
-                          className={`text-[10px] uppercase mb-3 transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-gray-800"
+                          className={`text-[10px] lg:text-xl uppercase mb-3 transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-gray-800"
                             }`}
                         >
                           {project.location}
@@ -151,7 +151,7 @@ export default function ProjectsListing() {
                       {/* Description */}
                       {project.description && (
                         <p
-                          className={`text-[12px] leading-relaxed line-clamp-2 transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-gray-700"
+                          className={`text-[12px] lg:text-xl leading-relaxed line-clamp-2 transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-gray-700"
                             }`}
                         >
                           {project.description}
@@ -161,7 +161,7 @@ export default function ProjectsListing() {
                       {/* Duration (Optional, keep if needed but wasn't in Figma) */}
                       {project.duration && (
                         <p
-                          className={`text-[11px] mt-auto pt-3 transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-gray-800"
+                          className={`text-[11px] lg:text-xl mt-auto pt-3 transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-gray-800"
                             }`}
                         >
                           Duration: {project.duration}

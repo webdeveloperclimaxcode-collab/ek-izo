@@ -228,11 +228,11 @@ export default function ServicesListing({ searchQuery }: ServicesListingProps) {
       <div className="w-full px-6 2xl:px-20 max-w-full mx-auto">
         {/* Header */}
         <div className="mb-8">
-          <h2 className={`text-[28px] font-bold mb-3 text-center transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"
+          <h2 className={`text-[28px] lg:text-[40px] font-medium tracking-wider mb-3 text-center transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"
             }`}>
             {t("servicesPage.completeRange")}
           </h2>
-          <p className={`text-[15px] leading-relaxed text-center max-w-4xl mx-auto mb-6 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#6B7280]"
+          <p className={`text-[15px] lg:text-3xl leading-relaxed text-center max-w-7xl mx-auto mb-6 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#6B7280]"
             }`}>
             {t("servicesPage.completeRangeDesc")}
           </p>
@@ -242,7 +242,7 @@ export default function ServicesListing({ searchQuery }: ServicesListingProps) {
             <div className="relative inline-block" ref={dropdownRef}>
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="px-8 py-3 bg-brand-gradient text-black font-semibold rounded-full text-sm flex items-center gap-3 hover:opacity-90 transition-opacity hover:cursor-pointer"
+                className="px-8 py-5 bg-brand-gradient text-black font-semibold rounded-full text-sm flex items-center gap-3 hover:opacity-90 transition-opacity hover:cursor-pointer"
               >
                 {t("servicesPage.browseByServiceLines")}
                 <Image
@@ -250,7 +250,7 @@ export default function ServicesListing({ searchQuery }: ServicesListingProps) {
                   alt="Dropdown"
                   width={16}
                   height={16}
-                  className={`w-4 h-4 transition-transform filter brightness-0 ${isDropdownOpen ? "rotate-180" : ""}`}
+                  className={` lg:ml-8 w-4 h-4 transition-transform filter brightness-0 ${isDropdownOpen ? "rotate-180" : ""}`}
                 />
               </button>
 
@@ -505,13 +505,13 @@ export default function ServicesListing({ searchQuery }: ServicesListingProps) {
                 {/* Service Content */}
                 <div className="p-6">
                   {/* Service Title */}
-                  <h3 className={`text-[18px] font-bold mb-3 leading-tight transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-gray-800"
+                  <h3 className={`text-[18px] lg:text-[22px] font-medium mb-3 leading-tight transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-gray-800"
                     }`}>
                     {service.title}
                   </h3>
 
                   {/* Service Description */}
-                  <p className={`text-[14px] leading-relaxed transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-gray-600"
+                  <p className={`text-[14px] lg:text-xl leading-relaxed transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-gray-600"
                     }`}>
                     Ideal for waterproofing and thermal insulation of terraces and special covers
                   </p>

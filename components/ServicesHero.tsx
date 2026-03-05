@@ -31,14 +31,14 @@ export default function ServicesHero({ searchQuery, onSearchChange }: ServicesHe
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full px-6 2xl:px-20 max-w-5xl mx-auto">
+      <div className="relative z-10 w-full px-6 2xl:px-20 max-w-7xl mx-auto">
         {/* Title */}
         <h1 className="text-white text-[48px] md:text-[56px] font-bold text-center mb-8 tracking-tight">
           {t("servicesPage.serviceLine")}
         </h1>
 
         {/* Search Bar - yellow background */}
-        <form onSubmit={handleSearch} className="services-hero-search relative max-w-3xl mx-auto">
+        <form onSubmit={handleSearch} className="services-hero-search relative max-w-7xl mx-auto">
           <div className="relative">
             <input
               type="text"
@@ -46,7 +46,7 @@ export default function ServicesHero({ searchQuery, onSearchChange }: ServicesHe
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
               className={`w-full px-8 py-5 rounded-full text-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-colors 
-              placeholder:text-black! placeholder:opacity-100! 
+              placeholder:text-black! placeholder:opacity-100! placeholder:font-medium!
               ${theme === "dark" ? "bg-yellow-400 text-gray-800" : "bg-yellow-400 text-gray-800"}`}
 
             />

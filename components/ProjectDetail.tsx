@@ -1,11 +1,16 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { useTheme } from "@/contexts/ThemeContext";
 import Spinner from "./Spinner";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import type { Swiper as SwiperType } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
 
 interface Project {
   id: string;
@@ -25,6 +30,7 @@ export default function ProjectDetail({ projectId }: { projectId: string }) {
   const [selectedImage, setSelectedImage] = useState(0);
   const [project, setProject] = useState<Project | null>(null);
   const [loading, setLoading] = useState(true);
+  const thumbnailSwiperRef = useRef<SwiperType | null>(null);
 
   useEffect(() => {
     fetchProject();
@@ -47,8 +53,8 @@ export default function ProjectDetail({ projectId }: { projectId: string }) {
 
   if (loading) {
     return (
-      <section className={`w-full py-12 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-[#EEF2F6]"}`}>
-        <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto text-center py-20">
+      <section className={`w-full py-12 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-[#EEF2F6] "}`}>
+        <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto text-center py-20 min-h-screen">
           <Spinner size="lg" />
         </div>
       </section>
@@ -57,7 +63,7 @@ export default function ProjectDetail({ projectId }: { projectId: string }) {
 
   if (!project) {
     return (
-      <section className={`w-full py-12 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-[#EEF2F6]"}`}>
+      <section className={`w-full py-12 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-[#EEF2F6]"} `}>
         <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto text-center">
           <p className={`transition-colors duration-300 ${theme === "dark" ? "text-gray-500" : "text-gray-500"}`}>{t("projectsPage.projectNotFound")}</p>
         </div>
@@ -68,16 +74,15 @@ export default function ProjectDetail({ projectId }: { projectId: string }) {
   const projectImages = project.images.length > 0 ? project.images : ["/assets/images/projects/p1.png"];
 
   return (
-    <section className={`w-full py-12 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-[#EEF2F6]"}`}>
+    <section className={`w-full py-12 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-[#EEF2F6]"} min-h-screen`}>
       <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto">
         {/* Back Button */}
         <button
           onClick={() => router.back()}
-          className={`flex items-center cursor-pointer gap-2 mb-6 transition-colors group ${
-            theme === "dark"
-              ? "text-gray-300 hover:text-brand-secondary"
-              : "text-brand-primary hover:text-brand-secondary"
-          }`}
+          className={`flex items-center cursor-pointer gap-2 mb-6 transition-colors group ${theme === "dark"
+            ? "text-gray-300 hover:text-brand-secondary"
+            : "text-brand-primary hover:text-brand-secondary"
+            }`}
         >
           <svg
             className="w-6 h-6 transition-transform group-hover:-translate-x-1"
@@ -149,27 +154,70 @@ export default function ProjectDetail({ projectId }: { projectId: string }) {
               )}
             </div>
 
-            {/* Thumbnail Images */}
             {projectImages.length > 1 && (
-              <div className="flex gap-6">
-                {projectImages.slice(0, 3).map((img, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setSelectedImage(index)}
-                    className={`relative h-32 flex-1 rounded-2xl overflow-hidden transition-all ${
-                      selectedImage === index
-                        ? `border-[3px] ${theme === "dark" ? "border-gray-400" : "border-brand-primary"}`
-                        : `border-[3px] ${theme === "dark" ? "border-gray-700 hover:border-gray-600" : "border-gray-300 hover:border-gray-400"}`
-                    }`}
-                  >
-                    <Image
-                      src={img}
-                      alt={`Thumbnail ${index + 1}`}
-                      fill
-                      className="object-cover"
-                    />
-                  </button>
-                ))}
+              <div className="relative">
+                <Swiper
+                  onSwiper={(swiper) => { thumbnailSwiperRef.current = swiper; }}
+                  modules={[Navigation]}
+                  navigation={{
+                    prevEl: ".service-thumb-prev",
+                    nextEl: ".service-thumb-next",
+                  }}
+                  slidesPerView={3}
+                  spaceBetween={16}
+                  loop={projectImages.length >= 3}
+                  className="rounded-2xl"
+                  breakpoints={{
+                    640: { slidesPerView: 3, spaceBetween: 20 },
+                    1024: { slidesPerView: 4, spaceBetween: 24 },
+                  }}
+                >
+                  {projectImages.map((img, index) => (
+                    <SwiperSlide key={index}>
+                      <button
+                        type="button"
+                        onClick={() => setSelectedImage(index)}
+                        className={`relative h-32 w-full rounded-2xl overflow-hidden transition-all block ${selectedImage === index
+                          ? `border-[3px] ${theme === "dark" ? "border-gray-400" : "border-[#1B2556]"}`
+                          : `border-[3px] ${theme === "dark" ? "border-gray-700 hover:border-gray-600" : "border-gray-300 hover:border-gray-400"}`
+                          }`}
+                      >
+                        <Image
+                          src={img}
+                          alt={`Thumbnail ${index + 1}`}
+                          fill
+                          className="object-cover"
+                        />
+                      </button>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+                <button
+                  type="button"
+                  className="service-thumb-prev absolute left-[-12px] top-1/2 -translate-y-1/2 z-10 hover:opacity-70 transition-opacity cursor-pointer disabled:opacity-40"
+                  aria-label="Previous thumbnails"
+                >
+                  <Image
+                    src="/assets/images/Products_page/slider_left_arrow.svg"
+                    alt="Previous"
+                    width={32}
+                    height={32}
+                    className="w-8 h-8"
+                  />
+                </button>
+                <button
+                  type="button"
+                  className="service-thumb-next absolute right-[-12px] top-1/2 -translate-y-1/2 z-10 hover:opacity-70 transition-opacity cursor-pointer disabled:opacity-40"
+                  aria-label="Next thumbnails"
+                >
+                  <Image
+                    src="/assets/images/Products_page/slider_right_arrow.svg"
+                    alt="Next"
+                    width={32}
+                    height={32}
+                    className="w-8 h-8"
+                  />
+                </button>
               </div>
             )}
           </div>
@@ -184,26 +232,26 @@ export default function ProjectDetail({ projectId }: { projectId: string }) {
             <div className="space-y-3 mb-6">
               {project.client && (
                 <div className="flex items-start gap-2">
-                  <span className={`text-[14px] font-semibold min-w-[100px] transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-brand-primary"}`}>{t("projectsPage.client")}:</span>
-                  <span className={`text-[14px] transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>{project.client}</span>
+                  <span className={`text-[14px] lg:text-xl font-semibold min-w-[100px] transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-brand-primary"}`}>{t("projectsPage.client")}:</span>
+                  <span className={`text-[14px] lg:text-xl transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>{project.client}</span>
                 </div>
               )}
               {project.location && (
                 <div className="flex items-start gap-2">
-                  <span className={`text-[14px] font-semibold min-w-[100px] transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-brand-primary"}`}>{t("projectsPage.location")}:</span>
+                  <span className={`text-[14px] lg:text-xl font-semibold min-w-[100px] transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-brand-primary"}`}>{t("projectsPage.location")}:</span>
                   <span className={`text-[14px] transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>{project.location}</span>
                 </div>
               )}
               {project.duration && (
                 <div className="flex items-start gap-2">
-                  <span className={`text-[14px] font-semibold min-w-[100px] transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-brand-primary"}`}>{t("projectsPage.duration")}:</span>
-                  <span className={`text-[14px] transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>{project.duration}</span>
+                  <span className={`text-[14px] lg:text-xl font-semibold min-w-[100px] transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-brand-primary"}`}>{t("projectsPage.duration")}:</span>
+                  <span className={`text-[14px] lg:text-xl transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>{project.duration}</span>
                 </div>
               )}
               {project.completionDate && (
                 <div className="flex items-start gap-2">
-                  <span className={`text-[14px] font-semibold min-w-[100px] transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-brand-primary"}`}>{t("projectsPage.completed")}:</span>
-                  <span className={`text-[14px] transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>
+                  <span className={`text-[14px] lg:text-xl font-semibold min-w-[100px] transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-brand-primary"}`}>{t("projectsPage.completed")}:</span>
+                  <span className={`text-[14px] lg:text-xl transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>
                     {new Date(project.completionDate).toLocaleDateString()}
                   </span>
                 </div>
@@ -211,7 +259,7 @@ export default function ProjectDetail({ projectId }: { projectId: string }) {
             </div>
 
             {project.description && (
-              <div className={`text-[14px] leading-relaxed mb-6 whitespace-pre-line transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>
+              <div className={`text-[14px] lg:text-xl leading-relaxed mb-6 whitespace-pre-line transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>
                 {project.description}
               </div>
             )}

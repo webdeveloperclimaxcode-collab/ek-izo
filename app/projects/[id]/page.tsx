@@ -8,7 +8,7 @@ export default function ProjectDetailPage() {
   const projectId = params.id as string;
 
   return (
-    <div>
+    <div >
       <ProjectDetail projectId={projectId} />
     </div>
   );

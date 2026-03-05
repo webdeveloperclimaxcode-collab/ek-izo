@@ -94,7 +94,7 @@ export default function HeroSection() {
                 <div className="absolute inset-0 px-3 md:px-6 2xl:px-20 flex items-center md:items-center justify-center md:justify-start h-full">
                   <div className="w-full md:max-w-3xl md:mx-30">
                     {/* Content Card with Gradient Border */}
-                    <div 
+                    <div
                       className="relative rounded-lg md:rounded-2xl bg-[#D9D9D9]/10 backdrop-blur-md px-4 py-6 md:px-8 md:py-11"
                       style={{
                         borderWidth: "1px",
