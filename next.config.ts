@@ -27,6 +27,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'izogrup-ontop.fra1.digitaloceanspaces.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'ekgrup.sfo3.digitaloceanspaces.com'
+      }
     ],
   },
   // Increase body size limit for file uploads
