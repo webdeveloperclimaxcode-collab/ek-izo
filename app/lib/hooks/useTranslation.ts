@@ -8,13 +8,22 @@ export function useTranslation() {
     const savedLanguage = localStorage.getItem('language') || 'en';
     setLanguage(savedLanguage);
 
-    const handleLanguageChange = () => {
+    const handleStorageChange = () => {
       const newLanguage = localStorage.getItem('language') || 'en';
       setLanguage(newLanguage);
     };
 
-    window.addEventListener('storage', handleLanguageChange);
-    return () => window.removeEventListener('storage', handleLanguageChange);
+    const handleLanguageEvent = (event: Event) => {
+      const newLanguage = (event as CustomEvent).detail;
+      if (newLanguage) setLanguage(newLanguage);
+    };
+
+    window.addEventListener('storage', handleStorageChange);
+    window.addEventListener('languageChange', handleLanguageEvent);
+    return () => {
+      window.removeEventListener('storage', handleStorageChange);
+      window.removeEventListener('languageChange', handleLanguageEvent);
+    };
   }, []);
 
   const t = (key: string) => getTranslation(language, key);

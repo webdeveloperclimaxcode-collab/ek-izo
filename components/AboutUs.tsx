@@ -86,11 +86,11 @@ export default function AboutUs() {
               <div className="bg-white dark:bg-[#1a1a1a] rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition-all p-8 text-left h-full">
                 {/* Icon */}
                 <div className="mb-6">
-                  <div className="w-12 h-12  rounded-lg flex items-center justify-center">
+                  <div className="w-18 h-12  rounded-lg flex items-center justify-center">
                     <Image
                       src={feature.icon}
                       alt={getTranslation(language, feature.titleKey)}
-                      width={56}
+                      width={64}
                       height={46}
                     // className="w-6 h-6"
                     />

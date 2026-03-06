@@ -90,7 +90,7 @@ export default function WhyChoose() {
             </h2>
           </div>
           <p className="text-base lg:text-3xl  text-gray-600 dark:text-gray-300  mx-auto leading-relaxed transition-colors">
-            The advantages of partnering with us
+            {t("whyChoose.subline")}
           </p>
         </div>
 

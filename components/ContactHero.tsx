@@ -550,11 +550,11 @@ export default function ContactHero() {
                       <div
                         key={index}
                         // Alternate row direction based on index (even = image left, odd = image right)
-                        className={`flex flex-col gap-8 md:gap-12 items-center ${index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row '
+                        className={`flex flex-col gap-8  lg:gap-40  md:gap-12 items-center  ${index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row '
                           }`}
                       >
                         {/* Office Image */}
-                        <div className="relative w-full md:w-[380px] h-[380px] flex-shrink-0">
+                        <div className="relative flex-1 lg:h-[500px] lg:w-[380px]  w-full md:w-[380px] h-[380px] flex-shrink-0">
                           <Image
                             src={office.image}
                             alt={`Office ${index + 1}`}
@@ -572,10 +572,10 @@ export default function ContactHero() {
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                               </div>
                               <div className="pt-0.5">
-                                <h4 className={`text-[13px] font-bold leading-none ${theme === "dark" ? "text-gray-200" : "text-[#1A1A1A]"}`}>
+                                <h4 className={`text-[13px] lg:text-2xl font-semibold leading-none ${theme === "dark" ? "text-gray-200" : "text-[#1A1A1A]"}`}>
                                   Address
                                 </h4>
-                                <p className={`text-[14px] mt-1.5 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>
+                                <p className={`text-[14px] lg:text-2xl mt-1.5 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>
                                   {office.address}
                                 </p>
                               </div>
@@ -587,10 +587,10 @@ export default function ContactHero() {
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                               </div>
                               <div className="pt-0.5">
-                                <h4 className={`text-[13px] font-bold leading-none ${theme === "dark" ? "text-gray-200" : "text-[#1A1A1A]"}`}>
+                                <h4 className={`text-[13px] lg:text-2xl font-semibold leading-none ${theme === "dark" ? "text-gray-200" : "text-[#1A1A1A]"}`}>
                                   Phone
                                 </h4>
-                                <p className={`text-[14px] mt-1.5 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>
+                                <p className={`text-[14px] lg:text-2xl mt-1.5 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>
                                   {office.phone}
                                 </p>
                               </div>
@@ -602,10 +602,10 @@ export default function ContactHero() {
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
                               </div>
                               <div className="pt-0.5">
-                                <h4 className={`text-[13px] font-bold leading-none ${theme === "dark" ? "text-gray-200" : "text-[#1A1A1A]"}`}>
+                                <h4 className={`text-[13px] lg:text-2xl font-semibold  leading-none ${theme === "dark" ? "text-gray-200" : "text-[#1A1A1A]"}`}>
                                   Fax
                                 </h4>
-                                <p className={`text-[14px] mt-1.5 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>
+                                <p className={`text-[14px] lg:text-2xl mt-1.5 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>
                                   {office.fax}
                                 </p>
                               </div>
@@ -617,12 +617,12 @@ export default function ContactHero() {
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                               </div>
                               <div className="pt-0.5">
-                                <h4 className={`text-[13px] font-bold leading-none ${theme === "dark" ? "text-gray-200" : "text-[#1A1A1A]"}`}>
+                                <h4 className={`text-[13px] lg:text-2xl font-semibold  leading-none ${theme === "dark" ? "text-gray-200" : "text-[#1A1A1A]"}`}>
                                   Email
                                 </h4>
                                 <Link
                                   href={`mailto:${office.email}`}
-                                  className={`text-[14px] mt-1.5 block underline hover:opacity-80 transition-opacity ${theme === "dark" ? "text-gray-300" : "text-[#4A5568]"}`}
+                                  className={`text-[14px] lg:text-2xl mt-1.5 block underline hover:opacity-80 transition-opacity ${theme === "dark" ? "text-gray-300" : "text-[#4A5568]"}`}
                                 >
                                   {office.email}
                                 </Link>
@@ -635,13 +635,13 @@ export default function ContactHero() {
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
                               </div>
                               <div className="pt-0.5">
-                                <h4 className={`text-[13px] font-bold leading-none ${theme === "dark" ? "text-gray-200" : "text-[#1A1A1A]"}`}>
+                                <h4 className={`text-[13px] lg:text-2xl font-semibold  leading-none ${theme === "dark" ? "text-gray-200" : "text-[#1A1A1A]"}`}>
                                   URL
                                 </h4>
                                 <Link
                                   href={`https://${office.url}`}
                                   target="_blank"
-                                  className="text-[14px] mt-1.5 block font-medium text-[#EAB308] hover:underline transition-colors"
+                                  className="text-[14px] lg:text-2xl mt-1.5 block font-medium text-[#EAB308] hover:underline transition-colors"
                                 >
                                   {office.url}
                                 </Link>
@@ -654,9 +654,9 @@ export default function ContactHero() {
                             <Link
                               href="https://maps.google.com"
                               target="_blank"
-                              className={`inline-block px-6 py-2.5 border rounded-full text-[12px] font-bold transition-colors ${theme === "dark"
-                                ? "border-gray-600 text-gray-300 hover:bg-gray-800"
-                                : "border-gray-300 text-[#4A5568] hover:bg-gray-50"
+                              className={`inline-block px-6 py-3 lg:text-lg border rounded-full text-[12px] font-medium transition-colors border-[#F6BA40] ${theme === "dark"
+                                ? " text-gray-300 hover:bg-gray-800"
+                                : " text-[#4A5568] hover:bg-gray-50"
                                 }`}
                             >
                               FIND US ON GOOGLE MAPS

@@ -166,11 +166,11 @@ export default function VideoTutorial() {
 
                     {/* Video Info */}
                     <div className="p-6 text-center">
-                      <h3 className={`truncate text-[17px] font-semibold mb-2 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-gray-800"}`}>
+                      <h3 className={`truncate lg:text-xl text-[17px] font-semibold mb-2 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-gray-800"}`}>
                         {video.title}
                       </h3>
                       {/* Category label - you can customize this based on your data */}
-                      <p className={`text-[14px] transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-gray-600"}`}>
+                      <p className={`text-[14px] lg:text-base transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-gray-600"}`}>
                         Construction Management
                       </p>
                     </div>
@@ -227,7 +227,7 @@ export default function VideoTutorial() {
           <div className="flex justify-center mt-12">
             <Link
               href="/video-tutorials"
-              className="px-12 py-4  rounded-full border border-brand-secondary text-[#373737] bg-white font-semibold  tracking-wide shadow-sm hover:bg-brand-secondary/5 transition text-[16px]"
+              className="px-12 py-4 lg:text-xl rounded-full border border-brand-secondary text-[#373737] bg-white font-medium  tracking-wide shadow-sm hover:bg-brand-secondary/5 transition text-[16px]"
 
             >
               {t("videoTutorial.viewAll")}

@@ -85,16 +85,16 @@ export default function BlogHero({
 
         {/* Title */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-white text-[48px] font-bold">BLOG</h1>
+          <h1 className="text-white text-[30px] lg:text-[60px] font-medium">BLOG</h1>
         </div>
       </div>
 
       {/* Search and Filters Bar */}
-      <div className={`py-6 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-brand-primary"}`}>
-        <div className="w-full px-6 2xl:px-20 max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row gap-4 items-center">
+      <div className={`py-10 transition-colors duration-300 bg-[#292929]`}>
+        <div className="w-full px-6 2xl:px-20  mx-auto">
+          <div className="flex flex-col md:flex-row gap-10 items-center">
             {/* Search Input */}
-            <div className="relative flex-1 max-w-md">
+            <div className="relative flex-2 ">
               <input
                 type="text"
                 placeholder="Search By Keywords"
@@ -119,10 +119,10 @@ export default function BlogHero({
             </div>
 
             {/* Topic Dropdown */}
-            <div className="relative">
+            <div className="relative flex-1">
               <button
                 onClick={() => setShowTopicDropdown(!showTopicDropdown)}
-                className={`px-8 py-3.5 text-black font-semibold rounded-full hover:opacity-90 transition-all text-[15px] flex items-center gap-3 min-w-[150px] justify-between ${
+                className={`px-8 py-3.5 text-black font-semibold rounded-full hover:opacity-90 transition-all text-[15px] flex items-center gap-3 w-full justify-between ${
                   theme === "dark"
                     ? "bg-[#6B1B2F]"
                     : "bg-brand-secondary"
@@ -139,7 +139,7 @@ export default function BlogHero({
                 />
               </button>
               {showTopicDropdown && (
-                <div className={`absolute top-full mt-2 w-full rounded-lg shadow-xl z-50 min-w-[200px] transition-colors duration-300 ${theme === "dark"
+                <div className={`absolute top-full mt-2 w-full rounded-lg shadow-xl z-50 transition-colors  duration-300 ${theme === "dark"
                   ? "bg-[#000000]"
                   : "bg-white"
                   }`}>
@@ -175,10 +175,10 @@ export default function BlogHero({
             </div>
 
             {/* Year Dropdown */}
-            <div className="relative">
+            <div className="relative flex-1">
               <button
                 onClick={() => setShowYearDropdown(!showYearDropdown)}
-                className={`px-8 py-3.5 text-black font-semibold rounded-full hover:opacity-90 transition-all text-[15px] flex items-center gap-3 min-w-[150px] justify-between ${
+                className={`px-8 py-3.5 text-black font-semibold rounded-full hover:opacity-90 transition-all text-[15px] flex items-center gap-3 w-full justify-between ${
                   theme === "dark"
                     ? "bg-[#6B1B2F]"
                     : "bg-brand-secondary"
