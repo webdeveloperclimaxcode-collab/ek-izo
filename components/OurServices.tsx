@@ -114,10 +114,10 @@ export default function OurServices() {
 
               {/* Content */}
               <div className="p-5 flex flex-col gap-2 flex-1">
-                <h3 className="text-[12px] md:text-[13px] font-semibold uppercase tracking-wide text-[#111827] dark:text-white leading-snug line-clamp-2 min-h-[34px]">
+                <h3 className="text-[12px] lg:text-2xl md:text-[13px] font-semibold uppercase tracking-wide text-[#111827] dark:text-white leading-snug line-clamp-2 min-h-[34px]">
                   {service.title}
                 </h3>
-                <p className="text-[12px] md:text-[13px] text-[#6B7280] dark:text-gray-300 leading-relaxed line-clamp-2 min-h-[38px]">
+                <p className="text-[12px] lg:text-xl md:text-[13px] text-[#6B7280] dark:text-gray-300 leading-relaxed line-clamp-2 min-h-[38px]">
                   {service.description || ""}
                 </p>
 
@@ -155,7 +155,7 @@ export default function OurServices() {
         <div className="flex justify-center mt-10">
           <Link
             href="/services"
-            className="px-10 py-3 rounded-full border border-brand-secondary text-[#373737] bg-white font-semibold text-[12px] tracking-wide shadow-sm hover:bg-brand-secondary/5 transition"
+            className="px-10 py-3 rounded-full border border-brand-secondary text-[#373737] bg-white font-medium text-[12px] lg:text-xl tracking-wide shadow-sm hover:bg-brand-secondary/5 transition"
           >
             {t("ourServices.viewAll")}
           </Link>

@@ -80,7 +80,7 @@ export default function ServiceDetail({ serviceId }: { serviceId: string }) {
 
   return (
     <section className={`w-full py-12 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-[#EEF2F6]"}`}>
-      <div className="w-full px-6 2xl:px-20 max-w-7xl mx-auto">
+      <div className="w-full px-6 2xl:px-20  mx-auto">
         {/* Back Button */}
         <button
           onClick={() => router.back()}

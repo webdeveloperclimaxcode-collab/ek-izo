@@ -68,19 +68,36 @@ export async function GET(request: Request) {
       });
     }
 
-    const blogs = await prisma.blog.findMany({
-      where,
-      include: {
-        category: true,
-      },
-      orderBy: [
-        { featured: "desc" },
-        { publishedAt: "desc" },
-        { createdAt: "desc" },
-      ],
-    });
+    // Pagination
+    const page = parseInt(searchParams.get("page") || "1", 10);
+    const limit = parseInt(searchParams.get("limit") || "9", 10);
+    const skip = (page - 1) * limit;
 
-    return NextResponse.json({ success: true, data: blogs });
+    const [blogs, total] = await Promise.all([
+      prisma.blog.findMany({
+        where,
+        include: {
+          category: true,
+        },
+        orderBy: [
+          { featured: "desc" },
+          { publishedAt: "desc" },
+          { createdAt: "desc" },
+        ],
+        skip,
+        take: limit,
+      }),
+      prisma.blog.count({ where }),
+    ]);
+
+    return NextResponse.json({
+      success: true,
+      data: blogs,
+      total,
+      page,
+      limit,
+      hasMore: skip + blogs.length < total,
+    });
   } catch (error) {
     console.error("Error fetching blogs:", error);
     return NextResponse.json(

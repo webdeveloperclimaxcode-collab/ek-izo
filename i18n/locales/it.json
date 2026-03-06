@@ -78,6 +78,7 @@
   },
   "aboutUs": {
     "heading": "CHI SIAMO",
+    
     "description": "Forniamo impermeabilizzazione e isolamento termico per tutti i tipi di edifici, dalle case e piccole imprese alle grandi aziende. Il nostro team addestrato offre installazioni professionali con una forte attenzione alla qualità e alla soddisfazione del cliente.",
     "features": {
       "constructionManagement": {
@@ -96,6 +97,7 @@
   },
   "whyChoose": {
     "heading": "PERCHÉ SCEGLIERE EKGRUP SH.P.K",
+    "subline": "I vantaggi di collaborare con noi",
     "description": "Fondato da Oligert & Erion Plaka nel 2004, Ekgrup si è affermato come uno dei più grandi e prestigiosi fornitori di servizi di impermeabilizzazione e isolamento termico in Albania.",
     "stats": {
       "experience": {
@@ -273,7 +275,7 @@
     "officeEmail": "Email",
     "officeUrl": "URL",
     "findOnMaps": "TROVACI SU GOOGLE MAPS",
-    "askForAdvice": "Chiedi Consiglio Tecnico",
+    "askForAdvice": "Chiedere",
     "technicalAdvice": "Consiglio Tecnico",
     "fillForm": "Compila il modulo con i tuoi dettagli e il nostro team ti contatterà a breve con il supporto di cui hai bisogno.",
     "namePlaceholder": "Nome*",

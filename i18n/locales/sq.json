@@ -78,6 +78,7 @@
   },
   "aboutUs": {
     "heading": "RRETH NESH",
+    
     "description": "Ne ofrojmë ujëmbrojtje dhe izolim termik për të gjitha llojet e ndërtesave—nga shtëpitë dhe bizneset e vogla deri te korporatat e mëdha. Ekipi ynë i trajnuar ofron instalime profesionale me fokus të fortë në cilësi dhe kënaqësinë e klientit.",
     "features": {
       "constructionManagement": {
@@ -97,6 +98,7 @@
   "whyChoose": {
     "heading": "PËR ÇFARË TË ZGJEDHNI EKGRUP SH.P.K",
     "description": "I themeluar nga Oligert & Erion Plaka në vitin 2004, Ekgrup ka vendosur veten si një nga ofruesit më të mëdhenj dhe më prestigjiozë të shërbimeve të ujëmbrojtjes dhe izolimit termik në Shqipëri.",
+    "subline": "Përparësitë e partneritetit me ne",
     "stats": {
       "experience": {
         "title": "10+ VJET",
@@ -273,7 +275,7 @@
     "officeEmail": "Email",
     "officeUrl": "URL",
     "findOnMaps": "GJENI NE NE GOOGLE MAPS",
-    "askForAdvice": "Kërkoni Këshillim Teknik",
+    "askForAdvice": "Kërkoni",
     "technicalAdvice": "Këshillim Teknik",
     "fillForm": "Plotësoni formularin me detajet tuaja, dhe ekipi ynë do t'ju kontaktojë në kohën e duhur me mbështetjen që keni nevojë.",
     "namePlaceholder": "Emri*",

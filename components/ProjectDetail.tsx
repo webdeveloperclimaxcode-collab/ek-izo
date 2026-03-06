@@ -75,7 +75,7 @@ export default function ProjectDetail({ projectId }: { projectId: string }) {
 
   return (
     <section className={`w-full py-12 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-[#EEF2F6]"} min-h-screen`}>
-      <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto">
+      <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 mx-auto">
         {/* Back Button */}
         <button
           onClick={() => router.back()}

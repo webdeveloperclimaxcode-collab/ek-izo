@@ -9,7 +9,7 @@ export default function SupportHero() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative w-full h-[300px] flex flex-col items-center justify-center">
+      <section className="relative w-full h-[450px] flex flex-col items-center justify-center">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -26,10 +26,10 @@ export default function SupportHero() {
 
         {/* Content */}
         <div className="relative z-10 text-center px-6">
-          <h1 className="text-white text-[42px] font-bold mb-3">
+          <h1 className="text-black text-3xl lg:text-6xl lg:tracking-wider font-medium mb-3">
             TECHNICAL & COMMERCIAL SUPPORT
           </h1>
-          <p className="text-white text-[18px]">
+          <p className="text-black text-2xl lg:text-3xl lg:tracking-wide">
             Always on hand for our clients, both before and after selling a
             product.
           </p>
@@ -38,9 +38,9 @@ export default function SupportHero() {
 
       {/* Content Section */}
       <section className={`w-full py-16 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-white"}`}>
-        <div className="w-full px-6 2xl:px-20 max-w-5xl mx-auto">
+        <div className="w-full px-6 2xl:px-20 mx-auto">
           {/* Title */}
-          <h2 className={`text-[32px] text-center mb-6 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
+          <h2 className={`text-[32px] lg:text-5xl lg:leading-tight lg:tracking-wider text-center mb-6 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
             Our{" "}
             <span className={`font-bold transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
               Technical Assistance Service
@@ -49,7 +49,7 @@ export default function SupportHero() {
           </h2>
 
           {/* Description */}
-          <p className={`text-[15px] leading-relaxed text-center mb-10 max-w-4xl mx-auto transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
+          <p className={`text-[15px] lg:text-3xl leading-relaxed text-center mb-10  mx-auto transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
             <span className="text-brand-secondary font-semibold">EKGRUP</span>{" "}
             delivers global technical and installation support through our highly
             skilled specialists, experienced across every sector. Our experts
@@ -63,13 +63,13 @@ export default function SupportHero() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
             <Link
               href="#contact-form"
-              className="px-10 py-4 bg-brand-gradient text-white font-semibold rounded-full hover:opacity-90 transition-opacity text-[15px] min-w-[280px] text-center"
+              className="px-10 py-4 bg-brand-gradient lg:py-10 lg:px-15 lg:text-3xl text-black font-medium rounded-full hover:opacity-90 transition-opacity text-[15px] text-center"
             >
               CONTACT US ONLINE
             </Link>
             <Link
               href="/contact"
-              className="px-10 py-4 bg-brand-gradient text-white font-semibold rounded-full hover:opacity-90 transition-opacity text-[15px] min-w-[280px] text-center"
+              className="px-10 py-4 bg-black dark:border dark:border-[#F6BA40] lg:py-10 lg:px-10 lg:text-2xl text-[#F6BA40] font-medium rounded-full hover:opacity-90 transition-opacity text-[15px]  text-center"
             >
               CONSULT AGENTS FROM YOUR AREA
             </Link>

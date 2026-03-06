@@ -20,6 +20,7 @@ interface Blog {
   id: string;
   title: string;
   author: string;
+  images: string[];
   featuredImage: string | null;
   category: BlogCategory | null;
   publishedAt: string | null;
@@ -120,7 +121,7 @@ export default function NewsBlogs() {
                     {/* Blog Image */}
                     <div className="relative h-48">
                       <Image
-                        src={blog.featuredImage || "/assets/images/blog-placeholder.jpg"}
+                        src={blog?.images?.[0] || "/assets/images/blog-placeholder.jpg"}
                         alt={blog.title}
                         fill
                         className="object-cover"
@@ -136,28 +137,28 @@ export default function NewsBlogs() {
                     <div className="p-6">
                       {/* Category */}
                       {blog.category && (
-                        <span className="text-[12px] text-yellow-600 dark:text-yellow-400 uppercase tracking-wider mb-3 block font-medium transition-colors">
+                        <span className="text-[12px] lg:text-base text-yellow-600 dark:text-yellow-400 uppercase tracking-wider mb-3 block font-medium transition-colors">
                           {blog.category.name}
                         </span>
                       )}
 
                       {/* Title */}
-                      <h3 className="text-[16px] font-bold text-gray-800 dark:text-white mb-4 leading-tight line-clamp-2 transition-colors">
+                      <h3 className="text-[16px] lg:text-xl font-bold text-gray-800 dark:text-white mb-4 leading-tight line-clamp-2 transition-colors">
                         {blog.title}
                       </h3>
 
                       {/* Date with Icon */}
                       <div className="flex items-center gap-2">
-                        <div className="w-4 h-4 bg-yellow-100 rounded flex items-center justify-center">
+                        <div className="w-6 h-6  rounded flex items-center justify-center">
                           <Image
-                            src="/assets/images/services/date.svg"
+                            src="/assets/images/services/date_yellow.svg"
                             alt="Date"
-                            width={12}
+                            width={16}
                             height={12}
-                            className="w-3 h-3"
+                            // className="w-3 h-3"
                           />
                         </div>
-                        <span className="text-[14px] text-gray-600 dark:text-gray-400 font-medium transition-colors">
+                        <span className="text-[14px] lg:text-base text-gray-600 dark:text-gray-400 font-medium transition-colors">
                           {formatDate(blog.publishedAt || blog.createdAt)}
                         </span>
                       </div>

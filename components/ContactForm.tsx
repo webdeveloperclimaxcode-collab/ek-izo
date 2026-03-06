@@ -91,17 +91,17 @@ export default function ContactForm() {
 
   return (
     <section className={`w-full py-16 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-[#EEF2F6]"}`}>
-      <div className="w-full px-6 2xl:px-20 max-w-4xl mx-auto">
+      <div className="w-full px-6 2xl:px-40 mx-auto">
         {/* Title */}
-        <h2 className={`text-[32px] text-center mb-4 transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-brand-primary"}`}>
+        <h2 className={`text-[32px] lg:text-5xl text-center mb-4 transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-brand-primary"}`}>
           {t("contactPage.askForAdvice")}{" "}
-          <span className={`font-bold transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
+          <span className={`font-semibold transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
             {t("contactPage.technicalAdvice")}
           </span>
         </h2>
 
         {/* Subtitle */}
-        <p className={`text-[15px] text-center mb-10 transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>
+        <p className={`text-[15px] lg:text-2xl text-center mb-10 transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>
           {t("contactPage.fillForm")}
         </p>
 
@@ -248,10 +248,10 @@ export default function ContactForm() {
 
           {/* Privacy Policy */}
           <div className="mb-8">
-            <h3 className={`text-[18px] font-bold mb-3 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"}`}>
+            <h3 className={`text-[18px] lg:text-xl font-bold mb-3 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#1B2556]"}`}>
               {t("contactPage.processingInfo")}
             </h3>
-            <p className={`text-[14px] mb-4 transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>
+            <p className={`text-[14px] lg:text-lg mb-4 transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>
               {t("contactPage.privacyText")}
             </p>
             <label className="flex items-start gap-3 cursor-pointer mb-4">
@@ -266,9 +266,9 @@ export default function ContactForm() {
                   : "border-gray-300 bg-white focus:ring-[#3B82F6]"
                   }`}
               />
-              <span className={`text-[14px] transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>{t("contactPage.iAgree")}</span>
+              <span className={`text-[14px] lg:text-lg transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>{t("contactPage.iAgree")}</span>
             </label>
-            <p className={`text-[14px] transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>
+            <p className={`text-[14px] lg:text-lg transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>
               {t("contactPage.consentText")}
             </p>
           </div>
@@ -278,7 +278,7 @@ export default function ContactForm() {
             <button
               type="submit"
               disabled={loading}
-              className="px-16  py-4 bg-brand-gradient text-white font-semibold rounded-full hover:opacity-90 transition-opacity text-[16px] disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+              className="px-16  py-4 border border-[#F6BA40] dark:text-[#F6BA40] text-black font-semibold rounded-full hover:opacity-90 transition-opacity text-[16px] disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
             >
               {loading ? t("contactPage.sending") : t("contactPage.contactUs")}
             </button>

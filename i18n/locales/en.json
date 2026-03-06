@@ -97,6 +97,7 @@
   "whyChoose": {
     "heading": "WHY CHOOSE EKGRUP SH.P.K",
     "description": "Founded by Oligert & Erion Plaka back in 2004, Ekgrup has established itself as one of the greatest & prestigious providers of waterproofing & thermal insulation services in Albania.",
+    "subline":"The advantages of partnering with us",
     "stats": {
       "experience": {
         "title": "10+ YEARS",
@@ -273,7 +274,7 @@
     "officeEmail": "Email",
     "officeUrl": "URL",
     "findOnMaps": "FIND US ON GOOGLE MAPS",
-    "askForAdvice": "Ask For Technical Advice",
+    "askForAdvice": "Ask For",
     "technicalAdvice": "Technical Advice",
     "fillForm": "Fill out the form with your details, and our team will contact you shortly with the support you need.",
     "namePlaceholder": "Name*",
