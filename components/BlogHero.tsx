@@ -103,7 +103,7 @@ export default function BlogHero({
                 onKeyPress={handleKeyPress}
                 className={`w-full px-6 py-3.5 text-black placeholder:text-black! placeholder:opacity-100! rounded-full focus:outline-none text-[15px] transition-colors duration-300 ${
                   theme === "dark"
-                    ? "bg-[#6B1B2F]"
+                  ? "bg-brand-secondary"
                     : "bg-brand-secondary"
                 }`}
               />
@@ -124,7 +124,7 @@ export default function BlogHero({
                 onClick={() => setShowTopicDropdown(!showTopicDropdown)}
                 className={`px-8 py-3.5 text-black font-semibold rounded-full hover:opacity-90 transition-all text-[15px] flex items-center gap-3 w-full justify-between ${
                   theme === "dark"
-                    ? "bg-[#6B1B2F]"
+                  ? "bg-brand-secondary"
                     : "bg-brand-secondary"
                 }`}
               >
@@ -180,7 +180,7 @@ export default function BlogHero({
                 onClick={() => setShowYearDropdown(!showYearDropdown)}
                 className={`px-8 py-3.5 text-black font-semibold rounded-full hover:opacity-90 transition-all text-[15px] flex items-center gap-3 w-full justify-between ${
                   theme === "dark"
-                    ? "bg-[#6B1B2F]"
+                  ? "bg-brand-secondary"
                     : "bg-brand-secondary"
                 }`}
               >

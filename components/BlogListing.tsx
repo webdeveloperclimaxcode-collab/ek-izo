@@ -106,14 +106,14 @@ export default function BlogListing({ searchQuery, selectedCategory, selectedYea
           Press releases, press kits and other content for journalists
         </p>
        <div className="flex justify-center item-center w-full">
-          <button  className={`text-[15px] rounded-full lg:text-2xl p-6 lg:py-4 border border-[#F6BA40] text-center mb-8 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
+          {/* <button  className={`text-[15px] rounded-full lg:text-2xl p-6 lg:py-4 border border-[#F6BA40] text-center mb-8 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
           Consult The Media Area
-        </button >
+        </button > */}
         </div>
 
         {/* Loading State */}
         {loading ? (
-          <div className="text-center py-12">
+          <div className="text-center py-15">
             <Spinner size="lg" />
           </div>
         ) : (
