@@ -1,5 +1,13 @@
 import nodemailer from "nodemailer";
 
+console.log(
+  "Email Configuration:",
+  "Host:", process.env.EMAIL_HOST,
+  "Port:", process.env.EMAIL_PORT,
+  "User:", process.env.EMAIL_USER,
+  "From:", process.env.EMAIL_FROM
+)
+
 // Create reusable transporter
 const transporter = nodemailer.createTransport({
   host: process.env.EMAIL_HOST,
