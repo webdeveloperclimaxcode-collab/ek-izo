@@ -58,7 +58,7 @@ export default function ServiceDetail({ serviceId }: { serviceId: string }) {
 
   if (loading) {
     return (
-      <section className={`w-full py-12 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-[#EEF2F6]"}`}>
+      <section className={`w-full py-12 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-[#fff]"}`}>
         <div className="w-full px-6 2xl:px-20 max-w-7xl mx-auto text-center py-20">
           <Spinner size="lg" />
         </div>
@@ -68,7 +68,7 @@ export default function ServiceDetail({ serviceId }: { serviceId: string }) {
 
   if (!service) {
     return (
-      <section className={`w-full py-12 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-[#EEF2F6]"}`}>
+      <section className={`w-full py-12 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-[#fff]"}`}>
         <div className="w-full px-6 2xl:px-20 max-w-7xl mx-auto text-center">
           <p className={`transition-colors duration-300 ${theme === "dark" ? "text-gray-500" : "text-gray-500"}`}>{t("servicesPage.serviceNotFound")}</p>
         </div>
@@ -79,7 +79,7 @@ export default function ServiceDetail({ serviceId }: { serviceId: string }) {
   const serviceImages = service.images.length > 0 ? service.images : ["/assets/images/services/s1.png"];
 
   return (
-    <section className={`w-full py-12 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-[#EEF2F6]"}`}>
+    <section className={`w-full py-12 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-[#fff]"}`}>
       <div className="w-full px-6 2xl:px-20  mx-auto">
         {/* Back Button */}
         <button
@@ -166,7 +166,7 @@ export default function ServiceDetail({ serviceId }: { serviceId: string }) {
                     ${service.price}
                   </span>
                 )} */}
-                {service.enableOnlineSales && (
+                {/* {service.enableOnlineSales && (
                   <button
                     onClick={() => {
                       if (service.price) {
@@ -192,7 +192,7 @@ export default function ServiceDetail({ serviceId }: { serviceId: string }) {
                       className="w-12"
                     />
                   </button>
-                )}
+                )} */}
               </div>
             </div>
 
