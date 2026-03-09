@@ -120,7 +120,7 @@ export default function Header() {
   return (
     <header className={`w-full py-3 relative  transition-colors duration-300 bg-black`}>
       <div className="w-full mx-auto px-6 2xl:px-20">
-        <div className="flex items-center justify-between gap-2 min-h-16 py-2">
+        <div className="flex items-center justify-between gap-2 md:gap-12 min-h-16 py-2">
           {/* Logo */}
           <div className="shrink-0 min-w-0">
             <Link href="/">
@@ -136,14 +136,14 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex  items-center gap-1 lg:gap-0 xl:gap-2 justify-evenly flex-1 max-w-7xl  lg:mr-64 ">
+          <nav className="hidden lg:flex  items-center gap-1 lg:gap-0 xl:gap-2 justify-evenly flex-1 max-w-7xl md:max-w-3xl  lg:mr-10 xl:mr-24 2xl:mr-48 ">
             {navItems.map((item) => {
               const isActive = pathname === item.href;
               return (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`px-3 xl:px-6 py-1/5  text-sm lg:text-3xl font-medium lg:font-light transition-all text-white whitespace-nowrap ${isActive
+                  className={`px-3 xl:px-6 py-1/5  text-sm lg:text-base xl:text-lg 2xl:text-2xl font-medium lg:font-light transition-all text-white whitespace-nowrap ${isActive
                     ? "bg-[#454545]  rounded-full hover:opacity-90"
                     : "hover:underline"
                     }`}
@@ -195,14 +195,14 @@ export default function Header() {
                   height={30}
                   className="object-cover  shrink-0"
                 />
-                <span className="text-[13px]  lg:text-3xl whitespace-nowrap hidden xl:inline">{selectedLanguage.name}</span>
+                <span className="text-[13px]  lg:text-base xl:text-lg 2xl:text-3xl whitespace-nowrap hidden xl:inline">{selectedLanguage.name}</span>
                 <Image
                   src="/assets/images/header/dropdown_white.svg"
                   alt="Dropdown"
                   width={15}
                   color="#fff"
                   height={15}
-                  className="w-3 xl:w-4 shrink-0 dark:invert lg:ml-15"
+                  className="w-3 xl:w-4 shrink-0 dark:invert lg:ml-2 xl:ml-6 2xl:ml-15"
                 />
               </button>
 
@@ -227,7 +227,7 @@ export default function Header() {
                           height={20}
                           className="w-8 h-5 rounded"
                         />
-                        <span className="text-base lg:text-3xl">{lang.name}</span>
+                        <span className="text-base lg:text-base xl:text-lg 2xl:text-3xl">{lang.name}</span>
                       </button>
                     ))}
                 </div>
@@ -238,9 +238,9 @@ export default function Header() {
             <button
               ref={menuButtonRef}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="flex items-center gap-2 lg:gap-30 cursor-pointer px-2 xl:px-3 py-2 text-sm font-medium text-[#4A5568] dark:text-gray-300 hover:text-[#7D1F3E] dark:hover:text-brand-secondary transition-colors "
+              className="flex items-center gap-2 lg:gap-4 xl:gap-10 2xl:gap-30 cursor-pointer px-2 xl:px-3 py-2 text-sm font-medium text-[#4A5568] dark:text-gray-300 hover:text-[#7D1F3E] dark:hover:text-brand-secondary transition-colors "
             >
-              <span className="text-[16px] lg:text-3xl text-white whitespace-nowrap">Menu</span>
+              <span className="text-[16px] lg:text-base xl:text-lg 2xl:text-3xl text-white whitespace-nowrap">Menu</span>
               <Image
                 src="/assets/images/header/Menu_Icon_white.svg"
                 alt="Menu"
