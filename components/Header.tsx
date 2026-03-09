@@ -127,9 +127,9 @@ export default function Header() {
               <Image
                 src="/assets/images/header/logo_bg_remove.png"
                 alt="EKGRUP Logo"
-                width={200}
+                width={90}
                 height={45}
-                className="h-aut0 w-auto max-w-[150px] lg:max-w-[200px]"
+                // className="h-aut0 w-auto max-w-[150px] lg:max-w-[200px]"
                 priority
               />
             </Link>
@@ -202,7 +202,7 @@ export default function Header() {
                   width={15}
                   color="#fff"
                   height={15}
-                  className="w-3 xl:w-4 shrink-0 dark:invert lg:ml-2 xl:ml-6 2xl:ml-15"
+                  className="w-3 xl:w-4 shrink-0  lg:ml-2 xl:mr-6 2xl:mr-15"
                 />
               </button>
 
@@ -238,7 +238,7 @@ export default function Header() {
             <button
               ref={menuButtonRef}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="flex items-center gap-2 lg:gap-4 xl:gap-10 2xl:gap-30 cursor-pointer px-2 xl:px-3 py-2 text-sm font-medium text-[#4A5568] dark:text-gray-300 hover:text-[#7D1F3E] dark:hover:text-brand-secondary transition-colors "
+              className="flex items-center gap-2 lg:gap-4  cursor-pointer px-2 xl:px-3 py-2 text-sm font-medium text-[#4A5568] dark:text-gray-300 hover:text-[#7D1F3E] dark:hover:text-brand-secondary transition-colors "
             >
               <span className="text-[16px] lg:text-base xl:text-lg 2xl:text-2xl text-white whitespace-nowrap">Menu</span>
               <Image

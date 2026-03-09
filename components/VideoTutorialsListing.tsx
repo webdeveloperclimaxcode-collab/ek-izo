@@ -86,9 +86,9 @@ export default function VideoTutorialsListing() {
                     <div
                       key={video.id}
                       onClick={() => openVideoModal(video)}
-                      className={`border rounded-lg overflow-hidden hover:shadow-lg cursor-pointer group transition-all duration-300 ${theme === "dark"
-                        ? "bg-[#000000] border-gray-700"
-                        : "bg-white border-gray-200"
+                      className={` rounded-lg overflow-hidden hover:shadow-lg cursor-pointer group transition-all duration-300 ${theme === "dark"
+                        ? "bg-[#000000] "
+                        : "bg-white "
                         }`}
                     >
                       {/* Video Thumbnail with Play Button */}

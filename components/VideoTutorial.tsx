@@ -138,8 +138,8 @@ export default function VideoTutorial() {
                   <div
                     onClick={() => openVideoModal(video)}
                     className={`rounded-xl overflow-hidden hover:shadow-xl transition-all cursor-pointer group h-full duration-300 ${theme === "dark"
-                      ? "bg-[#1a1a1a] shadow-lg"
-                      : "bg-white shadow-lg"
+                      ? "bg-[#1a1a1a] "
+                      : "bg-white "
                       }`}
                   >
                     {/* Video Thumbnail with Play Button */}
