@@ -53,7 +53,7 @@ export default function ProjectDetail({ projectId }: { projectId: string }) {
 
   if (loading) {
     return (
-      <section className={`w-full py-12 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-[#EEF2F6] "}`}>
+      <section className={`w-full py-12 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-[#fff] "}`}>
         <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto text-center py-20 min-h-screen">
           <Spinner size="lg" />
         </div>
@@ -63,7 +63,7 @@ export default function ProjectDetail({ projectId }: { projectId: string }) {
 
   if (!project) {
     return (
-      <section className={`w-full py-12 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-[#EEF2F6]"} `}>
+      <section className={`w-full py-12 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-[#fff]"} `}>
         <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-[1400px] mx-auto text-center">
           <p className={`transition-colors duration-300 ${theme === "dark" ? "text-gray-500" : "text-gray-500"}`}>{t("projectsPage.projectNotFound")}</p>
         </div>
@@ -74,7 +74,7 @@ export default function ProjectDetail({ projectId }: { projectId: string }) {
   const projectImages = project.images.length > 0 ? project.images : ["/assets/images/projects/p1.png"];
 
   return (
-    <section className={`w-full py-12 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-[#EEF2F6]"} min-h-screen`}>
+    <section className={`w-full py-12 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-[#fff]"} min-h-screen`}>
       <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 mx-auto">
         {/* Back Button */}
         <button

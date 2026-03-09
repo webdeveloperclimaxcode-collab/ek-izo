@@ -110,14 +110,14 @@ export default function RegisterForm() {
     <div className="min-h-screen bg-linear-to-br from-[#F0F3FF] via-[#FFFFFF] to-[#F2F5FF] dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
       <div className="max-w-md w-full">
         {/* Logo */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-2">
           <Link href="/" className="inline-block">
             <Image
-              src="/assets/images/header/logo.svg"
+              src="/assets/images/header/logo_new.svg"
               alt="EKGRUP Logo"
               width={200}
               height={60}
-              className="h-14 w-auto mx-auto"
+              // className="h-14 w-auto mx-auto"
             />
           </Link>
         </div>
@@ -153,7 +153,7 @@ export default function RegisterForm() {
                 required
                 value={formData.fullName}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-[12px] text-[14px] text-[#1B2556] dark:text-white placeholder-gray-400 dark:placeholder-gray-500 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-[#9F001B] dark:focus:ring-[#ff4d6d] focus:border-transparent transition-all"
+                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-[12px] text-[14px] text-[#1B2556] dark:text-white placeholder-gray-400 dark:placeholder-gray-500 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-[#F6BA40] dark:focus:ring-[#ff4d6d] focus:border-transparent transition-all"
                 placeholder="Enter your full name"
               />
             </div>
@@ -171,7 +171,7 @@ export default function RegisterForm() {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-[12px] text-[14px] text-[#1B2556] dark:text-white placeholder-gray-400 dark:placeholder-gray-500 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-[#9F001B] dark:focus:ring-[#ff4d6d] focus:border-transparent transition-all"
+                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-[12px] text-[14px] text-[#1B2556] dark:text-white placeholder-gray-400 dark:placeholder-gray-500 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-[#F6BA40] dark:focus:ring-[#ff4d6d] focus:border-transparent transition-all"
                 placeholder="Enter your email"
               />
             </div>
@@ -190,7 +190,7 @@ export default function RegisterForm() {
                   required
                   value={formData.password}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-[12px] text-[14px] text-[#1B2556] dark:text-white placeholder-gray-400 dark:placeholder-gray-500 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-[#9F001B] dark:focus:ring-[#ff4d6d] focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-[12px] text-[14px] text-[#1B2556] dark:text-white placeholder-gray-400 dark:placeholder-gray-500 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-[#F6BA40] dark:focus:ring-[#ff4d6d] focus:border-transparent transition-all"
                   placeholder="Create a password"
                 />
                 <button
@@ -226,7 +226,7 @@ export default function RegisterForm() {
                   required
                   value={formData.confirmPassword}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-[12px] text-[14px] text-[#1B2556] dark:text-white placeholder-gray-400 dark:placeholder-gray-500 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-[#9F001B] dark:focus:ring-[#ff4d6d] focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-[12px] text-[14px] text-[#1B2556] dark:text-white placeholder-gray-400 dark:placeholder-gray-500 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-[#F6BA40] dark:focus:ring-[#ff4d6d] focus:border-transparent transition-all"
                   placeholder="Confirm your password"
                 />
                 <button
@@ -256,15 +256,15 @@ export default function RegisterForm() {
                 type="checkbox"
                 checked={agreeTerms}
                 onChange={(e) => setAgreeTerms(e.target.checked)}
-                className="h-4 w-4 mt-0.5 text-[#9F001B] focus:ring-[#9F001B] border-gray-300 dark:border-gray-600 rounded cursor-pointer bg-white dark:bg-[#1a1a1a] transition-colors"
+                className="h-4 w-4 mt-0.5 text-[#F6BA40] focus:ring-[#F6BA40] border-gray-300 dark:border-gray-600 rounded cursor-pointer bg-white dark:bg-[#1a1a1a] transition-colors"
               />
               <label htmlFor="agree-terms" className="ml-2 block text-[13px] text-[#64748B] dark:text-gray-400 cursor-pointer transition-colors">
                 I agree to the{" "}
-                <Link href="/terms" className="text-[#9F001B] dark:text-[#ff4d6d] hover:text-[#7D001A] dark:hover:text-[#ff6b8a] font-semibold transition-colors">
+                <Link href="/terms" className="text-[#F6BA40] dark:text-[#ff4d6d] hover:text-[#7D001A] dark:hover:text-[#ff6b8a] font-semibold transition-colors">
                   Terms and Conditions
                 </Link>{" "}
                 and{" "}
-                <Link href="/privacy" className="text-[#9F001B] dark:text-[#ff4d6d] hover:text-[#7D001A] dark:hover:text-[#ff6b8a] font-semibold transition-colors">
+                <Link href="/privacy" className="text-[#F6BA40] dark:text-[#ff4d6d] hover:text-[#7D001A] dark:hover:text-[#ff6b8a] font-semibold transition-colors">
                   Privacy Policy
                 </Link>
               </label>
@@ -274,7 +274,7 @@ export default function RegisterForm() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-3.5 bg-linear-to-r from-[#9F001B] to-[#1B2556] text-white font-semibold rounded-[12px] hover:opacity-90 transition-opacity text-[15px] disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full py-3.5 bg-linear-to-r from-[#F6BA40] to-[#F6BA40] text-white font-semibold rounded-[12px] hover:opacity-90 transition-opacity text-[15px] disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? "Creating Account..." : "Create Account"}
             </button>
@@ -309,7 +309,7 @@ export default function RegisterForm() {
           {/* Sign In Link */}
           <p className="mt-6 text-center text-[14px] text-[#64748B] dark:text-gray-400 transition-colors">
             Already have an account?{" "}
-            <Link href="/login" className="font-semibold text-[#9F001B] dark:text-[#ff4d6d] hover:text-[#7D001A] dark:hover:text-[#ff6b8a] transition-colors">
+            <Link href="/login" className="font-semibold text-[#F6BA40] dark:text-[#ff4d6d] hover:text-[#000] dark:hover:text-[#ff6b8a] transition-colors">
               Sign in
             </Link>
           </p>

@@ -98,7 +98,7 @@ export default function Footer() {
           </div>
           <Link
             href="/support"
-            className={`px-8 cursor-pointer py-3 rounded-full font-semibold ${theme === "dark" ? "bg-white text-[#111827]" : "bg-black text-white"} shadow-md hover:bg-gray-100 hover:text-black transition-colors`}
+            className={`px-8 cursor-pointer py-3 rounded-full font-semibold  text-[#F6BA40] ${theme === "dark" ? "bg-white " : "bg-black"} shadow-md hover:bg-gray-100 transition-colors`}
           >
             {t("footer.contactBanner.button")}
           </Link>
