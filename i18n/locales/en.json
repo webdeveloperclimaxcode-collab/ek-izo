@@ -216,10 +216,10 @@
   "searchPage": {
     "searchTheSite": "SEARCH THE SITE",
     "browseByProductLine": "BROWSE BY PRODUCT LINE",
-    "searchPlaceholder": "Search for Products, Services, Projects, Technical Documents....",
+    "searchPlaceholder": "Search for Services, Projects, Technical Documents....",
     "browseSearchPlaceholder": "Search for Products....",
     "searching": "Searching...",
-    "enterSearchTerm": "Enter a search term to find products, solutions, projects, and technical documents",
+    "enterSearchTerm": "Enter a search term to find solutions, projects, and technical documents",
     "resultsWillAppear": "Results will appear here once you perform a search",
     "searchResultsFor": "Search Results for",
     "found": "Found",

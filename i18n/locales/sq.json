@@ -217,10 +217,10 @@
   "searchPage": {
     "searchTheSite": "KËRKO FAQEN",
     "browseByProductLine": "SHFLETONI SIPAS LINJËS SË PRODUKTEVE",
-    "searchPlaceholder": "Kërko Produktet, Shërbimet, Projektet, Dokumentet Teknikë....",
+    "searchPlaceholder": "Kërko Shërbimet, Projektet, Dokumentet Teknikë....",
     "browseSearchPlaceholder": "Kërko Produktet....",
     "searching": "Po kërkon...",
-    "enterSearchTerm": "Futni një term kërkimi për të gjetur produkte, zgjidhje, projekte dhe dokumente teknikë",
+    "enterSearchTerm": "Futni një term kërkimi për të gjetur zgjidhje, projekte dhe dokumente teknikë",
     "resultsWillAppear": "Rezultatet do të shfaqen këtu pasi të kryeni një kërkim",
     "searchResultsFor": "Rezultatet e Kërkimit për",
     "found": "Gjetur",

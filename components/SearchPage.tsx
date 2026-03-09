@@ -255,7 +255,7 @@ export default function SearchPage() {
               <button
                 onClick={() => setActiveTab("search")}
                 className={`px-8 py-3 font-semibold rounded-full text-[15px] transition-colors ${activeTab === "search"
-                  ? "bg-linear-to-r from-[#9F001B] to-[#1B2556] text-white"
+                  ? "bg-[#F6BA40] text-white"
                   : theme === "dark"
                     ? "bg-gray-700 text-gray-300 hover:bg-gray-600"
                     : "bg-gray-200 text-[#4A5568] hover:bg-gray-300"
@@ -263,17 +263,17 @@ export default function SearchPage() {
               >
                 {t("searchPage.searchTheSite")}
               </button>
-              <button
+              {/* <button
                 onClick={() => setActiveTab("browse")}
                 className={`px-8 py-3 font-semibold rounded-full text-[15px] transition-colors ${activeTab === "browse"
-                  ? "bg-linear-to-r from-[#9F001B] to-[#1B2556] text-white"
+                  ? "bg-[#F6BA40] text-white"
                   : theme === "dark"
                     ? "bg-gray-700 text-gray-300 hover:bg-gray-600"
                     : "bg-gray-200 text-[#4A5568] hover:bg-gray-300"
                   }`}
               >
                 {t("searchPage.browseByProductLine")}
-              </button>
+              </button> */}
             </div>
 
             {/* Close Button */}
@@ -294,7 +294,7 @@ export default function SearchPage() {
       </div>
 
       {/* Search Bar Section */}
-      <div className="w-full bg-linear-to-r from-[#9F001B] to-[#1B2556] py-8">
+      <div className="w-full bg-[#F6BA40] py-8">
         <div className="w-full px-6 2xl:px-20 max-w-7xl mx-auto">
           <form onSubmit={handleSearch} className="relative">
             {/* Search Icon on the left */}
@@ -377,7 +377,10 @@ export default function SearchPage() {
                   </h2>
                   <p className={`text-[15px] transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>
                     {t("searchPage.found")} {results.total} {results.total !== 1 ? t("searchPage.results") : t("searchPage.results")}
-                    ({results.products.length} {results.products.length !== 1 ? t("searchPage.products") : t("searchPage.product")}, {results.services.length} {results.services.length !== 1 ? t("searchPage.services") : t("searchPage.service")}, {results.projects.length} {results.projects.length !== 1 ? t("searchPage.projects") : t("searchPage.project")})
+                    (
+                    {/* {results.products.length} */}
+                    {/* {results.products.length !== 1 ? t("searchPage.products") : t("searchPage.product")}, */}
+                    {results.services.length} {results.services.length !== 1 ? t("searchPage.services") : t("searchPage.service")}, {results.projects.length} {results.projects.length !== 1 ? t("searchPage.projects") : t("searchPage.project")})
                   </p>
                 </div>
 
@@ -393,58 +396,7 @@ export default function SearchPage() {
                   </div>
                 )}
 
-                {/* Products Section */}
-                {results.products.length > 0 && (
-                  <div className="mb-12">
-                    <h3 className={`text-[20px] font-bold mb-6 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#2D3748]"}`}>
-                      {t("searchPage.products")} ({results.products.length})
-                    </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                      {results.products.map((product) => (
-                        <Link
-                          key={product.id}
-                          href={`/products/${product.id}`}
-                          className={`border rounded-lg overflow-hidden hover:shadow-lg transition-all transition-colors duration-300 ${theme === "dark"
-                            ? "bg-[#000000] border-gray-700"
-                            : "bg-white border-gray-200"
-                            }`}
-                        >
-                          {/* Product Image */}
-                          <div className={`relative h-48 ${theme === "dark" ? "bg-gray-700" : "bg-gray-100"}`}>
-                            {product.images && product.images.length > 0 ? (
-                              <Image
-                                src={product.images[0]}
-                                alt={product.title}
-                                fill
-                                className="object-cover"
-                              />
-                            ) : (
-                              <div className={`flex items-center justify-center h-full ${theme === "dark" ? "text-gray-500" : "text-gray-400"}`}>
-                                No Image
-                              </div>
-                            )}
-                          </div>
 
-                          {/* Product Info */}
-                          <div className="p-4">
-                            <span className="text-[11px] font-semibold text-[#9F001B] uppercase tracking-wider mb-2 block">
-                              {t("searchPage.product")}
-                            </span>
-                            <h4 className={`text-sm font-semibold mb-3 min-h-[40px] transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#2D3748]"}`}>
-                              {product.title}
-                            </h4>
-
-                            <div className="flex items-center justify-between">
-                              <span className={`text-[#9F001B] text-xl font-bold transition-colors ${theme === "dark" ? "text-white" : "text-[#9F001B]"}`}>
-                                {product.price ? `${product.price}` : "Contact Us"}
-                              </span>
-                            </div>
-                          </div>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
 
                 {/* Services Section */}
                 {results.services.length > 0 && (
@@ -480,7 +432,7 @@ export default function SearchPage() {
 
                           {/* Service Info */}
                           <div className="p-4">
-                            <span className="text-[11px] font-semibold text-[#9F001B] uppercase tracking-wider mb-2 block">
+                            <span className="text-[11px] font-semibold text-[#000] uppercase tracking-wider mb-2 block">
                               {t("searchPage.service")}
                             </span>
                             <h4 className={`text-sm font-semibold mb-3 min-h-[40px] transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#2D3748]"}`}>
@@ -533,12 +485,12 @@ export default function SearchPage() {
                           {/* Project Info */}
                           <div className="p-5 flex-1 flex flex-col">
                             {project.client && (
-                              <span className="text-[11px] font-semibold text-[#9F001B] uppercase tracking-wider mb-2 block">
+                              <span className="text-[11px] font-semibold text-[#000] uppercase tracking-wider mb-2 block">
                                 {project.client}
                               </span>
                             )}
 
-                            <h4 className={`text-[18px] font-bold mb-2 transition-colors ${theme === "dark" ? "text-white" : "text-[#9F001B]"}`}>
+                            <h4 className={`text-[18px] font-bold mb-2 transition-colors ${theme === "dark" ? "text-white" : "text-[#000]"}`}>
                               {project.title}
                             </h4>
 
@@ -555,7 +507,7 @@ export default function SearchPage() {
                             )}
 
                             {project.duration && (
-                              <p className={`text-[12px] mt-auto transition-colors ${theme === "dark" ? "text-white" : "text-[#9F001B]"}`}>
+                              <p className={`text-[12px] mt-auto transition-colors ${theme === "dark" ? "text-white" : "text-[#000]"}`}>
                                 Duration: {project.duration}
                               </p>
                             )}
@@ -570,252 +522,11 @@ export default function SearchPage() {
           </>
         ) : (
           <>
-            {/* Browse by Product Line Section */}
-            <div>
-              {/* Category Dropdown - Always show first */}
-              <div className="mb-8">
-                <div className="relative inline-block">
-                  <button
-                    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                    className="px-8 py-3 bg-linear-to-r from-[#9F001B] to-[#1B2556] text-white font-semibold rounded-full text-sm flex items-center gap-3 hover:opacity-90 transition-opacity"
-                  >
-                    {selectedSubcategoryId
-                      ? categories
-                        .flatMap((c) => c.subcategories)
-                        .find((s) => s.id === selectedSubcategoryId)?.name || t("searchPage.browseOurProductLines")
-                      : selectedCategoryId
-                        ? categories.find((c) => c.id === selectedCategoryId)?.name || t("searchPage.browseOurProductLines")
-                        : t("searchPage.browseOurProductLines")}
-                    <Image
-                      src="/assets/images/Products_page/dropdown.svg"
-                      alt="Dropdown"
-                      width={16}
-                      height={16}
-                      className={`w-4 h-4 transition-transform ${isDropdownOpen ? "rotate-180" : ""
-                        }`}
-                    />
-                  </button>
-
-                  {/* Categories Dropdown */}
-                  {isDropdownOpen && (
-                    <div className="absolute left-0 top-full mt-2 bg-white border border-gray-200 rounded-lg shadow-xl z-50 min-w-[200px]">
-                      <div
-                        className="px-4 py-3 cursor-pointer transition-colors border-b border-gray-100 hover:bg-gray-50"
-                        onClick={handleAllProductsClick}
-                      >
-                        <span className="text-sm font-medium text-[#4A5568]">
-                          {t("searchPage.allProducts")}
-                        </span>
-                      </div>
-                      {categories.map((category) => (
-                        <div key={category.id} className="relative">
-                          <div
-                            className={`flex items-center justify-between px-4 py-3 cursor-pointer transition-colors border-b border-gray-100 last:border-b-0 ${hoveredCategory === category.id
-                              ? "text-[#9F001B]"
-                              : "text-[#4A5568]"
-                              }`}
-                            onClick={() => handleCategoryClick(category.id)}
-                            onMouseEnter={() => setHoveredCategory(category.id)}
-                          >
-                            <span className="text-sm font-medium">
-                              {category.name}
-                            </span>
-                            {category.subcategories &&
-                              category.subcategories.length > 0 && (
-                                <Image
-                                  src="/assets/images/Products_page/ritharrow.svg"
-                                  alt="Arrow"
-                                  width={14}
-                                  height={14}
-                                  className="w-3.5 h-3.5"
-                                />
-                              )}
-                          </div>
-
-                          {/* Subcategories Dropdown */}
-                          {category.subcategories &&
-                            category.subcategories.length > 0 &&
-                            hoveredCategory === category.id && (
-                              <div
-                                className="absolute left-full top-0 ml-0 w-56 bg-white border border-gray-200 rounded-lg shadow-xl z-50 max-h-96 overflow-y-auto"
-                                onMouseEnter={() => setHoveredCategory(category.id)}
-                                onMouseLeave={() => setHoveredCategory(null)}
-                              >
-                                {category.subcategories.map((sub) => (
-                                  <div
-                                    key={sub.id}
-                                    className="px-4 py-3 text-sm text-[#4A5568] cursor-pointer transition-colors border-b border-gray-100 last:border-b-0 hover:bg-gray-50"
-                                    onClick={() => handleSubcategoryClick(sub.id)}
-                                  >
-                                    {sub.name}
-                                  </div>
-                                ))}
-                              </div>
-                            )}
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              </div>
-
-              {/* Loading State */}
-              {browseLoading && (
-                <div className="text-center py-12">
-                  <Spinner size="lg" />
-                  <p className={`text-[15px] mt-4 transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>{t("searchPage.loadingProducts")}</p>
-                </div>
-              )}
-
-              {/* Products Grid */}
-              {!browseLoading && browseProducts.length > 0 && (
-                <div>
-                  <h3 className={`text-[20px] font-bold mb-6 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#2D3748]"}`}>
-                    {selectedSubcategoryId
-                      ? categories
-                        .flatMap((c) => c.subcategories)
-                        .find((s) => s.id === selectedSubcategoryId)?.name
-                      : selectedCategoryId
-                        ? categories.find((c) => c.id === selectedCategoryId)?.name
-                        : t("searchPage.allProducts")}{" "}
-                    ({browseProducts.length})
-                  </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {browseProducts.map((product) => (
-                      <Link
-                        key={product.id}
-                        href={`/products/${product.id}`}
-                        className={`border rounded-lg overflow-hidden hover:shadow-lg transition-all transition-colors duration-300 ${theme === "dark"
-                          ? "bg-[#000000] border-gray-700"
-                          : "bg-white border-gray-200"
-                          }`}
-                      >
-                        {/* Product Image */}
-                        <div className={`relative h-48 ${theme === "dark" ? "bg-gray-700" : "bg-gray-100"}`}>
-                          {product.images && product.images.length > 0 ? (
-                            <Image
-                              src={product.images[0]}
-                              alt={product.title}
-                              fill
-                              className="object-cover"
-                            />
-                          ) : (
-                            <div className={`flex items-center justify-center h-full ${theme === "dark" ? "text-gray-500" : "text-gray-400"}`}>
-                              No Image
-                            </div>
-                          )}
-                        </div>
-
-                        {/* Product Info */}
-                        <div className="p-4">
-                          <span className="text-[11px] font-semibold text-[#9F001B] uppercase tracking-wider mb-2 block">
-                            {t("searchPage.product")}
-                          </span>
-                          <h4 className={`text-sm font-semibold mb-3 min-h-[40px] transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#2D3748]"}`}>
-                            {product.title}
-                          </h4>
-
-                          <div className="flex items-center justify-between">
-                            <span className={`text-[#9F001B] text-xl font-bold transition-colors ${theme === "dark" ? "text-white" : "text-[#9F001B]"}`}>
-                              {product.price ? `${product.price}` : "Contact Us"}
-                            </span>
-                          </div>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* No Products from Category Selection */}
-              {!browseLoading && browseProducts.length === 0 && (selectedCategoryId || selectedSubcategoryId) && (
-                <div className="text-center py-12">
-                  <p className={`text-[18px] mb-2 transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>
-                    {t("searchPage.noProductsFound")}
-                  </p>
-                  <p className={`text-[15px] transition-colors duration-300 ${theme === "dark" ? "text-gray-500" : "text-[#9CA3AF]"}`}>
-                    {t("searchPage.trySelectingDifferent")}
-                  </p>
-                </div>
-              )}
-
-              {/* Initial State */}
-              {!browseLoading && browseProducts.length === 0 && !selectedCategoryId && !selectedSubcategoryId && !hasSearched && (
-                <div className="text-center py-12">
-                  <p className={`text-[18px] mb-4 transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>
-                    {t("searchPage.browseOurProductLines")}
-                  </p>
-                  <p className={`text-[15px] transition-colors duration-300 ${theme === "dark" ? "text-gray-500" : "text-[#9CA3AF]"}`}>
-                    {t("searchPage.selectCategoryOrSearch")}
-                  </p>
-                </div>
-              )}
-
-              {/* Search Results Section - Show after category dropdown */}
-              {hasSearched && results && (
-                <div className="mt-12">
-                  {results.products.length > 0 ? (
-                    <div>
-                      <h3 className={`text-[20px] font-bold mb-6 transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#2D3748]"}`}>
-                        {t("searchPage.searchResultsFor")} "{searchQuery}" ({results.products.length} {results.products.length !== 1 ? t("searchPage.products") : t("searchPage.product")})
-                      </h3>
-                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {results.products.map((product) => (
-                          <Link
-                            key={product.id}
-                            href={`/products/${product.id}`}
-                            className={`border rounded-lg overflow-hidden hover:shadow-lg transition-all transition-colors duration-300 ${theme === "dark"
-                              ? "bg-[#000000] border-gray-700"
-                              : "bg-white border-gray-200"
-                              }`}
-                          >
-                            {/* Product Image */}
-                            <div className={`relative h-48 ${theme === "dark" ? "bg-gray-700" : "bg-gray-100"}`}>
-                              {product.images && product.images.length > 0 ? (
-                                <Image
-                                  src={product.images[0]}
-                                  alt={product.title}
-                                  fill
-                                  className="object-cover"
-                                />
-                              ) : (
-                                <div className={`flex items-center justify-center h-full ${theme === "dark" ? "text-gray-500" : "text-gray-400"}`}>
-                                  No Image
-                                </div>
-                              )}
-                            </div>
-
-                            {/* Product Info */}
-                            <div className="p-4">
-                              <span className="text-[11px] font-semibold text-[#9F001B] uppercase tracking-wider mb-2 block">
-                                PRODUCT
-                              </span>
-                              <h4 className={`text-sm font-semibold mb-3 min-h-[40px] transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-[#2D3748]"}`}>
-                                {product.title}
-                              </h4>
-
-                              <div className="flex items-center justify-between">
-                                <span className={`text-[#9F001B] text-xl font-bold transition-colors ${theme === "dark" ? "text-white" : "text-[#9F001B]"}`}>
-                                  {product.price ? `${product.price}` : "Contact Us"}
-                                </span>
-                              </div>
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="text-center py-12">
-                      <p className={`text-[18px] mb-2 transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>
-                        No products found for "{searchQuery}"
-                      </p>
-                      <p className={`text-[15px] transition-colors duration-300 ${theme === "dark" ? "text-gray-500" : "text-[#9CA3AF]"}`}>
-                        Try different keywords or browse by category above
-                      </p>
-                    </div>
-                  )}
-                </div>
-              )}
+            {/* Browse by Product Line Section - Disabled */}
+            <div className="text-center py-12">
+              <p className={`text-[18px] transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-[#6B7280]"}`}>
+                Product browsing is currently disabled.
+              </p>
             </div>
           </>
         )}

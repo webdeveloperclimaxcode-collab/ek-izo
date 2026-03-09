@@ -217,10 +217,10 @@
   "searchPage": {
     "searchTheSite": "CERCA IL SITO",
     "browseByProductLine": "SFOGLIA PER LINEA DI PRODOTTI",
-    "searchPlaceholder": "Cerca Prodotti, Servizi, Progetti, Documenti Tecnici....",
+    "searchPlaceholder": "Cerca Servizi, Progetti, Documenti Tecnici....",
     "browseSearchPlaceholder": "Cerca Prodotti....",
     "searching": "Ricerca in corso...",
-    "enterSearchTerm": "Inserisci un termine di ricerca per trovare prodotti, soluzioni, progetti e documenti tecnici",
+    "enterSearchTerm": "Inserisci un termine di ricerca per trovare soluzioni, progetti e documenti tecnici",
     "resultsWillAppear": "I risultati appariranno qui una volta eseguita una ricerca",
     "searchResultsFor": "Risultati della ricerca per",
     "found": "Trovato",
