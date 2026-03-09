@@ -143,7 +143,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`px-3 xl:px-6 py-1/5  text-sm lg:text-base xl:text-lg 2xl:text-2xl font-medium lg:font-light transition-all text-white whitespace-nowrap ${isActive
+                  className={`px-3 xl:px-6 py-2  text-sm lg:text-base xl:text-lg 2xl:text-2xl font-medium lg:font-light transition-all text-white whitespace-nowrap ${isActive
                     ? "bg-[#454545]  rounded-full hover:opacity-90"
                     : "hover:underline"
                     }`}
@@ -195,7 +195,7 @@ export default function Header() {
                   height={30}
                   className="object-cover  shrink-0"
                 />
-                <span className="text-[13px]  lg:text-base xl:text-lg 2xl:text-3xl whitespace-nowrap hidden xl:inline">{selectedLanguage.name}</span>
+                <span className="text-[13px]  lg:text-base xl:text-lg 2xl:text-2xl whitespace-nowrap hidden xl:inline">{selectedLanguage.name}</span>
                 <Image
                   src="/assets/images/header/dropdown_white.svg"
                   alt="Dropdown"
@@ -227,7 +227,7 @@ export default function Header() {
                           height={20}
                           className="w-8 h-5 rounded"
                         />
-                        <span className="text-base lg:text-base xl:text-lg 2xl:text-3xl">{lang.name}</span>
+                        <span className="text-base lg:text-base xl:text-lg 2xl:text-2xl">{lang.name}</span>
                       </button>
                     ))}
                 </div>
@@ -240,7 +240,7 @@ export default function Header() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="flex items-center gap-2 lg:gap-4 xl:gap-10 2xl:gap-30 cursor-pointer px-2 xl:px-3 py-2 text-sm font-medium text-[#4A5568] dark:text-gray-300 hover:text-[#7D1F3E] dark:hover:text-brand-secondary transition-colors "
             >
-              <span className="text-[16px] lg:text-base xl:text-lg 2xl:text-3xl text-white whitespace-nowrap">Menu</span>
+              <span className="text-[16px] lg:text-base xl:text-lg 2xl:text-2xl text-white whitespace-nowrap">Menu</span>
               <Image
                 src="/assets/images/header/Menu_Icon_white.svg"
                 alt="Menu"
@@ -322,7 +322,7 @@ export default function Header() {
                       </div>
                     )}
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-[16px] font-bold text-brand-primary dark:text-white truncate">
+                      <h3 className="text-[16px] font-bold text-white dark:text-white truncate">
                         {user.displayName || "User"}
                       </h3>
                       <p className="text-[12px] text-[#6B7280] dark:text-gray-400 truncate">
