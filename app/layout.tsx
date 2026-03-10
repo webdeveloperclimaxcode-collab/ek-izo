@@ -29,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Dark mode hydration script kept for future use.
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -41,8 +42,22 @@ export default function RootLayout({
             `,
           }}
         />
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                localStorage.setItem('izogrup_theme', 'light');
+                document.documentElement.classList.remove('dark');
+              } catch (e) {}
+            `,
+          }}
+        />
       </head>
+      {/* Previous class kept for future dark mode use:
       <body className={`${kantumruyPro.variable} antialiased bg-white dark:bg-black transition-colors duration-300`} suppressHydrationWarning>
+      */}
+      <body className={`${kantumruyPro.variable} antialiased bg-white transition-colors duration-300`} suppressHydrationWarning>
         <LanguageProvider>
           <ThemeProvider>
             <AuthProvider>

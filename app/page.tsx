@@ -23,7 +23,7 @@ export default function Home() {
       <AboutUs />
       <WhyChoose />
       <NewsBlogs />
-      <WeWorkWith />
+      {/* <WeWorkWith /> */}
     </div>
   );
 }

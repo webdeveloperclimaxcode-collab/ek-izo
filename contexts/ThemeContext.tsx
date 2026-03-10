@@ -28,43 +28,63 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   const [theme, setThemeState] = useState<Theme>("light");
   const [mounted, setMounted] = useState(false);
 
-  // Load theme from localStorage on mount
+  // Dark mode logic kept for future reuse.
+  // useEffect(() => {
+  //   const savedTheme = localStorage.getItem("izogrup_theme") as Theme;
+  //   if (savedTheme) {
+  //     setThemeState(savedTheme);
+  //     if (savedTheme === "dark") {
+  //       document.documentElement.classList.add("dark");
+  //     } else {
+  //       document.documentElement.classList.remove("dark");
+  //     }
+  //   } else {
+  //     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  //     const initialTheme = prefersDark ? "dark" : "light";
+  //     setThemeState(initialTheme);
+  //     if (prefersDark) {
+  //       document.documentElement.classList.add("dark");
+  //     } else {
+  //       document.documentElement.classList.remove("dark");
+  //     }
+  //   }
+  //   setMounted(true);
+  // }, []);
+
+  // Always enforce light mode on mount.
   useEffect(() => {
-    const savedTheme = localStorage.getItem("izogrup_theme") as Theme;
-    if (savedTheme) {
-      setThemeState(savedTheme);
-      if (savedTheme === "dark") {
-        document.documentElement.classList.add("dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-      }
-    } else {
-      // Check system preference
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      const initialTheme = prefersDark ? "dark" : "light";
-      setThemeState(initialTheme);
-      if (prefersDark) {
-        document.documentElement.classList.add("dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-      }
-    }
+    setThemeState("light");
+    localStorage.setItem("izogrup_theme", "light");
+    document.documentElement.classList.remove("dark");
     setMounted(true);
   }, []);
 
-  const setTheme = (newTheme: Theme) => {
-    setThemeState(newTheme);
-    localStorage.setItem("izogrup_theme", newTheme);
-    if (newTheme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+  // Original setTheme kept for future dark mode support.
+  // const setTheme = (newTheme: Theme) => {
+  //   setThemeState(newTheme);
+  //   localStorage.setItem("izogrup_theme", newTheme);
+  //   if (newTheme === "dark") {
+  //     document.documentElement.classList.add("dark");
+  //   } else {
+  //     document.documentElement.classList.remove("dark");
+  //   }
+  // };
+
+  const setTheme = (_newTheme: Theme) => {
+    // Keep API shape intact, but lock actual UI mode to light.
+    setThemeState("light");
+    localStorage.setItem("izogrup_theme", "light");
+    document.documentElement.classList.remove("dark");
   };
 
+  // Original toggle logic kept for future dark mode support.
+  // const toggleTheme = () => {
+  //   const newTheme = theme === "light" ? "dark" : "light";
+  //   setTheme(newTheme);
+  // };
+
   const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
+    setTheme("light");
   };
 
   const value = {

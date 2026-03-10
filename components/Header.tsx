@@ -34,7 +34,7 @@ export default function Header() {
   const [t, setT] = useState<(key: string) => string>(() => (key: string) => key);
   const pathname = usePathname();
   const { cartCount, openCart } = useCart();
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
   const { user, logout } = useAuth();
   const { language, setLanguage } = useLanguage();
   const router = useRouter();
@@ -485,7 +485,7 @@ export default function Header() {
                   </span>
                 </Link>
 
-                <button
+                {/* <button
                   onClick={toggleTheme}
                   className="group flex items-center gap-3 px-3 py-3 text-white hover:bg-gray-700 rounded-lg transition-colors w-full text-left cursor-pointer"
                 >
@@ -508,7 +508,7 @@ export default function Header() {
                       </span>
                     </>
                   )}
-                </button>
+                </button> */}
               </nav>
             </div>
           </div>
