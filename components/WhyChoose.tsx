@@ -65,7 +65,7 @@ const stats: Stat[] = [
   },
   {
     id: 5,
-    icon: "/assets/images/whychoose/c5.svg",
+    icon: "/assets/images/whychoose/c_5.svg",
     titleKey: "whyChoose.stats.quality.title",
     subtitleKey: "whyChoose.stats.quality.subtitle",
   },
@@ -86,7 +86,7 @@ export default function WhyChoose() {
               </span>
 
               {/* The Highlight - absolute positioning places it behind */}
-              <div className="absolute left-0 bottom-1 w-full h-7 bg-brand-secondary z-0" />
+              <div className="absolute left-0 bottom-1 w-full h-2 bg-brand-secondary z-0" />
             </h2>
           </div>
           <p className="text-base lg:text-3xl  text-gray-600 dark:text-gray-300  mx-auto leading-relaxed transition-colors">

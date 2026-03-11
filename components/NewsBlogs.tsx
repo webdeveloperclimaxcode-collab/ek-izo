@@ -42,7 +42,7 @@ export default function NewsBlogs() {
       const response = await fetch("/api/homepage/blogs");
       const data = await response.json();
       if (data.success) {
-        setBlogs(data.data);
+        setBlogs(data.data.slice(0, 6));
       }
     } catch (error) {
       console.error("Error fetching homepage blogs:", error);
@@ -213,7 +213,7 @@ export default function NewsBlogs() {
         <div className="flex justify-center mt-12">
           <Link
             href="/blog"
-            className="px-12 py-4 rounded-full border border-brand-secondary text-[#373737] bg-white font-semibold  tracking-wide shadow-sm hover:bg-brand-secondary/5 transition text-base"
+            className="px-12 py-4 rounded-full border border-brand-secondary text-[#373737] bg-white font-semibold  tracking-wide shadow-sm hover:bg-brand-secondary/5 transition text-base hover:bg-[#F6BA40] hover:text-white hover:cursor-pointer"
           >
             VIEW ALL BLOGS
           </Link>

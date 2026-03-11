@@ -117,7 +117,7 @@ export default function BlogDetail({ blogId }: { blogId: string }) {
           )}
 
           {/* Title */}
-          <h1 className={`text-[42px] font-bold mb-4 leading-tight transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
+          <h1 className={`text-3xl md:text-4xl lg:text-[42px] font-bold mb-4 leading-tight transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
             {blog.title}
           </h1>
 

@@ -5,34 +5,25 @@ import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useTheme } from "@/contexts/ThemeContext";
 
-export default function ProjectsHero() {
+interface ProjectsHeroProps {
+  searchQuery: string;
+  onSearch: (query: string) => void;
+}
+
+export default function ProjectsHero({ searchQuery: searchQueryProp, onSearch }: ProjectsHeroProps) {
   const { t } = useLanguage();
   const { theme } = useTheme();
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("Category");
-  const [selectedApplication, setSelectedApplication] = useState("Application");
-  const [selectedProducts, setSelectedProducts] = useState("Products");
-  const [selectedCountry, setSelectedCountry] = useState("Country");
-  const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
-  const [showApplicationDropdown, setShowApplicationDropdown] = useState(false);
-  const [showProductsDropdown, setShowProductsDropdown] = useState(false);
-  const [showCountryDropdown, setShowCountryDropdown] = useState(false);
-  const [showCategorySection, setShowCategorySection] = useState(true);
+  const [searchQuery, setSearchQuery] = useState(searchQueryProp);
 
-  const categories = [
-    "COMMERCIAL FACILITIES",
-    "Infrastructures",
-    "Production & Services",
-    "Residential Building",
-    "Public Building & Places",
-    "Sports Facilities",
-    "Tourism & Wellness",
-    "Special Projects",
-  ];
+  const handleSearch = () => {
+    onSearch(searchQuery);
+  };
 
-  const applications = ["All Applications", "Waterproofing", "Insulation", "Soundproofing"];
-  const products = ["All Products", "TPO/PVC", "Bitumen", "Liquid Membranes"];
-  const countries = ["All Countries", "Albania", "Italy", "Greece"];
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      handleSearch();
+    }
+  };
 
   return (
     <section className="relative w-full">
@@ -50,9 +41,45 @@ export default function ProjectsHero() {
 
         {/* Title */}
         <div className="absolute inset-0 flex items-center justify-center px-6">
-          <h1 className="text-white text-[36px] md:text-[42px] font-bold text-center leading-tight">
+          <h1 className="text-white text-2xl md:text-[42px] lg:text-[42px] font-bold text-center leading-tight">
             {t("projectsPage.projectsHero")}
           </h1>
+        </div>
+      </div>
+
+      {/* Search Bar */}
+      <div className="py-10 transition-colors duration-300 bg-[#292929]">
+        <div className="w-full px-6 2xl:px-20 mx-auto">
+          <div className="flex flex-col md:flex-row gap-10 items-center">
+            <div className="relative w-full">
+              <input
+                type="text"
+                placeholder="Search By Keywords"
+                value={searchQuery}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  setSearchQuery(value);
+                  onSearch(value);
+                }}
+                onKeyDown={handleKeyPress}
+                className="w-full px-6 py-3.5 text-black rounded-full focus:outline-none text-[15px] transition-colors duration-300 bg-brand-secondary placeholder:text-black! placeholder:opacity-100!"
+              />
+              <button
+                type="button"
+                onClick={handleSearch}
+                className="absolute right-5 top-1/2 -translate-y-1/2"
+                aria-label="Search"
+              >
+                <Image
+                  src="/assets/images/Products_page/search_icon.svg"
+                  alt="Search"
+                  width={18}
+                  height={18}
+                  className="w-4 h-4 cursor-pointer hover:opacity-80"
+                />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>

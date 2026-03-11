@@ -53,7 +53,7 @@ export default function MissionAndQuestions() {
 
             <Link
               href="/contact"
-              className="inline-block px-12 py-5  text-black dark:text-white font-medium rounded-full hover:opacity-90 transition-opacity text-2xl border border-[#F6BA40]"
+              className="inline-block px-12 py-5  text-black dark:text-white font-medium rounded-full hover:opacity-90 transition-opacity text-2xl border border-[#F6BA40] hover:bg-[#F6BA40] hover:text-white hover:cursor-pointer"
             >
               {useLanguage().t("Contact Us")}
             </Link>

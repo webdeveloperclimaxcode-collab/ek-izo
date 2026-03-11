@@ -91,11 +91,11 @@ export default function HeroSection() {
 
               {/* Content Card - Only show if there's text */}
               {(slide.title || slide.description || slide.buttonText) && (
-                <div className="absolute inset-0 px-3 md:px-6 2xl:px-20 flex items-center md:items-center justify-center md:justify-start h-full">
+                <div className="absolute inset-0 px-8 md:px-6 2xl:px-20 flex items-center md:items-center justify-center md:justify-start h-full">
                   <div className="w-full md:max-w-3xl md:mx-30">
                     {/* Content Card with Gradient Border */}
                     <div
-                      className="relative rounded-lg md:rounded-2xl bg-[#D9D9D9]/10 backdrop-blur-md px-4 py-6 md:px-8 md:py-11"
+                      className="relative rounded-lg md:rounded-2xl bg-[rgba(0,0,0,0.24)] px-4 py-6 md:px-8 md:py-11"
                       style={{
                         borderWidth: "1px",
                         borderStyle: "solid",
@@ -116,7 +116,7 @@ export default function HeroSection() {
                         <div className="flex justify-center md:justify-end">
                           <Link
                             href={slide.buttonLink}
-                            className="inline-block px-4 md:px-8 py-2 md:py-3 bg-white/20 backdrop-blur-sm text-white text-xs md:text-sm font-semibold rounded-full hover:bg-white/30 transition-all"
+                            className="inline-block px-4 md:px-8 py-2 md:py-3 bg-[#F6BA40] backdrop-blur-sm text-white text-xs md:text-sm font-semibold rounded-full hover:bg-white/30 transition-all hover:text-black"
 
                           >
                             {slide.buttonText}

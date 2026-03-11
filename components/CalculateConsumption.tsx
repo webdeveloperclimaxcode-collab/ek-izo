@@ -189,7 +189,7 @@ export default function CalculateConsumption({ productName, serviceName }: Calcu
           <div className="flex items-center gap-3">
             <button
               onClick={handleReset}
-              className={`px-10 py-3 font-semibold rounded-full transition-colors text-[14px] ${theme === "dark"
+              className={`px-10 py-3 font-semibold rounded-full transition-colors text-[14px] hover:text-[#F6BA40]    hover:cursor-pointer ${theme === "dark"
                   ? "bg-gray-800 text-white hover:bg-gray-700"
                   : "bg-[#E8EAED] text-brand-primary hover:bg-[#DDE0E4]"
                 }`}
@@ -199,7 +199,7 @@ export default function CalculateConsumption({ productName, serviceName }: Calcu
             <button
               onClick={handleSubmit}
               disabled={loading}
-              className="px-10 py-3 font-semibold rounded-full transition-colors text-[14px] disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer bg-brand-gradient text-white hover:opacity-90"
+              className="px-10 py-3 font-semibold rounded-full transition-colors text-[14px] disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer bg-brand-gradient text-white hover:text-black hover:opacity-90  hover:cursor-pointer"
             >
               {loading ? t("productsPage.sending") : t("productsPage.submit")}
             </button>

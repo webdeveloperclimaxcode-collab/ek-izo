@@ -92,8 +92,8 @@ export default function Footer() {
             <h2 className="text-3xl font-bold mb-2 text-[#111827]">
               {t("footer.contactBanner.heading")}
             </h2>
-            <p className="text-lg lg:text-3xl text-[#111827] opacity-90">
-              {t("footer.contactBanner.subheading")}
+            <p className="text-lg lg:text-2xl text-[#292929] font-medium opacity-90">
+              {t("footer.contactBanner.subheading")} hello
             </p>
           </div>
           <Link
@@ -117,7 +117,7 @@ export default function Footer() {
           />
         </div>
 
-        <div className="relative w-full px-20 2xl:px-20 py-16">
+        <div className="relative w-full lg:px-20 md:px-8 px-8 2xl:px-20 py-16">
           {/* Logo - Full Width */}
           <div className="mb-12">
             <Image
@@ -251,8 +251,9 @@ export default function Footer() {
                 </div>
               ) : (
                 <div>
-                  <h3 className="text-xl font-semibold mb-4 text-white">{t("footer.loginRegister")}</h3>
                   <Link href="/login" className="inline-block hover:opacity-80 transition-opacity cursor-pointer">
+                      <h3 className="text-xl font-semibold mb-4 text-white">{t("footer.loginRegister")}</h3>
+                      
                     <Image
                       src="/assets/images/header/logo_bg_remove.png"
                       alt="ek-website Login"
@@ -261,44 +262,49 @@ export default function Footer() {
                       className="h-auto w-auto"
                     />
                   </Link>
+                   <Link href="/register" className="inline-block hover:opacity-80 transition-opacity cursor-pointer">
+                      <h3 className="text-xl font-semibold mb-4 text-white">{t("footer.register")}</h3>
+                     
+                  </Link>
                 </div>
               )}
             </div>
 
             {/* Right Section - Navigation Links */}
             <div className="lg:col-span-7">
-              <div className="grid grid-cols-2 gap-x-20 gap-y-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-20 gap-y-8">
                 {/* Column 1 */}
                 <div className="space-y-8">
 
 
-                  <Link href="/search" className="block text-base font-medium text-white hover:text-gray-200 transition-colors pb-3 border-b border-white/20 cursor-pointer">
+                  {/* <Link href="/search" className="block w-full text-base font-medium text-white hover:text-gray-200 transition-colors py-3 border-b border-white/20 cursor-pointer">
                     {t("footer.sustainability")}
                   </Link>
-                  <Link href="/search" className="block text-base font-medium text-white hover:text-gray-200 transition-colors pb-3 border-b border-white/20 cursor-pointer">
+                  <Link href="/search" className="block w-full text-base font-medium text-white hover:text-gray-200 transition-colors py-3 border-b border-white/20 cursor-pointer">
                     {t("footer.toolsDownloads")}
-                  </Link>
-                  <Link href="/support" className="block text-base font-medium text-white hover:text-gray-200 transition-colors pb-3 border-b border-white/20 cursor-pointer">
+                  </Link> */}
+                  <Link href="/support" className="block w-full text-base font-medium text-white  transition-colors py-3 border-b border-white/20 cursor-pointer hover:text-[#F6BA40]  hover:cursor-pointer">
                     {t("footer.technicalService")}
                   </Link>
-                  <Link href="/" className="block text-base font-medium text-white hover:text-gray-200 transition-colors pb-3 border-b border-white/20 cursor-pointer">
+                  <Link href="/" className="block w-full text-base font-medium text-white  transition-colors py-3 border-b border-white/20 cursor-pointer hover:text-[#F6BA40]  hover:cursor-pointer">
                     {t("footer.workWithUs")}
+                  </Link>
+                  <Link href="/projects" className="block w-full text-base font-medium text-white  transition-colors py-3 border-b border-white/30 cursor-pointer hover:text-[#F6BA40]  hover:cursor-pointer">
+                    {t("footer.projects")}
+                  </Link>
+                  <Link href="/about" className="block w-full text-base font-medium text-white transition-colors py-3 border-b border-white/30 cursor-pointer hover:text-[#F6BA40]  hover:cursor-pointer">
+                    {t("footer.aboutUs")}
                   </Link>
                 </div>
 
                 {/* Column 2 */}
                 <div className="space-y-8">
-                  <Link href="/projects" className="block text-base font-medium text-white hover:text-gray-200 transition-colors pb-3 border-b border-white/30 cursor-pointer">
-                    {t("footer.projects")}
-                  </Link>
-                  <Link href="/about" className="block text-base font-medium text-white hover:text-gray-200 transition-colors pb-3 border-b border-white/30 cursor-pointer">
-                    {t("footer.aboutUs")}
-                  </Link>
-                  <Link href="/blog" className="block text-base font-medium text-white hover:text-gray-200 transition-colors pb-3 border-b border-white/30 cursor-pointer">
+                 
+                  <Link href="/blog" className="block w-full text-base font-medium text-white  transition-colors py-3 border-b border-white/30 cursor-pointer hover:text-[#F6BA40]  hover:cursor-pointer">
                     {t("footer.news")}
                   </Link>
 
-                  <Link href="/contact" className="block text-base font-medium text-white hover:text-gray-200 transition-colors pb-3 border-b border-white/30 cursor-pointer">
+                  <Link href="/contact" className="block w-full text-base font-medium text-white transition-colors py-3 border-b border-white/30 cursor-pointer hover:text-[#F6BA40]  hover:cursor-pointer">
                     {t("footer.contactBanner.heading")}
                   </Link>
                 </div>

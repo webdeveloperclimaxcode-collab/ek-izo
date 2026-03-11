@@ -68,7 +68,7 @@ export default function AboutUs() {
                 </span>
 
                 {/* The Highlight - absolute positioning places it behind */}
-                <div className="absolute left-0 bottom-1 w-full h-7 bg-brand-secondary z-0" />
+                <div className="absolute left-0 bottom-1 w-full h-2 bg-brand-secondary z-0" />
               </h2>
             </div>
           </div>

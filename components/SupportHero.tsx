@@ -63,13 +63,13 @@ export default function SupportHero() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
             <Link
               href="#contact-form"
-              className="px-10 py-4 bg-brand-gradient lg:py-10 lg:px-15 lg:text-3xl text-black font-medium rounded-full hover:opacity-90 transition-opacity text-[15px] text-center"
+              className="px-10 py-4 bg-brand-gradient lg:py-10 lg:px-15 lg:text-3xl text-black font-medium rounded-full hover:opacity-90 transition-opacity text-[13px] text-center"
             >
               CONTACT US ONLINE
             </Link>
             <Link
               href="/contact"
-              className="px-10 py-4 bg-black dark:border dark:border-[#F6BA40] lg:py-10 lg:px-10 lg:text-2xl text-[#F6BA40] font-medium rounded-full hover:opacity-90 transition-opacity text-[15px]  text-center"
+              className="px-8 py-4 bg-black dark:border dark:border-[#F6BA40] lg:py-10 lg:px-10 lg:text-2xl text-[#F6BA40] font-medium rounded-full hover:opacity-90 transition-opacity text-[13px]  text-center"
             >
               CONSULT AGENTS FROM YOUR AREA
             </Link>

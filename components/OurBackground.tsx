@@ -37,7 +37,7 @@ export default function OurBackground() {
             </p>
             <Link
               href="/services"
-              className="inline-block px-10 py-4 border border-[#F6BA40] text-black dark:text-white font-semibold rounded-full hover:opacity-90 transition-opacity text-[15px]"
+              className="inline-block px-10 py-4 border border-[#F6BA40] text-black dark:text-white font-semibold rounded-full hover:opacity-90 transition-opacity text-[15px] hover:bg-[#F6BA40] hover:text-white hover:cursor-pointer"
             >
               SEE OUR SERVICES
             </Link>

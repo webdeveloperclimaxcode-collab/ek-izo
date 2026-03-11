@@ -34,7 +34,7 @@ export default function AboutHero() {
         </p>
 
         {/* Video Section */}
-        <div className={`relative lg:ml-20 h-[450px] w-[90%] rounded-2xl overflow-hidden shadow-lg transition-colors duration-300 ${theme === "dark"
+        <div className={`relative lg:ml-20 lg:w-[90%] h-[450px] rounded-2xl overflow-hidden shadow-lg transition-colors duration-300 ${theme === "dark"
           ? "bg-linear-to-r from-gray-800 to-gray-700"
           : "bg-linear-to-r to-[#F0F3FF] from-[#FFFFFF]"
           }`}>

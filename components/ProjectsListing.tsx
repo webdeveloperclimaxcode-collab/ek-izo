@@ -19,15 +19,45 @@ interface Project {
   featured: boolean;
 }
 
-export default function ProjectsListing() {
+interface ProjectsListingProps {
+  searchQuery: string;
+}
+
+export default function ProjectsListing({ searchQuery }: ProjectsListingProps) {
   const { t } = useLanguage();
   const { theme } = useTheme();
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);
+  const [showAllProjects, setShowAllProjects] = useState(false);
+
+  const normalizedSearchQuery = searchQuery.trim().toLowerCase();
+  const filteredProjects = projects.filter((project) => {
+    if (!normalizedSearchQuery) return true;
+
+    const title = project.title.toLowerCase();
+    const description = (project.description || "").toLowerCase();
+    const client = (project.client || "").toLowerCase();
+    const location = (project.location || "").toLowerCase();
+
+    return (
+      title.includes(normalizedSearchQuery) ||
+      description.includes(normalizedSearchQuery) ||
+      client.includes(normalizedSearchQuery) ||
+      location.includes(normalizedSearchQuery)
+    );
+  });
+
+  const visibleProjects = showAllProjects
+    ? filteredProjects
+    : filteredProjects.slice(0, 5);
 
   useEffect(() => {
     fetchProjects();
   }, []);
+
+  useEffect(() => {
+    setShowAllProjects(false);
+  }, [searchQuery]);
 
   const fetchProjects = async () => {
     try {
@@ -59,19 +89,25 @@ export default function ProjectsListing() {
       <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-20 max-w-full mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
-          <button className={`text-2xl font-medium mb-4 p-5 transition-colors rounded-full border border-brand-secondary duration-300  ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
-            {t("projectsPage.discoverAllProjects")}
-          </button>
+          {!showAllProjects && filteredProjects.length > 5 && (
+            <button
+              type="button"
+              onClick={() => setShowAllProjects(true)}
+              className={`lg:text-2xl md:text-xl text-lg font-medium mb-4 p-5 transition-colors rounded-full border border-brand-secondary duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"} hover:bg-[#F6BA40] hover:text-white hover:cursor-pointer`}
+            >
+              {t("projectsPage.discoverAllProjects")}
+            </button>
+          )}
           <p className={`text-[15px] lg:text-4xl transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
             {t("projectsPage.discoverPrestigious")}
           </p>
         </div>
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mt-10">
-          {projects.length > 0 ? (
-            projects.map((project, index) => {
+          {visibleProjects.length > 0 ? (
+            visibleProjects.map((project, index) => {
               // Calculate the column span based on the repeating 5-item pattern from Figma
-              const getGridSpan = (idx: any) => {
+              const getGridSpan = (idx: number) => {
                 const mod = idx % 5;
                 if (mod === 0) return "md:col-span-2"; // 1st item: Wide
                 if (mod === 1) return "md:col-span-1"; // 2nd item: Narrow
@@ -123,7 +159,7 @@ export default function ProjectsListing() {
                       {/* Client / Category */}
                       {project.client && (
                         <span
-                          className={`text-[10px] lg:text-xl uppercase tracking-wider mb-1 block transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-gray-800"
+                          className={`text-[13px] lg:text-xl uppercase tracking-wider mb-1 block transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-gray-800"
                             }`}
                         >
                           {project.client}
@@ -132,7 +168,7 @@ export default function ProjectsListing() {
 
                       {/* Title */}
                       <h3
-                        className={`text-[15px] lg:text-2xl font-medium uppercase mb-0.5 transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-black"
+                        className={`text-[18px] lg:text-2xl font-medium uppercase mb-0.5 transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-black"
                           }`}
                       >
                         {project.title}
@@ -141,7 +177,7 @@ export default function ProjectsListing() {
                       {/* Location */}
                       {project.location && (
                         <p
-                          className={`text-[10px] lg:text-xl uppercase mb-3 transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-gray-800"
+                          className={`text-[13px] lg:text-xl uppercase mb-3 transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-gray-800"
                             }`}
                         >
                           {project.location}
@@ -151,7 +187,7 @@ export default function ProjectsListing() {
                       {/* Description */}
                       {project.description && (
                         <p
-                          className={`text-[12px] lg:text-xl leading-relaxed line-clamp-2 transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-gray-700"
+                          className={`text-[15px] lg:text-xl leading-relaxed line-clamp-2 transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-gray-700"
                             }`}
                         >
                           {project.description}
@@ -161,7 +197,7 @@ export default function ProjectsListing() {
                       {/* Duration (Optional, keep if needed but wasn't in Figma) */}
                       {project.duration && (
                         <p
-                          className={`text-[11px] lg:text-xl mt-auto pt-3 transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-gray-800"
+                          className={`text-[13px] lg:text-xl mt-auto pt-3 transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-gray-800"
                             }`}
                         >
                           Duration: {project.duration}

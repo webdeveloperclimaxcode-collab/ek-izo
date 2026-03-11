@@ -122,7 +122,7 @@ export default function BlogHero({
             <div className="relative flex-1">
               <button
                 onClick={() => setShowTopicDropdown(!showTopicDropdown)}
-                className={`px-8 py-3.5 text-black font-semibold rounded-full hover:opacity-90 transition-all text-[15px] flex items-center gap-3 w-full justify-between ${
+                className={`px-8 py-3.5 text-black font-semibold rounded-full hover:opacity-90 transition-all text-[15px] flex items-center lg:gap-3 md:gap-3 gap-30 w-full justify-between ${
                   theme === "dark"
                   ? "bg-brand-secondary"
                     : "bg-brand-secondary"
@@ -178,7 +178,7 @@ export default function BlogHero({
             <div className="relative flex-1">
               <button
                 onClick={() => setShowYearDropdown(!showYearDropdown)}
-                className={`px-8 py-3.5 text-black font-semibold rounded-full hover:opacity-90 transition-all text-[15px] flex items-center gap-3 w-full justify-between ${
+                className={`px-8 py-3.5 text-black font-semibold rounded-full hover:opacity-90 transition-all text-[15px] flex items-center lg:gap-3 md:gap-3 gap-30 w-full justify-between ${
                   theme === "dark"
                   ? "bg-brand-secondary"
                     : "bg-brand-secondary"

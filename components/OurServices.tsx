@@ -32,7 +32,7 @@ export default function OurServices() {
       const response = await fetch("/api/homepage/services");
       const data = await response.json();
       if (data.success) {
-        setServices(data.data);
+      setServices(data.data.slice(0, 6));
       }
     } catch (error) {
       console.error("Error fetching homepage services:", error);
@@ -80,7 +80,7 @@ export default function OurServices() {
             </span>
 
             {/* The Highlight - absolute positioning places it behind */}
-            <div className="absolute left-0 bottom-1 w-full h-7 bg-brand-secondary z-0" />
+            <div className="absolute left-0 bottom-1 w-full h-2 bg-brand-secondary z-0" />
           </h2>
           <p className="text-[16px] lg:text-[30px] md:text-[15px] text-[#6B7280] dark:text-gray-300  leading-relaxed transition-colors">
             {t("ourServices.description")}
@@ -155,7 +155,7 @@ export default function OurServices() {
         <div className="flex justify-center mt-10">
           <Link
             href="/services"
-            className="px-10 py-3 rounded-full border border-brand-secondary text-[#373737] bg-white font-medium text-[12px] lg:text-xl tracking-wide shadow-sm hover:bg-brand-secondary/5 transition"
+            className="px-10 py-3 rounded-full border border-brand-secondary text-[#373737] bg-white font-medium text-[12px] lg:text-xl tracking-wide shadow-sm hover:bg-brand-secondary/5 transition hover:bg-[#F6BA40] hover:text-white hover:cursor-pointer"
           >
             {t("ourServices.viewAll")}
           </Link>

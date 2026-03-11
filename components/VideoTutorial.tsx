@@ -36,7 +36,7 @@ export default function VideoTutorial() {
       const data = await response.json();
       if (data.success) {
         console.log("Fetched videos:", data);
-        setVideos(data.data);
+        setVideos(data.data.slice(0, 6));
       }
     } catch (error) {
       console.error("Error fetching homepage videos:", error);
@@ -94,7 +94,7 @@ export default function VideoTutorial() {
                 </span>
 
                 {/* The Highlight - absolute positioning places it behind */}
-                <div className="absolute left-0 bottom-1 w-full h-7 bg-brand-secondary z-0" />
+                <div className="absolute left-0 bottom-1 w-full h-2 bg-brand-secondary z-0" />
               </h2>
               {/* <h2 className={`text-[36px] font-bold tracking-tight transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-brand-primary"}`}>
                 VIDEO TUTORIAL
@@ -227,7 +227,7 @@ export default function VideoTutorial() {
           <div className="flex justify-center mt-12">
             <Link
               href="/video-tutorials"
-              className="px-12 py-4 lg:text-xl rounded-full border border-brand-secondary text-[#373737] bg-white font-medium  tracking-wide shadow-sm hover:bg-brand-secondary/5 transition text-[16px]"
+              className="px-12 py-4 lg:text-xl rounded-full border border-brand-secondary text-[#373737] bg-white font-medium  tracking-wide shadow-sm hover:bg-brand-secondary/5 transition text-[16px] hover:bg-[#F6BA40] hover:text-white hover:cursor-pointer"
 
             >
               {t("videoTutorial.viewAll")}

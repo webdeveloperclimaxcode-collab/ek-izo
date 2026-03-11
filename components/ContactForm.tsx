@@ -90,7 +90,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className={`w-full py-16 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-[#EEF2F6]"}`}>
+    <section className={`w-full py-16 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-[#fff]"}`}>
       <div className="w-full px-6 2xl:px-40 mx-auto">
         {/* Title */}
         <h2 className={`text-[32px] lg:text-5xl text-center mb-4 transition-colors duration-300 ${theme === "dark" ? "text-gray-300" : "text-brand-primary"}`}>
@@ -162,7 +162,7 @@ export default function ContactForm() {
               required
               className={`px-6 py-4 rounded-xl focus:outline-none focus:ring-2 text-[15px] shadow-sm transition-colors ${theme === "dark"
                 ? "bg-gray-800 text-white placeholder:text-white placeholder:opacity-100 focus:ring-[#ff4d6d]"
-                : "bg-white text-[#4A5568] placeholder:text-[#9CA3AF] focus:ring-[#3B82F6]"
+                : "bg-[#F4F4F4] text-[#4A5568] placeholder:text-[#9CA3AF] focus:ring-[#3B82F6]"
                 }`}
             />
             <input
@@ -173,7 +173,7 @@ export default function ContactForm() {
               onChange={handleChange}
               className={`px-6 py-4 rounded-xl focus:outline-none focus:ring-2 text-[15px] shadow-sm transition-colors ${theme === "dark"
                 ? "bg-gray-800 text-white placeholder:text-white placeholder:opacity-100 focus:ring-[#ff4d6d]"
-                : "bg-white text-[#4A5568] placeholder:text-[#9CA3AF] focus:ring-[#3B82F6]"
+                : "bg-[#F4F4F4] text-[#4A5568] placeholder:text-[#9CA3AF] focus:ring-[#3B82F6]"
                 }`}
             />
           </div>
@@ -189,7 +189,7 @@ export default function ContactForm() {
               required
               className={`px-6 py-4 rounded-xl focus:outline-none focus:ring-2 text-[15px] shadow-sm transition-colors ${theme === "dark"
                 ? "bg-gray-800 text-white placeholder:text-white placeholder:opacity-100 focus:ring-[#ff4d6d]"
-                : "bg-white text-[#4A5568] placeholder:text-[#9CA3AF] focus:ring-[#3B82F6]"
+                : "bg-[#F4F4F4] text-[#4A5568] placeholder:text-[#9CA3AF] focus:ring-[#3B82F6]"
                 }`}
             />
             <input
@@ -201,7 +201,7 @@ export default function ContactForm() {
               required
               className={`px-6 py-4 rounded-xl focus:outline-none focus:ring-2 text-[15px] shadow-sm transition-colors ${theme === "dark"
                 ? "bg-gray-800 text-white placeholder:text-white placeholder:opacity-100 focus:ring-[#ff4d6d]"
-                : "bg-white text-[#4A5568] placeholder:text-[#9CA3AF] focus:ring-[#3B82F6]"
+                : "bg-[#F4F4F4] text-[#4A5568] placeholder:text-[#9CA3AF] focus:ring-[#3B82F6]"
                 }`}
             />
           </div>
@@ -216,7 +216,7 @@ export default function ContactForm() {
               onChange={handleChange}
               className={`px-6 py-4 rounded-xl focus:outline-none focus:ring-2 text-[15px] shadow-sm transition-colors ${theme === "dark"
                 ? "bg-gray-800 text-white placeholder:text-white placeholder:opacity-100 focus:ring-[#ff4d6d]"
-                : "bg-white text-[#4A5568] placeholder:text-[#9CA3AF] focus:ring-[#3B82F6]"
+                : "bg-[#F4F4F4] text-[#4A5568] placeholder:text-[#9CA3AF] focus:ring-[#3B82F6]"
                 }`}
             />
             <input
@@ -227,7 +227,7 @@ export default function ContactForm() {
               onChange={handleChange}
               className={`px-6 py-4 rounded-xl focus:outline-none focus:ring-2 text-[15px] shadow-sm transition-colors ${theme === "dark"
                 ? "bg-gray-800 text-white placeholder:text-white placeholder:opacity-100 focus:ring-[#ff4d6d]"
-                : "bg-white text-[#4A5568] placeholder:text-[#9CA3AF] focus:ring-[#3B82F6]"
+                : "bg-[#F4F4F4] text-[#4A5568] placeholder:text-[#9CA3AF] focus:ring-[#3B82F6]"
                 }`}
             />
           </div>
@@ -242,7 +242,7 @@ export default function ContactForm() {
             rows={6}
             className={`w-full px-6 py-4 rounded-xl focus:outline-none focus:ring-2 text-[15px] mb-8 shadow-sm resize-none transition-colors ${theme === "dark"
               ? "bg-gray-700 text-white placeholder:text-white placeholder:opacity-100 focus:ring-[#ff4d6d]"
-              : "bg-white text-[#4A5568] placeholder:text-[#9CA3AF] focus:ring-[#3B82F6]"
+              : "bg-[#F4F4F4] text-[#4A5568] placeholder:text-[#9CA3AF] focus:ring-[#3B82F6]"
               }`}
           ></textarea>
 
@@ -278,7 +278,7 @@ export default function ContactForm() {
             <button
               type="submit"
               disabled={loading}
-              className="px-16  py-4 border border-[#F6BA40] dark:text-[#F6BA40] text-black font-semibold rounded-full hover:opacity-90 transition-opacity text-[16px] disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+              className="px-16  py-4 border border-[#F6BA40] dark:text-[#F6BA40] text-black font-semibold rounded-full hover:opacity-90 transition-opacity text-[16px] disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer hover:bg-[#F6BA40] hover:text-white hover:cursor-pointer"
             >
               {loading ? t("contactPage.sending") : t("contactPage.contactUs")}
             </button>

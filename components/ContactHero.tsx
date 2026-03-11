@@ -498,10 +498,12 @@ export default function ContactHero() {
                 <div className="pt-4">
                   <Link
                     href="/support"
-                    className={`inline-block lg:text-2xl px-8 py-3.5 border rounded-full text-[13px] font-medium tracking-wide transition-all duration-300 ${theme === "dark"
+                    className={`inline-block lg:text-2xl px-8 py-3.5 border rounded-full text-[13px] font-medium tracking-wide transition-all duration-300 
+                       ${theme === "dark"
                       ? "border-[#EAB308] text-white hover:bg-[#EAB308] hover:text-black"
-                      : "border-[#EAB308] text-[#1A1A1A] hover:bg-gray-50"
-                      }`}
+                      : "border-[#EAB308] text-[#1A1A1A] hover:bg-[#F6BA40] hover:text-white hover:cursor-pointer"
+                      }
+                      `}
                   >
                     {t("contactPage.contactButton") || "CONTACT THE TECHNICAL & COMMERCIAL SUPPORT"}
                   </Link>
@@ -656,7 +658,7 @@ export default function ContactHero() {
                               target="_blank"
                               className={`inline-block px-6 py-3 lg:text-lg border rounded-full text-[12px] font-medium transition-colors border-[#F6BA40] ${theme === "dark"
                                 ? " text-gray-300 hover:bg-gray-800"
-                                : " text-[#4A5568] hover:bg-gray-50"
+                                : " text-[#4A5568]  hover:bg-[#F6BA40] hover:text-white hover:cursor-pointer"
                                 }`}
                             >
                               FIND US ON GOOGLE MAPS
