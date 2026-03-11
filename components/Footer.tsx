@@ -251,21 +251,21 @@ export default function Footer() {
                 </div>
               ) : (
                 <div>
-                  <Link href="/login" className="inline-block hover:opacity-80 transition-opacity cursor-pointer">
-                      <h3 className="text-xl font-semibold mb-4 text-white">{t("footer.loginRegister")}</h3>
+                  <Link href="/" className="inline-block hover:opacity-80 transition-opacity cursor-pointer">
+                      {/* <h3 className="text-xl font-semibold mb-4 text-white">{t("footer.loginRegister")}</h3> */}
                       
                     <Image
                       src="/assets/images/header/logo_bg_remove.png"
-                      alt="ek-website Login"
+                      alt="ek-website"
                       width={180}
                       height={60}
                       className="h-auto w-auto"
                     />
                   </Link>
-                   <Link href="/register" className="inline-block hover:opacity-80 transition-opacity cursor-pointer">
+                   {/* <Link href="/register" className="inline-block hover:opacity-80 transition-opacity cursor-pointer">
                       <h3 className="text-xl font-semibold mb-4 text-white">{t("footer.register")}</h3>
                      
-                  </Link>
+                  </Link> */}
                 </div>
               )}
             </div>

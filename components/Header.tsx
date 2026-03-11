@@ -353,13 +353,13 @@ export default function Header() {
                     <h3 className="text-[16px] lg:text-xl font-medium text-white">
                       ek-website
                     </h3>
-                    <Link
+                    {/* <Link
                       href="/login"
                       onClick={() => setIsMenuOpen(false)}
                       className="text-[13px] lg:text-[15px] text-white  hover:text-brand-secondary dark:hover:text-[#F6BA40] cursor-pointer"
                     >
                       {t("header.login")}
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               )}
