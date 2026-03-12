@@ -18,7 +18,7 @@ export async function GET() {
     // Map to return video data directly
     const videos = homepageVideos.map((hv) => hv.video);
 
-    return NextResponse.json({ success: true, data: videos });
+    return NextResponse.json({ success: true, data: videos.filter((video: any) => video.publishOnWebsite) });
   } catch (error) {
     console.error("Error fetching homepage videos:", error);
     return NextResponse.json(

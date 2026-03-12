@@ -14,7 +14,7 @@ export default function AboutHero() {
           src="/assets/images/about/AboutHero2.png"
           alt="Building Today With The Future In Mind"
           fill
-          className="object-cover"
+          // className="object-cover"
           priority
         />
       </div>

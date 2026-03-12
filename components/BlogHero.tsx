@@ -94,7 +94,7 @@ export default function BlogHero({
         <div className="w-full px-6 2xl:px-20  mx-auto">
           <div className="flex flex-col md:flex-row gap-10 items-center">
             {/* Search Input */}
-            <div className="relative flex-2 ">
+            <div className="relative flex-2 w-full md:w-auto">
               <input
                 type="text"
                 placeholder="Search By Keywords"
@@ -119,16 +119,15 @@ export default function BlogHero({
             </div>
 
             {/* Topic Dropdown */}
-            <div className="relative flex-1">
+            <div className="relative flex-1 min-w-0 w-full md:w-auto">
               <button
                 onClick={() => setShowTopicDropdown(!showTopicDropdown)}
-                className={`px-8 py-3.5 text-black font-semibold rounded-full hover:opacity-90 transition-all text-[15px] flex items-center lg:gap-3 md:gap-3 gap-30 w-full justify-between ${
-                  theme === "dark"
-                  ? "bg-brand-secondary"
+                className={`px-8 py-3.5 text-black font-semibold rounded-full hover:opacity-90 transition-all text-[15px] flex items-center gap-3 w-full justify-between min-w-0 ${theme === "dark"
+                    ? "bg-brand-secondary"
                     : "bg-brand-secondary"
-                }`}
+                  }`}
               >
-                {selectedTopicLabel}
+                <span className="truncate">{selectedTopicLabel}</span>
                 <Image
                   src="/assets/images/Products_page/dropdown_black.svg"
                   alt="Dropdown"
@@ -175,16 +174,15 @@ export default function BlogHero({
             </div>
 
             {/* Year Dropdown */}
-            <div className="relative flex-1">
+            <div className="relative flex-1 min-w-0 w-full md:w-auto">
               <button
                 onClick={() => setShowYearDropdown(!showYearDropdown)}
-                className={`px-8 py-3.5 text-black font-semibold rounded-full hover:opacity-90 transition-all text-[15px] flex items-center lg:gap-3 md:gap-3 gap-30 w-full justify-between ${
-                  theme === "dark"
-                  ? "bg-brand-secondary"
+                className={`px-8 py-3.5 text-black font-semibold rounded-full hover:opacity-90 transition-all text-[15px] flex items-center gap-3 w-full justify-between min-w-0 ${theme === "dark"
+                    ? "bg-brand-secondary"
                     : "bg-brand-secondary"
-                }`}
+                  }`}
               >
-                {selectedYearLabel}
+                <span className="truncate">{selectedYearLabel}</span>
                 <Image
                   src="/assets/images/Products_page/dropdown_black.svg"
                   alt="Dropdown"

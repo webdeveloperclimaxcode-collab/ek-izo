@@ -25,6 +25,8 @@ interface Blog {
   category: BlogCategory | null;
   publishedAt: string | null;
   createdAt: string;
+  publishOnWebsite: boolean;
+  showOnHomepage: boolean;
 }
 
 export default function NewsBlogs() {
@@ -42,7 +44,12 @@ export default function NewsBlogs() {
       const response = await fetch("/api/homepage/blogs");
       const data = await response.json();
       if (data.success) {
-        setBlogs(data.data.slice(0, 6));
+        //these are the variables publishOnWebsite, showOnHomepage if it is true then show else remove from data.data
+        data.data = data.data.filter(
+          (blog: Blog) => blog.publishOnWebsite && blog.showOnHomepage
+
+        );
+        setBlogs(data.data);
       }
     } catch (error) {
       console.error("Error fetching homepage blogs:", error);

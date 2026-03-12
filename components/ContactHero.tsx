@@ -435,7 +435,7 @@ export default function ContactHero() {
         </div>
 
         {/* Title */}
-        <h1 className="relative z-10 text-black text-[48px] font-semibold">
+        <h1 className="relative z-10 text-white text-[48px] font-semibold">
           {t("contactPage.contactsHero")}
         </h1>
       </section>

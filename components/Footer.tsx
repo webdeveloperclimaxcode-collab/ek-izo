@@ -93,7 +93,7 @@ export default function Footer() {
               {t("footer.contactBanner.heading")}
             </h2>
             <p className="text-lg lg:text-2xl text-[#292929] font-medium opacity-90">
-              {t("footer.contactBanner.subheading")} hello
+              {t("footer.contactBanner.subheading")}
             </p>
           </div>
           <Link
@@ -105,9 +105,9 @@ export default function Footer() {
         </div>
       </div>
 
-      <footer className="relative w-full text-white overflow-hidden bg-gray-900">
+      <footer className="relative w-full text-white overflow-hidden ">
         {/* Background Image - always visible */}
-        <div className="absolute inset-0 opacity-100">
+        <div className="absolute inset-0 ">
           <Image
             src="/assets/images/Footer/bg_img_new.png"
             alt="Footer Background"
