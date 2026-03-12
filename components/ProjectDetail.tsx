@@ -108,11 +108,24 @@ export default function ProjectDetail({ projectId }: { projectId: string }) {
               ? "border-gray-700"
               : "border-[#D4D4D4]"
               }`} style={{ border: theme === "dark" ? "2px solid #4b5563" : "2px solid #D4D4D4" }}>
+              <div className="absolute z-0 bg-black/75 w-full h-full flex items-center justify-center">
+                  <Image
+                    src="/assets/images/loader/loader.svg"
+                    alt="Placeholder"
+                    width={80}
+                    height={80}
+                    className="w-12 h-12 "
+                  />  
+                </div>
               <Image
+                
                 src={projectImages[selectedImage]}
                 alt={project.title}
                 fill
                 className="rounded-[10px] object-cover"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                }}
               />
 
               {/* Navigation Arrows */}
@@ -182,11 +195,23 @@ export default function ProjectDetail({ projectId }: { projectId: string }) {
                           : `border-[3px] ${theme === "dark" ? "border-gray-700 hover:border-gray-600" : "border-gray-300 hover:border-gray-400"}`
                           }`}
                       >
+                        <div className=" bg-black/75 w-full h-full flex items-center justify-center">
+                          <Image
+                            src="/assets/images/loader/loader.svg"
+                            alt="Placeholder"
+                            width={100}
+                            height={80}
+                            className="w-12 h-12 "
+                          />
+                        </div>
                         <Image
                           src={img}
                           alt={`Thumbnail ${index + 1}`}
                           fill
                           className="object-cover"
+                          onError={(e) => {
+                            e.currentTarget.style.display = 'none';
+                          }}
                         />
                       </button>
                     </SwiperSlide>

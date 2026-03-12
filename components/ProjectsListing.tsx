@@ -135,12 +135,26 @@ export default function ProjectsListing({ searchQuery }: ProjectsListingProps) {
                         }`}
                     >
                       {project.images && project.images.length > 0 ? (
+                        <>
+                        <div className="absolute z-0 bg-black/75 w-full h-full flex items-center justify-center">
+                  <Image
+                    src="/assets/images/loader/loader.svg"
+                    alt="Placeholder"
+                    width={80}
+                    height={80}
+                    className="w-12 h-12 "
+                  />  
+                </div>
                         <Image
                           src={project.images[0]}
                           alt={project.title}
                           fill
                           className="object-cover"
-                        />
+                          onError={(e) => {
+                            e.currentTarget.style.display = 'none';
+                          }}
+                          />
+                        </>
                       ) : (
                         <div className="w-full h-full flex items-center justify-center">
                           <span

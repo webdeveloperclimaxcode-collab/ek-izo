@@ -98,13 +98,28 @@ export default function OurServices() {
               {/* Image */}
               <div className="relative h-[170px] md:h-[185px] bg-gray-100 dark:bg-gray-900">
                 {service.images && service.images.length > 0 ? (
+                  <>
+                  <div className="absolute z-0 bg-black/75 w-full h-full flex items-center justify-center">
+                                    <Image
+                                      src="/assets/images/loader/loader.svg"
+                                      alt="Placeholder"
+                                      width={80}
+                                      height={80}
+                                      className="w-12 h-12 "
+                                    />  
+                                  </div>
                   <Image
                     src={service.images[0]}
                     alt={service.title}
                     fill
-                    className="object-cover"
+                      className="object-cover"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                      }}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
+                  
+                  </>
                 ) : (
                   <div className="flex items-center justify-center h-full text-gray-400 text-sm">
                     No Image

@@ -133,12 +133,26 @@ export default function BlogListing({ searchQuery, selectedCategory, selectedYea
                     {/* Blog Image */}
                     <div className="relative h-48">
                       {blog.images && blog.images.length > 0 ? (
+                        <>
+                          <div className="absolute z-0 bg-black/75 w-full h-full flex items-center justify-center">
+                  <Image
+                    src="/assets/images/loader/loader.svg"
+                    alt="Placeholder"
+                    width={80}
+                    height={80}
+                    className="w-12 h-12 "
+                  />  
+                </div>
                         <Image
                           src={blog.images[0]}
                           alt={blog.title}
                           fill
                           className="object-cover"
+                          onError={(e) => {
+                            e.currentTarget.style.display = 'none';
+                          }}
                         />
+                        </>
                       ) : (
                         <div className={`w-full h-full flex items-center justify-center transition-colors duration-300 ${theme === "dark"
                           ? "bg-gray-700"

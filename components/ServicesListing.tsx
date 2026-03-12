@@ -279,6 +279,7 @@ export default function ServicesListing({ searchQuery }: ServicesListingProps) {
                           }}
                           className="hover:opacity-70"
                         >
+
                           <Image
                             src="/assets/images/Products_page/slider_left_arrow.svg"
                             alt="Up"
@@ -489,12 +490,26 @@ export default function ServicesListing({ searchQuery }: ServicesListingProps) {
                 {/* Service Image */}
                 <div className="relative h-[200px] overflow-hidden">
                   {service.images && service.images.length > 0 ? (
+                    <>
+                      <div className="absolute z-0 bg-black/75 w-full h-full flex items-center justify-center">
+                        <Image
+                          src="/assets/images/loader/loader.svg"
+                          alt="Placeholder"
+                          width={80}
+                          height={80}
+                          className="w-12 h-12 "
+                        />
+                      </div>
                     <Image
                       src={service.images[0]}
                       alt={service.title}
                       fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
+                        }}
+                      />
+                      </>
                   ) : (
                     <div className={`flex items-center justify-center h-full transition-colors ${theme === "dark" ? "bg-gray-700" : "bg-gray-100"}`}>
                       <span className={`transition-colors ${theme === "dark" ? "text-gray-400" : "text-gray-500"}`}>No Image</span>

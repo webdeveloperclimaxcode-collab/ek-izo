@@ -6,6 +6,7 @@ import { useDebounce } from "@/app/lib/hooks/useDebounce";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useTheme } from "@/contexts/ThemeContext";
 import Spinner from "./Spinner";
+import { getVideoEmbedUrl, getVideoThumbnailUrl } from "@/lib/video";
 
 interface Video {
   id: string;
@@ -64,16 +65,6 @@ export default function VideoTutorialsListing() {
     setFilteredVideos(nextVideos);
     setVisibleVideos(6);
   }, [debouncedSearchQuery, videos]);
-
-  const getYouTubeThumbnail = (url: string) => {
-    const videoId = url.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/)?.[1];
-    return videoId ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg` : "/assets/images/services/s1.png";
-  };
-
-  const getYouTubeEmbedUrl = (url: string) => {
-    const videoId = url.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/)?.[1];
-    return videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1` : url;
-  };
 
   const openVideoModal = (video: Video) => {
     setSelectedVideo(video);
@@ -172,7 +163,7 @@ export default function VideoTutorialsListing() {
                       {/* Video Thumbnail with Play Button */}
                       <div className="relative h-[200px] overflow-hidden">
                         <Image
-                          src={getYouTubeThumbnail(video.youtubeUrl)}
+                          src={getVideoThumbnailUrl(video.youtubeUrl)}
                           alt={video.title}
                           fill
                           className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -265,7 +256,7 @@ export default function VideoTutorialsListing() {
             <div className="relative pt-[56.25%]">
               <iframe
                 className="absolute inset-0 w-full h-full"
-                src={getYouTubeEmbedUrl(selectedVideo.youtubeUrl)}
+                src={getVideoEmbedUrl(selectedVideo.youtubeUrl, true)}
                 title={selectedVideo.title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen

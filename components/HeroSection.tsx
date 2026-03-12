@@ -76,24 +76,41 @@ export default function HeroSection() {
         {slides.map((slide, index) => (
           <SwiperSlide key={slide.id}>
             <div className="relative w-full h-full">
-              {/* Background Image */}
-              <div className="absolute inset-0">
+
+              {/* Background Image Wrapper */}
+              <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
+
+                {/* 1. Spinner stays in the background while loading */}
+                <div className="absolute z-0 bg-black/75 w-full h-full flex items-center justify-center">
+                  <Image
+                    src="/assets/images/loader/loader.svg"
+                    alt="Placeholder"
+                    width={80}
+                    height={80}
+                    className="w-12 h-12 "
+                  />  
+                </div>
+
+                {/* 2. Actual Image (Covers spinner when loaded) */}
                 <Image
                   src={slide.imageUrl}
-                  alt={slide.title}
+                  alt={slide.title || "Hero Slide"}
                   fill
-                  className="object-cover"
+                  className="object-cover relative z-10"
                   priority={index === 0}
                   quality={100}
                   sizes="100vw"
+                  // If image breaks, we can hide it so the background spinner/color shows
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                  }}
                 />
               </div>
 
               {/* Content Card - Only show if there's text */}
               {(slide.title || slide.description || slide.buttonText) && (
-                <div className="absolute inset-0 px-8 md:px-6 2xl:px-20 flex items-center md:items-center justify-center md:justify-start h-full">
+                <div className="absolute z-20 inset-0 px-8 md:px-6 2xl:px-20 flex items-center md:items-center justify-center md:justify-start h-full">
                   <div className="w-full md:max-w-3xl md:mx-30">
-                    {/* Content Card with Gradient Border */}
                     <div
                       className="relative rounded-lg md:rounded-2xl bg-[rgba(0,0,0,0.24)] px-4 py-6 md:px-8 md:py-11"
                       style={{
@@ -117,7 +134,6 @@ export default function HeroSection() {
                           <Link
                             href={slide.buttonLink}
                             className="inline-block px-4 md:px-8 py-2 md:py-3 bg-[#F6BA40] backdrop-blur-sm text-black text-xs md:text-sm font-semibold rounded-full hover:bg-white/30 transition-all hover:text-black"
-
                           >
                             {slide.buttonText}
                           </Link>
@@ -134,7 +150,7 @@ export default function HeroSection() {
 
       {/* Custom Navigation Buttons */}
       <button
-        className="swiper-button-prev-custom absolute left-1 md:left-8 top-1/2 -translate-y-1/2 z-10 cursor-pointer hover:opacity-80 transition-opacity"
+        className="swiper-button-prev-custom absolute left-1 md:left-8 top-1/2 -translate-y-1/2 z-30 cursor-pointer hover:opacity-80 transition-opacity"
         aria-label="Previous slide"
       >
         <Image
@@ -147,7 +163,7 @@ export default function HeroSection() {
       </button>
 
       <button
-        className="swiper-button-next-custom absolute right-1 md:right-8 top-1/2 -translate-y-1/2 z-10 cursor-pointer hover:opacity-80 transition-opacity"
+        className="swiper-button-next-custom absolute right-1 md:right-8 top-1/2 -translate-y-1/2 z-30 cursor-pointer hover:opacity-80 transition-opacity"
         aria-label="Next slide"
       >
         <Image
@@ -160,7 +176,7 @@ export default function HeroSection() {
       </button>
 
       {/* Custom Pagination */}
-      <div className="swiper-pagination-custom absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 z-10 flex gap-2"></div>
+      <div className="swiper-pagination-custom absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-2"></div>
     </section>
   );
 }

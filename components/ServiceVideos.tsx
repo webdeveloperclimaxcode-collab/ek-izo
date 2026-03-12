@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useTheme } from "@/contexts/ThemeContext";
+import { getVideoEmbedUrl, getVideoThumbnailUrl } from "@/lib/video";
 
 interface Service {
   videos: string[];
@@ -38,16 +39,6 @@ export default function ServiceVideos({ serviceId }: { serviceId: string }) {
     return null;
   }
 
-  const getYouTubeEmbedUrl = (url: string) => {
-    const videoId = url.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/)?.[1];
-    return videoId ? `https://www.youtube.com/embed/${videoId}` : url;
-  };
-
-  const getYouTubeThumbnail = (url: string) => {
-    const videoId = url.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/)?.[1];
-    return videoId ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg` : "/assets/images/services/s1.png";
-  };
-
   const mainVideo = service.videos[0];
   const relatedVideos = service.videos.slice(1, 4);
 
@@ -59,7 +50,7 @@ export default function ServiceVideos({ serviceId }: { serviceId: string }) {
           <iframe
             width="100%"
             height="100%"
-            src={getYouTubeEmbedUrl(mainVideo)}
+            src={getVideoEmbedUrl(mainVideo)}
             title="Service Video"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -107,11 +98,23 @@ export default function ServiceVideos({ serviceId }: { serviceId: string }) {
                 <div className="flex items-center gap-4 p-4">
                   {/* Video Thumbnail */}
                   <div className="relative w-28 h-28 shrink-0 rounded-lg overflow-hidden group">
+                    <div className="absolute z-0 bg-black/75 w-full h-full flex items-center justify-center">
+                      <Image
+                        src="/assets/images/loader/loader.svg"
+                        alt="Placeholder"
+                        width={80}
+                        height={80}
+                        className="w-12 h-12 "
+                      />
+                    </div>
                     <Image
-                      src={getYouTubeThumbnail(videoUrl)}
+                      src={getVideoThumbnailUrl(videoUrl)}
                       alt={`Video ${index + 1}`}
                       fill
                       className="object-cover"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                      }}
                     />
                     {/* Play Button Overlay */}
                     <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">

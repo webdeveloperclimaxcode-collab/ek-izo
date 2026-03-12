@@ -10,6 +10,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { useTheme } from "@/contexts/ThemeContext";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { getVideoEmbedUrl, getVideoThumbnailUrl } from "@/lib/video";
 interface Video {
   id: string;
   title: string;
@@ -36,24 +37,13 @@ export default function VideoTutorial() {
       const data = await response.json();
       if (data.success) {
         console.log("Fetched videos:", data);
-        setVideos(data.data.slice(0, 6));
+        setVideos(data.data);
       }
     } catch (error) {
       console.error("Error fetching homepage videos:", error);
     } finally {
       setLoading(false);
     }
-  };
-
-  const getYouTubeThumbnail = (url: string) => {
-    // Extract video ID from YouTube URL
-    const videoId = url.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/)?.[1];
-    return videoId ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg` : "/assets/images/services/s1.png";
-  };
-
-  const getYouTubeEmbedUrl = (url: string) => {
-    const videoId = url.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/)?.[1];
-    return videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1` : url;
   };
 
   const openVideoModal = (video: Video) => {
@@ -144,11 +134,23 @@ export default function VideoTutorial() {
                   >
                     {/* Video Thumbnail with Play Button */}
                     <div className="relative h-[220px]">
+                      <div className="absolute z-0 bg-black/75 w-full h-full flex items-center justify-center">
+                        <Image
+                          src="/assets/images/loader/loader.svg"
+                          alt="Placeholder"
+                          width={80}
+                          height={80}
+                          className="w-12 h-12 "
+                        />
+                      </div>
                       <Image
-                        src={getYouTubeThumbnail(video.youtubeUrl)}
+                        src={getVideoThumbnailUrl(video.youtubeUrl)}
                         alt={video.title}
                         fill
                         className="object-cover"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
+                        }}
                       />
                       {/* Play Button Overlay */}
                       <div className="absolute inset-0 bg-black/20 flex items-center justify-center group-hover:bg-black/30 transition-colors">
@@ -183,7 +185,7 @@ export default function VideoTutorial() {
             {videos.length > 0 && (
               <>
                 <button
-                  className="video-button-prev absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors"
+                  className="video-button-prev absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-[#F6BA40] rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors hover:cursor-pointer"
                   aria-label="Previous video"
                 >
                   <svg
@@ -202,7 +204,7 @@ export default function VideoTutorial() {
                 </button>
 
                 <button
-                  className="video-button-next absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors"
+                  className="video-button-next absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-[#F6BA40] rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors hover:cursor-pointer"
                   aria-label="Next video"
                 >
                   <svg
@@ -270,7 +272,7 @@ export default function VideoTutorial() {
             <div className="relative pt-[56.25%]">
               <iframe
                 className="absolute inset-0 w-full h-full"
-                src={getYouTubeEmbedUrl(selectedVideo.youtubeUrl)}
+                src={getVideoEmbedUrl(selectedVideo.youtubeUrl, true)}
                 title={selectedVideo.title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen

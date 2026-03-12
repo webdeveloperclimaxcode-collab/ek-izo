@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useTheme } from "@/contexts/ThemeContext";
+import { getVideoEmbedUrl, getVideoThumbnailUrl } from "@/lib/video";
 
 interface Product {
   videos: string[];
@@ -38,16 +39,6 @@ export default function ProductVideos({ productId }: { productId: string }) {
     return null;
   }
 
-  const getYouTubeEmbedUrl = (url: string) => {
-    const videoId = url.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/)?.[1];
-    return videoId ? `https://www.youtube.com/embed/${videoId}` : url;
-  };
-
-  const getYouTubeThumbnail = (url: string) => {
-    const videoId = url.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/)?.[1];
-    return videoId ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg` : "/assets/images/services/s1.png";
-  };
-
   const mainVideo = product.videos[0];
   const relatedVideos = product.videos.slice(1, 4);
 
@@ -59,7 +50,7 @@ export default function ProductVideos({ productId }: { productId: string }) {
           <iframe
             width="100%"
             height="100%"
-            src={getYouTubeEmbedUrl(mainVideo)}
+            src={getVideoEmbedUrl(mainVideo)}
             title="Product Video"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -108,7 +99,7 @@ export default function ProductVideos({ productId }: { productId: string }) {
                   {/* Video Thumbnail */}
                   <div className="relative w-28 h-28 shrink-0 rounded-lg overflow-hidden group">
                     <Image
-                      src={getYouTubeThumbnail(videoUrl)}
+                      src={getVideoThumbnailUrl(videoUrl)}
                       alt={`Video ${index + 1}`}
                       fill
                       className="object-cover"

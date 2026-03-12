@@ -145,11 +145,23 @@ export default function BlogDetail({ blogId }: { blogId: string }) {
         {/* Featured Image */}
         {blog.featuredImage && (
           <div className="relative w-full h-[500px] mb-8 rounded-lg overflow-hidden">
+            <div className="absolute z-0 bg-black/75 w-full h-full flex items-center justify-center">
+              <Image
+                src="/assets/images/loader/loader.svg"
+                alt="Placeholder"
+                width={80}
+                height={80}
+                className="w-12 h-12 "
+              />
+            </div>
             <Image
               src={blog.featuredImage}
               alt={blog.title}
               fill
               className="object-cover"
+              onError={(e) => {
+                e.currentTarget.style.display = 'none';
+              }}
             />
           </div>
         )}
@@ -169,11 +181,23 @@ export default function BlogDetail({ blogId }: { blogId: string }) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {blog.images.map((image, index) => (
                 <div key={index} className="relative h-[400px] rounded-lg overflow-hidden">
+                  <div className="absolute z-0 bg-black/75 w-full h-full flex items-center justify-center">
+                    <Image
+                      src="/assets/images/loader/loader.svg"
+                      alt="Placeholder"
+                      width={80}
+                      height={80}
+                      className="w-12 h-12 "
+                    />
+                  </div>
                   <Image
                     src={image}
                     alt={`Gallery image ${index + 1}`}
                     fill
                     className="object-cover"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                    }}
                   />
                 </div>
               ))}

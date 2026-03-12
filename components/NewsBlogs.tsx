@@ -127,15 +127,22 @@ export default function NewsBlogs() {
                   <div className="bg-white dark:bg-[#1a1a1a] rounded-lg shadow-sm hover:shadow-md transition-shadow h-full border border-gray-100 dark:border-gray-700 max-w-sm  cursor-pointer overflow-hidden">
                     {/* Blog Image */}
                     <div className="relative h-48">
+                      <div className="absolute z-0 bg-black/75 w-full h-full flex items-center justify-center">
+                        <Image
+                          src="/assets/images/loader/loader.svg"
+                          alt="Placeholder"
+                          width={80}
+                          height={80}
+                          className="w-12 h-12 "
+                        />
+                      </div>
                       <Image
                         src={blog?.images?.[0] || "/assets/images/blog-placeholder.jpg"}
                         alt={blog.title}
                         fill
                         className="object-cover"
                         onError={(e) => {
-                          // Fallback to a default construction image if the featured image fails
-                          const target = e.target as HTMLImageElement;
-                          target.src = "/assets/images/services/s1.png";
+                          e.currentTarget.style.display = 'none';
                         }}
                       />
                     </div>
