@@ -116,7 +116,7 @@ export default function HeroSection() {
                         <div className="flex justify-center md:justify-end">
                           <Link
                             href={slide.buttonLink}
-                            className="inline-block px-4 md:px-8 py-2 md:py-3 bg-[#F6BA40] backdrop-blur-sm text-white text-xs md:text-sm font-semibold rounded-full hover:bg-white/30 transition-all hover:text-black"
+                            className="inline-block px-4 md:px-8 py-2 md:py-3 bg-[#F6BA40] backdrop-blur-sm text-black text-xs md:text-sm font-semibold rounded-full hover:bg-white/30 transition-all hover:text-black"
 
                           >
                             {slide.buttonText}
