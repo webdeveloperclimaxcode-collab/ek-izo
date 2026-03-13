@@ -89,7 +89,7 @@ export default function VideoTutorialsListing() {
       <section className="relative w-full h-[430px] flex items-end justify-center">
         <div className={`absolute inset-0 z-0 h-[300px] ${theme === "dark" ? "brightness-50" : ""}`}>
           <Image
-            src="/assets/images/blog/hero.png"
+            src="/assets/images/blog/hero.jpg"
             alt="Video Tutorials Background"
             fill
             className="object-cover"
@@ -108,7 +108,7 @@ export default function VideoTutorialsListing() {
                 <form onSubmit={handleSearch} className="relative w-full">
                   <input
                     type="text"
-                    placeholder={t("servicesPage.searchService")}
+                    placeholder="Search videos..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="w-full px-6 py-3.5 text-black rounded-full focus:outline-none text-[15px] transition-colors duration-300 bg-brand-secondary placeholder:text-black! placeholder:opacity-100!"
