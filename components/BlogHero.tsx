@@ -74,7 +74,7 @@ export default function BlogHero({
       {/* Hero Image */}
       <div className="relative w-full h-[300px]">
         <Image
-          src="/assets/images/blog/hero_2.jpg"
+          src="/assets/images/blog/hero.jpg"
           alt="Blog"
           fill
           className="object-cover"
