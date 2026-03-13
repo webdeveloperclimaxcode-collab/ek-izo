@@ -15,6 +15,7 @@
     "lightMode": "Light Mode",
     "login": "Login",
     "logout": "Logout",
+    "menu":"Menu",
     "myIzogrup": "MyEkgrup"
   },
   "hero": {
@@ -55,7 +56,7 @@
       },
       "protechSigilflex": {
         "name": "Protech Sigilflex",
-        "description": "Advanced waterproofing membrane for terraces"
+        "description": "Advanced membrane for terraces"
       },
       "thermalInsulation": {
         "name": "Thermal Insulation Pro",
@@ -206,7 +207,9 @@
     "serviceLine": "SERVICE LINE",
     "searchService": "Search Service",
     "completeRange": "A Complete Range Of Services And Technologies For The Building Industry",
-    "completeRangeDesc": "Over the years, Ekgrup has become a reliable partner in the construction industry, offering specialized services for every need from waterproofing roofs to soundproofing theatres and restoring historic buildings.",
+    "completeRangeDesc": "Over the years, Ekgrup has become a reliable partner in the construction industry, offering specialized services for every need General building construction, Residential and villa construction projects to supporting large infrastructure or industrial projects.",
+    
+
     "browseByServiceLines": "Browse by Service Lines",
     "allServices": "All Services",
     "noServicesFound": "No services found.",
