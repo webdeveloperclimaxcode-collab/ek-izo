@@ -30,7 +30,7 @@ const benefits: Benefit[] = [
     icon: "/assets/images/about/money.svg",
     title: "MINIMAL COST",
     description:
-      "Because we work locally with trusted suppliers and our own experienced crew, we cut out the middleman and unnecessary expenses. You're paying for quality and efficiency—not hidden fees—which is how we keep our prices competitive without cutting corners.",
+      "Because we work locally with trusted suppliers and our own experienced crew, we cut out the middleman and unnecessary expenses. You're paying for quality and efficiency not hidden fees which is how we keep our prices competitive without cutting corners.",
   },
 ];
 

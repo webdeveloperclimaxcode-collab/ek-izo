@@ -22,7 +22,8 @@ export default function ServicesHero({ searchQuery, onSearchChange }: ServicesHe
       {/* Background Image */}
       <div className={`absolute inset-0 z-0 ${theme === "dark" ? "brightness-50" : ""}`}>
         <Image
-          src="/assets/images/Products_page/service_hero.svg"
+          // src="/assets/images/Products_page/service_hero.svg"
+          src="/assets/images/HeroSection/hero_bg.png"
           alt="Product Line Background"
           fill
           className="object-cover"

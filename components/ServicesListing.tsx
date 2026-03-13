@@ -241,7 +241,7 @@ export default function ServicesListing({ searchQuery }: ServicesListingProps) {
           {/* Browse by Service Lines Button */}
           <div className="flex justify-center">
             <div className="relative inline-block" ref={dropdownRef}>
-              {/* <button
+              <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 className="px-8 py-5 bg-brand-gradient text-black font-semibold rounded-full text-sm flex items-center gap-3 hover:opacity-90 transition-opacity hover:cursor-pointer"
               >
@@ -253,7 +253,7 @@ export default function ServicesListing({ searchQuery }: ServicesListingProps) {
                   height={16}
                   className={` lg:ml-8 w-4 h-4 transition-transform filter brightness-0 ${isDropdownOpen ? "rotate-180" : ""}`}
                 />
-              </button> */}
+              </button>
 
               {/* Dropdown Container */}
               {isDropdownOpen && (

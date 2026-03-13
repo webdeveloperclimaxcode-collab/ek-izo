@@ -109,13 +109,14 @@ export default function Footer() {
         {/* Background Image - always visible */}
         <div className="absolute inset-0 ">
           <Image
-            src="/assets/images/Footer/bg_img_new.png"
+            src="/assets/images/Footer/bg_img_new_2.png"
             alt="Footer Background"
             fill
             className="object-cover"
             priority
           />
         </div>
+        <div className={`absolute inset-0 ${theme === "dark" ? "bg-black/70" : "bg-black/40"}`}></div>
 
         <div className="relative w-full lg:px-20 md:px-8 px-8 2xl:px-20 py-16">
           {/* Logo - Full Width */}

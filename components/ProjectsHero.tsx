@@ -30,14 +30,16 @@ export default function ProjectsHero({ searchQuery: searchQueryProp, onSearch }:
       {/* Hero Image */}
       <div className="relative w-full h-[300px]">
         <Image
-          src="/assets/images/projects/hero.png"
+          src="/assets/images/projects/p5.png"
           alt="Projects"
           fill
           className={`object-cover ${theme === "dark" ? "brightness-50" : ""}`}
           priority
         />
         {/* Dark Overlay */}
-        <div className={`absolute inset-0 ${theme === "dark" ? "bg-black/70" : "bg-black/50"}`}></div>
+        {/* <div className={`absolute inset-0 ${theme === "dark" ? "bg-black/70" : "bg-black/50"}`}></div>
+         */}
+        {/* <div className={`absolute inset-0 ${theme === "dark" ? "bg-black/70" : "bg-black/40"}`}></div> */}
 
         {/* Title */}
         <div className="absolute inset-0 flex items-center justify-center px-6">

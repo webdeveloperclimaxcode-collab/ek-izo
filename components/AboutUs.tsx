@@ -74,7 +74,7 @@ export default function AboutUs() {
           </div>
           <div className="flex justify-start">
             <p className="text-base lg:text-[30px] text-gray-600 dark:text-gray-300  leading-relaxed transition-colors text-start">
-              We provide services for all types of buildings—from homes and small businesses to large corporations. Our trained team delivers professional installations with a strong focus on quality and customer satisfaction.
+              We provide professional construction services for residential, commercial, and industrial projects. Our experienced team delivers quality building, plastering, and concrete work using modern equipment, with a strong focus on safety, reliability, and timely project completion.
             </p>
           </div>
         </div>

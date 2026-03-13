@@ -33,8 +33,8 @@ export default function BlogHero({
   const { theme } = useTheme();
 
   const selectedTopicLabel = selectedCategoryId
-    ? (categories.find((c) => c.id === selectedCategoryId)?.name ?? "Topic")
-    : "Topic";
+    ? (categories.find((c) => c.id === selectedCategoryId)?.name ?? "Categories")
+    : "Categories";
   const selectedYearLabel = selectedYearProp || "Years";
 
   useEffect(() => {
@@ -74,7 +74,7 @@ export default function BlogHero({
       {/* Hero Image */}
       <div className="relative w-full h-[300px]">
         <Image
-          src="/assets/images/blog/hero.png"
+          src="/assets/images/blog/hero_2.jpg"
           alt="Blog"
           fill
           className="object-cover"
@@ -119,7 +119,7 @@ export default function BlogHero({
             </div>
 
             {/* Topic Dropdown */}
-            {/* <div className="relative flex-1 min-w-0 w-full md:w-auto">
+            <div className="relative flex-1 min-w-0 w-full md:w-auto">
               <button
                 onClick={() => setShowTopicDropdown(!showTopicDropdown)}
                 className={`px-8 py-3.5 text-black font-semibold rounded-full hover:opacity-90 transition-all text-[15px] flex items-center gap-3 w-full justify-between min-w-0 ${theme === "dark"
@@ -171,10 +171,10 @@ export default function BlogHero({
                   ))}
                 </div>
               )}
-            </div> */}
+            </div>
 
             {/* Year Dropdown */}
-            <div className="relative flex-1 min-w-0 w-full md:w-auto">
+            {/* <div className="relative flex-1 min-w-0 w-full md:w-auto">
               <button
                 onClick={() => setShowYearDropdown(!showYearDropdown)}
                 className={`px-8 py-3.5 text-black font-semibold rounded-full hover:opacity-90 transition-all text-[15px] flex items-center gap-3 w-full justify-between min-w-0 ${theme === "dark"
@@ -226,7 +226,7 @@ export default function BlogHero({
                   ))}
                 </div>
               )}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -337,9 +337,10 @@ interface Office {
   image: string;
   address: string;
   phone: string;
-  fax: string;
+  fax?: string;
   email: string;
   url: string;
+  addressLink?: string;
 }
 
 interface DropdownSection {
@@ -367,20 +368,21 @@ export default function ContactHero() {
       offices: [
         {
           image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop",
-          address: "Rruga Cerrik Gostime, Gostimë 3018, Albania",
-          phone: "+355696666060",
-          fax: "+355 69 66 66 060",
-          email: "Info@ekgrup.Al",
-          url: "Ek Group.COM",
+          address: "ELBASAN, CËRRIK",
+          addressLink: "https://maps.google.com/?q=ELBASAN,+CËRRIK",
+          phone: "+355 69 708 5555",
+          // fax: "+355 69 66 66 060",
+          email: "ekgrup2010@gmail.com",
+          url: "lobster-app-o2ajr.ondigitalocean.app",
         },
-        {
-          image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop",
-          address: "Rruga Cerrik Gostime, Gostimë 3018, Albania",
-          phone: "+355696666060",
-          fax: "+355 69 66 66 060",
-          email: "Info@ekgrup.Al",
-          url: "Ek Group.COM",
-        },
+        // {
+        //   image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop",
+        //   address: "Rruga Cerrik Gostime, Gostimë 3018, Albania",
+        //   phone: "+355696666060",
+        //   fax: "+355 69 66 66 060",
+        //   email: "Info@ekgrup.Al",
+        //   url: "Ek Group.COM",
+        // },
       ],
     }
     // {
@@ -498,7 +500,7 @@ export default function ContactHero() {
                 <div className="pt-4">
                   <Link
                     href="/support"
-                    className={`inline-block lg:text-2xl px-8 py-3.5 border rounded-full text-[13px] font-medium tracking-wide transition-all duration-300 
+                    className={`inline-block lg:text-2xl lg:px-8 md:px-8 px-6 text-center py-2 lg:py-3.5 md:py-3.5 border rounded-full text-[13px] font-medium tracking-wide transition-all duration-300 
                        ${theme === "dark"
                       ? "border-[#EAB308] text-white hover:bg-[#EAB308] hover:text-black"
                       : "border-[#EAB308] text-[#1A1A1A] hover:bg-[#F6BA40] hover:text-white hover:cursor-pointer"
@@ -599,6 +601,7 @@ export default function ContactHero() {
                             </div>
 
                             {/* Fax */}
+                            {office.fax && (
                             <div className="flex items-start gap-4">
                               <div className="w-10 h-10 rounded-md bg-[#242424] flex items-center justify-center flex-shrink-0 text-[#EAB308]">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
@@ -612,6 +615,7 @@ export default function ContactHero() {
                                 </p>
                               </div>
                             </div>
+                              )}
 
                             {/* Email */}
                             <div className="flex items-start gap-4">
@@ -654,7 +658,7 @@ export default function ContactHero() {
                           {/* Google Maps Button */}
                           <div className="pt-4">
                             <Link
-                              href="https://maps.google.com"
+                              href={office.addressLink || "https://maps.google.com"}
                               target="_blank"
                               className={`inline-block px-6 py-3 lg:text-lg border rounded-full text-[12px] font-medium transition-colors border-[#F6BA40] ${theme === "dark"
                                 ? " text-gray-300 hover:bg-gray-800"

@@ -14,7 +14,7 @@ export default function AboutHero() {
           src="/assets/images/about/AboutHero2.png"
           alt="Building Today With The Future In Mind"
           fill
-          // className="object-cover"
+          className="object-cover"
           priority
         />
       </div>
@@ -41,7 +41,7 @@ export default function AboutHero() {
           <iframe
             width="80%"
             height="80%"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            src="https://www.youtube.com/watch?v=4BzjUq921Y4&pp=ygUlY29uc3RydWN0aW9uIHNpZGUgdmlkZW9zIGZvciBhbGJhbmlhIA%3D%3D"
             title="Grouting And Exalting Ceramic Tiles | Quick-Drying...."
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
