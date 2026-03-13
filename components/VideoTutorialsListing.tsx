@@ -188,7 +188,7 @@ export default function VideoTutorialsListing() {
                           {video.title}
                         </h3>
                         <p className={`text-[14px] lg:text-xl leading-relaxed line-clamp-3 transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-gray-600"}`}>
-                          {video.description || "Ideal for waterproofing and thermal insulation of terraces and special covers"}
+                          {video.description }
                         </p>
                       </div>
                     </div>

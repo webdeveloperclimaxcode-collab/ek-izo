@@ -7,27 +7,27 @@ import Image from "next/image";
 export default function MissionAndQuestions() {
   const { theme } = useTheme();
 
-  const questions = [
-    {
-      question: "Why does Ekgrup services cost less than its competitors?",
-      answer:
-        "Because we import the materials directly from the first hand supplier. Ekgrup does not enter into commercial agreements with third party companies. Also we have distribution points and staff teams in all major cities, this causes lowers fuel and transportation costs.",
-    },
-    {
-      question: "What is the timeline for the project?",
-      answer: "",
-    },
-    {
-      question:
-        "What is the total budget for a waterproofing or thermal insulation project?",
-      answer: "",
-    },
-    {
-      question:
-        "How is a waterproofing or thermal insulation project initiated?",
-      answer: "",
-    },
-  ];
+  // const questions = [
+  //   {
+  //     question: "Why does Ekgrup services cost less than its competitors?",
+  //     answer:
+  //       "Because we import the materials directly from the first hand supplier. Ekgrup does not enter into commercial agreements with third party companies. Also we have distribution points and staff teams in all major cities, this causes lowers fuel and transportation costs.",
+  //   },
+  //   {
+  //     question: "What is the timeline for the project?",
+  //     answer: "",
+  //   },
+  //   {
+  //     question:
+  //       "What is the total budget for a waterproofing or thermal insulation project?",
+  //     answer: "",
+  //   },
+  //   {
+  //     question:
+  //       "How is a waterproofing or thermal insulation project initiated?",
+  //     answer: "",
+  //   },
+  // ];
 
   return (
     <section className={`w-full py-16 transition-colors duration-300 ${theme === "dark" ? "bg-[#000000]" : "bg-[#F5F7FA]"}`}>

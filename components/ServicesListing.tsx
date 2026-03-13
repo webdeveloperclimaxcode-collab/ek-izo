@@ -28,6 +28,7 @@ interface Service {
   images: string[];
   subcategoryId: string | null;
   enableOnlineSales: boolean;
+  description: string;
   subcategory?: {
     id: string;
     name: string;
@@ -528,7 +529,7 @@ export default function ServicesListing({ searchQuery }: ServicesListingProps) {
                   {/* Service Description */}
                   <p className={`text-[14px] lg:text-xl leading-relaxed transition-colors duration-300 ${theme === "dark" ? "text-gray-400" : "text-gray-600"
                     }`}>
-                    Ideal for waterproofing and thermal insulation of terraces and special covers
+                    {service.description}
                   </p>
                 </div>
               </Link>
