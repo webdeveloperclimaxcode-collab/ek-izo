@@ -296,6 +296,7 @@
     "messageSentSuccess": "Messaggio Inviato Con Successo!",
     "thankYouMessage": "Grazie per averci contattato. Il nostro team ti contatterà a breve.",
     "error": "Errore",
+    "submit":"Invia",
     "failedToSend": "Impossibile inviare il messaggio. Per favore riprova.",
     "errorOccurred": "Si è verificato un errore. Per favore riprova più tardi."
   },

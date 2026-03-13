@@ -297,6 +297,7 @@
     "messageSentSuccess": "Message Sent Successfully!",
     "thankYouMessage": "Thank you for contacting us. Our team will get back to you shortly.",
     "error": "Error",
+    "submit":"Submit",
     "failedToSend": "Failed to send message. Please try again.",
     "errorOccurred": "An error occurred. Please try again later."
   },
